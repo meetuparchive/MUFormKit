@@ -1,0 +1,1045 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DE50BA3B196CB66C0074C342 /* NSError+MUValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = DE50BA3A196CB66C0074C342 /* NSError+MUValidation.m */; };
+		DE50BA3D196CB6FD0074C342 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE50BA3C196CB6FD0074C342 /* CoreData.framework */; };
+		DE50BA40196CB9070074C342 /* NSDate+MUDateStyles.m in Sources */ = {isa = PBXBuildFile; fileRef = DE50BA3F196CB9070074C342 /* NSDate+MUDateStyles.m */; };
+		DE50BA43196CB9C00074C342 /* NSDate+MUAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DE50BA42196CB9C00074C342 /* NSDate+MUAdditions.m */; };
+		DE50BA46196CBA100074C342 /* NSObject+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = DE50BA45196CBA100074C342 /* NSObject+Additions.m */; };
+		DE50BA49196CBB200074C342 /* UITextView+ReturnBugFix.m in Sources */ = {isa = PBXBuildFile; fileRef = DE50BA48196CBB200074C342 /* UITextView+ReturnBugFix.m */; };
+		DE50BA4C196CBB520074C342 /* NSTimeZone+MUAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DE50BA4B196CBB520074C342 /* NSTimeZone+MUAdditions.m */; };
+		DED8C52D1965105F000D18DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED8C52C1965105F000D18DC /* Foundation.framework */; };
+		DED8C52F1965105F000D18DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED8C52E1965105F000D18DC /* CoreGraphics.framework */; };
+		DED8C5311965105F000D18DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED8C5301965105F000D18DC /* UIKit.framework */; };
+		DED8C5371965105F000D18DC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5351965105F000D18DC /* InfoPlist.strings */; };
+		DED8C5391965105F000D18DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C5381965105F000D18DC /* main.m */; };
+		DED8C53D1965105F000D18DC /* MUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C53C1965105F000D18DC /* MUAppDelegate.m */; };
+		DED8C5401965105F000D18DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DED8C53E1965105F000D18DC /* Main.storyboard */; };
+		DED8C5431965105F000D18DC /* MUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C5421965105F000D18DC /* MUViewController.m */; };
+		DED8C5451965105F000D18DC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5441965105F000D18DC /* Images.xcassets */; };
+		DED8C54C1965105F000D18DC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED8C54B1965105F000D18DC /* XCTest.framework */; };
+		DED8C54D1965105F000D18DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED8C52C1965105F000D18DC /* Foundation.framework */; };
+		DED8C54E1965105F000D18DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED8C5301965105F000D18DC /* UIKit.framework */; };
+		DED8C5561965105F000D18DC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5541965105F000D18DC /* InfoPlist.strings */; };
+		DED8C5581965105F000D18DC /* FormKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C5571965105F000D18DC /* FormKitTests.m */; };
+		DED8C5DB196510B9000D18DC /* MUDynamicFormController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C565196510B9000D18DC /* MUDynamicFormController.m */; };
+		DED8C5DC196510B9000D18DC /* MUDynamicFormDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C567196510B9000D18DC /* MUDynamicFormDataSource.m */; };
+		DED8C5DD196510B9000D18DC /* MUFormActivationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C569196510B9000D18DC /* MUFormActivationCell.m */; };
+		DED8C5DE196510B9000D18DC /* MUFormBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C56B196510B9000D18DC /* MUFormBaseCell.m */; };
+		DED8C5DF196510B9000D18DC /* MUFormCCNumberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C56D196510B9000D18DC /* MUFormCCNumberCell.m */; };
+		DED8C5E0196510B9000D18DC /* MUFormController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C570196510B9000D18DC /* MUFormController.m */; };
+		DED8C5E1196510B9000D18DC /* MUFormDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C572196510B9000D18DC /* MUFormDataSource.m */; };
+		DED8C5E2196510B9000D18DC /* MUFormDateTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C574196510B9000D18DC /* MUFormDateTimeCell.m */; };
+		DED8C5E3196510B9000D18DC /* MUFormIconCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C576196510B9000D18DC /* MUFormIconCell.m */; };
+		DED8C5E4196510B9000D18DC /* MUFormNumberFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C579196510B9000D18DC /* MUFormNumberFieldCell.m */; };
+		DED8C5E5196510B9000D18DC /* MUFormOptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C57B196510B9000D18DC /* MUFormOptionCell.m */; };
+		DED8C5E6196510B9000D18DC /* MUFormRelativeDateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C57D196510B9000D18DC /* MUFormRelativeDateCell.m */; };
+		DED8C5E7196510B9000D18DC /* MUFormStaticInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C57F196510B9000D18DC /* MUFormStaticInfoCell.m */; };
+		DED8C5E8196510B9000D18DC /* MUFormStaticLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C581196510B9000D18DC /* MUFormStaticLabelCell.m */; };
+		DED8C5E9196510B9000D18DC /* MUFormSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C583196510B9000D18DC /* MUFormSwitchCell.m */; };
+		DED8C5EA196510B9000D18DC /* MUFormTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C585196510B9000D18DC /* MUFormTextFieldCell.m */; };
+		DED8C5EB196510B9000D18DC /* MUFormTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C587196510B9000D18DC /* MUFormTextViewCell.m */; };
+		DED8C5EC196510B9000D18DC /* MUFormTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C589196510B9000D18DC /* MUFormTimeCell.m */; };
+		DED8C5ED196510B9000D18DC /* MUFormTimePickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C58B196510B9000D18DC /* MUFormTimePickerCell.m */; };
+		DED8C5EE196510B9000D18DC /* MUFormToFormSegueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C58D196510B9000D18DC /* MUFormToFormSegueCell.m */; };
+		DED8C5EF196510B9000D18DC /* MUNextResponderController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C58F196510B9000D18DC /* MUNextResponderController.m */; };
+		DED8C5F0196510B9000D18DC /* MURelativeDatePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C591196510B9000D18DC /* MURelativeDatePickerController.m */; };
+		DED8C5F1196510B9000D18DC /* MUValidationErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C593196510B9000D18DC /* MUValidationErrors.m */; };
+		DED8C5F2196510B9000D18DC /* MUFormActivationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C595196510B9000D18DC /* MUFormActivationCell.xib */; };
+		DED8C5F3196510B9000D18DC /* MUFormCCNumberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C597196510B9000D18DC /* MUFormCCNumberCell.xib */; };
+		DED8C5F4196510B9000D18DC /* MUFormDateTimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C599196510B9000D18DC /* MUFormDateTimeCell.xib */; };
+		DED8C5F5196510B9000D18DC /* MUFormNumberFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C59B196510B9000D18DC /* MUFormNumberFieldCell.xib */; };
+		DED8C5F6196510B9000D18DC /* MUFormOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C59D196510B9000D18DC /* MUFormOptionCell.xib */; };
+		DED8C5F7196510B9000D18DC /* MUFormRelativeDateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C59F196510B9000D18DC /* MUFormRelativeDateCell.xib */; };
+		DED8C5F8196510B9000D18DC /* MUFormStaticInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5A1196510B9000D18DC /* MUFormStaticInfoCell.xib */; };
+		DED8C5F9196510B9000D18DC /* MUFormStaticLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5A3196510B9000D18DC /* MUFormStaticLabelCell.xib */; };
+		DED8C5FA196510B9000D18DC /* MUFormSwitchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5A5196510B9000D18DC /* MUFormSwitchCell.xib */; };
+		DED8C5FB196510B9000D18DC /* MUFormTextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5A7196510B9000D18DC /* MUFormTextFieldCell.xib */; };
+		DED8C5FC196510B9000D18DC /* MUFormTextViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5A9196510B9000D18DC /* MUFormTextViewCell.xib */; };
+		DED8C5FD196510B9000D18DC /* MUFormTimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5AB196510B9000D18DC /* MUFormTimeCell.xib */; };
+		DED8C5FE196510B9000D18DC /* MUFormTimePickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5AD196510B9000D18DC /* MUFormTimePickerCell.xib */; };
+		DED8C5FF196510B9000D18DC /* MUFormToFormSegueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5AF196510B9000D18DC /* MUFormToFormSegueCell.xib */; };
+		DED8C600196510B9000D18DC /* MUFormActivationCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5B1196510B9000D18DC /* MUFormActivationCell.strings */; };
+		DED8C601196510B9000D18DC /* MUFormCCNumberCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5B3196510B9000D18DC /* MUFormCCNumberCell.strings */; };
+		DED8C602196510B9000D18DC /* MUFormDateTimeCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5B5196510B9000D18DC /* MUFormDateTimeCell.strings */; };
+		DED8C603196510B9000D18DC /* MUFormNumberFieldCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5B7196510B9000D18DC /* MUFormNumberFieldCell.strings */; };
+		DED8C604196510B9000D18DC /* MUFormOptionCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5B9196510B9000D18DC /* MUFormOptionCell.strings */; };
+		DED8C605196510B9000D18DC /* MUFormRelativeDateCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5BB196510B9000D18DC /* MUFormRelativeDateCell.strings */; };
+		DED8C606196510B9000D18DC /* MUFormStaticInfoCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5BD196510B9000D18DC /* MUFormStaticInfoCell.strings */; };
+		DED8C607196510B9000D18DC /* MUFormStaticLabelCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5BF196510B9000D18DC /* MUFormStaticLabelCell.strings */; };
+		DED8C608196510B9000D18DC /* MUFormSwitchCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5C1196510B9000D18DC /* MUFormSwitchCell.strings */; };
+		DED8C609196510B9000D18DC /* MUFormTextFieldCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5C3196510B9000D18DC /* MUFormTextFieldCell.strings */; };
+		DED8C60A196510B9000D18DC /* MUFormTextViewCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5C5196510B9000D18DC /* MUFormTextViewCell.strings */; };
+		DED8C60B196510B9000D18DC /* MUFormTimeCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5C7196510B9000D18DC /* MUFormTimeCell.strings */; };
+		DED8C60C196510B9000D18DC /* MUFormTimePickerCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5C9196510B9000D18DC /* MUFormTimePickerCell.strings */; };
+		DED8C60D196510B9000D18DC /* MUFormToFormSegueCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5CB196510B9000D18DC /* MUFormToFormSegueCell.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DED8C54F1965105F000D18DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DED8C5211965105F000D18DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DED8C5281965105F000D18DC;
+			remoteInfo = FormKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DE50BA39196CB66C0074C342 /* NSError+MUValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+MUValidation.h"; sourceTree = "<group>"; };
+		DE50BA3A196CB66C0074C342 /* NSError+MUValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+MUValidation.m"; sourceTree = "<group>"; };
+		DE50BA3C196CB6FD0074C342 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DE50BA3E196CB9070074C342 /* NSDate+MUDateStyles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+MUDateStyles.h"; path = "../../../../Documents/workspaces/meetup/meetup-ios-alt/Classes/NSDate+MUDateStyles.h"; sourceTree = "<group>"; };
+		DE50BA3F196CB9070074C342 /* NSDate+MUDateStyles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+MUDateStyles.m"; path = "../../../../Documents/workspaces/meetup/meetup-ios-alt/Classes/NSDate+MUDateStyles.m"; sourceTree = "<group>"; };
+		DE50BA41196CB9C00074C342 /* NSDate+MUAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+MUAdditions.h"; path = "../../../../Documents/workspaces/meetup/meetup-ios-alt/Classes/NSDate+MUAdditions.h"; sourceTree = "<group>"; };
+		DE50BA42196CB9C00074C342 /* NSDate+MUAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+MUAdditions.m"; path = "../../../../Documents/workspaces/meetup/meetup-ios-alt/Classes/NSDate+MUAdditions.m"; sourceTree = "<group>"; };
+		DE50BA44196CBA0F0074C342 /* NSObject+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+Additions.h"; path = "../../../../Documents/workspaces/meetup/meetup-ios-alt/Classes/NSObject+Additions.h"; sourceTree = "<group>"; };
+		DE50BA45196CBA100074C342 /* NSObject+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Additions.m"; path = "../../../../Documents/workspaces/meetup/meetup-ios-alt/Classes/NSObject+Additions.m"; sourceTree = "<group>"; };
+		DE50BA47196CBB200074C342 /* UITextView+ReturnBugFix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextView+ReturnBugFix.h"; path = "../../../../Documents/workspaces/meetup/meetup-ios-alt/Classes/UITextView+ReturnBugFix.h"; sourceTree = "<group>"; };
+		DE50BA48196CBB200074C342 /* UITextView+ReturnBugFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITextView+ReturnBugFix.m"; path = "../../../../Documents/workspaces/meetup/meetup-ios-alt/Classes/UITextView+ReturnBugFix.m"; sourceTree = "<group>"; };
+		DE50BA4A196CBB520074C342 /* NSTimeZone+MUAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSTimeZone+MUAdditions.h"; path = "../../../../Documents/workspaces/meetup/meetup-ios-alt/Classes/NSTimeZone+MUAdditions.h"; sourceTree = "<group>"; };
+		DE50BA4B196CBB520074C342 /* NSTimeZone+MUAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSTimeZone+MUAdditions.m"; path = "../../../../Documents/workspaces/meetup/meetup-ios-alt/Classes/NSTimeZone+MUAdditions.m"; sourceTree = "<group>"; };
+		DED8C5291965105F000D18DC /* FormKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FormKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DED8C52C1965105F000D18DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DED8C52E1965105F000D18DC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DED8C5301965105F000D18DC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DED8C5341965105F000D18DC /* FormKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FormKit-Info.plist"; sourceTree = "<group>"; };
+		DED8C5361965105F000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DED8C5381965105F000D18DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DED8C53A1965105F000D18DC /* FormKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FormKit-Prefix.pch"; sourceTree = "<group>"; };
+		DED8C53B1965105F000D18DC /* MUAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MUAppDelegate.h; sourceTree = "<group>"; };
+		DED8C53C1965105F000D18DC /* MUAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MUAppDelegate.m; sourceTree = "<group>"; };
+		DED8C53F1965105F000D18DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DED8C5411965105F000D18DC /* MUViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MUViewController.h; sourceTree = "<group>"; };
+		DED8C5421965105F000D18DC /* MUViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MUViewController.m; sourceTree = "<group>"; };
+		DED8C5441965105F000D18DC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DED8C54A1965105F000D18DC /* FormKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FormKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DED8C54B1965105F000D18DC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		DED8C5531965105F000D18DC /* FormKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FormKitTests-Info.plist"; sourceTree = "<group>"; };
+		DED8C5551965105F000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DED8C5571965105F000D18DC /* FormKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FormKitTests.m; sourceTree = "<group>"; };
+		DED8C564196510B9000D18DC /* MUDynamicFormController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUDynamicFormController.h; sourceTree = "<group>"; };
+		DED8C565196510B9000D18DC /* MUDynamicFormController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUDynamicFormController.m; sourceTree = "<group>"; };
+		DED8C566196510B9000D18DC /* MUDynamicFormDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUDynamicFormDataSource.h; sourceTree = "<group>"; };
+		DED8C567196510B9000D18DC /* MUDynamicFormDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUDynamicFormDataSource.m; sourceTree = "<group>"; };
+		DED8C568196510B9000D18DC /* MUFormActivationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormActivationCell.h; sourceTree = "<group>"; };
+		DED8C569196510B9000D18DC /* MUFormActivationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUFormActivationCell.m; sourceTree = "<group>"; };
+		DED8C56A196510B9000D18DC /* MUFormBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormBaseCell.h; sourceTree = "<group>"; };
+		DED8C56B196510B9000D18DC /* MUFormBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUFormBaseCell.m; sourceTree = "<group>"; };
+		DED8C56C196510B9000D18DC /* MUFormCCNumberCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormCCNumberCell.h; sourceTree = "<group>"; };
+		DED8C56D196510B9000D18DC /* MUFormCCNumberCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUFormCCNumberCell.m; sourceTree = "<group>"; };
+		DED8C56E196510B9000D18DC /* MUFormConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormConstants.h; sourceTree = "<group>"; };
+		DED8C56F196510B9000D18DC /* MUFormController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormController.h; sourceTree = "<group>"; };
+		DED8C570196510B9000D18DC /* MUFormController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUFormController.m; sourceTree = "<group>"; };
+		DED8C571196510B9000D18DC /* MUFormDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormDataSource.h; sourceTree = "<group>"; };
+		DED8C572196510B9000D18DC /* MUFormDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUFormDataSource.m; sourceTree = "<group>"; };
+		DED8C573196510B9000D18DC /* MUFormDateTimeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormDateTimeCell.h; sourceTree = "<group>"; };
+		DED8C574196510B9000D18DC /* MUFormDateTimeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUFormDateTimeCell.m; sourceTree = "<group>"; };
+		DED8C575196510B9000D18DC /* MUFormIconCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormIconCell.h; sourceTree = "<group>"; };
+		DED8C576196510B9000D18DC /* MUFormIconCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUFormIconCell.m; sourceTree = "<group>"; };
+		DED8C577196510B9000D18DC /* MUFormKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormKit.h; sourceTree = "<group>"; };
+		DED8C578196510B9000D18DC /* MUFormNumberFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormNumberFieldCell.h; sourceTree = "<group>"; };
+		DED8C579196510B9000D18DC /* MUFormNumberFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUFormNumberFieldCell.m; sourceTree = "<group>"; };
+		DED8C57A196510B9000D18DC /* MUFormOptionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormOptionCell.h; sourceTree = "<group>"; };
+		DED8C57B196510B9000D18DC /* MUFormOptionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUFormOptionCell.m; sourceTree = "<group>"; };
+		DED8C57C196510B9000D18DC /* MUFormRelativeDateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormRelativeDateCell.h; sourceTree = "<group>"; };
+		DED8C57D196510B9000D18DC /* MUFormRelativeDateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUFormRelativeDateCell.m; sourceTree = "<group>"; };
+		DED8C57E196510B9000D18DC /* MUFormStaticInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormStaticInfoCell.h; sourceTree = "<group>"; };
+		DED8C57F196510B9000D18DC /* MUFormStaticInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUFormStaticInfoCell.m; sourceTree = "<group>"; };
+		DED8C580196510B9000D18DC /* MUFormStaticLabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormStaticLabelCell.h; sourceTree = "<group>"; };
+		DED8C581196510B9000D18DC /* MUFormStaticLabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUFormStaticLabelCell.m; sourceTree = "<group>"; };
+		DED8C582196510B9000D18DC /* MUFormSwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormSwitchCell.h; sourceTree = "<group>"; };
+		DED8C583196510B9000D18DC /* MUFormSwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUFormSwitchCell.m; sourceTree = "<group>"; };
+		DED8C584196510B9000D18DC /* MUFormTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormTextFieldCell.h; sourceTree = "<group>"; };
+		DED8C585196510B9000D18DC /* MUFormTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUFormTextFieldCell.m; sourceTree = "<group>"; };
+		DED8C586196510B9000D18DC /* MUFormTextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormTextViewCell.h; sourceTree = "<group>"; };
+		DED8C587196510B9000D18DC /* MUFormTextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUFormTextViewCell.m; sourceTree = "<group>"; };
+		DED8C588196510B9000D18DC /* MUFormTimeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormTimeCell.h; sourceTree = "<group>"; };
+		DED8C589196510B9000D18DC /* MUFormTimeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUFormTimeCell.m; sourceTree = "<group>"; };
+		DED8C58A196510B9000D18DC /* MUFormTimePickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormTimePickerCell.h; sourceTree = "<group>"; };
+		DED8C58B196510B9000D18DC /* MUFormTimePickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUFormTimePickerCell.m; sourceTree = "<group>"; };
+		DED8C58C196510B9000D18DC /* MUFormToFormSegueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormToFormSegueCell.h; sourceTree = "<group>"; };
+		DED8C58D196510B9000D18DC /* MUFormToFormSegueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUFormToFormSegueCell.m; sourceTree = "<group>"; };
+		DED8C58E196510B9000D18DC /* MUNextResponderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUNextResponderController.h; sourceTree = "<group>"; };
+		DED8C58F196510B9000D18DC /* MUNextResponderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUNextResponderController.m; sourceTree = "<group>"; };
+		DED8C590196510B9000D18DC /* MURelativeDatePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURelativeDatePickerController.h; sourceTree = "<group>"; };
+		DED8C591196510B9000D18DC /* MURelativeDatePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURelativeDatePickerController.m; sourceTree = "<group>"; };
+		DED8C592196510B9000D18DC /* MUValidationErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUValidationErrors.h; sourceTree = "<group>"; };
+		DED8C593196510B9000D18DC /* MUValidationErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUValidationErrors.m; sourceTree = "<group>"; };
+		DED8C596196510B9000D18DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MUFormActivationCell.xib; sourceTree = "<group>"; };
+		DED8C598196510B9000D18DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MUFormCCNumberCell.xib; sourceTree = "<group>"; };
+		DED8C59A196510B9000D18DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MUFormDateTimeCell.xib; sourceTree = "<group>"; };
+		DED8C59C196510B9000D18DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MUFormNumberFieldCell.xib; sourceTree = "<group>"; };
+		DED8C59E196510B9000D18DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MUFormOptionCell.xib; sourceTree = "<group>"; };
+		DED8C5A0196510B9000D18DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MUFormRelativeDateCell.xib; sourceTree = "<group>"; };
+		DED8C5A2196510B9000D18DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MUFormStaticInfoCell.xib; sourceTree = "<group>"; };
+		DED8C5A4196510B9000D18DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MUFormStaticLabelCell.xib; sourceTree = "<group>"; };
+		DED8C5A6196510B9000D18DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MUFormSwitchCell.xib; sourceTree = "<group>"; };
+		DED8C5A8196510B9000D18DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MUFormTextFieldCell.xib; sourceTree = "<group>"; };
+		DED8C5AA196510B9000D18DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MUFormTextViewCell.xib; sourceTree = "<group>"; };
+		DED8C5AC196510B9000D18DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MUFormTimeCell.xib; sourceTree = "<group>"; };
+		DED8C5AE196510B9000D18DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MUFormTimePickerCell.xib; sourceTree = "<group>"; };
+		DED8C5B0196510B9000D18DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MUFormToFormSegueCell.xib; sourceTree = "<group>"; };
+		DED8C5B2196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormActivationCell.strings; sourceTree = "<group>"; };
+		DED8C5B4196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormCCNumberCell.strings; sourceTree = "<group>"; };
+		DED8C5B6196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormDateTimeCell.strings; sourceTree = "<group>"; };
+		DED8C5B8196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormNumberFieldCell.strings; sourceTree = "<group>"; };
+		DED8C5BA196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormOptionCell.strings; sourceTree = "<group>"; };
+		DED8C5BC196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormRelativeDateCell.strings; sourceTree = "<group>"; };
+		DED8C5BE196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormStaticInfoCell.strings; sourceTree = "<group>"; };
+		DED8C5C0196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormStaticLabelCell.strings; sourceTree = "<group>"; };
+		DED8C5C2196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormSwitchCell.strings; sourceTree = "<group>"; };
+		DED8C5C4196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormTextFieldCell.strings; sourceTree = "<group>"; };
+		DED8C5C6196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormTextViewCell.strings; sourceTree = "<group>"; };
+		DED8C5C8196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormTimeCell.strings; sourceTree = "<group>"; };
+		DED8C5CA196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormTimePickerCell.strings; sourceTree = "<group>"; };
+		DED8C5CC196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormToFormSegueCell.strings; sourceTree = "<group>"; };
+		DED8C5CD196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormActivationCell.strings; sourceTree = "<group>"; };
+		DED8C5CE196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormCCNumberCell.strings; sourceTree = "<group>"; };
+		DED8C5CF196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormDateTimeCell.strings; sourceTree = "<group>"; };
+		DED8C5D0196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormNumberFieldCell.strings; sourceTree = "<group>"; };
+		DED8C5D1196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormOptionCell.strings; sourceTree = "<group>"; };
+		DED8C5D2196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormRelativeDateCell.strings; sourceTree = "<group>"; };
+		DED8C5D3196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormStaticInfoCell.strings; sourceTree = "<group>"; };
+		DED8C5D4196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormStaticLabelCell.strings; sourceTree = "<group>"; };
+		DED8C5D5196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormSwitchCell.strings; sourceTree = "<group>"; };
+		DED8C5D6196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormTextFieldCell.strings; sourceTree = "<group>"; };
+		DED8C5D7196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormTextViewCell.strings; sourceTree = "<group>"; };
+		DED8C5D8196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormTimeCell.strings; sourceTree = "<group>"; };
+		DED8C5D9196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormTimePickerCell.strings; sourceTree = "<group>"; };
+		DED8C5DA196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormToFormSegueCell.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DED8C5261965105F000D18DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE50BA3D196CB6FD0074C342 /* CoreData.framework in Frameworks */,
+				DED8C52F1965105F000D18DC /* CoreGraphics.framework in Frameworks */,
+				DED8C5311965105F000D18DC /* UIKit.framework in Frameworks */,
+				DED8C52D1965105F000D18DC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DED8C5471965105F000D18DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DED8C54C1965105F000D18DC /* XCTest.framework in Frameworks */,
+				DED8C54E1965105F000D18DC /* UIKit.framework in Frameworks */,
+				DED8C54D1965105F000D18DC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DED8C5201965105F000D18DC = {
+			isa = PBXGroup;
+			children = (
+				DED8C562196510B9000D18DC /* src */,
+				DED8C5321965105F000D18DC /* FormKit */,
+				DED8C5511965105F000D18DC /* FormKitTests */,
+				DED8C52B1965105F000D18DC /* Frameworks */,
+				DED8C52A1965105F000D18DC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DED8C52A1965105F000D18DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DED8C5291965105F000D18DC /* FormKit.app */,
+				DED8C54A1965105F000D18DC /* FormKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DED8C52B1965105F000D18DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE50BA3C196CB6FD0074C342 /* CoreData.framework */,
+				DED8C52C1965105F000D18DC /* Foundation.framework */,
+				DED8C52E1965105F000D18DC /* CoreGraphics.framework */,
+				DED8C5301965105F000D18DC /* UIKit.framework */,
+				DED8C54B1965105F000D18DC /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DED8C5321965105F000D18DC /* FormKit */ = {
+			isa = PBXGroup;
+			children = (
+				DED8C53B1965105F000D18DC /* MUAppDelegate.h */,
+				DED8C53C1965105F000D18DC /* MUAppDelegate.m */,
+				DED8C53E1965105F000D18DC /* Main.storyboard */,
+				DED8C5411965105F000D18DC /* MUViewController.h */,
+				DED8C5421965105F000D18DC /* MUViewController.m */,
+				DED8C5441965105F000D18DC /* Images.xcassets */,
+				DED8C5331965105F000D18DC /* Supporting Files */,
+			);
+			path = FormKit;
+			sourceTree = "<group>";
+		};
+		DED8C5331965105F000D18DC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DED8C5341965105F000D18DC /* FormKit-Info.plist */,
+				DED8C5351965105F000D18DC /* InfoPlist.strings */,
+				DED8C5381965105F000D18DC /* main.m */,
+				DED8C53A1965105F000D18DC /* FormKit-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DED8C5511965105F000D18DC /* FormKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				DED8C5571965105F000D18DC /* FormKitTests.m */,
+				DED8C5521965105F000D18DC /* Supporting Files */,
+			);
+			path = FormKitTests;
+			sourceTree = "<group>";
+		};
+		DED8C5521965105F000D18DC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DED8C5531965105F000D18DC /* FormKitTests-Info.plist */,
+				DED8C5541965105F000D18DC /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DED8C562196510B9000D18DC /* src */ = {
+			isa = PBXGroup;
+			children = (
+				DED8C563196510B9000D18DC /* Classes */,
+				DED8C594196510B9000D18DC /* Resources */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		DED8C563196510B9000D18DC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DE50BA4A196CBB520074C342 /* NSTimeZone+MUAdditions.h */,
+				DE50BA4B196CBB520074C342 /* NSTimeZone+MUAdditions.m */,
+				DE50BA47196CBB200074C342 /* UITextView+ReturnBugFix.h */,
+				DE50BA48196CBB200074C342 /* UITextView+ReturnBugFix.m */,
+				DE50BA44196CBA0F0074C342 /* NSObject+Additions.h */,
+				DE50BA45196CBA100074C342 /* NSObject+Additions.m */,
+				DE50BA41196CB9C00074C342 /* NSDate+MUAdditions.h */,
+				DE50BA42196CB9C00074C342 /* NSDate+MUAdditions.m */,
+				DE50BA3E196CB9070074C342 /* NSDate+MUDateStyles.h */,
+				DE50BA3F196CB9070074C342 /* NSDate+MUDateStyles.m */,
+				DE50BA39196CB66C0074C342 /* NSError+MUValidation.h */,
+				DE50BA3A196CB66C0074C342 /* NSError+MUValidation.m */,
+				DED8C564196510B9000D18DC /* MUDynamicFormController.h */,
+				DED8C565196510B9000D18DC /* MUDynamicFormController.m */,
+				DED8C566196510B9000D18DC /* MUDynamicFormDataSource.h */,
+				DED8C567196510B9000D18DC /* MUDynamicFormDataSource.m */,
+				DED8C568196510B9000D18DC /* MUFormActivationCell.h */,
+				DED8C569196510B9000D18DC /* MUFormActivationCell.m */,
+				DED8C56A196510B9000D18DC /* MUFormBaseCell.h */,
+				DED8C56B196510B9000D18DC /* MUFormBaseCell.m */,
+				DED8C56C196510B9000D18DC /* MUFormCCNumberCell.h */,
+				DED8C56D196510B9000D18DC /* MUFormCCNumberCell.m */,
+				DED8C56E196510B9000D18DC /* MUFormConstants.h */,
+				DED8C56F196510B9000D18DC /* MUFormController.h */,
+				DED8C570196510B9000D18DC /* MUFormController.m */,
+				DED8C571196510B9000D18DC /* MUFormDataSource.h */,
+				DED8C572196510B9000D18DC /* MUFormDataSource.m */,
+				DED8C573196510B9000D18DC /* MUFormDateTimeCell.h */,
+				DED8C574196510B9000D18DC /* MUFormDateTimeCell.m */,
+				DED8C575196510B9000D18DC /* MUFormIconCell.h */,
+				DED8C576196510B9000D18DC /* MUFormIconCell.m */,
+				DED8C577196510B9000D18DC /* MUFormKit.h */,
+				DED8C578196510B9000D18DC /* MUFormNumberFieldCell.h */,
+				DED8C579196510B9000D18DC /* MUFormNumberFieldCell.m */,
+				DED8C57A196510B9000D18DC /* MUFormOptionCell.h */,
+				DED8C57B196510B9000D18DC /* MUFormOptionCell.m */,
+				DED8C57C196510B9000D18DC /* MUFormRelativeDateCell.h */,
+				DED8C57D196510B9000D18DC /* MUFormRelativeDateCell.m */,
+				DED8C57E196510B9000D18DC /* MUFormStaticInfoCell.h */,
+				DED8C57F196510B9000D18DC /* MUFormStaticInfoCell.m */,
+				DED8C580196510B9000D18DC /* MUFormStaticLabelCell.h */,
+				DED8C581196510B9000D18DC /* MUFormStaticLabelCell.m */,
+				DED8C582196510B9000D18DC /* MUFormSwitchCell.h */,
+				DED8C583196510B9000D18DC /* MUFormSwitchCell.m */,
+				DED8C584196510B9000D18DC /* MUFormTextFieldCell.h */,
+				DED8C585196510B9000D18DC /* MUFormTextFieldCell.m */,
+				DED8C586196510B9000D18DC /* MUFormTextViewCell.h */,
+				DED8C587196510B9000D18DC /* MUFormTextViewCell.m */,
+				DED8C588196510B9000D18DC /* MUFormTimeCell.h */,
+				DED8C589196510B9000D18DC /* MUFormTimeCell.m */,
+				DED8C58A196510B9000D18DC /* MUFormTimePickerCell.h */,
+				DED8C58B196510B9000D18DC /* MUFormTimePickerCell.m */,
+				DED8C58C196510B9000D18DC /* MUFormToFormSegueCell.h */,
+				DED8C58D196510B9000D18DC /* MUFormToFormSegueCell.m */,
+				DED8C58E196510B9000D18DC /* MUNextResponderController.h */,
+				DED8C58F196510B9000D18DC /* MUNextResponderController.m */,
+				DED8C590196510B9000D18DC /* MURelativeDatePickerController.h */,
+				DED8C591196510B9000D18DC /* MURelativeDatePickerController.m */,
+				DED8C592196510B9000D18DC /* MUValidationErrors.h */,
+				DED8C593196510B9000D18DC /* MUValidationErrors.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		DED8C594196510B9000D18DC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DED8C595196510B9000D18DC /* MUFormActivationCell.xib */,
+				DED8C597196510B9000D18DC /* MUFormCCNumberCell.xib */,
+				DED8C599196510B9000D18DC /* MUFormDateTimeCell.xib */,
+				DED8C59B196510B9000D18DC /* MUFormNumberFieldCell.xib */,
+				DED8C59D196510B9000D18DC /* MUFormOptionCell.xib */,
+				DED8C59F196510B9000D18DC /* MUFormRelativeDateCell.xib */,
+				DED8C5A1196510B9000D18DC /* MUFormStaticInfoCell.xib */,
+				DED8C5A3196510B9000D18DC /* MUFormStaticLabelCell.xib */,
+				DED8C5A5196510B9000D18DC /* MUFormSwitchCell.xib */,
+				DED8C5A7196510B9000D18DC /* MUFormTextFieldCell.xib */,
+				DED8C5A9196510B9000D18DC /* MUFormTextViewCell.xib */,
+				DED8C5AB196510B9000D18DC /* MUFormTimeCell.xib */,
+				DED8C5AD196510B9000D18DC /* MUFormTimePickerCell.xib */,
+				DED8C5AF196510B9000D18DC /* MUFormToFormSegueCell.xib */,
+				DED8C5B1196510B9000D18DC /* MUFormActivationCell.strings */,
+				DED8C5B3196510B9000D18DC /* MUFormCCNumberCell.strings */,
+				DED8C5B5196510B9000D18DC /* MUFormDateTimeCell.strings */,
+				DED8C5B7196510B9000D18DC /* MUFormNumberFieldCell.strings */,
+				DED8C5B9196510B9000D18DC /* MUFormOptionCell.strings */,
+				DED8C5BB196510B9000D18DC /* MUFormRelativeDateCell.strings */,
+				DED8C5BD196510B9000D18DC /* MUFormStaticInfoCell.strings */,
+				DED8C5BF196510B9000D18DC /* MUFormStaticLabelCell.strings */,
+				DED8C5C1196510B9000D18DC /* MUFormSwitchCell.strings */,
+				DED8C5C3196510B9000D18DC /* MUFormTextFieldCell.strings */,
+				DED8C5C5196510B9000D18DC /* MUFormTextViewCell.strings */,
+				DED8C5C7196510B9000D18DC /* MUFormTimeCell.strings */,
+				DED8C5C9196510B9000D18DC /* MUFormTimePickerCell.strings */,
+				DED8C5CB196510B9000D18DC /* MUFormToFormSegueCell.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DED8C5281965105F000D18DC /* FormKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DED8C55B1965105F000D18DC /* Build configuration list for PBXNativeTarget "FormKit" */;
+			buildPhases = (
+				DED8C5251965105F000D18DC /* Sources */,
+				DED8C5261965105F000D18DC /* Frameworks */,
+				DED8C5271965105F000D18DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FormKit;
+			productName = FormKit;
+			productReference = DED8C5291965105F000D18DC /* FormKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DED8C5491965105F000D18DC /* FormKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DED8C55E1965105F000D18DC /* Build configuration list for PBXNativeTarget "FormKitTests" */;
+			buildPhases = (
+				DED8C5461965105F000D18DC /* Sources */,
+				DED8C5471965105F000D18DC /* Frameworks */,
+				DED8C5481965105F000D18DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DED8C5501965105F000D18DC /* PBXTargetDependency */,
+			);
+			name = FormKitTests;
+			productName = FormKitTests;
+			productReference = DED8C54A1965105F000D18DC /* FormKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DED8C5211965105F000D18DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MU;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Meetup;
+				TargetAttributes = {
+					DED8C5491965105F000D18DC = {
+						TestTargetID = DED8C5281965105F000D18DC;
+					};
+				};
+			};
+			buildConfigurationList = DED8C5241965105F000D18DC /* Build configuration list for PBXProject "FormKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				it,
+			);
+			mainGroup = DED8C5201965105F000D18DC;
+			productRefGroup = DED8C52A1965105F000D18DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DED8C5281965105F000D18DC /* FormKit */,
+				DED8C5491965105F000D18DC /* FormKitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DED8C5271965105F000D18DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DED8C60B196510B9000D18DC /* MUFormTimeCell.strings in Resources */,
+				DED8C5F7196510B9000D18DC /* MUFormRelativeDateCell.xib in Resources */,
+				DED8C5FA196510B9000D18DC /* MUFormSwitchCell.xib in Resources */,
+				DED8C601196510B9000D18DC /* MUFormCCNumberCell.strings in Resources */,
+				DED8C5451965105F000D18DC /* Images.xcassets in Resources */,
+				DED8C605196510B9000D18DC /* MUFormRelativeDateCell.strings in Resources */,
+				DED8C5F2196510B9000D18DC /* MUFormActivationCell.xib in Resources */,
+				DED8C603196510B9000D18DC /* MUFormNumberFieldCell.strings in Resources */,
+				DED8C5FD196510B9000D18DC /* MUFormTimeCell.xib in Resources */,
+				DED8C5FB196510B9000D18DC /* MUFormTextFieldCell.xib in Resources */,
+				DED8C5FC196510B9000D18DC /* MUFormTextViewCell.xib in Resources */,
+				DED8C5371965105F000D18DC /* InfoPlist.strings in Resources */,
+				DED8C5F5196510B9000D18DC /* MUFormNumberFieldCell.xib in Resources */,
+				DED8C604196510B9000D18DC /* MUFormOptionCell.strings in Resources */,
+				DED8C5F6196510B9000D18DC /* MUFormOptionCell.xib in Resources */,
+				DED8C608196510B9000D18DC /* MUFormSwitchCell.strings in Resources */,
+				DED8C600196510B9000D18DC /* MUFormActivationCell.strings in Resources */,
+				DED8C5401965105F000D18DC /* Main.storyboard in Resources */,
+				DED8C5F8196510B9000D18DC /* MUFormStaticInfoCell.xib in Resources */,
+				DED8C5FF196510B9000D18DC /* MUFormToFormSegueCell.xib in Resources */,
+				DED8C5FE196510B9000D18DC /* MUFormTimePickerCell.xib in Resources */,
+				DED8C607196510B9000D18DC /* MUFormStaticLabelCell.strings in Resources */,
+				DED8C5F9196510B9000D18DC /* MUFormStaticLabelCell.xib in Resources */,
+				DED8C60C196510B9000D18DC /* MUFormTimePickerCell.strings in Resources */,
+				DED8C602196510B9000D18DC /* MUFormDateTimeCell.strings in Resources */,
+				DED8C609196510B9000D18DC /* MUFormTextFieldCell.strings in Resources */,
+				DED8C60A196510B9000D18DC /* MUFormTextViewCell.strings in Resources */,
+				DED8C5F4196510B9000D18DC /* MUFormDateTimeCell.xib in Resources */,
+				DED8C606196510B9000D18DC /* MUFormStaticInfoCell.strings in Resources */,
+				DED8C60D196510B9000D18DC /* MUFormToFormSegueCell.strings in Resources */,
+				DED8C5F3196510B9000D18DC /* MUFormCCNumberCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DED8C5481965105F000D18DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DED8C5561965105F000D18DC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DED8C5251965105F000D18DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DED8C5E0196510B9000D18DC /* MUFormController.m in Sources */,
+				DED8C5F1196510B9000D18DC /* MUValidationErrors.m in Sources */,
+				DE50BA40196CB9070074C342 /* NSDate+MUDateStyles.m in Sources */,
+				DED8C53D1965105F000D18DC /* MUAppDelegate.m in Sources */,
+				DED8C5E3196510B9000D18DC /* MUFormIconCell.m in Sources */,
+				DED8C5EC196510B9000D18DC /* MUFormTimeCell.m in Sources */,
+				DED8C5F0196510B9000D18DC /* MURelativeDatePickerController.m in Sources */,
+				DED8C5DD196510B9000D18DC /* MUFormActivationCell.m in Sources */,
+				DED8C5EF196510B9000D18DC /* MUNextResponderController.m in Sources */,
+				DED8C5EA196510B9000D18DC /* MUFormTextFieldCell.m in Sources */,
+				DED8C5E6196510B9000D18DC /* MUFormRelativeDateCell.m in Sources */,
+				DE50BA4C196CBB520074C342 /* NSTimeZone+MUAdditions.m in Sources */,
+				DED8C5E5196510B9000D18DC /* MUFormOptionCell.m in Sources */,
+				DE50BA3B196CB66C0074C342 /* NSError+MUValidation.m in Sources */,
+				DED8C5431965105F000D18DC /* MUViewController.m in Sources */,
+				DED8C5E8196510B9000D18DC /* MUFormStaticLabelCell.m in Sources */,
+				DE50BA46196CBA100074C342 /* NSObject+Additions.m in Sources */,
+				DED8C5E1196510B9000D18DC /* MUFormDataSource.m in Sources */,
+				DED8C5DE196510B9000D18DC /* MUFormBaseCell.m in Sources */,
+				DED8C5ED196510B9000D18DC /* MUFormTimePickerCell.m in Sources */,
+				DED8C5DF196510B9000D18DC /* MUFormCCNumberCell.m in Sources */,
+				DED8C5E4196510B9000D18DC /* MUFormNumberFieldCell.m in Sources */,
+				DED8C5E7196510B9000D18DC /* MUFormStaticInfoCell.m in Sources */,
+				DED8C5E9196510B9000D18DC /* MUFormSwitchCell.m in Sources */,
+				DE50BA49196CBB200074C342 /* UITextView+ReturnBugFix.m in Sources */,
+				DED8C5391965105F000D18DC /* main.m in Sources */,
+				DED8C5EE196510B9000D18DC /* MUFormToFormSegueCell.m in Sources */,
+				DED8C5E2196510B9000D18DC /* MUFormDateTimeCell.m in Sources */,
+				DED8C5EB196510B9000D18DC /* MUFormTextViewCell.m in Sources */,
+				DED8C5DB196510B9000D18DC /* MUDynamicFormController.m in Sources */,
+				DED8C5DC196510B9000D18DC /* MUDynamicFormDataSource.m in Sources */,
+				DE50BA43196CB9C00074C342 /* NSDate+MUAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DED8C5461965105F000D18DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DED8C5581965105F000D18DC /* FormKitTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DED8C5501965105F000D18DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DED8C5281965105F000D18DC /* FormKit */;
+			targetProxy = DED8C54F1965105F000D18DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DED8C5351965105F000D18DC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DED8C5361965105F000D18DC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DED8C53E1965105F000D18DC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DED8C53F1965105F000D18DC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DED8C5541965105F000D18DC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DED8C5551965105F000D18DC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DED8C595196510B9000D18DC /* MUFormActivationCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DED8C596196510B9000D18DC /* Base */,
+			);
+			name = MUFormActivationCell.xib;
+			sourceTree = "<group>";
+		};
+		DED8C597196510B9000D18DC /* MUFormCCNumberCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DED8C598196510B9000D18DC /* Base */,
+			);
+			name = MUFormCCNumberCell.xib;
+			sourceTree = "<group>";
+		};
+		DED8C599196510B9000D18DC /* MUFormDateTimeCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DED8C59A196510B9000D18DC /* Base */,
+			);
+			name = MUFormDateTimeCell.xib;
+			sourceTree = "<group>";
+		};
+		DED8C59B196510B9000D18DC /* MUFormNumberFieldCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DED8C59C196510B9000D18DC /* Base */,
+			);
+			name = MUFormNumberFieldCell.xib;
+			sourceTree = "<group>";
+		};
+		DED8C59D196510B9000D18DC /* MUFormOptionCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DED8C59E196510B9000D18DC /* Base */,
+			);
+			name = MUFormOptionCell.xib;
+			sourceTree = "<group>";
+		};
+		DED8C59F196510B9000D18DC /* MUFormRelativeDateCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DED8C5A0196510B9000D18DC /* Base */,
+			);
+			name = MUFormRelativeDateCell.xib;
+			sourceTree = "<group>";
+		};
+		DED8C5A1196510B9000D18DC /* MUFormStaticInfoCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DED8C5A2196510B9000D18DC /* Base */,
+			);
+			name = MUFormStaticInfoCell.xib;
+			sourceTree = "<group>";
+		};
+		DED8C5A3196510B9000D18DC /* MUFormStaticLabelCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DED8C5A4196510B9000D18DC /* Base */,
+			);
+			name = MUFormStaticLabelCell.xib;
+			sourceTree = "<group>";
+		};
+		DED8C5A5196510B9000D18DC /* MUFormSwitchCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DED8C5A6196510B9000D18DC /* Base */,
+			);
+			name = MUFormSwitchCell.xib;
+			sourceTree = "<group>";
+		};
+		DED8C5A7196510B9000D18DC /* MUFormTextFieldCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DED8C5A8196510B9000D18DC /* Base */,
+			);
+			name = MUFormTextFieldCell.xib;
+			sourceTree = "<group>";
+		};
+		DED8C5A9196510B9000D18DC /* MUFormTextViewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DED8C5AA196510B9000D18DC /* Base */,
+			);
+			name = MUFormTextViewCell.xib;
+			sourceTree = "<group>";
+		};
+		DED8C5AB196510B9000D18DC /* MUFormTimeCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DED8C5AC196510B9000D18DC /* Base */,
+			);
+			name = MUFormTimeCell.xib;
+			sourceTree = "<group>";
+		};
+		DED8C5AD196510B9000D18DC /* MUFormTimePickerCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DED8C5AE196510B9000D18DC /* Base */,
+			);
+			name = MUFormTimePickerCell.xib;
+			sourceTree = "<group>";
+		};
+		DED8C5AF196510B9000D18DC /* MUFormToFormSegueCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DED8C5B0196510B9000D18DC /* Base */,
+			);
+			name = MUFormToFormSegueCell.xib;
+			sourceTree = "<group>";
+		};
+		DED8C5B1196510B9000D18DC /* MUFormActivationCell.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DED8C5B2196510B9000D18DC /* en */,
+				DED8C5CD196510B9000D18DC /* it */,
+			);
+			name = MUFormActivationCell.strings;
+			sourceTree = "<group>";
+		};
+		DED8C5B3196510B9000D18DC /* MUFormCCNumberCell.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DED8C5B4196510B9000D18DC /* en */,
+				DED8C5CE196510B9000D18DC /* it */,
+			);
+			name = MUFormCCNumberCell.strings;
+			sourceTree = "<group>";
+		};
+		DED8C5B5196510B9000D18DC /* MUFormDateTimeCell.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DED8C5B6196510B9000D18DC /* en */,
+				DED8C5CF196510B9000D18DC /* it */,
+			);
+			name = MUFormDateTimeCell.strings;
+			sourceTree = "<group>";
+		};
+		DED8C5B7196510B9000D18DC /* MUFormNumberFieldCell.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DED8C5B8196510B9000D18DC /* en */,
+				DED8C5D0196510B9000D18DC /* it */,
+			);
+			name = MUFormNumberFieldCell.strings;
+			sourceTree = "<group>";
+		};
+		DED8C5B9196510B9000D18DC /* MUFormOptionCell.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DED8C5BA196510B9000D18DC /* en */,
+				DED8C5D1196510B9000D18DC /* it */,
+			);
+			name = MUFormOptionCell.strings;
+			sourceTree = "<group>";
+		};
+		DED8C5BB196510B9000D18DC /* MUFormRelativeDateCell.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DED8C5BC196510B9000D18DC /* en */,
+				DED8C5D2196510B9000D18DC /* it */,
+			);
+			name = MUFormRelativeDateCell.strings;
+			sourceTree = "<group>";
+		};
+		DED8C5BD196510B9000D18DC /* MUFormStaticInfoCell.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DED8C5BE196510B9000D18DC /* en */,
+				DED8C5D3196510B9000D18DC /* it */,
+			);
+			name = MUFormStaticInfoCell.strings;
+			sourceTree = "<group>";
+		};
+		DED8C5BF196510B9000D18DC /* MUFormStaticLabelCell.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DED8C5C0196510B9000D18DC /* en */,
+				DED8C5D4196510B9000D18DC /* it */,
+			);
+			name = MUFormStaticLabelCell.strings;
+			sourceTree = "<group>";
+		};
+		DED8C5C1196510B9000D18DC /* MUFormSwitchCell.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DED8C5C2196510B9000D18DC /* en */,
+				DED8C5D5196510B9000D18DC /* it */,
+			);
+			name = MUFormSwitchCell.strings;
+			sourceTree = "<group>";
+		};
+		DED8C5C3196510B9000D18DC /* MUFormTextFieldCell.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DED8C5C4196510B9000D18DC /* en */,
+				DED8C5D6196510B9000D18DC /* it */,
+			);
+			name = MUFormTextFieldCell.strings;
+			sourceTree = "<group>";
+		};
+		DED8C5C5196510B9000D18DC /* MUFormTextViewCell.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DED8C5C6196510B9000D18DC /* en */,
+				DED8C5D7196510B9000D18DC /* it */,
+			);
+			name = MUFormTextViewCell.strings;
+			sourceTree = "<group>";
+		};
+		DED8C5C7196510B9000D18DC /* MUFormTimeCell.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DED8C5C8196510B9000D18DC /* en */,
+				DED8C5D8196510B9000D18DC /* it */,
+			);
+			name = MUFormTimeCell.strings;
+			sourceTree = "<group>";
+		};
+		DED8C5C9196510B9000D18DC /* MUFormTimePickerCell.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DED8C5CA196510B9000D18DC /* en */,
+				DED8C5D9196510B9000D18DC /* it */,
+			);
+			name = MUFormTimePickerCell.strings;
+			sourceTree = "<group>";
+		};
+		DED8C5CB196510B9000D18DC /* MUFormToFormSegueCell.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DED8C5CC196510B9000D18DC /* en */,
+				DED8C5DA196510B9000D18DC /* it */,
+			);
+			name = MUFormToFormSegueCell.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DED8C5591965105F000D18DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DED8C55A1965105F000D18DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DED8C55C1965105F000D18DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FormKit/FormKit-Prefix.pch";
+				INFOPLIST_FILE = "FormKit/FormKit-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DED8C55D1965105F000D18DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FormKit/FormKit-Prefix.pch";
+				INFOPLIST_FILE = "FormKit/FormKit-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DED8C55F1965105F000D18DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FormKit.app/FormKit";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FormKit/FormKit-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FormKitTests/FormKitTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		DED8C5601965105F000D18DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FormKit.app/FormKit";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FormKit/FormKit-Prefix.pch";
+				INFOPLIST_FILE = "FormKitTests/FormKitTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DED8C5241965105F000D18DC /* Build configuration list for PBXProject "FormKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DED8C5591965105F000D18DC /* Debug */,
+				DED8C55A1965105F000D18DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DED8C55B1965105F000D18DC /* Build configuration list for PBXNativeTarget "FormKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DED8C55C1965105F000D18DC /* Debug */,
+				DED8C55D1965105F000D18DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DED8C55E1965105F000D18DC /* Build configuration list for PBXNativeTarget "FormKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DED8C55F1965105F000D18DC /* Debug */,
+				DED8C5601965105F000D18DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DED8C5211965105F000D18DC /* Project object */;
+}
