@@ -136,7 +136,7 @@ NSString *const MUFormSectionIndexedValueKeypathKey = @"MUFormSectionIndexedValu
 {
     NSArray *dynamicValues = (NSArray *)[self arrayPropertyValueForSection:section];
     if (dynamicValues) {
-        NSUInteger dynamicValuesWithAddNewCell = [dynamicValues count] + 1;
+        NSUInteger dynamicValuesWithAddNewCell = [dynamicValues count] + ([self hasAddNewCellForSection:section] ? 1 : 0);
         NSUInteger maxCellsCount = [self maxRowsForDynamicSection:section];
         return MIN(dynamicValuesWithAddNewCell, maxCellsCount);
     }
@@ -243,6 +243,8 @@ NSString *const MUFormSectionIndexedValueKeypathKey = @"MUFormSectionIndexedValu
     return [NSIndexPath indexPathForRow:maxRowsForDynamicSection-1 inSection:section];
 }
 
+#pragma mark - Add New Cell
+
 -(BOOL) isAddNewItemForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return [self rowTypeForRowAtIndexPath:indexPath] == MUDynamicRowTypeAddNewItem;
@@ -251,6 +253,12 @@ NSString *const MUFormSectionIndexedValueKeypathKey = @"MUFormSectionIndexedValu
 -(BOOL) isAddedRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return self.addedCellIndexPaths[indexPath] != nil;
+}
+
+-(BOOL) hasAddNewCellForSection:(NSInteger)section
+{
+    NSDictionary *sectionInfo = self.activeSections[section];
+    return sectionInfo[MUFormSectionRowAddKey] != nil;
 }
 
 -(void) addNewCellForRowAtIndexPath:(NSIndexPath *)indexPath canAddMore:(BOOL *)outCanAddMore

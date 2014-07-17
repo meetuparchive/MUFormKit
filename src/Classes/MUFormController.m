@@ -10,6 +10,8 @@
 #import "MUFormKit.h"
 #import "MUFormDataSource.h"
 #import "MURelativeDatePickerController.h"
+#import "NSDate+MUAdditions.h"
+#import "NSObject+MUAdditions.h"
 
 static CGFloat const kMUDefaultRowHeight = 44.0;
 static CGFloat const kMUDefaulSectionHeaderHeight = 17.0;

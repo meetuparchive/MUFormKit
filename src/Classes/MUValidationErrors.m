@@ -10,12 +10,7 @@
 #import "NSError+MUValidation.h"
 #import <CoreData/CoreData.h>
 
-#ifdef _COREDATADEFINES_H
-NSString *const MUValidationDetailedErrorsKey = @"NSDetailedErrorsKey";
-#else
-NSString *const MUValidationDetailedErrorsKey = @"MUValidationDetailedErrorsKey";
-#endif
-
+NSString *const MUValidationDetailedErrorsKey = @"MUValidationDetailedErrors";
 NSString *const MUValidationMessagesKey = @"MUValidationMessages";
 
 NSInteger ErrorCodeFromName(NSString *errorName)
@@ -47,7 +42,7 @@ NSArray *LocalizedValidationMessagesForError(NSError *error)
         if ([error code] == MUValidationMultipleErrorsError) {
             
             // Look for detailed errors.
-            NSArray *allErrors = [error userInfo][MUValidationDetailedErrorsKey]; // Core data detailed error key (CoreDataErrors.h).
+            NSArray *allErrors = [error userInfo][NSDetailedErrorsKey]; // Core data detailed error key (CoreDataErrors.h).
             if (allErrors == nil) {
                 allErrors = [error userInfo][MUValidationDetailedErrorsKey]; // Alternative detailed errors key.
             }
@@ -61,6 +56,20 @@ NSArray *LocalizedValidationMessagesForError(NSError *error)
         }
     }
     return [validationMessages copy];
+}
+
+NSError *LocalizedValidationErrorForError(NSError *error)
+{
+    NSString *errorLocalizedDescription = LocalizedErrorStringForError(error);
+    NSError *localizedValidationError;
+    if (errorLocalizedDescription) {
+        NSDictionary *userInfo = @{
+            NSLocalizedDescriptionKey : errorLocalizedDescription,
+            NSUnderlyingErrorKey : error
+        };
+        localizedValidationError = [NSError errorWithDomain:MUValidationErrorDomain code:[error code] userInfo:userInfo];
+    }
+    return localizedValidationError;
 }
 
 NSString *LocalizedErrorStringForError(NSError *error)

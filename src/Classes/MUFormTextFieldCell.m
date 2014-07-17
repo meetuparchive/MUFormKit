@@ -60,8 +60,10 @@ static CGFloat const kMUDescriptionLabelHeight = 20.0;
     
     NSString *placeholderKey = info[MUFormLocalizedDefaultValueKey];
     self.textField.placeholder = [[NSBundle mainBundle] localizedStringForKey:placeholderKey value:placeholderKey table:MUFormKitStringTable];
-    if (info[MUFormAccessibilityLabelKey]) {
-        self.textField.accessibilityLabel = NSLocalizedString(info[MUFormAccessibilityLabelKey], nil);
+    if (info[MUFormLocalizedAccessibilityLabelKey]) {
+        self.textField.accessibilityLabel = [[NSBundle mainBundle] localizedStringForKey:info[MUFormLocalizedAccessibilityLabelKey]
+                                                                                   value:info[MUFormLocalizedAccessibilityLabelKey]
+                                                                                   table:MUFormKitStringTable];
     }
 
     NSNumber *autoCorrectType = info[MUFormUITextAutocorrectionTypeKey];

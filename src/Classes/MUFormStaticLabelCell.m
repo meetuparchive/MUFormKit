@@ -68,8 +68,11 @@ CGFloat const kMUPadding = 13.0;
     
     self.staticLabel.text = text;
 
-    if (info[MUFormAccessibilityLabelKey]) {
-        self.staticLabel.accessibilityLabel = [NSString stringWithFormat:@"%@, %@", NSLocalizedString(info[MUFormAccessibilityLabelKey], nil), text];
+    if (info[MUFormLocalizedAccessibilityLabelKey]) {
+        NSString *labelText = [[NSBundle mainBundle] localizedStringForKey:info[MUFormLocalizedAccessibilityLabelKey]
+                                                                     value:info[MUFormLocalizedAccessibilityLabelKey]
+                                                                     table:MUFormKitStringTable];
+        self.staticLabel.accessibilityLabel = [NSString stringWithFormat:@"%@, %@", labelText, text];
     }
     
     UITableViewCellAccessoryType accessoryType = UITableViewCellAccessoryNone;

@@ -35,6 +35,7 @@ typedef NS_ENUM(NSInteger, MUValidationErrorType) {
     MUValidationNumberTooLargeError = NSValidationNumberTooLargeError,
     MUValidationNumberTooSmallError = NSValidationNumberTooSmallError,
     MUValidationStringPatternMatchingError = NSValidationStringPatternMatchingError
+    
 };
 #else
 
@@ -81,6 +82,14 @@ NSArray *LocalizedValidationMessagesForError(NSError *error);
  */
 NSString *LocalizedErrorStringForError(NSError *error);
 
+/**
+ Assembles a displayable validation error an error object.
+ 
+ @param error An error object.
+ 
+ @return A error in a displayable format, if no displayable errors or passed in error is nil, returned error will be nil
+ */
+NSError *LocalizedValidationErrorForError(NSError *error);
 
 @interface MUValidationErrors : NSObject
 

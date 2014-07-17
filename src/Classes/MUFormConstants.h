@@ -127,7 +127,7 @@ extern NSString *const MUFormUITextAutocapitalizationTypeKey;
 extern NSString *const MUFormLocalizedLabelKey;
 
 /** An accessibility label to assign to the dominant item in the form cell */
-extern NSString *const MUFormAccessibilityLabelKey;
+extern NSString *const MUFormLocalizedAccessibilityLabelKey;
 
 /** Returns a localized key for a message to be displayed in a cell's `messageLabel`. */
 extern NSString *const MUFormLocalizedCellMessageKey;

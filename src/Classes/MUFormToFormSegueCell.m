@@ -53,7 +53,7 @@ static CGFloat const kMUMessageHeight = 10.0;
     NSNumber *state = self.cellAttributes[MUFormSubformEnabledPropertyNameKey];
     NSString *text = self.cellAttributes[MUFormSubformValuePropertyNameKey];
     if (state) {
-        self.stateIndicatorLabel.text = [state boolValue] ? NSLocalizedString(@"On",nil) : NSLocalizedString(@"Off",nil);
+        self.stateIndicatorLabel.text = [state boolValue] ? NSLocalizedString(@"On", @"Label for an on/off switch") : NSLocalizedString(@"Off", @"Label for an on/off switch");
     }
     else {
         self.stateIndicatorLabel.text = text;

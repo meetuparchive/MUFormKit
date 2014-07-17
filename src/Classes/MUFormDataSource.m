@@ -47,7 +47,7 @@ NSString *const MUFormUIKeyboardTypeKey                 = @"MUFormUIKeyboardType
 NSString *const MUFormUIReturnKeyTypeKey                = @"MUFormUIReturnKeyTypeKey";
 NSString *const MUFormUITextAutocapitalizationTypeKey   = @"MUFormUITextAutocapitalizationTypeKey";
 NSString *const MUFormLocalizedLabelKey            		= @"MUFormLocalizedLabelKey";
-NSString *const MUFormAccessibilityLabelKey             = @"MUFormAccessibilityLabelKey";
+NSString *const MUFormLocalizedAccessibilityLabelKey    = @"MUFormLocalizedAccessibilityLabelKey";
 NSString *const MUFormLocalizedCellMessageKey           = @"MUFormLocalizedCellMessageKey";
 NSString *const MUFormCellSegueIdentifierKey            = @"MUFormCellSegueIdentifierKey";
 NSString *const MUFormCellIconNameKey                   = @"MUFormCellIconNameKey";
@@ -190,9 +190,8 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
 
 - (NSIndexSet *)indexPathsForSection:(NSInteger)section
 {
-    NSAssert(section < [self.activeSections count],
-    @"Section index (%ld) is out of bounds (%lu).", (long)section, (unsigned long)[self.activeSections count]);
-    
+    NSUInteger count = [self.activeSections count];
+    NSAssert((section < (NSInteger)count), @"Section index (%ld) is out of bounds (%lu).", (long)section, (unsigned long)count);
     NSDictionary *sectionInfo = self.activeSections[section];
     NSArray *rows = sectionInfo[MUFormSectionRowsKey];
     NSMutableArray *indexes = [NSMutableArray arrayWithCapacity:[rows count]];
