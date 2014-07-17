@@ -1,0 +1,34 @@
+PODS:
+  - FormatterKit (1.5.2):
+    - FormatterKit/AddressFormatter
+    - FormatterKit/ArrayFormatter
+    - FormatterKit/ColorFormatter
+    - FormatterKit/LocationFormatter
+    - FormatterKit/OrdinalNumberFormatter
+    - FormatterKit/TimeIntervalFormatter
+    - FormatterKit/UnitOfInformationFormatter
+    - FormatterKit/URLRequestFormatter
+  - FormatterKit/AddressFormatter (1.5.2)
+  - FormatterKit/ArrayFormatter (1.5.2)
+  - FormatterKit/ColorFormatter (1.5.2)
+  - FormatterKit/LocationFormatter (1.5.2)
+  - FormatterKit/OrdinalNumberFormatter (1.5.2)
+  - FormatterKit/TimeIntervalFormatter (1.5.2)
+  - FormatterKit/UnitOfInformationFormatter (1.5.2)
+  - FormatterKit/URLRequestFormatter (1.5.2)
+  - MUCore (0.0.2):
+    - FormatterKit
+
+DEPENDENCIES:
+  - MUCore (from `git@github.com:meetup/MUCore.git`, tag `0.0.2`)
+
+EXTERNAL SOURCES:
+  MUCore:
+    :git: git@github.com:meetup/MUCore.git
+    :tag: 0.0.2
+
+SPEC CHECKSUMS:
+  FormatterKit: f1a811f73eec78944ce165286f65b55b6202e84a
+  MUCore: f488d9dbf4b33fe67f3b44f31e56135fef1b60ff
+
+COCOAPODS: 0.33.1

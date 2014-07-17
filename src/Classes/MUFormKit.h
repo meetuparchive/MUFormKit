@@ -22,4 +22,4 @@
 
 #import "NSDate+MUAdditions.h"
 #import "NSDate+MUDateStyles.h"
-#import "NSObject+Additions.h"
+#import "NSObject+MUAdditions.h"

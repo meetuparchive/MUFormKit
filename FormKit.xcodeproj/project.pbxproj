@@ -1,1045 +1,3214 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		DE50BA3B196CB66C0074C342 /* NSError+MUValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = DE50BA3A196CB66C0074C342 /* NSError+MUValidation.m */; };
-		DE50BA3D196CB6FD0074C342 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE50BA3C196CB6FD0074C342 /* CoreData.framework */; };
-		DE50BA40196CB9070074C342 /* NSDate+MUDateStyles.m in Sources */ = {isa = PBXBuildFile; fileRef = DE50BA3F196CB9070074C342 /* NSDate+MUDateStyles.m */; };
-		DE50BA43196CB9C00074C342 /* NSDate+MUAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DE50BA42196CB9C00074C342 /* NSDate+MUAdditions.m */; };
-		DE50BA46196CBA100074C342 /* NSObject+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = DE50BA45196CBA100074C342 /* NSObject+Additions.m */; };
-		DE50BA49196CBB200074C342 /* UITextView+ReturnBugFix.m in Sources */ = {isa = PBXBuildFile; fileRef = DE50BA48196CBB200074C342 /* UITextView+ReturnBugFix.m */; };
-		DE50BA4C196CBB520074C342 /* NSTimeZone+MUAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = DE50BA4B196CBB520074C342 /* NSTimeZone+MUAdditions.m */; };
-		DED8C52D1965105F000D18DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED8C52C1965105F000D18DC /* Foundation.framework */; };
-		DED8C52F1965105F000D18DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED8C52E1965105F000D18DC /* CoreGraphics.framework */; };
-		DED8C5311965105F000D18DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED8C5301965105F000D18DC /* UIKit.framework */; };
-		DED8C5371965105F000D18DC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5351965105F000D18DC /* InfoPlist.strings */; };
-		DED8C5391965105F000D18DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C5381965105F000D18DC /* main.m */; };
-		DED8C53D1965105F000D18DC /* MUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C53C1965105F000D18DC /* MUAppDelegate.m */; };
-		DED8C5401965105F000D18DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DED8C53E1965105F000D18DC /* Main.storyboard */; };
-		DED8C5431965105F000D18DC /* MUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C5421965105F000D18DC /* MUViewController.m */; };
-		DED8C5451965105F000D18DC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5441965105F000D18DC /* Images.xcassets */; };
-		DED8C54C1965105F000D18DC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED8C54B1965105F000D18DC /* XCTest.framework */; };
-		DED8C54D1965105F000D18DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED8C52C1965105F000D18DC /* Foundation.framework */; };
-		DED8C54E1965105F000D18DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED8C5301965105F000D18DC /* UIKit.framework */; };
-		DED8C5561965105F000D18DC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5541965105F000D18DC /* InfoPlist.strings */; };
-		DED8C5581965105F000D18DC /* FormKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C5571965105F000D18DC /* FormKitTests.m */; };
-		DED8C5DB196510B9000D18DC /* MUDynamicFormController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C565196510B9000D18DC /* MUDynamicFormController.m */; };
-		DED8C5DC196510B9000D18DC /* MUDynamicFormDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C567196510B9000D18DC /* MUDynamicFormDataSource.m */; };
-		DED8C5DD196510B9000D18DC /* MUFormActivationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C569196510B9000D18DC /* MUFormActivationCell.m */; };
-		DED8C5DE196510B9000D18DC /* MUFormBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C56B196510B9000D18DC /* MUFormBaseCell.m */; };
-		DED8C5DF196510B9000D18DC /* MUFormCCNumberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C56D196510B9000D18DC /* MUFormCCNumberCell.m */; };
-		DED8C5E0196510B9000D18DC /* MUFormController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C570196510B9000D18DC /* MUFormController.m */; };
-		DED8C5E1196510B9000D18DC /* MUFormDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C572196510B9000D18DC /* MUFormDataSource.m */; };
-		DED8C5E2196510B9000D18DC /* MUFormDateTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C574196510B9000D18DC /* MUFormDateTimeCell.m */; };
-		DED8C5E3196510B9000D18DC /* MUFormIconCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C576196510B9000D18DC /* MUFormIconCell.m */; };
-		DED8C5E4196510B9000D18DC /* MUFormNumberFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C579196510B9000D18DC /* MUFormNumberFieldCell.m */; };
-		DED8C5E5196510B9000D18DC /* MUFormOptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C57B196510B9000D18DC /* MUFormOptionCell.m */; };
-		DED8C5E6196510B9000D18DC /* MUFormRelativeDateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C57D196510B9000D18DC /* MUFormRelativeDateCell.m */; };
-		DED8C5E7196510B9000D18DC /* MUFormStaticInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C57F196510B9000D18DC /* MUFormStaticInfoCell.m */; };
-		DED8C5E8196510B9000D18DC /* MUFormStaticLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C581196510B9000D18DC /* MUFormStaticLabelCell.m */; };
-		DED8C5E9196510B9000D18DC /* MUFormSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C583196510B9000D18DC /* MUFormSwitchCell.m */; };
-		DED8C5EA196510B9000D18DC /* MUFormTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C585196510B9000D18DC /* MUFormTextFieldCell.m */; };
-		DED8C5EB196510B9000D18DC /* MUFormTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C587196510B9000D18DC /* MUFormTextViewCell.m */; };
-		DED8C5EC196510B9000D18DC /* MUFormTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C589196510B9000D18DC /* MUFormTimeCell.m */; };
-		DED8C5ED196510B9000D18DC /* MUFormTimePickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C58B196510B9000D18DC /* MUFormTimePickerCell.m */; };
-		DED8C5EE196510B9000D18DC /* MUFormToFormSegueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C58D196510B9000D18DC /* MUFormToFormSegueCell.m */; };
-		DED8C5EF196510B9000D18DC /* MUNextResponderController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C58F196510B9000D18DC /* MUNextResponderController.m */; };
-		DED8C5F0196510B9000D18DC /* MURelativeDatePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C591196510B9000D18DC /* MURelativeDatePickerController.m */; };
-		DED8C5F1196510B9000D18DC /* MUValidationErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C593196510B9000D18DC /* MUValidationErrors.m */; };
-		DED8C5F2196510B9000D18DC /* MUFormActivationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C595196510B9000D18DC /* MUFormActivationCell.xib */; };
-		DED8C5F3196510B9000D18DC /* MUFormCCNumberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C597196510B9000D18DC /* MUFormCCNumberCell.xib */; };
-		DED8C5F4196510B9000D18DC /* MUFormDateTimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C599196510B9000D18DC /* MUFormDateTimeCell.xib */; };
-		DED8C5F5196510B9000D18DC /* MUFormNumberFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C59B196510B9000D18DC /* MUFormNumberFieldCell.xib */; };
-		DED8C5F6196510B9000D18DC /* MUFormOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C59D196510B9000D18DC /* MUFormOptionCell.xib */; };
-		DED8C5F7196510B9000D18DC /* MUFormRelativeDateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C59F196510B9000D18DC /* MUFormRelativeDateCell.xib */; };
-		DED8C5F8196510B9000D18DC /* MUFormStaticInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5A1196510B9000D18DC /* MUFormStaticInfoCell.xib */; };
-		DED8C5F9196510B9000D18DC /* MUFormStaticLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5A3196510B9000D18DC /* MUFormStaticLabelCell.xib */; };
-		DED8C5FA196510B9000D18DC /* MUFormSwitchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5A5196510B9000D18DC /* MUFormSwitchCell.xib */; };
-		DED8C5FB196510B9000D18DC /* MUFormTextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5A7196510B9000D18DC /* MUFormTextFieldCell.xib */; };
-		DED8C5FC196510B9000D18DC /* MUFormTextViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5A9196510B9000D18DC /* MUFormTextViewCell.xib */; };
-		DED8C5FD196510B9000D18DC /* MUFormTimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5AB196510B9000D18DC /* MUFormTimeCell.xib */; };
-		DED8C5FE196510B9000D18DC /* MUFormTimePickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5AD196510B9000D18DC /* MUFormTimePickerCell.xib */; };
-		DED8C5FF196510B9000D18DC /* MUFormToFormSegueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5AF196510B9000D18DC /* MUFormToFormSegueCell.xib */; };
-		DED8C600196510B9000D18DC /* MUFormActivationCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5B1196510B9000D18DC /* MUFormActivationCell.strings */; };
-		DED8C601196510B9000D18DC /* MUFormCCNumberCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5B3196510B9000D18DC /* MUFormCCNumberCell.strings */; };
-		DED8C602196510B9000D18DC /* MUFormDateTimeCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5B5196510B9000D18DC /* MUFormDateTimeCell.strings */; };
-		DED8C603196510B9000D18DC /* MUFormNumberFieldCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5B7196510B9000D18DC /* MUFormNumberFieldCell.strings */; };
-		DED8C604196510B9000D18DC /* MUFormOptionCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5B9196510B9000D18DC /* MUFormOptionCell.strings */; };
-		DED8C605196510B9000D18DC /* MUFormRelativeDateCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5BB196510B9000D18DC /* MUFormRelativeDateCell.strings */; };
-		DED8C606196510B9000D18DC /* MUFormStaticInfoCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5BD196510B9000D18DC /* MUFormStaticInfoCell.strings */; };
-		DED8C607196510B9000D18DC /* MUFormStaticLabelCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5BF196510B9000D18DC /* MUFormStaticLabelCell.strings */; };
-		DED8C608196510B9000D18DC /* MUFormSwitchCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5C1196510B9000D18DC /* MUFormSwitchCell.strings */; };
-		DED8C609196510B9000D18DC /* MUFormTextFieldCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5C3196510B9000D18DC /* MUFormTextFieldCell.strings */; };
-		DED8C60A196510B9000D18DC /* MUFormTextViewCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5C5196510B9000D18DC /* MUFormTextViewCell.strings */; };
-		DED8C60B196510B9000D18DC /* MUFormTimeCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5C7196510B9000D18DC /* MUFormTimeCell.strings */; };
-		DED8C60C196510B9000D18DC /* MUFormTimePickerCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5C9196510B9000D18DC /* MUFormTimePickerCell.strings */; };
-		DED8C60D196510B9000D18DC /* MUFormToFormSegueCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5CB196510B9000D18DC /* MUFormToFormSegueCell.strings */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		DED8C54F1965105F000D18DC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DED8C5211965105F000D18DC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DED8C5281965105F000D18DC;
-			remoteInfo = FormKit;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		DE50BA39196CB66C0074C342 /* NSError+MUValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+MUValidation.h"; sourceTree = "<group>"; };
-		DE50BA3A196CB66C0074C342 /* NSError+MUValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+MUValidation.m"; sourceTree = "<group>"; };
-		DE50BA3C196CB6FD0074C342 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		DE50BA3E196CB9070074C342 /* NSDate+MUDateStyles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+MUDateStyles.h"; path = "../../../../Documents/workspaces/meetup/meetup-ios-alt/Classes/NSDate+MUDateStyles.h"; sourceTree = "<group>"; };
-		DE50BA3F196CB9070074C342 /* NSDate+MUDateStyles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+MUDateStyles.m"; path = "../../../../Documents/workspaces/meetup/meetup-ios-alt/Classes/NSDate+MUDateStyles.m"; sourceTree = "<group>"; };
-		DE50BA41196CB9C00074C342 /* NSDate+MUAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+MUAdditions.h"; path = "../../../../Documents/workspaces/meetup/meetup-ios-alt/Classes/NSDate+MUAdditions.h"; sourceTree = "<group>"; };
-		DE50BA42196CB9C00074C342 /* NSDate+MUAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+MUAdditions.m"; path = "../../../../Documents/workspaces/meetup/meetup-ios-alt/Classes/NSDate+MUAdditions.m"; sourceTree = "<group>"; };
-		DE50BA44196CBA0F0074C342 /* NSObject+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+Additions.h"; path = "../../../../Documents/workspaces/meetup/meetup-ios-alt/Classes/NSObject+Additions.h"; sourceTree = "<group>"; };
-		DE50BA45196CBA100074C342 /* NSObject+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Additions.m"; path = "../../../../Documents/workspaces/meetup/meetup-ios-alt/Classes/NSObject+Additions.m"; sourceTree = "<group>"; };
-		DE50BA47196CBB200074C342 /* UITextView+ReturnBugFix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextView+ReturnBugFix.h"; path = "../../../../Documents/workspaces/meetup/meetup-ios-alt/Classes/UITextView+ReturnBugFix.h"; sourceTree = "<group>"; };
-		DE50BA48196CBB200074C342 /* UITextView+ReturnBugFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITextView+ReturnBugFix.m"; path = "../../../../Documents/workspaces/meetup/meetup-ios-alt/Classes/UITextView+ReturnBugFix.m"; sourceTree = "<group>"; };
-		DE50BA4A196CBB520074C342 /* NSTimeZone+MUAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSTimeZone+MUAdditions.h"; path = "../../../../Documents/workspaces/meetup/meetup-ios-alt/Classes/NSTimeZone+MUAdditions.h"; sourceTree = "<group>"; };
-		DE50BA4B196CBB520074C342 /* NSTimeZone+MUAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSTimeZone+MUAdditions.m"; path = "../../../../Documents/workspaces/meetup/meetup-ios-alt/Classes/NSTimeZone+MUAdditions.m"; sourceTree = "<group>"; };
-		DED8C5291965105F000D18DC /* FormKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FormKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DED8C52C1965105F000D18DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		DED8C52E1965105F000D18DC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		DED8C5301965105F000D18DC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		DED8C5341965105F000D18DC /* FormKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FormKit-Info.plist"; sourceTree = "<group>"; };
-		DED8C5361965105F000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		DED8C5381965105F000D18DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DED8C53A1965105F000D18DC /* FormKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FormKit-Prefix.pch"; sourceTree = "<group>"; };
-		DED8C53B1965105F000D18DC /* MUAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MUAppDelegate.h; sourceTree = "<group>"; };
-		DED8C53C1965105F000D18DC /* MUAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MUAppDelegate.m; sourceTree = "<group>"; };
-		DED8C53F1965105F000D18DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DED8C5411965105F000D18DC /* MUViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MUViewController.h; sourceTree = "<group>"; };
-		DED8C5421965105F000D18DC /* MUViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MUViewController.m; sourceTree = "<group>"; };
-		DED8C5441965105F000D18DC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		DED8C54A1965105F000D18DC /* FormKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FormKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DED8C54B1965105F000D18DC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		DED8C5531965105F000D18DC /* FormKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FormKitTests-Info.plist"; sourceTree = "<group>"; };
-		DED8C5551965105F000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		DED8C5571965105F000D18DC /* FormKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FormKitTests.m; sourceTree = "<group>"; };
-		DED8C564196510B9000D18DC /* MUDynamicFormController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUDynamicFormController.h; sourceTree = "<group>"; };
-		DED8C565196510B9000D18DC /* MUDynamicFormController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUDynamicFormController.m; sourceTree = "<group>"; };
-		DED8C566196510B9000D18DC /* MUDynamicFormDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUDynamicFormDataSource.h; sourceTree = "<group>"; };
-		DED8C567196510B9000D18DC /* MUDynamicFormDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUDynamicFormDataSource.m; sourceTree = "<group>"; };
-		DED8C568196510B9000D18DC /* MUFormActivationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormActivationCell.h; sourceTree = "<group>"; };
-		DED8C569196510B9000D18DC /* MUFormActivationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUFormActivationCell.m; sourceTree = "<group>"; };
-		DED8C56A196510B9000D18DC /* MUFormBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormBaseCell.h; sourceTree = "<group>"; };
-		DED8C56B196510B9000D18DC /* MUFormBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUFormBaseCell.m; sourceTree = "<group>"; };
-		DED8C56C196510B9000D18DC /* MUFormCCNumberCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormCCNumberCell.h; sourceTree = "<group>"; };
-		DED8C56D196510B9000D18DC /* MUFormCCNumberCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUFormCCNumberCell.m; sourceTree = "<group>"; };
-		DED8C56E196510B9000D18DC /* MUFormConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormConstants.h; sourceTree = "<group>"; };
-		DED8C56F196510B9000D18DC /* MUFormController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormController.h; sourceTree = "<group>"; };
-		DED8C570196510B9000D18DC /* MUFormController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUFormController.m; sourceTree = "<group>"; };
-		DED8C571196510B9000D18DC /* MUFormDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormDataSource.h; sourceTree = "<group>"; };
-		DED8C572196510B9000D18DC /* MUFormDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUFormDataSource.m; sourceTree = "<group>"; };
-		DED8C573196510B9000D18DC /* MUFormDateTimeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormDateTimeCell.h; sourceTree = "<group>"; };
-		DED8C574196510B9000D18DC /* MUFormDateTimeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUFormDateTimeCell.m; sourceTree = "<group>"; };
-		DED8C575196510B9000D18DC /* MUFormIconCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormIconCell.h; sourceTree = "<group>"; };
-		DED8C576196510B9000D18DC /* MUFormIconCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUFormIconCell.m; sourceTree = "<group>"; };
-		DED8C577196510B9000D18DC /* MUFormKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormKit.h; sourceTree = "<group>"; };
-		DED8C578196510B9000D18DC /* MUFormNumberFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormNumberFieldCell.h; sourceTree = "<group>"; };
-		DED8C579196510B9000D18DC /* MUFormNumberFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUFormNumberFieldCell.m; sourceTree = "<group>"; };
-		DED8C57A196510B9000D18DC /* MUFormOptionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormOptionCell.h; sourceTree = "<group>"; };
-		DED8C57B196510B9000D18DC /* MUFormOptionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUFormOptionCell.m; sourceTree = "<group>"; };
-		DED8C57C196510B9000D18DC /* MUFormRelativeDateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormRelativeDateCell.h; sourceTree = "<group>"; };
-		DED8C57D196510B9000D18DC /* MUFormRelativeDateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUFormRelativeDateCell.m; sourceTree = "<group>"; };
-		DED8C57E196510B9000D18DC /* MUFormStaticInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormStaticInfoCell.h; sourceTree = "<group>"; };
-		DED8C57F196510B9000D18DC /* MUFormStaticInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUFormStaticInfoCell.m; sourceTree = "<group>"; };
-		DED8C580196510B9000D18DC /* MUFormStaticLabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormStaticLabelCell.h; sourceTree = "<group>"; };
-		DED8C581196510B9000D18DC /* MUFormStaticLabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUFormStaticLabelCell.m; sourceTree = "<group>"; };
-		DED8C582196510B9000D18DC /* MUFormSwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormSwitchCell.h; sourceTree = "<group>"; };
-		DED8C583196510B9000D18DC /* MUFormSwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUFormSwitchCell.m; sourceTree = "<group>"; };
-		DED8C584196510B9000D18DC /* MUFormTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormTextFieldCell.h; sourceTree = "<group>"; };
-		DED8C585196510B9000D18DC /* MUFormTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUFormTextFieldCell.m; sourceTree = "<group>"; };
-		DED8C586196510B9000D18DC /* MUFormTextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormTextViewCell.h; sourceTree = "<group>"; };
-		DED8C587196510B9000D18DC /* MUFormTextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUFormTextViewCell.m; sourceTree = "<group>"; };
-		DED8C588196510B9000D18DC /* MUFormTimeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormTimeCell.h; sourceTree = "<group>"; };
-		DED8C589196510B9000D18DC /* MUFormTimeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUFormTimeCell.m; sourceTree = "<group>"; };
-		DED8C58A196510B9000D18DC /* MUFormTimePickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormTimePickerCell.h; sourceTree = "<group>"; };
-		DED8C58B196510B9000D18DC /* MUFormTimePickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUFormTimePickerCell.m; sourceTree = "<group>"; };
-		DED8C58C196510B9000D18DC /* MUFormToFormSegueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormToFormSegueCell.h; sourceTree = "<group>"; };
-		DED8C58D196510B9000D18DC /* MUFormToFormSegueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUFormToFormSegueCell.m; sourceTree = "<group>"; };
-		DED8C58E196510B9000D18DC /* MUNextResponderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUNextResponderController.h; sourceTree = "<group>"; };
-		DED8C58F196510B9000D18DC /* MUNextResponderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUNextResponderController.m; sourceTree = "<group>"; };
-		DED8C590196510B9000D18DC /* MURelativeDatePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MURelativeDatePickerController.h; sourceTree = "<group>"; };
-		DED8C591196510B9000D18DC /* MURelativeDatePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MURelativeDatePickerController.m; sourceTree = "<group>"; };
-		DED8C592196510B9000D18DC /* MUValidationErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUValidationErrors.h; sourceTree = "<group>"; };
-		DED8C593196510B9000D18DC /* MUValidationErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUValidationErrors.m; sourceTree = "<group>"; };
-		DED8C596196510B9000D18DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MUFormActivationCell.xib; sourceTree = "<group>"; };
-		DED8C598196510B9000D18DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MUFormCCNumberCell.xib; sourceTree = "<group>"; };
-		DED8C59A196510B9000D18DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MUFormDateTimeCell.xib; sourceTree = "<group>"; };
-		DED8C59C196510B9000D18DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MUFormNumberFieldCell.xib; sourceTree = "<group>"; };
-		DED8C59E196510B9000D18DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MUFormOptionCell.xib; sourceTree = "<group>"; };
-		DED8C5A0196510B9000D18DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MUFormRelativeDateCell.xib; sourceTree = "<group>"; };
-		DED8C5A2196510B9000D18DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MUFormStaticInfoCell.xib; sourceTree = "<group>"; };
-		DED8C5A4196510B9000D18DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MUFormStaticLabelCell.xib; sourceTree = "<group>"; };
-		DED8C5A6196510B9000D18DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MUFormSwitchCell.xib; sourceTree = "<group>"; };
-		DED8C5A8196510B9000D18DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MUFormTextFieldCell.xib; sourceTree = "<group>"; };
-		DED8C5AA196510B9000D18DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MUFormTextViewCell.xib; sourceTree = "<group>"; };
-		DED8C5AC196510B9000D18DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MUFormTimeCell.xib; sourceTree = "<group>"; };
-		DED8C5AE196510B9000D18DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MUFormTimePickerCell.xib; sourceTree = "<group>"; };
-		DED8C5B0196510B9000D18DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MUFormToFormSegueCell.xib; sourceTree = "<group>"; };
-		DED8C5B2196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormActivationCell.strings; sourceTree = "<group>"; };
-		DED8C5B4196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormCCNumberCell.strings; sourceTree = "<group>"; };
-		DED8C5B6196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormDateTimeCell.strings; sourceTree = "<group>"; };
-		DED8C5B8196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormNumberFieldCell.strings; sourceTree = "<group>"; };
-		DED8C5BA196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormOptionCell.strings; sourceTree = "<group>"; };
-		DED8C5BC196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormRelativeDateCell.strings; sourceTree = "<group>"; };
-		DED8C5BE196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormStaticInfoCell.strings; sourceTree = "<group>"; };
-		DED8C5C0196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormStaticLabelCell.strings; sourceTree = "<group>"; };
-		DED8C5C2196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormSwitchCell.strings; sourceTree = "<group>"; };
-		DED8C5C4196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormTextFieldCell.strings; sourceTree = "<group>"; };
-		DED8C5C6196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormTextViewCell.strings; sourceTree = "<group>"; };
-		DED8C5C8196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormTimeCell.strings; sourceTree = "<group>"; };
-		DED8C5CA196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormTimePickerCell.strings; sourceTree = "<group>"; };
-		DED8C5CC196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormToFormSegueCell.strings; sourceTree = "<group>"; };
-		DED8C5CD196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormActivationCell.strings; sourceTree = "<group>"; };
-		DED8C5CE196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormCCNumberCell.strings; sourceTree = "<group>"; };
-		DED8C5CF196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormDateTimeCell.strings; sourceTree = "<group>"; };
-		DED8C5D0196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormNumberFieldCell.strings; sourceTree = "<group>"; };
-		DED8C5D1196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormOptionCell.strings; sourceTree = "<group>"; };
-		DED8C5D2196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormRelativeDateCell.strings; sourceTree = "<group>"; };
-		DED8C5D3196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormStaticInfoCell.strings; sourceTree = "<group>"; };
-		DED8C5D4196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormStaticLabelCell.strings; sourceTree = "<group>"; };
-		DED8C5D5196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormSwitchCell.strings; sourceTree = "<group>"; };
-		DED8C5D6196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormTextFieldCell.strings; sourceTree = "<group>"; };
-		DED8C5D7196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormTextViewCell.strings; sourceTree = "<group>"; };
-		DED8C5D8196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormTimeCell.strings; sourceTree = "<group>"; };
-		DED8C5D9196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormTimePickerCell.strings; sourceTree = "<group>"; };
-		DED8C5DA196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormToFormSegueCell.strings; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		DED8C5261965105F000D18DC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DE50BA3D196CB6FD0074C342 /* CoreData.framework in Frameworks */,
-				DED8C52F1965105F000D18DC /* CoreGraphics.framework in Frameworks */,
-				DED8C5311965105F000D18DC /* UIKit.framework in Frameworks */,
-				DED8C52D1965105F000D18DC /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DED8C5471965105F000D18DC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DED8C54C1965105F000D18DC /* XCTest.framework in Frameworks */,
-				DED8C54E1965105F000D18DC /* UIKit.framework in Frameworks */,
-				DED8C54D1965105F000D18DC /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		DED8C5201965105F000D18DC = {
-			isa = PBXGroup;
-			children = (
-				DED8C562196510B9000D18DC /* src */,
-				DED8C5321965105F000D18DC /* FormKit */,
-				DED8C5511965105F000D18DC /* FormKitTests */,
-				DED8C52B1965105F000D18DC /* Frameworks */,
-				DED8C52A1965105F000D18DC /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		DED8C52A1965105F000D18DC /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				DED8C5291965105F000D18DC /* FormKit.app */,
-				DED8C54A1965105F000D18DC /* FormKitTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		DED8C52B1965105F000D18DC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				DE50BA3C196CB6FD0074C342 /* CoreData.framework */,
-				DED8C52C1965105F000D18DC /* Foundation.framework */,
-				DED8C52E1965105F000D18DC /* CoreGraphics.framework */,
-				DED8C5301965105F000D18DC /* UIKit.framework */,
-				DED8C54B1965105F000D18DC /* XCTest.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		DED8C5321965105F000D18DC /* FormKit */ = {
-			isa = PBXGroup;
-			children = (
-				DED8C53B1965105F000D18DC /* MUAppDelegate.h */,
-				DED8C53C1965105F000D18DC /* MUAppDelegate.m */,
-				DED8C53E1965105F000D18DC /* Main.storyboard */,
-				DED8C5411965105F000D18DC /* MUViewController.h */,
-				DED8C5421965105F000D18DC /* MUViewController.m */,
-				DED8C5441965105F000D18DC /* Images.xcassets */,
-				DED8C5331965105F000D18DC /* Supporting Files */,
-			);
-			path = FormKit;
-			sourceTree = "<group>";
-		};
-		DED8C5331965105F000D18DC /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				DED8C5341965105F000D18DC /* FormKit-Info.plist */,
-				DED8C5351965105F000D18DC /* InfoPlist.strings */,
-				DED8C5381965105F000D18DC /* main.m */,
-				DED8C53A1965105F000D18DC /* FormKit-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		DED8C5511965105F000D18DC /* FormKitTests */ = {
-			isa = PBXGroup;
-			children = (
-				DED8C5571965105F000D18DC /* FormKitTests.m */,
-				DED8C5521965105F000D18DC /* Supporting Files */,
-			);
-			path = FormKitTests;
-			sourceTree = "<group>";
-		};
-		DED8C5521965105F000D18DC /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				DED8C5531965105F000D18DC /* FormKitTests-Info.plist */,
-				DED8C5541965105F000D18DC /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		DED8C562196510B9000D18DC /* src */ = {
-			isa = PBXGroup;
-			children = (
-				DED8C563196510B9000D18DC /* Classes */,
-				DED8C594196510B9000D18DC /* Resources */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
-		DED8C563196510B9000D18DC /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				DE50BA4A196CBB520074C342 /* NSTimeZone+MUAdditions.h */,
-				DE50BA4B196CBB520074C342 /* NSTimeZone+MUAdditions.m */,
-				DE50BA47196CBB200074C342 /* UITextView+ReturnBugFix.h */,
-				DE50BA48196CBB200074C342 /* UITextView+ReturnBugFix.m */,
-				DE50BA44196CBA0F0074C342 /* NSObject+Additions.h */,
-				DE50BA45196CBA100074C342 /* NSObject+Additions.m */,
-				DE50BA41196CB9C00074C342 /* NSDate+MUAdditions.h */,
-				DE50BA42196CB9C00074C342 /* NSDate+MUAdditions.m */,
-				DE50BA3E196CB9070074C342 /* NSDate+MUDateStyles.h */,
-				DE50BA3F196CB9070074C342 /* NSDate+MUDateStyles.m */,
-				DE50BA39196CB66C0074C342 /* NSError+MUValidation.h */,
-				DE50BA3A196CB66C0074C342 /* NSError+MUValidation.m */,
-				DED8C564196510B9000D18DC /* MUDynamicFormController.h */,
-				DED8C565196510B9000D18DC /* MUDynamicFormController.m */,
-				DED8C566196510B9000D18DC /* MUDynamicFormDataSource.h */,
-				DED8C567196510B9000D18DC /* MUDynamicFormDataSource.m */,
-				DED8C568196510B9000D18DC /* MUFormActivationCell.h */,
-				DED8C569196510B9000D18DC /* MUFormActivationCell.m */,
-				DED8C56A196510B9000D18DC /* MUFormBaseCell.h */,
-				DED8C56B196510B9000D18DC /* MUFormBaseCell.m */,
-				DED8C56C196510B9000D18DC /* MUFormCCNumberCell.h */,
-				DED8C56D196510B9000D18DC /* MUFormCCNumberCell.m */,
-				DED8C56E196510B9000D18DC /* MUFormConstants.h */,
-				DED8C56F196510B9000D18DC /* MUFormController.h */,
-				DED8C570196510B9000D18DC /* MUFormController.m */,
-				DED8C571196510B9000D18DC /* MUFormDataSource.h */,
-				DED8C572196510B9000D18DC /* MUFormDataSource.m */,
-				DED8C573196510B9000D18DC /* MUFormDateTimeCell.h */,
-				DED8C574196510B9000D18DC /* MUFormDateTimeCell.m */,
-				DED8C575196510B9000D18DC /* MUFormIconCell.h */,
-				DED8C576196510B9000D18DC /* MUFormIconCell.m */,
-				DED8C577196510B9000D18DC /* MUFormKit.h */,
-				DED8C578196510B9000D18DC /* MUFormNumberFieldCell.h */,
-				DED8C579196510B9000D18DC /* MUFormNumberFieldCell.m */,
-				DED8C57A196510B9000D18DC /* MUFormOptionCell.h */,
-				DED8C57B196510B9000D18DC /* MUFormOptionCell.m */,
-				DED8C57C196510B9000D18DC /* MUFormRelativeDateCell.h */,
-				DED8C57D196510B9000D18DC /* MUFormRelativeDateCell.m */,
-				DED8C57E196510B9000D18DC /* MUFormStaticInfoCell.h */,
-				DED8C57F196510B9000D18DC /* MUFormStaticInfoCell.m */,
-				DED8C580196510B9000D18DC /* MUFormStaticLabelCell.h */,
-				DED8C581196510B9000D18DC /* MUFormStaticLabelCell.m */,
-				DED8C582196510B9000D18DC /* MUFormSwitchCell.h */,
-				DED8C583196510B9000D18DC /* MUFormSwitchCell.m */,
-				DED8C584196510B9000D18DC /* MUFormTextFieldCell.h */,
-				DED8C585196510B9000D18DC /* MUFormTextFieldCell.m */,
-				DED8C586196510B9000D18DC /* MUFormTextViewCell.h */,
-				DED8C587196510B9000D18DC /* MUFormTextViewCell.m */,
-				DED8C588196510B9000D18DC /* MUFormTimeCell.h */,
-				DED8C589196510B9000D18DC /* MUFormTimeCell.m */,
-				DED8C58A196510B9000D18DC /* MUFormTimePickerCell.h */,
-				DED8C58B196510B9000D18DC /* MUFormTimePickerCell.m */,
-				DED8C58C196510B9000D18DC /* MUFormToFormSegueCell.h */,
-				DED8C58D196510B9000D18DC /* MUFormToFormSegueCell.m */,
-				DED8C58E196510B9000D18DC /* MUNextResponderController.h */,
-				DED8C58F196510B9000D18DC /* MUNextResponderController.m */,
-				DED8C590196510B9000D18DC /* MURelativeDatePickerController.h */,
-				DED8C591196510B9000D18DC /* MURelativeDatePickerController.m */,
-				DED8C592196510B9000D18DC /* MUValidationErrors.h */,
-				DED8C593196510B9000D18DC /* MUValidationErrors.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		DED8C594196510B9000D18DC /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				DED8C595196510B9000D18DC /* MUFormActivationCell.xib */,
-				DED8C597196510B9000D18DC /* MUFormCCNumberCell.xib */,
-				DED8C599196510B9000D18DC /* MUFormDateTimeCell.xib */,
-				DED8C59B196510B9000D18DC /* MUFormNumberFieldCell.xib */,
-				DED8C59D196510B9000D18DC /* MUFormOptionCell.xib */,
-				DED8C59F196510B9000D18DC /* MUFormRelativeDateCell.xib */,
-				DED8C5A1196510B9000D18DC /* MUFormStaticInfoCell.xib */,
-				DED8C5A3196510B9000D18DC /* MUFormStaticLabelCell.xib */,
-				DED8C5A5196510B9000D18DC /* MUFormSwitchCell.xib */,
-				DED8C5A7196510B9000D18DC /* MUFormTextFieldCell.xib */,
-				DED8C5A9196510B9000D18DC /* MUFormTextViewCell.xib */,
-				DED8C5AB196510B9000D18DC /* MUFormTimeCell.xib */,
-				DED8C5AD196510B9000D18DC /* MUFormTimePickerCell.xib */,
-				DED8C5AF196510B9000D18DC /* MUFormToFormSegueCell.xib */,
-				DED8C5B1196510B9000D18DC /* MUFormActivationCell.strings */,
-				DED8C5B3196510B9000D18DC /* MUFormCCNumberCell.strings */,
-				DED8C5B5196510B9000D18DC /* MUFormDateTimeCell.strings */,
-				DED8C5B7196510B9000D18DC /* MUFormNumberFieldCell.strings */,
-				DED8C5B9196510B9000D18DC /* MUFormOptionCell.strings */,
-				DED8C5BB196510B9000D18DC /* MUFormRelativeDateCell.strings */,
-				DED8C5BD196510B9000D18DC /* MUFormStaticInfoCell.strings */,
-				DED8C5BF196510B9000D18DC /* MUFormStaticLabelCell.strings */,
-				DED8C5C1196510B9000D18DC /* MUFormSwitchCell.strings */,
-				DED8C5C3196510B9000D18DC /* MUFormTextFieldCell.strings */,
-				DED8C5C5196510B9000D18DC /* MUFormTextViewCell.strings */,
-				DED8C5C7196510B9000D18DC /* MUFormTimeCell.strings */,
-				DED8C5C9196510B9000D18DC /* MUFormTimePickerCell.strings */,
-				DED8C5CB196510B9000D18DC /* MUFormToFormSegueCell.strings */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		DED8C5281965105F000D18DC /* FormKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DED8C55B1965105F000D18DC /* Build configuration list for PBXNativeTarget "FormKit" */;
-			buildPhases = (
-				DED8C5251965105F000D18DC /* Sources */,
-				DED8C5261965105F000D18DC /* Frameworks */,
-				DED8C5271965105F000D18DC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = FormKit;
-			productName = FormKit;
-			productReference = DED8C5291965105F000D18DC /* FormKit.app */;
-			productType = "com.apple.product-type.application";
-		};
-		DED8C5491965105F000D18DC /* FormKitTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DED8C55E1965105F000D18DC /* Build configuration list for PBXNativeTarget "FormKitTests" */;
-			buildPhases = (
-				DED8C5461965105F000D18DC /* Sources */,
-				DED8C5471965105F000D18DC /* Frameworks */,
-				DED8C5481965105F000D18DC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DED8C5501965105F000D18DC /* PBXTargetDependency */,
-			);
-			name = FormKitTests;
-			productName = FormKitTests;
-			productReference = DED8C54A1965105F000D18DC /* FormKitTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		DED8C5211965105F000D18DC /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				CLASSPREFIX = MU;
-				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = Meetup;
-				TargetAttributes = {
-					DED8C5491965105F000D18DC = {
-						TestTargetID = DED8C5281965105F000D18DC;
-					};
-				};
-			};
-			buildConfigurationList = DED8C5241965105F000D18DC /* Build configuration list for PBXProject "FormKit" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-				it,
-			);
-			mainGroup = DED8C5201965105F000D18DC;
-			productRefGroup = DED8C52A1965105F000D18DC /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				DED8C5281965105F000D18DC /* FormKit */,
-				DED8C5491965105F000D18DC /* FormKitTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		DED8C5271965105F000D18DC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DED8C60B196510B9000D18DC /* MUFormTimeCell.strings in Resources */,
-				DED8C5F7196510B9000D18DC /* MUFormRelativeDateCell.xib in Resources */,
-				DED8C5FA196510B9000D18DC /* MUFormSwitchCell.xib in Resources */,
-				DED8C601196510B9000D18DC /* MUFormCCNumberCell.strings in Resources */,
-				DED8C5451965105F000D18DC /* Images.xcassets in Resources */,
-				DED8C605196510B9000D18DC /* MUFormRelativeDateCell.strings in Resources */,
-				DED8C5F2196510B9000D18DC /* MUFormActivationCell.xib in Resources */,
-				DED8C603196510B9000D18DC /* MUFormNumberFieldCell.strings in Resources */,
-				DED8C5FD196510B9000D18DC /* MUFormTimeCell.xib in Resources */,
-				DED8C5FB196510B9000D18DC /* MUFormTextFieldCell.xib in Resources */,
-				DED8C5FC196510B9000D18DC /* MUFormTextViewCell.xib in Resources */,
-				DED8C5371965105F000D18DC /* InfoPlist.strings in Resources */,
-				DED8C5F5196510B9000D18DC /* MUFormNumberFieldCell.xib in Resources */,
-				DED8C604196510B9000D18DC /* MUFormOptionCell.strings in Resources */,
-				DED8C5F6196510B9000D18DC /* MUFormOptionCell.xib in Resources */,
-				DED8C608196510B9000D18DC /* MUFormSwitchCell.strings in Resources */,
-				DED8C600196510B9000D18DC /* MUFormActivationCell.strings in Resources */,
-				DED8C5401965105F000D18DC /* Main.storyboard in Resources */,
-				DED8C5F8196510B9000D18DC /* MUFormStaticInfoCell.xib in Resources */,
-				DED8C5FF196510B9000D18DC /* MUFormToFormSegueCell.xib in Resources */,
-				DED8C5FE196510B9000D18DC /* MUFormTimePickerCell.xib in Resources */,
-				DED8C607196510B9000D18DC /* MUFormStaticLabelCell.strings in Resources */,
-				DED8C5F9196510B9000D18DC /* MUFormStaticLabelCell.xib in Resources */,
-				DED8C60C196510B9000D18DC /* MUFormTimePickerCell.strings in Resources */,
-				DED8C602196510B9000D18DC /* MUFormDateTimeCell.strings in Resources */,
-				DED8C609196510B9000D18DC /* MUFormTextFieldCell.strings in Resources */,
-				DED8C60A196510B9000D18DC /* MUFormTextViewCell.strings in Resources */,
-				DED8C5F4196510B9000D18DC /* MUFormDateTimeCell.xib in Resources */,
-				DED8C606196510B9000D18DC /* MUFormStaticInfoCell.strings in Resources */,
-				DED8C60D196510B9000D18DC /* MUFormToFormSegueCell.strings in Resources */,
-				DED8C5F3196510B9000D18DC /* MUFormCCNumberCell.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DED8C5481965105F000D18DC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DED8C5561965105F000D18DC /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		DED8C5251965105F000D18DC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DED8C5E0196510B9000D18DC /* MUFormController.m in Sources */,
-				DED8C5F1196510B9000D18DC /* MUValidationErrors.m in Sources */,
-				DE50BA40196CB9070074C342 /* NSDate+MUDateStyles.m in Sources */,
-				DED8C53D1965105F000D18DC /* MUAppDelegate.m in Sources */,
-				DED8C5E3196510B9000D18DC /* MUFormIconCell.m in Sources */,
-				DED8C5EC196510B9000D18DC /* MUFormTimeCell.m in Sources */,
-				DED8C5F0196510B9000D18DC /* MURelativeDatePickerController.m in Sources */,
-				DED8C5DD196510B9000D18DC /* MUFormActivationCell.m in Sources */,
-				DED8C5EF196510B9000D18DC /* MUNextResponderController.m in Sources */,
-				DED8C5EA196510B9000D18DC /* MUFormTextFieldCell.m in Sources */,
-				DED8C5E6196510B9000D18DC /* MUFormRelativeDateCell.m in Sources */,
-				DE50BA4C196CBB520074C342 /* NSTimeZone+MUAdditions.m in Sources */,
-				DED8C5E5196510B9000D18DC /* MUFormOptionCell.m in Sources */,
-				DE50BA3B196CB66C0074C342 /* NSError+MUValidation.m in Sources */,
-				DED8C5431965105F000D18DC /* MUViewController.m in Sources */,
-				DED8C5E8196510B9000D18DC /* MUFormStaticLabelCell.m in Sources */,
-				DE50BA46196CBA100074C342 /* NSObject+Additions.m in Sources */,
-				DED8C5E1196510B9000D18DC /* MUFormDataSource.m in Sources */,
-				DED8C5DE196510B9000D18DC /* MUFormBaseCell.m in Sources */,
-				DED8C5ED196510B9000D18DC /* MUFormTimePickerCell.m in Sources */,
-				DED8C5DF196510B9000D18DC /* MUFormCCNumberCell.m in Sources */,
-				DED8C5E4196510B9000D18DC /* MUFormNumberFieldCell.m in Sources */,
-				DED8C5E7196510B9000D18DC /* MUFormStaticInfoCell.m in Sources */,
-				DED8C5E9196510B9000D18DC /* MUFormSwitchCell.m in Sources */,
-				DE50BA49196CBB200074C342 /* UITextView+ReturnBugFix.m in Sources */,
-				DED8C5391965105F000D18DC /* main.m in Sources */,
-				DED8C5EE196510B9000D18DC /* MUFormToFormSegueCell.m in Sources */,
-				DED8C5E2196510B9000D18DC /* MUFormDateTimeCell.m in Sources */,
-				DED8C5EB196510B9000D18DC /* MUFormTextViewCell.m in Sources */,
-				DED8C5DB196510B9000D18DC /* MUDynamicFormController.m in Sources */,
-				DED8C5DC196510B9000D18DC /* MUDynamicFormDataSource.m in Sources */,
-				DE50BA43196CB9C00074C342 /* NSDate+MUAdditions.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DED8C5461965105F000D18DC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DED8C5581965105F000D18DC /* FormKitTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		DED8C5501965105F000D18DC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DED8C5281965105F000D18DC /* FormKit */;
-			targetProxy = DED8C54F1965105F000D18DC /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		DED8C5351965105F000D18DC /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5361965105F000D18DC /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		DED8C53E1965105F000D18DC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C53F1965105F000D18DC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		DED8C5541965105F000D18DC /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5551965105F000D18DC /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		DED8C595196510B9000D18DC /* MUFormActivationCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C596196510B9000D18DC /* Base */,
-			);
-			name = MUFormActivationCell.xib;
-			sourceTree = "<group>";
-		};
-		DED8C597196510B9000D18DC /* MUFormCCNumberCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C598196510B9000D18DC /* Base */,
-			);
-			name = MUFormCCNumberCell.xib;
-			sourceTree = "<group>";
-		};
-		DED8C599196510B9000D18DC /* MUFormDateTimeCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C59A196510B9000D18DC /* Base */,
-			);
-			name = MUFormDateTimeCell.xib;
-			sourceTree = "<group>";
-		};
-		DED8C59B196510B9000D18DC /* MUFormNumberFieldCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C59C196510B9000D18DC /* Base */,
-			);
-			name = MUFormNumberFieldCell.xib;
-			sourceTree = "<group>";
-		};
-		DED8C59D196510B9000D18DC /* MUFormOptionCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C59E196510B9000D18DC /* Base */,
-			);
-			name = MUFormOptionCell.xib;
-			sourceTree = "<group>";
-		};
-		DED8C59F196510B9000D18DC /* MUFormRelativeDateCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5A0196510B9000D18DC /* Base */,
-			);
-			name = MUFormRelativeDateCell.xib;
-			sourceTree = "<group>";
-		};
-		DED8C5A1196510B9000D18DC /* MUFormStaticInfoCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5A2196510B9000D18DC /* Base */,
-			);
-			name = MUFormStaticInfoCell.xib;
-			sourceTree = "<group>";
-		};
-		DED8C5A3196510B9000D18DC /* MUFormStaticLabelCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5A4196510B9000D18DC /* Base */,
-			);
-			name = MUFormStaticLabelCell.xib;
-			sourceTree = "<group>";
-		};
-		DED8C5A5196510B9000D18DC /* MUFormSwitchCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5A6196510B9000D18DC /* Base */,
-			);
-			name = MUFormSwitchCell.xib;
-			sourceTree = "<group>";
-		};
-		DED8C5A7196510B9000D18DC /* MUFormTextFieldCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5A8196510B9000D18DC /* Base */,
-			);
-			name = MUFormTextFieldCell.xib;
-			sourceTree = "<group>";
-		};
-		DED8C5A9196510B9000D18DC /* MUFormTextViewCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5AA196510B9000D18DC /* Base */,
-			);
-			name = MUFormTextViewCell.xib;
-			sourceTree = "<group>";
-		};
-		DED8C5AB196510B9000D18DC /* MUFormTimeCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5AC196510B9000D18DC /* Base */,
-			);
-			name = MUFormTimeCell.xib;
-			sourceTree = "<group>";
-		};
-		DED8C5AD196510B9000D18DC /* MUFormTimePickerCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5AE196510B9000D18DC /* Base */,
-			);
-			name = MUFormTimePickerCell.xib;
-			sourceTree = "<group>";
-		};
-		DED8C5AF196510B9000D18DC /* MUFormToFormSegueCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5B0196510B9000D18DC /* Base */,
-			);
-			name = MUFormToFormSegueCell.xib;
-			sourceTree = "<group>";
-		};
-		DED8C5B1196510B9000D18DC /* MUFormActivationCell.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5B2196510B9000D18DC /* en */,
-				DED8C5CD196510B9000D18DC /* it */,
-			);
-			name = MUFormActivationCell.strings;
-			sourceTree = "<group>";
-		};
-		DED8C5B3196510B9000D18DC /* MUFormCCNumberCell.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5B4196510B9000D18DC /* en */,
-				DED8C5CE196510B9000D18DC /* it */,
-			);
-			name = MUFormCCNumberCell.strings;
-			sourceTree = "<group>";
-		};
-		DED8C5B5196510B9000D18DC /* MUFormDateTimeCell.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5B6196510B9000D18DC /* en */,
-				DED8C5CF196510B9000D18DC /* it */,
-			);
-			name = MUFormDateTimeCell.strings;
-			sourceTree = "<group>";
-		};
-		DED8C5B7196510B9000D18DC /* MUFormNumberFieldCell.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5B8196510B9000D18DC /* en */,
-				DED8C5D0196510B9000D18DC /* it */,
-			);
-			name = MUFormNumberFieldCell.strings;
-			sourceTree = "<group>";
-		};
-		DED8C5B9196510B9000D18DC /* MUFormOptionCell.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5BA196510B9000D18DC /* en */,
-				DED8C5D1196510B9000D18DC /* it */,
-			);
-			name = MUFormOptionCell.strings;
-			sourceTree = "<group>";
-		};
-		DED8C5BB196510B9000D18DC /* MUFormRelativeDateCell.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5BC196510B9000D18DC /* en */,
-				DED8C5D2196510B9000D18DC /* it */,
-			);
-			name = MUFormRelativeDateCell.strings;
-			sourceTree = "<group>";
-		};
-		DED8C5BD196510B9000D18DC /* MUFormStaticInfoCell.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5BE196510B9000D18DC /* en */,
-				DED8C5D3196510B9000D18DC /* it */,
-			);
-			name = MUFormStaticInfoCell.strings;
-			sourceTree = "<group>";
-		};
-		DED8C5BF196510B9000D18DC /* MUFormStaticLabelCell.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5C0196510B9000D18DC /* en */,
-				DED8C5D4196510B9000D18DC /* it */,
-			);
-			name = MUFormStaticLabelCell.strings;
-			sourceTree = "<group>";
-		};
-		DED8C5C1196510B9000D18DC /* MUFormSwitchCell.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5C2196510B9000D18DC /* en */,
-				DED8C5D5196510B9000D18DC /* it */,
-			);
-			name = MUFormSwitchCell.strings;
-			sourceTree = "<group>";
-		};
-		DED8C5C3196510B9000D18DC /* MUFormTextFieldCell.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5C4196510B9000D18DC /* en */,
-				DED8C5D6196510B9000D18DC /* it */,
-			);
-			name = MUFormTextFieldCell.strings;
-			sourceTree = "<group>";
-		};
-		DED8C5C5196510B9000D18DC /* MUFormTextViewCell.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5C6196510B9000D18DC /* en */,
-				DED8C5D7196510B9000D18DC /* it */,
-			);
-			name = MUFormTextViewCell.strings;
-			sourceTree = "<group>";
-		};
-		DED8C5C7196510B9000D18DC /* MUFormTimeCell.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5C8196510B9000D18DC /* en */,
-				DED8C5D8196510B9000D18DC /* it */,
-			);
-			name = MUFormTimeCell.strings;
-			sourceTree = "<group>";
-		};
-		DED8C5C9196510B9000D18DC /* MUFormTimePickerCell.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5CA196510B9000D18DC /* en */,
-				DED8C5D9196510B9000D18DC /* it */,
-			);
-			name = MUFormTimePickerCell.strings;
-			sourceTree = "<group>";
-		};
-		DED8C5CB196510B9000D18DC /* MUFormToFormSegueCell.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5CC196510B9000D18DC /* en */,
-				DED8C5DA196510B9000D18DC /* it */,
-			);
-			name = MUFormToFormSegueCell.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		DED8C5591965105F000D18DC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-			};
-			name = Debug;
-		};
-		DED8C55A1965105F000D18DC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		DED8C55C1965105F000D18DC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FormKit/FormKit-Prefix.pch";
-				INFOPLIST_FILE = "FormKit/FormKit-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		DED8C55D1965105F000D18DC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FormKit/FormKit-Prefix.pch";
-				INFOPLIST_FILE = "FormKit/FormKit-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		DED8C55F1965105F000D18DC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FormKit.app/FormKit";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FormKit/FormKit-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "FormKitTests/FormKitTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		DED8C5601965105F000D18DC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FormKit.app/FormKit";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FormKit/FormKit-Prefix.pch";
-				INFOPLIST_FILE = "FormKitTests/FormKitTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		DED8C5241965105F000D18DC /* Build configuration list for PBXProject "FormKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DED8C5591965105F000D18DC /* Debug */,
-				DED8C55A1965105F000D18DC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DED8C55B1965105F000D18DC /* Build configuration list for PBXNativeTarget "FormKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DED8C55C1965105F000D18DC /* Debug */,
-				DED8C55D1965105F000D18DC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DED8C55E1965105F000D18DC /* Build configuration list for PBXNativeTarget "FormKitTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DED8C55F1965105F000D18DC /* Debug */,
-				DED8C5601965105F000D18DC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = DED8C5211965105F000D18DC /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>0AA6397D56304625BCFCA36E</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Pods-FormKit-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>31E4ED881C4D4A57BD86FF62</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-FormKit.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Pods-FormKit.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4DF66157A8F44C76A2CBB131</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-FormKit.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>6376E361BCBB429E839EB0B8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4DF66157A8F44C76A2CBB131</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C05ED521FD5D465CA3EBFC82</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>DE50BA39196CB66C0074C342</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NSError+MUValidation.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE50BA3A196CB66C0074C342</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSError+MUValidation.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE50BA3B196CB66C0074C342</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DE50BA3A196CB66C0074C342</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DE50BA3C196CB6FD0074C342</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreData.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreData.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>DE50BA3D196CB6FD0074C342</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DE50BA3C196CB6FD0074C342</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5201965105F000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C562196510B9000D18DC</string>
+				<string>DED8C5321965105F000D18DC</string>
+				<string>DED8C5511965105F000D18DC</string>
+				<string>DED8C52B1965105F000D18DC</string>
+				<string>DED8C52A1965105F000D18DC</string>
+				<string>31E4ED881C4D4A57BD86FF62</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5211965105F000D18DC</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>CLASSPREFIX</key>
+				<string>MU</string>
+				<key>LastUpgradeCheck</key>
+				<string>0510</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>Meetup</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>DED8C5491965105F000D18DC</key>
+					<dict>
+						<key>TestTargetID</key>
+						<string>DED8C5281965105F000D18DC</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>DED8C5241965105F000D18DC</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+				<string>it</string>
+			</array>
+			<key>mainGroup</key>
+			<string>DED8C5201965105F000D18DC</string>
+			<key>productRefGroup</key>
+			<string>DED8C52A1965105F000D18DC</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>DED8C5281965105F000D18DC</string>
+				<string>DED8C5491965105F000D18DC</string>
+			</array>
+		</dict>
+		<key>DED8C5241965105F000D18DC</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>DED8C5591965105F000D18DC</string>
+				<string>DED8C55A1965105F000D18DC</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>DED8C5251965105F000D18DC</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>DED8C5E0196510B9000D18DC</string>
+				<string>DED8C5F1196510B9000D18DC</string>
+				<string>DED8C53D1965105F000D18DC</string>
+				<string>DED8C5E3196510B9000D18DC</string>
+				<string>DED8C5EC196510B9000D18DC</string>
+				<string>DED8C5F0196510B9000D18DC</string>
+				<string>DED8C5DD196510B9000D18DC</string>
+				<string>DED8C5EF196510B9000D18DC</string>
+				<string>DED8C5EA196510B9000D18DC</string>
+				<string>DED8C5E6196510B9000D18DC</string>
+				<string>DED8C5E5196510B9000D18DC</string>
+				<string>DE50BA3B196CB66C0074C342</string>
+				<string>DED8C5431965105F000D18DC</string>
+				<string>DED8C5E8196510B9000D18DC</string>
+				<string>DED8C5E1196510B9000D18DC</string>
+				<string>DED8C5DE196510B9000D18DC</string>
+				<string>DED8C5ED196510B9000D18DC</string>
+				<string>DED8C5DF196510B9000D18DC</string>
+				<string>DED8C5E4196510B9000D18DC</string>
+				<string>DED8C5E7196510B9000D18DC</string>
+				<string>DED8C5E9196510B9000D18DC</string>
+				<string>DED8C5391965105F000D18DC</string>
+				<string>DED8C5EE196510B9000D18DC</string>
+				<string>DED8C5E2196510B9000D18DC</string>
+				<string>DED8C5EB196510B9000D18DC</string>
+				<string>DED8C5DB196510B9000D18DC</string>
+				<string>DED8C5DC196510B9000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>DED8C5261965105F000D18DC</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>DE50BA3D196CB6FD0074C342</string>
+				<string>DED8C52F1965105F000D18DC</string>
+				<string>DED8C5311965105F000D18DC</string>
+				<string>DED8C52D1965105F000D18DC</string>
+				<string>6376E361BCBB429E839EB0B8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>DED8C5271965105F000D18DC</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>DED8C60B196510B9000D18DC</string>
+				<string>DED8C5F7196510B9000D18DC</string>
+				<string>DED8C5FA196510B9000D18DC</string>
+				<string>DED8C601196510B9000D18DC</string>
+				<string>DED8C5451965105F000D18DC</string>
+				<string>DED8C605196510B9000D18DC</string>
+				<string>DED8C5F2196510B9000D18DC</string>
+				<string>DED8C603196510B9000D18DC</string>
+				<string>DED8C5FD196510B9000D18DC</string>
+				<string>DED8C5FB196510B9000D18DC</string>
+				<string>DED8C5FC196510B9000D18DC</string>
+				<string>DED8C5371965105F000D18DC</string>
+				<string>DED8C5F5196510B9000D18DC</string>
+				<string>DED8C604196510B9000D18DC</string>
+				<string>DED8C5F6196510B9000D18DC</string>
+				<string>DED8C608196510B9000D18DC</string>
+				<string>DED8C600196510B9000D18DC</string>
+				<string>DED8C5401965105F000D18DC</string>
+				<string>DED8C5F8196510B9000D18DC</string>
+				<string>DED8C5FF196510B9000D18DC</string>
+				<string>DED8C5FE196510B9000D18DC</string>
+				<string>DED8C607196510B9000D18DC</string>
+				<string>DED8C5F9196510B9000D18DC</string>
+				<string>DED8C60C196510B9000D18DC</string>
+				<string>DED8C602196510B9000D18DC</string>
+				<string>DED8C609196510B9000D18DC</string>
+				<string>DED8C60A196510B9000D18DC</string>
+				<string>DED8C5F4196510B9000D18DC</string>
+				<string>DED8C606196510B9000D18DC</string>
+				<string>DED8C60D196510B9000D18DC</string>
+				<string>DED8C5F3196510B9000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>DED8C5281965105F000D18DC</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>DED8C55B1965105F000D18DC</string>
+			<key>buildPhases</key>
+			<array>
+				<string>C05ED521FD5D465CA3EBFC82</string>
+				<string>DED8C5251965105F000D18DC</string>
+				<string>DED8C5261965105F000D18DC</string>
+				<string>DED8C5271965105F000D18DC</string>
+				<string>0AA6397D56304625BCFCA36E</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>FormKit</string>
+			<key>productName</key>
+			<string>FormKit</string>
+			<key>productReference</key>
+			<string>DED8C5291965105F000D18DC</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>DED8C5291965105F000D18DC</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>FormKit.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>DED8C52A1965105F000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C5291965105F000D18DC</string>
+				<string>DED8C54A1965105F000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C52B1965105F000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DE50BA3C196CB6FD0074C342</string>
+				<string>DED8C52C1965105F000D18DC</string>
+				<string>DED8C52E1965105F000D18DC</string>
+				<string>DED8C5301965105F000D18DC</string>
+				<string>DED8C54B1965105F000D18DC</string>
+				<string>4DF66157A8F44C76A2CBB131</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C52C1965105F000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>DED8C52D1965105F000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C52C1965105F000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C52E1965105F000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreGraphics.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreGraphics.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>DED8C52F1965105F000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C52E1965105F000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5301965105F000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>UIKit.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/UIKit.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>DED8C5311965105F000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C5301965105F000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5321965105F000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C53B1965105F000D18DC</string>
+				<string>DED8C53C1965105F000D18DC</string>
+				<string>DED8C53E1965105F000D18DC</string>
+				<string>DED8C5411965105F000D18DC</string>
+				<string>DED8C5421965105F000D18DC</string>
+				<string>DED8C5441965105F000D18DC</string>
+				<string>DED8C5331965105F000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>FormKit</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5331965105F000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C5341965105F000D18DC</string>
+				<string>DED8C5351965105F000D18DC</string>
+				<string>DED8C5381965105F000D18DC</string>
+				<string>DED8C53A1965105F000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5341965105F000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>FormKit-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5351965105F000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C5361965105F000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5361965105F000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5371965105F000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C5351965105F000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5381965105F000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>main.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5391965105F000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C5381965105F000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C53A1965105F000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>FormKit-Prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C53B1965105F000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MUAppDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C53C1965105F000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MUAppDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C53D1965105F000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C53C1965105F000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C53E1965105F000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C53F1965105F000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C53F1965105F000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5401965105F000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C53E1965105F000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5411965105F000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MUViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5421965105F000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MUViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5431965105F000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C5421965105F000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5441965105F000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Images.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5451965105F000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C5441965105F000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5461965105F000D18DC</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>DED8C5581965105F000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>DED8C5471965105F000D18DC</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>DED8C54C1965105F000D18DC</string>
+				<string>DED8C54E1965105F000D18DC</string>
+				<string>DED8C54D1965105F000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>DED8C5481965105F000D18DC</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>DED8C5561965105F000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>DED8C5491965105F000D18DC</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>DED8C55E1965105F000D18DC</string>
+			<key>buildPhases</key>
+			<array>
+				<string>DED8C5461965105F000D18DC</string>
+				<string>DED8C5471965105F000D18DC</string>
+				<string>DED8C5481965105F000D18DC</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>DED8C5501965105F000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>FormKitTests</string>
+			<key>productName</key>
+			<string>FormKitTests</string>
+			<key>productReference</key>
+			<string>DED8C54A1965105F000D18DC</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>DED8C54A1965105F000D18DC</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>FormKitTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>DED8C54B1965105F000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>XCTest.framework</string>
+			<key>path</key>
+			<string>Library/Frameworks/XCTest.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>DED8C54C1965105F000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C54B1965105F000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C54D1965105F000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C52C1965105F000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C54E1965105F000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C5301965105F000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C54F1965105F000D18DC</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>DED8C5211965105F000D18DC</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>DED8C5281965105F000D18DC</string>
+			<key>remoteInfo</key>
+			<string>FormKit</string>
+		</dict>
+		<key>DED8C5501965105F000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>DED8C5281965105F000D18DC</string>
+			<key>targetProxy</key>
+			<string>DED8C54F1965105F000D18DC</string>
+		</dict>
+		<key>DED8C5511965105F000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C5571965105F000D18DC</string>
+				<string>DED8C5521965105F000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>FormKitTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5521965105F000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C5531965105F000D18DC</string>
+				<string>DED8C5541965105F000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5531965105F000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>FormKitTests-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5541965105F000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C5551965105F000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5551965105F000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5561965105F000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C5541965105F000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5571965105F000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>FormKitTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5581965105F000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C5571965105F000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5591965105F000D18DC</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>DED8C55A1965105F000D18DC</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>DED8C55B1965105F000D18DC</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>DED8C55C1965105F000D18DC</string>
+				<string>DED8C55D1965105F000D18DC</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>DED8C55C1965105F000D18DC</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>31E4ED881C4D4A57BD86FF62</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+				<string>LaunchImage</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>FormKit/FormKit-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>FormKit/FormKit-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>DED8C55D1965105F000D18DC</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>31E4ED881C4D4A57BD86FF62</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+				<string>LaunchImage</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>FormKit/FormKit-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>FormKit/FormKit-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>DED8C55E1965105F000D18DC</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>DED8C55F1965105F000D18DC</string>
+				<string>DED8C5601965105F000D18DC</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>DED8C55F1965105F000D18DC</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/FormKit.app/FormKit</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>FormKit/FormKit-Prefix.pch</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>FormKitTests/FormKitTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>DED8C5601965105F000D18DC</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/FormKit.app/FormKit</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>FormKit/FormKit-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>FormKitTests/FormKitTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>DED8C562196510B9000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C563196510B9000D18DC</string>
+				<string>DED8C594196510B9000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>src</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C563196510B9000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DE50BA39196CB66C0074C342</string>
+				<string>DE50BA3A196CB66C0074C342</string>
+				<string>DED8C564196510B9000D18DC</string>
+				<string>DED8C565196510B9000D18DC</string>
+				<string>DED8C566196510B9000D18DC</string>
+				<string>DED8C567196510B9000D18DC</string>
+				<string>DED8C568196510B9000D18DC</string>
+				<string>DED8C569196510B9000D18DC</string>
+				<string>DED8C56A196510B9000D18DC</string>
+				<string>DED8C56B196510B9000D18DC</string>
+				<string>DED8C56C196510B9000D18DC</string>
+				<string>DED8C56D196510B9000D18DC</string>
+				<string>DED8C56E196510B9000D18DC</string>
+				<string>DED8C56F196510B9000D18DC</string>
+				<string>DED8C570196510B9000D18DC</string>
+				<string>DED8C571196510B9000D18DC</string>
+				<string>DED8C572196510B9000D18DC</string>
+				<string>DED8C573196510B9000D18DC</string>
+				<string>DED8C574196510B9000D18DC</string>
+				<string>DED8C575196510B9000D18DC</string>
+				<string>DED8C576196510B9000D18DC</string>
+				<string>DED8C577196510B9000D18DC</string>
+				<string>DED8C578196510B9000D18DC</string>
+				<string>DED8C579196510B9000D18DC</string>
+				<string>DED8C57A196510B9000D18DC</string>
+				<string>DED8C57B196510B9000D18DC</string>
+				<string>DED8C57C196510B9000D18DC</string>
+				<string>DED8C57D196510B9000D18DC</string>
+				<string>DED8C57E196510B9000D18DC</string>
+				<string>DED8C57F196510B9000D18DC</string>
+				<string>DED8C580196510B9000D18DC</string>
+				<string>DED8C581196510B9000D18DC</string>
+				<string>DED8C582196510B9000D18DC</string>
+				<string>DED8C583196510B9000D18DC</string>
+				<string>DED8C584196510B9000D18DC</string>
+				<string>DED8C585196510B9000D18DC</string>
+				<string>DED8C586196510B9000D18DC</string>
+				<string>DED8C587196510B9000D18DC</string>
+				<string>DED8C588196510B9000D18DC</string>
+				<string>DED8C589196510B9000D18DC</string>
+				<string>DED8C58A196510B9000D18DC</string>
+				<string>DED8C58B196510B9000D18DC</string>
+				<string>DED8C58C196510B9000D18DC</string>
+				<string>DED8C58D196510B9000D18DC</string>
+				<string>DED8C58E196510B9000D18DC</string>
+				<string>DED8C58F196510B9000D18DC</string>
+				<string>DED8C590196510B9000D18DC</string>
+				<string>DED8C591196510B9000D18DC</string>
+				<string>DED8C592196510B9000D18DC</string>
+				<string>DED8C593196510B9000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Classes</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C564196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MUDynamicFormController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C565196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MUDynamicFormController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C566196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MUDynamicFormDataSource.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C567196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MUDynamicFormDataSource.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C568196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MUFormActivationCell.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C569196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MUFormActivationCell.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C56A196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MUFormBaseCell.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C56B196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MUFormBaseCell.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C56C196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MUFormCCNumberCell.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C56D196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MUFormCCNumberCell.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C56E196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MUFormConstants.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C56F196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MUFormController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C570196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MUFormController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C571196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MUFormDataSource.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C572196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MUFormDataSource.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C573196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MUFormDateTimeCell.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C574196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MUFormDateTimeCell.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C575196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MUFormIconCell.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C576196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MUFormIconCell.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C577196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MUFormKit.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C578196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MUFormNumberFieldCell.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C579196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MUFormNumberFieldCell.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C57A196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MUFormOptionCell.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C57B196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MUFormOptionCell.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C57C196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MUFormRelativeDateCell.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C57D196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MUFormRelativeDateCell.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C57E196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MUFormStaticInfoCell.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C57F196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MUFormStaticInfoCell.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C580196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MUFormStaticLabelCell.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C581196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MUFormStaticLabelCell.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C582196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MUFormSwitchCell.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C583196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MUFormSwitchCell.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C584196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MUFormTextFieldCell.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C585196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MUFormTextFieldCell.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C586196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MUFormTextViewCell.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C587196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MUFormTextViewCell.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C588196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MUFormTimeCell.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C589196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MUFormTimeCell.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C58A196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MUFormTimePickerCell.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C58B196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MUFormTimePickerCell.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C58C196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MUFormToFormSegueCell.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C58D196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MUFormToFormSegueCell.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C58E196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MUNextResponderController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C58F196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MUNextResponderController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C590196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MURelativeDatePickerController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C591196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MURelativeDatePickerController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C592196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MUValidationErrors.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C593196510B9000D18DC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MUValidationErrors.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C594196510B9000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C595196510B9000D18DC</string>
+				<string>DED8C597196510B9000D18DC</string>
+				<string>DED8C599196510B9000D18DC</string>
+				<string>DED8C59B196510B9000D18DC</string>
+				<string>DED8C59D196510B9000D18DC</string>
+				<string>DED8C59F196510B9000D18DC</string>
+				<string>DED8C5A1196510B9000D18DC</string>
+				<string>DED8C5A3196510B9000D18DC</string>
+				<string>DED8C5A5196510B9000D18DC</string>
+				<string>DED8C5A7196510B9000D18DC</string>
+				<string>DED8C5A9196510B9000D18DC</string>
+				<string>DED8C5AB196510B9000D18DC</string>
+				<string>DED8C5AD196510B9000D18DC</string>
+				<string>DED8C5AF196510B9000D18DC</string>
+				<string>DED8C5B1196510B9000D18DC</string>
+				<string>DED8C5B3196510B9000D18DC</string>
+				<string>DED8C5B5196510B9000D18DC</string>
+				<string>DED8C5B7196510B9000D18DC</string>
+				<string>DED8C5B9196510B9000D18DC</string>
+				<string>DED8C5BB196510B9000D18DC</string>
+				<string>DED8C5BD196510B9000D18DC</string>
+				<string>DED8C5BF196510B9000D18DC</string>
+				<string>DED8C5C1196510B9000D18DC</string>
+				<string>DED8C5C3196510B9000D18DC</string>
+				<string>DED8C5C5196510B9000D18DC</string>
+				<string>DED8C5C7196510B9000D18DC</string>
+				<string>DED8C5C9196510B9000D18DC</string>
+				<string>DED8C5CB196510B9000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Resources</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C595196510B9000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C596196510B9000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>MUFormActivationCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C596196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/MUFormActivationCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C597196510B9000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C598196510B9000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>MUFormCCNumberCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C598196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/MUFormCCNumberCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C599196510B9000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C59A196510B9000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>MUFormDateTimeCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C59A196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/MUFormDateTimeCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C59B196510B9000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C59C196510B9000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>MUFormNumberFieldCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C59C196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/MUFormNumberFieldCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C59D196510B9000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C59E196510B9000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>MUFormOptionCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C59E196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/MUFormOptionCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C59F196510B9000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C5A0196510B9000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>MUFormRelativeDateCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5A0196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/MUFormRelativeDateCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5A1196510B9000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C5A2196510B9000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>MUFormStaticInfoCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5A2196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/MUFormStaticInfoCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5A3196510B9000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C5A4196510B9000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>MUFormStaticLabelCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5A4196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/MUFormStaticLabelCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5A5196510B9000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C5A6196510B9000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>MUFormSwitchCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5A6196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/MUFormSwitchCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5A7196510B9000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C5A8196510B9000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>MUFormTextFieldCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5A8196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/MUFormTextFieldCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5A9196510B9000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C5AA196510B9000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>MUFormTextViewCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5AA196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/MUFormTextViewCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5AB196510B9000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C5AC196510B9000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>MUFormTimeCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5AC196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/MUFormTimeCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5AD196510B9000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C5AE196510B9000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>MUFormTimePickerCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5AE196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/MUFormTimePickerCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5AF196510B9000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C5B0196510B9000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>MUFormToFormSegueCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5B0196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/MUFormToFormSegueCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5B1196510B9000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C5B2196510B9000D18DC</string>
+				<string>DED8C5CD196510B9000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>MUFormActivationCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5B2196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/MUFormActivationCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5B3196510B9000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C5B4196510B9000D18DC</string>
+				<string>DED8C5CE196510B9000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>MUFormCCNumberCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5B4196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/MUFormCCNumberCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5B5196510B9000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C5B6196510B9000D18DC</string>
+				<string>DED8C5CF196510B9000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>MUFormDateTimeCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5B6196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/MUFormDateTimeCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5B7196510B9000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C5B8196510B9000D18DC</string>
+				<string>DED8C5D0196510B9000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>MUFormNumberFieldCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5B8196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/MUFormNumberFieldCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5B9196510B9000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C5BA196510B9000D18DC</string>
+				<string>DED8C5D1196510B9000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>MUFormOptionCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5BA196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/MUFormOptionCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5BB196510B9000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C5BC196510B9000D18DC</string>
+				<string>DED8C5D2196510B9000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>MUFormRelativeDateCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5BC196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/MUFormRelativeDateCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5BD196510B9000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C5BE196510B9000D18DC</string>
+				<string>DED8C5D3196510B9000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>MUFormStaticInfoCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5BE196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/MUFormStaticInfoCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5BF196510B9000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C5C0196510B9000D18DC</string>
+				<string>DED8C5D4196510B9000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>MUFormStaticLabelCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5C0196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/MUFormStaticLabelCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5C1196510B9000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C5C2196510B9000D18DC</string>
+				<string>DED8C5D5196510B9000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>MUFormSwitchCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5C2196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/MUFormSwitchCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5C3196510B9000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C5C4196510B9000D18DC</string>
+				<string>DED8C5D6196510B9000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>MUFormTextFieldCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5C4196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/MUFormTextFieldCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5C5196510B9000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C5C6196510B9000D18DC</string>
+				<string>DED8C5D7196510B9000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>MUFormTextViewCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5C6196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/MUFormTextViewCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5C7196510B9000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C5C8196510B9000D18DC</string>
+				<string>DED8C5D8196510B9000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>MUFormTimeCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5C8196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/MUFormTimeCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5C9196510B9000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C5CA196510B9000D18DC</string>
+				<string>DED8C5D9196510B9000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>MUFormTimePickerCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5CA196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/MUFormTimePickerCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5CB196510B9000D18DC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DED8C5CC196510B9000D18DC</string>
+				<string>DED8C5DA196510B9000D18DC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>MUFormToFormSegueCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5CC196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/MUFormToFormSegueCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5CD196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>it</string>
+			<key>path</key>
+			<string>it.lproj/MUFormActivationCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5CE196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>it</string>
+			<key>path</key>
+			<string>it.lproj/MUFormCCNumberCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5CF196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>it</string>
+			<key>path</key>
+			<string>it.lproj/MUFormDateTimeCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5D0196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>it</string>
+			<key>path</key>
+			<string>it.lproj/MUFormNumberFieldCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5D1196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>it</string>
+			<key>path</key>
+			<string>it.lproj/MUFormOptionCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5D2196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>it</string>
+			<key>path</key>
+			<string>it.lproj/MUFormRelativeDateCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5D3196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>it</string>
+			<key>path</key>
+			<string>it.lproj/MUFormStaticInfoCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5D4196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>it</string>
+			<key>path</key>
+			<string>it.lproj/MUFormStaticLabelCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5D5196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>it</string>
+			<key>path</key>
+			<string>it.lproj/MUFormSwitchCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5D6196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>it</string>
+			<key>path</key>
+			<string>it.lproj/MUFormTextFieldCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5D7196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>it</string>
+			<key>path</key>
+			<string>it.lproj/MUFormTextViewCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5D8196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>it</string>
+			<key>path</key>
+			<string>it.lproj/MUFormTimeCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5D9196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>it</string>
+			<key>path</key>
+			<string>it.lproj/MUFormTimePickerCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5DA196510B9000D18DC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>it</string>
+			<key>path</key>
+			<string>it.lproj/MUFormToFormSegueCell.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DED8C5DB196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C565196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5DC196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C567196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5DD196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C569196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5DE196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C56B196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5DF196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C56D196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5E0196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C570196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5E1196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C572196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5E2196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C574196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5E3196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C576196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5E4196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C579196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5E5196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C57B196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5E6196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C57D196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5E7196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C57F196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5E8196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C581196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5E9196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C583196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5EA196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C585196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5EB196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C587196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5EC196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C589196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5ED196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C58B196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5EE196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C58D196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5EF196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C58F196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5F0196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C591196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5F1196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C593196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5F2196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C595196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5F3196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C597196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5F4196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C599196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5F5196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C59B196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5F6196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C59D196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5F7196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C59F196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5F8196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C5A1196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5F9196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C5A3196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5FA196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C5A5196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5FB196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C5A7196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5FC196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C5A9196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5FD196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C5AB196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5FE196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C5AD196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C5FF196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C5AF196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C600196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C5B1196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C601196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C5B3196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C602196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C5B5196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C603196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C5B7196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C604196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C5B9196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C605196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C5BB196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C606196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C5BD196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C607196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C5BF196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C608196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C5C1196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C609196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C5C3196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C60A196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C5C5196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C60B196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C5C7196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C60C196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C5C9196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DED8C60D196510B9000D18DC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DED8C5CB196510B9000D18DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>DED8C5211965105F000D18DC</string>
+</dict>
+</plist>
