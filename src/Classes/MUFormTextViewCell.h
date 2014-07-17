@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "MUFormBaseCell.h"
+#import "SAMTextView.h"
 
 @interface MUFormTextViewCell : MUFormBaseCell <UITextViewDelegate, MUFormNextTextResponder>
 
-@property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (weak, nonatomic) IBOutlet SAMTextView *textView;
 
 @end

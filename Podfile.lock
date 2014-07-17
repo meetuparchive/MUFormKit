@@ -18,17 +18,23 @@ PODS:
   - FormatterKit/URLRequestFormatter (1.5.2)
   - MUCore (0.0.2):
     - FormatterKit
+  - SAMTextView (0.2.0)
 
 DEPENDENCIES:
   - MUCore (from `git@github.com:meetup/MUCore.git`, tag `0.0.2`)
+  - SAMTextView (from `git://github.com/smup/SAMTextView.git`, commit `85159bc5bb57fc4487e5c03da28dd1cb70c33f07`)
 
 EXTERNAL SOURCES:
   MUCore:
     :git: git@github.com:meetup/MUCore.git
     :tag: 0.0.2
+  SAMTextView:
+    :commit: 85159bc5bb57fc4487e5c03da28dd1cb70c33f07
+    :git: git://github.com/smup/SAMTextView.git
 
 SPEC CHECKSUMS:
   FormatterKit: f1a811f73eec78944ce165286f65b55b6202e84a
   MUCore: f488d9dbf4b33fe67f3b44f31e56135fef1b60ff
+  SAMTextView: 3a18c24b6bbfb856ac6e519536b3eec27a2f2fb8
 
 COCOAPODS: 0.33.1

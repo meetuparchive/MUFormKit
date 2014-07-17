@@ -66,8 +66,8 @@ static CGFloat kMUErrorLabelHeight = 20.0;
         NSString *localizedKey = info[MUFormLocalizedDefaultValueKey];
         NSString *localizedString = [[NSBundle mainBundle] localizedStringForKey:localizedKey value:localizedKey table:MUFormKitStringTable];
 
-//        self.textView.attributedPlaceholder = [[NSAttributedString alloc] initWithString:localizedString
-//                                                                              attributes:attributes];
+        self.textView.attributedPlaceholder = [[NSAttributedString alloc] initWithString:localizedString
+                                                                              attributes:attributes];
     }
     
     NSArray *validationMessages = info[MUValidationMessagesKey];
