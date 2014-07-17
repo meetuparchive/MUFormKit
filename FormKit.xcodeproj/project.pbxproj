@@ -203,6 +203,8 @@
 		DED8C5D9196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormTimePickerCell.strings; sourceTree = "<group>"; };
 		DED8C5DA196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormToFormSegueCell.strings; sourceTree = "<group>"; };
 		F39EA67E19786A31002E4F3F /* MUFormKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = MUFormKit.podspec; sourceTree = "<group>"; };
+		F39EA6801978717E002E4F3F /* MUFormKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = MUFormKit.podspec; sourceTree = "<group>"; };
+		F39EA68119787191002E4F3F /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +236,8 @@
 		DED8C5201965105F000D18DC = {
 			isa = PBXGroup;
 			children = (
+				F39EA68119787191002E4F3F /* LICENSE */,
+				F39EA6801978717E002E4F3F /* MUFormKit.podspec */,
 				DED8C562196510B9000D18DC /* src */,
 				DED8C5321965105F000D18DC /* FormKit */,
 				DED8C5511965105F000D18DC /* FormKitTests */,
