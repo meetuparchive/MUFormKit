@@ -190,8 +190,9 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
 
 - (NSIndexSet *)indexPathsForSection:(NSInteger)section
 {
-    NSUInteger count = [self.activeSections count];
-    NSAssert((section < (NSInteger)count), @"Section index (%ld) is out of bounds (%lu).", (long)section, (unsigned long)count);
+    NSAssert((section < (NSInteger)[self.activeSections count]),
+    @"Section index (%ld) is out of bounds (%lu).", (long)section, (unsigned long)[self.activeSections count]);
+    
     NSDictionary *sectionInfo = self.activeSections[section];
     NSArray *rows = sectionInfo[MUFormSectionRowsKey];
     NSMutableArray *indexes = [NSMutableArray arrayWithCapacity:[rows count]];
