@@ -61,20 +61,6 @@
 		DED8C5FD196510B9000D18DC /* MUFormTimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5AB196510B9000D18DC /* MUFormTimeCell.xib */; };
 		DED8C5FE196510B9000D18DC /* MUFormTimePickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5AD196510B9000D18DC /* MUFormTimePickerCell.xib */; };
 		DED8C5FF196510B9000D18DC /* MUFormToFormSegueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5AF196510B9000D18DC /* MUFormToFormSegueCell.xib */; };
-		DED8C600196510B9000D18DC /* MUFormActivationCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5B1196510B9000D18DC /* MUFormActivationCell.strings */; };
-		DED8C601196510B9000D18DC /* MUFormCCNumberCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5B3196510B9000D18DC /* MUFormCCNumberCell.strings */; };
-		DED8C602196510B9000D18DC /* MUFormDateTimeCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5B5196510B9000D18DC /* MUFormDateTimeCell.strings */; };
-		DED8C603196510B9000D18DC /* MUFormNumberFieldCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5B7196510B9000D18DC /* MUFormNumberFieldCell.strings */; };
-		DED8C604196510B9000D18DC /* MUFormOptionCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5B9196510B9000D18DC /* MUFormOptionCell.strings */; };
-		DED8C605196510B9000D18DC /* MUFormRelativeDateCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5BB196510B9000D18DC /* MUFormRelativeDateCell.strings */; };
-		DED8C606196510B9000D18DC /* MUFormStaticInfoCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5BD196510B9000D18DC /* MUFormStaticInfoCell.strings */; };
-		DED8C607196510B9000D18DC /* MUFormStaticLabelCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5BF196510B9000D18DC /* MUFormStaticLabelCell.strings */; };
-		DED8C608196510B9000D18DC /* MUFormSwitchCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5C1196510B9000D18DC /* MUFormSwitchCell.strings */; };
-		DED8C609196510B9000D18DC /* MUFormTextFieldCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5C3196510B9000D18DC /* MUFormTextFieldCell.strings */; };
-		DED8C60A196510B9000D18DC /* MUFormTextViewCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5C5196510B9000D18DC /* MUFormTextViewCell.strings */; };
-		DED8C60B196510B9000D18DC /* MUFormTimeCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5C7196510B9000D18DC /* MUFormTimeCell.strings */; };
-		DED8C60C196510B9000D18DC /* MUFormTimePickerCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5C9196510B9000D18DC /* MUFormTimePickerCell.strings */; };
-		DED8C60D196510B9000D18DC /* MUFormToFormSegueCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5CB196510B9000D18DC /* MUFormToFormSegueCell.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -174,34 +160,34 @@
 		DED8C5AC196510B9000D18DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MUFormTimeCell.xib; sourceTree = "<group>"; };
 		DED8C5AE196510B9000D18DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MUFormTimePickerCell.xib; sourceTree = "<group>"; };
 		DED8C5B0196510B9000D18DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MUFormToFormSegueCell.xib; sourceTree = "<group>"; };
-		DED8C5B2196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormActivationCell.strings; sourceTree = "<group>"; };
-		DED8C5B4196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormCCNumberCell.strings; sourceTree = "<group>"; };
-		DED8C5B6196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormDateTimeCell.strings; sourceTree = "<group>"; };
-		DED8C5B8196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormNumberFieldCell.strings; sourceTree = "<group>"; };
-		DED8C5BA196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormOptionCell.strings; sourceTree = "<group>"; };
-		DED8C5BC196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormRelativeDateCell.strings; sourceTree = "<group>"; };
-		DED8C5BE196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormStaticInfoCell.strings; sourceTree = "<group>"; };
-		DED8C5C0196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormStaticLabelCell.strings; sourceTree = "<group>"; };
-		DED8C5C2196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormSwitchCell.strings; sourceTree = "<group>"; };
-		DED8C5C4196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormTextFieldCell.strings; sourceTree = "<group>"; };
-		DED8C5C6196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormTextViewCell.strings; sourceTree = "<group>"; };
-		DED8C5C8196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormTimeCell.strings; sourceTree = "<group>"; };
-		DED8C5CA196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormTimePickerCell.strings; sourceTree = "<group>"; };
-		DED8C5CC196510B9000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormToFormSegueCell.strings; sourceTree = "<group>"; };
-		DED8C5CD196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormActivationCell.strings; sourceTree = "<group>"; };
-		DED8C5CE196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormCCNumberCell.strings; sourceTree = "<group>"; };
-		DED8C5CF196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormDateTimeCell.strings; sourceTree = "<group>"; };
-		DED8C5D0196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormNumberFieldCell.strings; sourceTree = "<group>"; };
-		DED8C5D1196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormOptionCell.strings; sourceTree = "<group>"; };
-		DED8C5D2196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormRelativeDateCell.strings; sourceTree = "<group>"; };
-		DED8C5D3196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormStaticInfoCell.strings; sourceTree = "<group>"; };
-		DED8C5D4196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormStaticLabelCell.strings; sourceTree = "<group>"; };
-		DED8C5D5196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormSwitchCell.strings; sourceTree = "<group>"; };
-		DED8C5D6196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormTextFieldCell.strings; sourceTree = "<group>"; };
-		DED8C5D7196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormTextViewCell.strings; sourceTree = "<group>"; };
-		DED8C5D8196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormTimeCell.strings; sourceTree = "<group>"; };
-		DED8C5D9196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormTimePickerCell.strings; sourceTree = "<group>"; };
-		DED8C5DA196510B9000D18DC /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormToFormSegueCell.strings; sourceTree = "<group>"; };
+		F326820A1979786100374B36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormActivationCell.strings; sourceTree = "<group>"; };
+		F326820B1979786300374B36 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormActivationCell.strings; sourceTree = "<group>"; };
+		F326820C1979786A00374B36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormCCNumberCell.strings; sourceTree = "<group>"; };
+		F326820D1979786C00374B36 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormCCNumberCell.strings; sourceTree = "<group>"; };
+		F326820E1979787000374B36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormDateTimeCell.strings; sourceTree = "<group>"; };
+		F326820F1979787200374B36 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormDateTimeCell.strings; sourceTree = "<group>"; };
+		F32682101979787600374B36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormNumberFieldCell.strings; sourceTree = "<group>"; };
+		F32682111979787800374B36 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormNumberFieldCell.strings; sourceTree = "<group>"; };
+		F32682121979787B00374B36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormOptionCell.strings; sourceTree = "<group>"; };
+		F32682131979787D00374B36 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormOptionCell.strings; sourceTree = "<group>"; };
+		F32682141979788000374B36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormRelativeDateCell.strings; sourceTree = "<group>"; };
+		F32682151979788200374B36 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormRelativeDateCell.strings; sourceTree = "<group>"; };
+		F32682161979788600374B36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormStaticInfoCell.strings; sourceTree = "<group>"; };
+		F32682171979788800374B36 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormStaticInfoCell.strings; sourceTree = "<group>"; };
+		F32682181979788B00374B36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormStaticLabelCell.strings; sourceTree = "<group>"; };
+		F32682191979788E00374B36 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormStaticLabelCell.strings; sourceTree = "<group>"; };
+		F326821A1979789100374B36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormSwitchCell.strings; sourceTree = "<group>"; };
+		F326821B1979789300374B36 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormSwitchCell.strings; sourceTree = "<group>"; };
+		F326821C1979789600374B36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormTextFieldCell.strings; sourceTree = "<group>"; };
+		F326821D1979789800374B36 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormTextFieldCell.strings; sourceTree = "<group>"; };
+		F326821E19797B0800374B36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormTextViewCell.strings; sourceTree = "<group>"; };
+		F326821F19797B0A00374B36 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormTextViewCell.strings; sourceTree = "<group>"; };
+		F326822019797B0E00374B36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormTimeCell.strings; sourceTree = "<group>"; };
+		F326822119797B1000374B36 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormTimeCell.strings; sourceTree = "<group>"; };
+		F326822219797B1400374B36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormTimePickerCell.strings; sourceTree = "<group>"; };
+		F326822319797B1600374B36 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormTimePickerCell.strings; sourceTree = "<group>"; };
+		F326822419797B1A00374B36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormToFormSegueCell.strings; sourceTree = "<group>"; };
+		F326822519797B1C00374B36 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormToFormSegueCell.strings; sourceTree = "<group>"; };
 		F39EA67E19786A31002E4F3F /* MUFormKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = MUFormKit.podspec; sourceTree = "<group>"; };
 		F39EA6801978717E002E4F3F /* MUFormKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = MUFormKit.podspec; sourceTree = "<group>"; };
 		F39EA68119787191002E4F3F /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -396,20 +382,6 @@
 				DED8C5AB196510B9000D18DC /* MUFormTimeCell.xib */,
 				DED8C5AD196510B9000D18DC /* MUFormTimePickerCell.xib */,
 				DED8C5AF196510B9000D18DC /* MUFormToFormSegueCell.xib */,
-				DED8C5B1196510B9000D18DC /* MUFormActivationCell.strings */,
-				DED8C5B3196510B9000D18DC /* MUFormCCNumberCell.strings */,
-				DED8C5B5196510B9000D18DC /* MUFormDateTimeCell.strings */,
-				DED8C5B7196510B9000D18DC /* MUFormNumberFieldCell.strings */,
-				DED8C5B9196510B9000D18DC /* MUFormOptionCell.strings */,
-				DED8C5BB196510B9000D18DC /* MUFormRelativeDateCell.strings */,
-				DED8C5BD196510B9000D18DC /* MUFormStaticInfoCell.strings */,
-				DED8C5BF196510B9000D18DC /* MUFormStaticLabelCell.strings */,
-				DED8C5C1196510B9000D18DC /* MUFormSwitchCell.strings */,
-				DED8C5C3196510B9000D18DC /* MUFormTextFieldCell.strings */,
-				DED8C5C5196510B9000D18DC /* MUFormTextViewCell.strings */,
-				DED8C5C7196510B9000D18DC /* MUFormTimeCell.strings */,
-				DED8C5C9196510B9000D18DC /* MUFormTimePickerCell.strings */,
-				DED8C5CB196510B9000D18DC /* MUFormToFormSegueCell.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -494,36 +466,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DED8C60B196510B9000D18DC /* MUFormTimeCell.strings in Resources */,
 				DED8C5F7196510B9000D18DC /* MUFormRelativeDateCell.xib in Resources */,
 				DED8C5FA196510B9000D18DC /* MUFormSwitchCell.xib in Resources */,
-				DED8C601196510B9000D18DC /* MUFormCCNumberCell.strings in Resources */,
 				DED8C5451965105F000D18DC /* Images.xcassets in Resources */,
-				DED8C605196510B9000D18DC /* MUFormRelativeDateCell.strings in Resources */,
 				DED8C5F2196510B9000D18DC /* MUFormActivationCell.xib in Resources */,
-				DED8C603196510B9000D18DC /* MUFormNumberFieldCell.strings in Resources */,
 				DED8C5FD196510B9000D18DC /* MUFormTimeCell.xib in Resources */,
 				DED8C5FB196510B9000D18DC /* MUFormTextFieldCell.xib in Resources */,
 				DED8C5FC196510B9000D18DC /* MUFormTextViewCell.xib in Resources */,
 				DED8C5371965105F000D18DC /* InfoPlist.strings in Resources */,
 				DED8C5F5196510B9000D18DC /* MUFormNumberFieldCell.xib in Resources */,
-				DED8C604196510B9000D18DC /* MUFormOptionCell.strings in Resources */,
 				DED8C5F6196510B9000D18DC /* MUFormOptionCell.xib in Resources */,
-				DED8C608196510B9000D18DC /* MUFormSwitchCell.strings in Resources */,
-				DED8C600196510B9000D18DC /* MUFormActivationCell.strings in Resources */,
 				DED8C5401965105F000D18DC /* Main.storyboard in Resources */,
 				DED8C5F8196510B9000D18DC /* MUFormStaticInfoCell.xib in Resources */,
 				DED8C5FF196510B9000D18DC /* MUFormToFormSegueCell.xib in Resources */,
 				DED8C5FE196510B9000D18DC /* MUFormTimePickerCell.xib in Resources */,
-				DED8C607196510B9000D18DC /* MUFormStaticLabelCell.strings in Resources */,
 				DED8C5F9196510B9000D18DC /* MUFormStaticLabelCell.xib in Resources */,
-				DED8C60C196510B9000D18DC /* MUFormTimePickerCell.strings in Resources */,
-				DED8C602196510B9000D18DC /* MUFormDateTimeCell.strings in Resources */,
-				DED8C609196510B9000D18DC /* MUFormTextFieldCell.strings in Resources */,
-				DED8C60A196510B9000D18DC /* MUFormTextViewCell.strings in Resources */,
 				DED8C5F4196510B9000D18DC /* MUFormDateTimeCell.xib in Resources */,
-				DED8C606196510B9000D18DC /* MUFormStaticInfoCell.strings in Resources */,
-				DED8C60D196510B9000D18DC /* MUFormToFormSegueCell.strings in Resources */,
 				DED8C5F3196510B9000D18DC /* MUFormCCNumberCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -653,6 +611,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				DED8C596196510B9000D18DC /* Base */,
+				F326820A1979786100374B36 /* en */,
+				F326820B1979786300374B36 /* it */,
 			);
 			name = MUFormActivationCell.xib;
 			sourceTree = "<group>";
@@ -661,6 +621,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				DED8C598196510B9000D18DC /* Base */,
+				F326820C1979786A00374B36 /* en */,
+				F326820D1979786C00374B36 /* it */,
 			);
 			name = MUFormCCNumberCell.xib;
 			sourceTree = "<group>";
@@ -669,6 +631,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				DED8C59A196510B9000D18DC /* Base */,
+				F326820E1979787000374B36 /* en */,
+				F326820F1979787200374B36 /* it */,
 			);
 			name = MUFormDateTimeCell.xib;
 			sourceTree = "<group>";
@@ -677,6 +641,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				DED8C59C196510B9000D18DC /* Base */,
+				F32682101979787600374B36 /* en */,
+				F32682111979787800374B36 /* it */,
 			);
 			name = MUFormNumberFieldCell.xib;
 			sourceTree = "<group>";
@@ -685,6 +651,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				DED8C59E196510B9000D18DC /* Base */,
+				F32682121979787B00374B36 /* en */,
+				F32682131979787D00374B36 /* it */,
 			);
 			name = MUFormOptionCell.xib;
 			sourceTree = "<group>";
@@ -693,6 +661,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				DED8C5A0196510B9000D18DC /* Base */,
+				F32682141979788000374B36 /* en */,
+				F32682151979788200374B36 /* it */,
 			);
 			name = MUFormRelativeDateCell.xib;
 			sourceTree = "<group>";
@@ -701,6 +671,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				DED8C5A2196510B9000D18DC /* Base */,
+				F32682161979788600374B36 /* en */,
+				F32682171979788800374B36 /* it */,
 			);
 			name = MUFormStaticInfoCell.xib;
 			sourceTree = "<group>";
@@ -709,6 +681,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				DED8C5A4196510B9000D18DC /* Base */,
+				F32682181979788B00374B36 /* en */,
+				F32682191979788E00374B36 /* it */,
 			);
 			name = MUFormStaticLabelCell.xib;
 			sourceTree = "<group>";
@@ -717,6 +691,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				DED8C5A6196510B9000D18DC /* Base */,
+				F326821A1979789100374B36 /* en */,
+				F326821B1979789300374B36 /* it */,
 			);
 			name = MUFormSwitchCell.xib;
 			sourceTree = "<group>";
@@ -725,6 +701,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				DED8C5A8196510B9000D18DC /* Base */,
+				F326821C1979789600374B36 /* en */,
+				F326821D1979789800374B36 /* it */,
 			);
 			name = MUFormTextFieldCell.xib;
 			sourceTree = "<group>";
@@ -733,6 +711,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				DED8C5AA196510B9000D18DC /* Base */,
+				F326821E19797B0800374B36 /* en */,
+				F326821F19797B0A00374B36 /* it */,
 			);
 			name = MUFormTextViewCell.xib;
 			sourceTree = "<group>";
@@ -741,6 +721,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				DED8C5AC196510B9000D18DC /* Base */,
+				F326822019797B0E00374B36 /* en */,
+				F326822119797B1000374B36 /* it */,
 			);
 			name = MUFormTimeCell.xib;
 			sourceTree = "<group>";
@@ -749,6 +731,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				DED8C5AE196510B9000D18DC /* Base */,
+				F326822219797B1400374B36 /* en */,
+				F326822319797B1600374B36 /* it */,
 			);
 			name = MUFormTimePickerCell.xib;
 			sourceTree = "<group>";
@@ -757,134 +741,10 @@
 			isa = PBXVariantGroup;
 			children = (
 				DED8C5B0196510B9000D18DC /* Base */,
+				F326822419797B1A00374B36 /* en */,
+				F326822519797B1C00374B36 /* it */,
 			);
 			name = MUFormToFormSegueCell.xib;
-			sourceTree = "<group>";
-		};
-		DED8C5B1196510B9000D18DC /* MUFormActivationCell.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5B2196510B9000D18DC /* en */,
-				DED8C5CD196510B9000D18DC /* it */,
-			);
-			name = MUFormActivationCell.strings;
-			sourceTree = "<group>";
-		};
-		DED8C5B3196510B9000D18DC /* MUFormCCNumberCell.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5B4196510B9000D18DC /* en */,
-				DED8C5CE196510B9000D18DC /* it */,
-			);
-			name = MUFormCCNumberCell.strings;
-			sourceTree = "<group>";
-		};
-		DED8C5B5196510B9000D18DC /* MUFormDateTimeCell.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5B6196510B9000D18DC /* en */,
-				DED8C5CF196510B9000D18DC /* it */,
-			);
-			name = MUFormDateTimeCell.strings;
-			sourceTree = "<group>";
-		};
-		DED8C5B7196510B9000D18DC /* MUFormNumberFieldCell.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5B8196510B9000D18DC /* en */,
-				DED8C5D0196510B9000D18DC /* it */,
-			);
-			name = MUFormNumberFieldCell.strings;
-			sourceTree = "<group>";
-		};
-		DED8C5B9196510B9000D18DC /* MUFormOptionCell.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5BA196510B9000D18DC /* en */,
-				DED8C5D1196510B9000D18DC /* it */,
-			);
-			name = MUFormOptionCell.strings;
-			sourceTree = "<group>";
-		};
-		DED8C5BB196510B9000D18DC /* MUFormRelativeDateCell.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5BC196510B9000D18DC /* en */,
-				DED8C5D2196510B9000D18DC /* it */,
-			);
-			name = MUFormRelativeDateCell.strings;
-			sourceTree = "<group>";
-		};
-		DED8C5BD196510B9000D18DC /* MUFormStaticInfoCell.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5BE196510B9000D18DC /* en */,
-				DED8C5D3196510B9000D18DC /* it */,
-			);
-			name = MUFormStaticInfoCell.strings;
-			sourceTree = "<group>";
-		};
-		DED8C5BF196510B9000D18DC /* MUFormStaticLabelCell.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5C0196510B9000D18DC /* en */,
-				DED8C5D4196510B9000D18DC /* it */,
-			);
-			name = MUFormStaticLabelCell.strings;
-			sourceTree = "<group>";
-		};
-		DED8C5C1196510B9000D18DC /* MUFormSwitchCell.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5C2196510B9000D18DC /* en */,
-				DED8C5D5196510B9000D18DC /* it */,
-			);
-			name = MUFormSwitchCell.strings;
-			sourceTree = "<group>";
-		};
-		DED8C5C3196510B9000D18DC /* MUFormTextFieldCell.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5C4196510B9000D18DC /* en */,
-				DED8C5D6196510B9000D18DC /* it */,
-			);
-			name = MUFormTextFieldCell.strings;
-			sourceTree = "<group>";
-		};
-		DED8C5C5196510B9000D18DC /* MUFormTextViewCell.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5C6196510B9000D18DC /* en */,
-				DED8C5D7196510B9000D18DC /* it */,
-			);
-			name = MUFormTextViewCell.strings;
-			sourceTree = "<group>";
-		};
-		DED8C5C7196510B9000D18DC /* MUFormTimeCell.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5C8196510B9000D18DC /* en */,
-				DED8C5D8196510B9000D18DC /* it */,
-			);
-			name = MUFormTimeCell.strings;
-			sourceTree = "<group>";
-		};
-		DED8C5C9196510B9000D18DC /* MUFormTimePickerCell.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5CA196510B9000D18DC /* en */,
-				DED8C5D9196510B9000D18DC /* it */,
-			);
-			name = MUFormTimePickerCell.strings;
-			sourceTree = "<group>";
-		};
-		DED8C5CB196510B9000D18DC /* MUFormToFormSegueCell.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5CC196510B9000D18DC /* en */,
-				DED8C5DA196510B9000D18DC /* it */,
-			);
-			name = MUFormToFormSegueCell.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
