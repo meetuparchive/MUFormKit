@@ -69,7 +69,7 @@ extern NSString *const MUFormCellTimeZoneKey;
  @discussion This method does nothing by default and returns 44.0.
              Subclasses should override this method to compute the cell's height.
  */
-+ (CGFloat)heightForValue:(id)value info:(NSDictionary *)info;
++ (CGFloat)heightForTableView:(UITableView*)tableView value:(id)value info:(NSDictionary *)info;
 
 
 ///-------------------------------------------------------------------

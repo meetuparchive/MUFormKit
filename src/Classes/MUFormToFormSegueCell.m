@@ -22,7 +22,7 @@ static CGFloat const kMUMessageHeight = 10.0;
 @implementation MUFormToFormSegueCell
 
 
-+ (CGFloat)heightForValue:(id)value info:(NSDictionary *)info
++ (CGFloat)heightForTableView:(UITableView*)tableView value:(id)value info:(NSDictionary *)info
 {
     CGFloat height = kMUDefaultRowHeight;
     if (value) {

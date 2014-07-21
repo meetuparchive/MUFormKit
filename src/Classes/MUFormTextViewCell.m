@@ -17,7 +17,7 @@ static CGFloat kMUErrorLabelHeight = 20.0;
 #pragma mark - Overrides -
 
 
-+ (CGFloat)heightForValue:(id)value info:(NSDictionary *)info
++ (CGFloat)heightForTableView:(UITableView*)tableView value:(id)value info:(NSDictionary *)info
 {
     CGFloat height = kMUCellHeight;
     if (info[MUValidationMessagesKey]) {

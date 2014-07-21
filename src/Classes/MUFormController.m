@@ -258,7 +258,7 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
     else {
         Class class = [self.dataSource cellClassForItemAtIndexPath:indexPath];
         id value = [self.dataSource valueForItemAtIndexPath:indexPath];
-        height = [class heightForValue:value info:rowInfo];
+        height = [class heightForTableView:self.tableView value:value info:rowInfo];
     }
     
     return height;

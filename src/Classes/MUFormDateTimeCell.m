@@ -15,7 +15,7 @@ static CGFloat const kMUDefaultRowHeight = 44.0;
 
 @implementation MUFormDateTimeCell
 
-+ (CGFloat)heightForValue:(id)value info:(NSDictionary *)info
++ (CGFloat)heightForTableView:(UITableView*)tableView value:(id)value info:(NSDictionary *)info
 {    
     return kMUDefaultRowHeight;
 }

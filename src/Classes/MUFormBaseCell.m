@@ -26,7 +26,7 @@ static CGFloat const kMUErrorLabelHeight = 20.0;
 
 @implementation MUFormBaseCell
 
-+ (CGFloat)heightForValue:(id)value info:(NSDictionary *)info
++ (CGFloat)heightForTableView:(UITableView*)tableView value:(id)value info:(NSDictionary *)info
 {
     /** Override this method in subclasses. */
     

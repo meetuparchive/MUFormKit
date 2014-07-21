@@ -10,7 +10,7 @@
 
 @implementation MUFormTimePickerCell
 
-+ (CGFloat)heightForValue:(id)value info:(NSDictionary *)info
++ (CGFloat)heightForTableView:(UITableView*)tableView value:(id)value info:(NSDictionary *)info
 {    
     return 216.0;
 }

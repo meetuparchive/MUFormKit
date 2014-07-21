@@ -26,7 +26,7 @@ static CGFloat const kMUHeightWithMessage = 56.0;
 
 @implementation MUFormRelativeDateCell
 
-+ (CGFloat)heightForValue:(id)value info:(NSDictionary *)info
++ (CGFloat)heightForTableView:(UITableView*)tableView value:(id)value info:(NSDictionary *)info
 {
     NSString *localizedKey = info[MUFormLocalizedCellMessageKey];
     NSString *message = [[NSBundle mainBundle] localizedStringForKey:localizedKey value:localizedKey table:MUFormKitStringTable];
