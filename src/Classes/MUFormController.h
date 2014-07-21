@@ -31,4 +31,7 @@
  */
 - (CGFloat)heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 
+
+- (void)viewDidLoad NS_REQUIRES_SUPER;
+
 @end
