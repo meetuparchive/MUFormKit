@@ -15,10 +15,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ag-oL-CLT" userLabel="Container View">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="53"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Changes made via mobile will remove advanced text formatting for this event." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="258" translatesAutoresizingMaskIntoConstraints="NO" id="NSg-rX-0cf">
-                                <rect key="frame" x="47" y="12" width="258" height="31"/>
+                                <rect key="frame" x="47" y="12" width="258" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                 <color key="textColor" white="0.050467609490000002" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -36,7 +36,6 @@
                             <constraint firstItem="NSg-rX-0cf" firstAttribute="leading" secondItem="lhY-r8-AMd" secondAttribute="trailing" constant="6" id="DBZ-tS-rjg" userLabel="icon-H-label"/>
                             <constraint firstItem="NSg-rX-0cf" firstAttribute="top" secondItem="5Ag-oL-CLT" secondAttribute="top" constant="12" id="JWv-ig-zv0"/>
                             <constraint firstItem="NSg-rX-0cf" firstAttribute="centerY" secondItem="lhY-r8-AMd" secondAttribute="centerY" id="Pk9-NY-O4B"/>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="54" id="To4-2t-M4j"/>
                             <constraint firstItem="lhY-r8-AMd" firstAttribute="leading" secondItem="5Ag-oL-CLT" secondAttribute="leading" constant="15" id="eBk-Gh-hUs" userLabel="image-leading"/>
                             <constraint firstAttribute="trailing" secondItem="NSg-rX-0cf" secondAttribute="trailing" constant="15" id="nNg-D3-ya8" userLabel="label-trailing"/>
                             <constraint firstAttribute="bottom" secondItem="NSg-rX-0cf" secondAttribute="bottom" constant="11" id="sex-j7-hjG"/>
@@ -44,15 +43,13 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="5Ag-oL-CLT" secondAttribute="bottom" constant="-1" id="cK0-wa-XDd"/>
+                    <constraint firstAttribute="bottom" secondItem="5Ag-oL-CLT" secondAttribute="bottom" id="cK0-wa-XDd"/>
                     <constraint firstItem="5Ag-oL-CLT" firstAttribute="leading" secondItem="Bw3-Vk-YnS" secondAttribute="leading" id="dxz-Qe-gPr"/>
                     <constraint firstAttribute="trailing" secondItem="5Ag-oL-CLT" secondAttribute="trailing" id="eK0-vp-p41"/>
                     <constraint firstItem="5Ag-oL-CLT" firstAttribute="top" secondItem="Bw3-Vk-YnS" secondAttribute="top" id="rzy-eE-9mA"/>
                 </constraints>
             </tableViewCellContentView>
             <constraints>
-                <constraint firstItem="5Ag-oL-CLT" firstAttribute="top" secondItem="cmw-Qi-Ojf" secondAttribute="top" id="32a-9f-tTq"/>
-                <constraint firstItem="5Ag-oL-CLT" firstAttribute="bottom" secondItem="cmw-Qi-Ojf" secondAttribute="bottom" id="44y-dT-1ju"/>
                 <constraint firstItem="5Ag-oL-CLT" firstAttribute="leading" secondItem="cmw-Qi-Ojf" secondAttribute="leading" id="J6X-kU-XpL"/>
             </constraints>
             <connections>
