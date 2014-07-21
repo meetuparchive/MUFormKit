@@ -11,6 +11,18 @@
           "MUFormCellIdentifierKey": "form-static-info-cell",
           "MUFormPropertyNameKey": "resizeableTextString",
           "MUFormTapActionIdentifierKey": "info-label-1",
+        },
+        {
+          "MUFormCellClassKey": "MUFormStaticInfoCell", 
+          "MUFormCellIconNameKey": "MUInfoIcon", 
+          "MUFormCellIdentifierKey": "form-static-info-cell",
+          "MUFormLocalizedStaticTextKey": "Label 2",
+        },
+        {
+          "MUFormCellClassKey": "MUFormStaticInfoCell", 
+          "MUFormCellIconNameKey": "MUInfoIcon", 
+          "MUFormCellIdentifierKey": "form-static-info-cell",
+          "MUFormLocalizedStaticTextKey": "Label 3",
         }
       ]
     }

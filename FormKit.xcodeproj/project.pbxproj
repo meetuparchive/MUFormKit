@@ -315,7 +315,6 @@
 			isa = PBXGroup;
 			children = (
 				DED8C563196510B9000D18DC /* Classes */,
-				DED8C594196510B9000D18DC /* Resources */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -323,50 +322,21 @@
 		DED8C563196510B9000D18DC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F3E7E250197D79F700C4AAB5 /* Cells */,
 				DE50BA39196CB66C0074C342 /* NSError+MUValidation.h */,
 				DE50BA3A196CB66C0074C342 /* NSError+MUValidation.m */,
 				DED8C564196510B9000D18DC /* MUDynamicFormController.h */,
 				DED8C565196510B9000D18DC /* MUDynamicFormController.m */,
 				DED8C566196510B9000D18DC /* MUDynamicFormDataSource.h */,
 				DED8C567196510B9000D18DC /* MUDynamicFormDataSource.m */,
-				DED8C568196510B9000D18DC /* MUFormActivationCell.h */,
-				DED8C569196510B9000D18DC /* MUFormActivationCell.m */,
 				DED8C56A196510B9000D18DC /* MUFormBaseCell.h */,
 				DED8C56B196510B9000D18DC /* MUFormBaseCell.m */,
-				DED8C56C196510B9000D18DC /* MUFormCCNumberCell.h */,
-				DED8C56D196510B9000D18DC /* MUFormCCNumberCell.m */,
 				DED8C56E196510B9000D18DC /* MUFormConstants.h */,
 				DED8C56F196510B9000D18DC /* MUFormController.h */,
 				DED8C570196510B9000D18DC /* MUFormController.m */,
 				DED8C571196510B9000D18DC /* MUFormDataSource.h */,
 				DED8C572196510B9000D18DC /* MUFormDataSource.m */,
-				DED8C573196510B9000D18DC /* MUFormDateTimeCell.h */,
-				DED8C574196510B9000D18DC /* MUFormDateTimeCell.m */,
-				DED8C575196510B9000D18DC /* MUFormIconCell.h */,
-				DED8C576196510B9000D18DC /* MUFormIconCell.m */,
 				DED8C577196510B9000D18DC /* MUFormKit.h */,
-				DED8C578196510B9000D18DC /* MUFormNumberFieldCell.h */,
-				DED8C579196510B9000D18DC /* MUFormNumberFieldCell.m */,
-				DED8C57A196510B9000D18DC /* MUFormOptionCell.h */,
-				DED8C57B196510B9000D18DC /* MUFormOptionCell.m */,
-				DED8C57C196510B9000D18DC /* MUFormRelativeDateCell.h */,
-				DED8C57D196510B9000D18DC /* MUFormRelativeDateCell.m */,
-				DED8C57E196510B9000D18DC /* MUFormStaticInfoCell.h */,
-				DED8C57F196510B9000D18DC /* MUFormStaticInfoCell.m */,
-				DED8C580196510B9000D18DC /* MUFormStaticLabelCell.h */,
-				DED8C581196510B9000D18DC /* MUFormStaticLabelCell.m */,
-				DED8C582196510B9000D18DC /* MUFormSwitchCell.h */,
-				DED8C583196510B9000D18DC /* MUFormSwitchCell.m */,
-				DED8C584196510B9000D18DC /* MUFormTextFieldCell.h */,
-				DED8C585196510B9000D18DC /* MUFormTextFieldCell.m */,
-				DED8C586196510B9000D18DC /* MUFormTextViewCell.h */,
-				DED8C587196510B9000D18DC /* MUFormTextViewCell.m */,
-				DED8C588196510B9000D18DC /* MUFormTimeCell.h */,
-				DED8C589196510B9000D18DC /* MUFormTimeCell.m */,
-				DED8C58A196510B9000D18DC /* MUFormTimePickerCell.h */,
-				DED8C58B196510B9000D18DC /* MUFormTimePickerCell.m */,
-				DED8C58C196510B9000D18DC /* MUFormToFormSegueCell.h */,
-				DED8C58D196510B9000D18DC /* MUFormToFormSegueCell.m */,
 				DED8C58E196510B9000D18DC /* MUNextResponderController.h */,
 				DED8C58F196510B9000D18DC /* MUNextResponderController.m */,
 				DED8C590196510B9000D18DC /* MURelativeDatePickerController.h */,
@@ -395,7 +365,46 @@
 				DED8C5AD196510B9000D18DC /* MUFormTimePickerCell.xib */,
 				DED8C5AF196510B9000D18DC /* MUFormToFormSegueCell.xib */,
 			);
-			path = Resources;
+			name = Resources;
+			path = ../Resources;
+			sourceTree = "<group>";
+		};
+		F3E7E250197D79F700C4AAB5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DED8C594196510B9000D18DC /* Resources */,
+				DED8C568196510B9000D18DC /* MUFormActivationCell.h */,
+				DED8C569196510B9000D18DC /* MUFormActivationCell.m */,
+				DED8C56C196510B9000D18DC /* MUFormCCNumberCell.h */,
+				DED8C56D196510B9000D18DC /* MUFormCCNumberCell.m */,
+				DED8C573196510B9000D18DC /* MUFormDateTimeCell.h */,
+				DED8C574196510B9000D18DC /* MUFormDateTimeCell.m */,
+				DED8C575196510B9000D18DC /* MUFormIconCell.h */,
+				DED8C576196510B9000D18DC /* MUFormIconCell.m */,
+				DED8C578196510B9000D18DC /* MUFormNumberFieldCell.h */,
+				DED8C579196510B9000D18DC /* MUFormNumberFieldCell.m */,
+				DED8C57A196510B9000D18DC /* MUFormOptionCell.h */,
+				DED8C57B196510B9000D18DC /* MUFormOptionCell.m */,
+				DED8C57C196510B9000D18DC /* MUFormRelativeDateCell.h */,
+				DED8C57D196510B9000D18DC /* MUFormRelativeDateCell.m */,
+				DED8C57E196510B9000D18DC /* MUFormStaticInfoCell.h */,
+				DED8C57F196510B9000D18DC /* MUFormStaticInfoCell.m */,
+				DED8C580196510B9000D18DC /* MUFormStaticLabelCell.h */,
+				DED8C581196510B9000D18DC /* MUFormStaticLabelCell.m */,
+				DED8C582196510B9000D18DC /* MUFormSwitchCell.h */,
+				DED8C583196510B9000D18DC /* MUFormSwitchCell.m */,
+				DED8C584196510B9000D18DC /* MUFormTextFieldCell.h */,
+				DED8C585196510B9000D18DC /* MUFormTextFieldCell.m */,
+				DED8C586196510B9000D18DC /* MUFormTextViewCell.h */,
+				DED8C587196510B9000D18DC /* MUFormTextViewCell.m */,
+				DED8C588196510B9000D18DC /* MUFormTimeCell.h */,
+				DED8C589196510B9000D18DC /* MUFormTimeCell.m */,
+				DED8C58A196510B9000D18DC /* MUFormTimePickerCell.h */,
+				DED8C58B196510B9000D18DC /* MUFormTimePickerCell.m */,
+				DED8C58C196510B9000D18DC /* MUFormToFormSegueCell.h */,
+				DED8C58D196510B9000D18DC /* MUFormToFormSegueCell.m */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
