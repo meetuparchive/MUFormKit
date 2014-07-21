@@ -206,6 +206,8 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
     self.tableView.rowHeight = kMUDefaultRowHeight;
     self.tableView.sectionHeaderHeight = kMUDefaulSectionHeaderHeight;
     self.tableView.sectionFooterHeight = kMUDefaultSectionFooterHeight;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 44.0;
     
     // Observe the keyboard.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(observeKeyboardDidShowNotification:) name:UIKeyboardDidShowNotification object:nil];
