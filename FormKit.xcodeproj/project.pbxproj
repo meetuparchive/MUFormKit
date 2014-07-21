@@ -16,8 +16,7 @@
 		DED8C5371965105F000D18DC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5351965105F000D18DC /* InfoPlist.strings */; };
 		DED8C5391965105F000D18DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C5381965105F000D18DC /* main.m */; };
 		DED8C53D1965105F000D18DC /* MUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C53C1965105F000D18DC /* MUAppDelegate.m */; };
-		DED8C5401965105F000D18DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DED8C53E1965105F000D18DC /* Main.storyboard */; };
-		DED8C5431965105F000D18DC /* MUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C5421965105F000D18DC /* MUViewController.m */; };
+		DED8C5431965105F000D18DC /* MUHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C5421965105F000D18DC /* MUHomeViewController.m */; };
 		DED8C5451965105F000D18DC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5441965105F000D18DC /* Images.xcassets */; };
 		DED8C54C1965105F000D18DC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED8C54B1965105F000D18DC /* XCTest.framework */; };
 		DED8C54D1965105F000D18DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED8C52C1965105F000D18DC /* Foundation.framework */; };
@@ -61,6 +60,10 @@
 		DED8C5FD196510B9000D18DC /* MUFormTimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5AB196510B9000D18DC /* MUFormTimeCell.xib */; };
 		DED8C5FE196510B9000D18DC /* MUFormTimePickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5AD196510B9000D18DC /* MUFormTimePickerCell.xib */; };
 		DED8C5FF196510B9000D18DC /* MUFormToFormSegueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5AF196510B9000D18DC /* MUFormToFormSegueCell.xib */; };
+		F3E7E248197D523900C4AAB5 /* MUHomeViewController.json in Resources */ = {isa = PBXBuildFile; fileRef = F3E7E247197D523900C4AAB5 /* MUHomeViewController.json */; };
+		F3E7E24B197D554A00C4AAB5 /* MUResizeableCellsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E7E24A197D554A00C4AAB5 /* MUResizeableCellsController.m */; };
+		F3E7E24D197D570600C4AAB5 /* MUHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3E7E24C197D570600C4AAB5 /* MUHome.storyboard */; };
+		F3E7E24F197D5A1B00C4AAB5 /* MUResizeableCellsController.json in Resources */ = {isa = PBXBuildFile; fileRef = F3E7E24E197D5A1B00C4AAB5 /* MUResizeableCellsController.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,9 +92,8 @@
 		DED8C53A1965105F000D18DC /* FormKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FormKit-Prefix.pch"; sourceTree = "<group>"; };
 		DED8C53B1965105F000D18DC /* MUAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MUAppDelegate.h; sourceTree = "<group>"; };
 		DED8C53C1965105F000D18DC /* MUAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MUAppDelegate.m; sourceTree = "<group>"; };
-		DED8C53F1965105F000D18DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DED8C5411965105F000D18DC /* MUViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MUViewController.h; sourceTree = "<group>"; };
-		DED8C5421965105F000D18DC /* MUViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MUViewController.m; sourceTree = "<group>"; };
+		DED8C5411965105F000D18DC /* MUHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MUHomeViewController.h; sourceTree = "<group>"; };
+		DED8C5421965105F000D18DC /* MUHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MUHomeViewController.m; sourceTree = "<group>"; };
 		DED8C5441965105F000D18DC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DED8C54A1965105F000D18DC /* FormKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FormKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DED8C54B1965105F000D18DC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -191,6 +193,11 @@
 		F39EA67E19786A31002E4F3F /* MUFormKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = MUFormKit.podspec; sourceTree = "<group>"; };
 		F39EA6801978717E002E4F3F /* MUFormKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = MUFormKit.podspec; sourceTree = "<group>"; };
 		F39EA68119787191002E4F3F /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		F3E7E247197D523900C4AAB5 /* MUHomeViewController.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MUHomeViewController.json; sourceTree = "<group>"; };
+		F3E7E249197D554A00C4AAB5 /* MUResizeableCellsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUResizeableCellsController.h; sourceTree = "<group>"; };
+		F3E7E24A197D554A00C4AAB5 /* MUResizeableCellsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUResizeableCellsController.m; sourceTree = "<group>"; };
+		F3E7E24C197D570600C4AAB5 /* MUHome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MUHome.storyboard; sourceTree = "<group>"; };
+		F3E7E24E197D5A1B00C4AAB5 /* MUResizeableCellsController.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MUResizeableCellsController.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,7 +232,7 @@
 				F39EA68119787191002E4F3F /* LICENSE */,
 				F39EA6801978717E002E4F3F /* MUFormKit.podspec */,
 				DED8C562196510B9000D18DC /* src */,
-				DED8C5321965105F000D18DC /* FormKit */,
+				DED8C5321965105F000D18DC /* Demo */,
 				DED8C5511965105F000D18DC /* FormKitTests */,
 				DED8C52B1965105F000D18DC /* Frameworks */,
 				DED8C52A1965105F000D18DC /* Products */,
@@ -256,17 +263,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DED8C5321965105F000D18DC /* FormKit */ = {
+		DED8C5321965105F000D18DC /* Demo */ = {
 			isa = PBXGroup;
 			children = (
 				DED8C53B1965105F000D18DC /* MUAppDelegate.h */,
 				DED8C53C1965105F000D18DC /* MUAppDelegate.m */,
-				DED8C53E1965105F000D18DC /* Main.storyboard */,
-				DED8C5411965105F000D18DC /* MUViewController.h */,
-				DED8C5421965105F000D18DC /* MUViewController.m */,
+				F3E7E24C197D570600C4AAB5 /* MUHome.storyboard */,
+				DED8C5411965105F000D18DC /* MUHomeViewController.h */,
+				DED8C5421965105F000D18DC /* MUHomeViewController.m */,
+				F3E7E247197D523900C4AAB5 /* MUHomeViewController.json */,
+				F3E7E249197D554A00C4AAB5 /* MUResizeableCellsController.h */,
+				F3E7E24A197D554A00C4AAB5 /* MUResizeableCellsController.m */,
+				F3E7E24E197D5A1B00C4AAB5 /* MUResizeableCellsController.json */,
 				DED8C5441965105F000D18DC /* Images.xcassets */,
 				DED8C5331965105F000D18DC /* Supporting Files */,
 			);
+			name = Demo;
 			path = FormKit;
 			sourceTree = "<group>";
 		};
@@ -389,9 +401,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DED8C5281965105F000D18DC /* FormKit */ = {
+		DED8C5281965105F000D18DC /* FormKitDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DED8C55B1965105F000D18DC /* Build configuration list for PBXNativeTarget "FormKit" */;
+			buildConfigurationList = DED8C55B1965105F000D18DC /* Build configuration list for PBXNativeTarget "FormKitDemo" */;
 			buildPhases = (
 				C05ED521FD5D465CA3EBFC82 /* Check Pods Manifest.lock */,
 				DED8C5251965105F000D18DC /* Sources */,
@@ -403,7 +415,7 @@
 			);
 			dependencies = (
 			);
-			name = FormKit;
+			name = FormKitDemo;
 			productName = FormKit;
 			productReference = DED8C5291965105F000D18DC /* FormKit.app */;
 			productType = "com.apple.product-type.application";
@@ -455,7 +467,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DED8C5281965105F000D18DC /* FormKit */,
+				DED8C5281965105F000D18DC /* FormKitDemo */,
 				DED8C5491965105F000D18DC /* FormKitTests */,
 			);
 		};
@@ -469,6 +481,7 @@
 				DED8C5F7196510B9000D18DC /* MUFormRelativeDateCell.xib in Resources */,
 				DED8C5FA196510B9000D18DC /* MUFormSwitchCell.xib in Resources */,
 				DED8C5451965105F000D18DC /* Images.xcassets in Resources */,
+				F3E7E24F197D5A1B00C4AAB5 /* MUResizeableCellsController.json in Resources */,
 				DED8C5F2196510B9000D18DC /* MUFormActivationCell.xib in Resources */,
 				DED8C5FD196510B9000D18DC /* MUFormTimeCell.xib in Resources */,
 				DED8C5FB196510B9000D18DC /* MUFormTextFieldCell.xib in Resources */,
@@ -476,13 +489,14 @@
 				DED8C5371965105F000D18DC /* InfoPlist.strings in Resources */,
 				DED8C5F5196510B9000D18DC /* MUFormNumberFieldCell.xib in Resources */,
 				DED8C5F6196510B9000D18DC /* MUFormOptionCell.xib in Resources */,
-				DED8C5401965105F000D18DC /* Main.storyboard in Resources */,
 				DED8C5F8196510B9000D18DC /* MUFormStaticInfoCell.xib in Resources */,
 				DED8C5FF196510B9000D18DC /* MUFormToFormSegueCell.xib in Resources */,
 				DED8C5FE196510B9000D18DC /* MUFormTimePickerCell.xib in Resources */,
 				DED8C5F9196510B9000D18DC /* MUFormStaticLabelCell.xib in Resources */,
+				F3E7E248197D523900C4AAB5 /* MUHomeViewController.json in Resources */,
 				DED8C5F4196510B9000D18DC /* MUFormDateTimeCell.xib in Resources */,
 				DED8C5F3196510B9000D18DC /* MUFormCCNumberCell.xib in Resources */,
+				F3E7E24D197D570600C4AAB5 /* MUHome.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,6 +551,7 @@
 				DED8C5E0196510B9000D18DC /* MUFormController.m in Sources */,
 				DED8C5F1196510B9000D18DC /* MUValidationErrors.m in Sources */,
 				DED8C53D1965105F000D18DC /* MUAppDelegate.m in Sources */,
+				F3E7E24B197D554A00C4AAB5 /* MUResizeableCellsController.m in Sources */,
 				DED8C5E3196510B9000D18DC /* MUFormIconCell.m in Sources */,
 				DED8C5EC196510B9000D18DC /* MUFormTimeCell.m in Sources */,
 				DED8C5F0196510B9000D18DC /* MURelativeDatePickerController.m in Sources */,
@@ -546,7 +561,7 @@
 				DED8C5E6196510B9000D18DC /* MUFormRelativeDateCell.m in Sources */,
 				DED8C5E5196510B9000D18DC /* MUFormOptionCell.m in Sources */,
 				DE50BA3B196CB66C0074C342 /* NSError+MUValidation.m in Sources */,
-				DED8C5431965105F000D18DC /* MUViewController.m in Sources */,
+				DED8C5431965105F000D18DC /* MUHomeViewController.m in Sources */,
 				DED8C5E8196510B9000D18DC /* MUFormStaticLabelCell.m in Sources */,
 				DED8C5E1196510B9000D18DC /* MUFormDataSource.m in Sources */,
 				DED8C5DE196510B9000D18DC /* MUFormBaseCell.m in Sources */,
@@ -577,7 +592,7 @@
 /* Begin PBXTargetDependency section */
 		DED8C5501965105F000D18DC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DED8C5281965105F000D18DC /* FormKit */;
+			target = DED8C5281965105F000D18DC /* FormKitDemo */;
 			targetProxy = DED8C54F1965105F000D18DC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -589,14 +604,6 @@
 				DED8C5361965105F000D18DC /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		DED8C53E1965105F000D18DC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C53F1965105F000D18DC /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		DED8C5541965105F000D18DC /* InfoPlist.strings */ = {
@@ -900,7 +907,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DED8C55B1965105F000D18DC /* Build configuration list for PBXNativeTarget "FormKit" */ = {
+		DED8C55B1965105F000D18DC /* Build configuration list for PBXNativeTarget "FormKitDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DED8C55C1965105F000D18DC /* Debug */,

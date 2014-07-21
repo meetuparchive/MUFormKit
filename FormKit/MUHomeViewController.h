@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Meetup. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "MUFormController.h"
 
-@interface MUViewController : UIViewController
+@interface MUHomeViewController : MUFormController
 
 @end

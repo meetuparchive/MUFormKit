@@ -7,12 +7,16 @@
 //
 
 #import "MUAppDelegate.h"
+#import "MUHomeViewController.h"
 
 @implementation MUAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    UIViewController *homeViewController = [[UIStoryboard storyboardWithName:@"MUHome" bundle:[NSBundle mainBundle]] instantiateInitialViewController];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:homeViewController];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 							

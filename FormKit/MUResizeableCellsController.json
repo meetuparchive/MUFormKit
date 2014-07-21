@@ -1,0 +1,18 @@
+{
+  "MUFormMetadataKey": {
+    "MUFormLocalizedMetadataTitleKey": "group_settings_form_title"
+  }, 
+  "MUFormSectionsKey": [
+    {
+      "MUFormSectionRowsKey": [
+        {
+          "MUFormCellClassKey": "MUFormStaticInfoCell", 
+          "MUFormCellIconNameKey": "MUInfoIcon", 
+          "MUFormCellIdentifierKey": "form-static-info-cell",
+          "MUFormPropertyNameKey": "resizeableTextString",
+          "MUFormTapActionIdentifierKey": "info-label-1",
+        }
+      ]
+    }
+  ]
+}
