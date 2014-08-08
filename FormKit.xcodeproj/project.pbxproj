@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6376E361BCBB429E839EB0B8 /* libPods-FormKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF66157A8F44C76A2CBB131 /* libPods-FormKit.a */; };
 		DE50BA3B196CB66C0074C342 /* NSError+MUValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = DE50BA3A196CB66C0074C342 /* NSError+MUValidation.m */; };
 		DE50BA3D196CB6FD0074C342 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE50BA3C196CB6FD0074C342 /* CoreData.framework */; };
 		DED8C52D1965105F000D18DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED8C52C1965105F000D18DC /* Foundation.framework */; };
@@ -60,6 +59,7 @@
 		DED8C5FD196510B9000D18DC /* MUFormTimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5AB196510B9000D18DC /* MUFormTimeCell.xib */; };
 		DED8C5FE196510B9000D18DC /* MUFormTimePickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5AD196510B9000D18DC /* MUFormTimePickerCell.xib */; };
 		DED8C5FF196510B9000D18DC /* MUFormToFormSegueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5AF196510B9000D18DC /* MUFormToFormSegueCell.xib */; };
+		EBAD38FE78D84A779E6DF804 /* libPods-FormKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9C8C03042A4D8DA132A258 /* libPods-FormKitDemo.a */; };
 		F3E7E248197D523900C4AAB5 /* MUHomeViewController.json in Resources */ = {isa = PBXBuildFile; fileRef = F3E7E247197D523900C4AAB5 /* MUHomeViewController.json */; };
 		F3E7E24B197D554A00C4AAB5 /* MUResizeableCellsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E7E24A197D554A00C4AAB5 /* MUResizeableCellsController.m */; };
 		F3E7E24D197D570600C4AAB5 /* MUHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3E7E24C197D570600C4AAB5 /* MUHome.storyboard */; };
@@ -79,6 +79,7 @@
 /* Begin PBXFileReference section */
 		31E4ED881C4D4A57BD86FF62 /* Pods-FormKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormKit.xcconfig"; path = "Pods/Pods-FormKit.xcconfig"; sourceTree = "<group>"; };
 		4DF66157A8F44C76A2CBB131 /* libPods-FormKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FormKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		98586668885E4330B31A9C4D /* Pods-FormKitDemo.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormKitDemo.xcconfig"; path = "Pods/Pods-FormKitDemo.xcconfig"; sourceTree = "<group>"; };
 		DE50BA39196CB66C0074C342 /* NSError+MUValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+MUValidation.h"; sourceTree = "<group>"; };
 		DE50BA3A196CB66C0074C342 /* NSError+MUValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+MUValidation.m"; sourceTree = "<group>"; };
 		DE50BA3C196CB6FD0074C342 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -162,6 +163,7 @@
 		DED8C5AC196510B9000D18DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MUFormTimeCell.xib; sourceTree = "<group>"; };
 		DED8C5AE196510B9000D18DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MUFormTimePickerCell.xib; sourceTree = "<group>"; };
 		DED8C5B0196510B9000D18DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MUFormToFormSegueCell.xib; sourceTree = "<group>"; };
+		EC9C8C03042A4D8DA132A258 /* libPods-FormKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FormKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F326820A1979786100374B36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormActivationCell.strings; sourceTree = "<group>"; };
 		F326820B1979786300374B36 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormActivationCell.strings; sourceTree = "<group>"; };
 		F326820C1979786A00374B36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormCCNumberCell.strings; sourceTree = "<group>"; };
@@ -209,7 +211,7 @@
 				DED8C52F1965105F000D18DC /* CoreGraphics.framework in Frameworks */,
 				DED8C5311965105F000D18DC /* UIKit.framework in Frameworks */,
 				DED8C52D1965105F000D18DC /* Foundation.framework in Frameworks */,
-				6376E361BCBB429E839EB0B8 /* libPods-FormKit.a in Frameworks */,
+				EBAD38FE78D84A779E6DF804 /* libPods-FormKitDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +240,7 @@
 				DED8C52A1965105F000D18DC /* Products */,
 				31E4ED881C4D4A57BD86FF62 /* Pods-FormKit.xcconfig */,
 				F39EA67E19786A31002E4F3F /* MUFormKit.podspec */,
+				98586668885E4330B31A9C4D /* Pods-FormKitDemo.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -259,6 +262,7 @@
 				DED8C5301965105F000D18DC /* UIKit.framework */,
 				DED8C54B1965105F000D18DC /* XCTest.framework */,
 				4DF66157A8F44C76A2CBB131 /* libPods-FormKit.a */,
+				EC9C8C03042A4D8DA132A258 /* libPods-FormKitDemo.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -532,7 +536,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-FormKit-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Pods-FormKitDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C05ED521FD5D465CA3EBFC82 /* Check Pods Manifest.lock */ = {
@@ -838,7 +842,7 @@
 		};
 		DED8C55C1965105F000D18DC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31E4ED881C4D4A57BD86FF62 /* Pods-FormKit.xcconfig */;
+			baseConfigurationReference = 98586668885E4330B31A9C4D /* Pods-FormKitDemo.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -852,7 +856,7 @@
 		};
 		DED8C55D1965105F000D18DC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31E4ED881C4D4A57BD86FF62 /* Pods-FormKit.xcconfig */;
+			baseConfigurationReference = 98586668885E4330B31A9C4D /* Pods-FormKitDemo.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
