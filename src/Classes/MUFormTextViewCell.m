@@ -7,7 +7,6 @@
 //
 
 #import "MUFormTextViewCell.h"
-#import "UITextView+ReturnBugFix.h"
 
 static CGFloat kMUCellHeight = 120.0;
 static CGFloat kMUErrorLabelHeight = 20.0;
@@ -54,7 +53,7 @@ static CGFloat kMUErrorLabelHeight = 20.0;
     [super configureWithValue:value info:info];
     
     if (value) {
-        NSAssert([value isKindOfClass:[NSString class]], @"Expected ‘value’ to be an NSString. It was: %@", [value class]);
+        MUAssert([value isKindOfClass:[NSString class]], @"Expected ‘value’ to be an NSString. It was: %@", [value class]);
         self.textView.text = value;
     }
     else if (info[MUFormLocalizedDefaultValueKey]) {
@@ -65,11 +64,16 @@ static CGFloat kMUErrorLabelHeight = 20.0;
         
         NSString *localizedKey = info[MUFormLocalizedDefaultValueKey];
         NSString *localizedString = [[NSBundle mainBundle] localizedStringForKey:localizedKey value:localizedKey table:MUFormKitStringTable];
-
         self.textView.attributedPlaceholder = [[NSAttributedString alloc] initWithString:localizedString
                                                                               attributes:attributes];
     }
-    
+
+    if (info[MUFormLocalizedAccessibilityLabelKey]) {
+        NSString *accessibilityLabelKey = info[MUFormLocalizedAccessibilityLabelKey];
+        NSString *accessibilityLabelString = [[NSBundle mainBundle] localizedStringForKey:accessibilityLabelKey value:accessibilityLabelKey table:MUFormKitStringTable];
+        self.textView.accessibilityLabel = accessibilityLabelString;
+    }
+
     NSArray *validationMessages = info[MUValidationMessagesKey];
     if ([validationMessages count] > 0) {
         self.messageLabel.text = validationMessages[0];

@@ -10,8 +10,6 @@
 #import "MUFormKit.h"
 #import "MUFormDataSource.h"
 #import "MURelativeDatePickerController.h"
-#import "NSDate+MUAdditions.h"
-#import "NSObject+MUAdditions.h"
 
 static CGFloat const kMUDefaultRowHeight = 44.0;
 static CGFloat const kMUDefaulSectionHeaderHeight = 17.0;
@@ -164,7 +162,7 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
     
     self.nextResponderController.dataSource = dataSource;
     
-    NSAssert(self.tableView, @"Expected tableview to be loaded");
+    MUAssert(self.tableView, @"Expected tableview to be loaded");
     self.tableView.dataSource = self.dataSource;
     
     // Register the form cells with the tableview.
@@ -302,7 +300,12 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     self.lastTappedIndexPath = indexPath;
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    MUFormBaseCell *cell = (MUFormBaseCell *)[tableView cellForRowAtIndexPath:indexPath];
+    MUAssert([cell isKindOfClass:[MUFormBaseCell class]], @"Expected cell type MUFormBaseCell was %@",cell);
+    
+    if (UIAccessibilityIsVoiceOverRunning()) {
+        [cell voiceOverActivate];
+    }
     
     NSString *segueIdentifier = [self.dataSource segueIdentifierForitemAtIndexPath:indexPath];
     if ([segueIdentifier length] > 0) {

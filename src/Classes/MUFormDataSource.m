@@ -30,6 +30,8 @@ NSString *const MUFormSectionFooterHeightKey         = @"MUFormSectionFooterHeig
 // Form row constants definitions.
 NSString *const MUFormCellIdentifierKey                 = @"MUFormCellIdentifierKey";
 NSString *const MUFormCellClassKey                      = @"MUFormCellClassKey";
+NSString *const MUFormCellLocalizedAccessibilityHintKey = @"MUFormCellLocalizedAccessibilityHintKey";
+NSString *const MUFormCellAccessibilityButtonTraitKey   = @"MUFormCellAccessibilityButtonTraitKey";
 NSString *const MUFormRowExpandedKey                    = @"MUFormRowExpandedKey";
 NSString *const MUFormLocalizedStaticTextKey            = @"MUFormLocalizedStaticTextKey";
 NSString *const MUFormCellAccessoryTypeKey              = @"MUFormCellAccessoryTypeKey";
@@ -114,7 +116,7 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
         self.metadata = formInfo[MUFormMetadataKey];
         self.rawSections = [formInfo[MUFormSectionsKey] copy];
         [self updateActiveSections];
-        NSAssert(error == nil, @"Error parsing json datasource file: %@\n%@", [error localizedDescription], [error userInfo]);
+        MUAssert(error == nil, @"Error parsing json datasource file: %@\n%@", [error localizedDescription], [error userInfo]);
     }
     return self;
 }
@@ -190,9 +192,8 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
 
 - (NSIndexSet *)indexPathsForSection:(NSInteger)section
 {
-    NSAssert((section < (NSInteger)[self.activeSections count]),
-    @"Section index (%ld) is out of bounds (%lu).", (long)section, (unsigned long)[self.activeSections count]);
-    
+    NSUInteger count = [self.activeSections count];
+    MUAssert((section < (NSInteger)count), @"Section index (%ld) is out of bounds (%lu).", (long)section, (unsigned long)count);
     NSDictionary *sectionInfo = self.activeSections[section];
     NSArray *rows = sectionInfo[MUFormSectionRowsKey];
     NSMutableArray *indexes = [NSMutableArray arrayWithCapacity:[rows count]];
@@ -267,7 +268,7 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
 
 - (void)deleteTimePickerAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSAssert([indexPath compare:self.timePickerIndexPath] == NSOrderedSame, @"Time picker indexPath (%@) does not match the time picker indexPath to delete (%@)", self.timePickerIndexPath, indexPath);
+    MUAssert([indexPath compare:self.timePickerIndexPath] == NSOrderedSame, @"Time picker indexPath (%@) does not match the time picker indexPath to delete (%@)", self.timePickerIndexPath, indexPath);
     self.timePickerIndexPath = nil;
     self.timePickerRowInfo = nil;
 }
@@ -281,7 +282,7 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
 {
     NSString *dependencyPropertyName = [self rowInfoForItemAtIndexPath:indexPath][MUFormDependencyPropertyNameKey];
     NSString *propertyName = dependencyPropertyName ?: [self rowInfoForItemAtIndexPath:indexPath][MUFormPropertyNameKey];
-    NSAssert(propertyName, @"Expected property name for indexpath %@",indexPath);
+    MUAssert(propertyName, @"Expected property name for indexpath %@",indexPath);
     
     NSMutableArray *dependentSectionPropertyNames = [NSMutableArray array];
     [self enumerateSectionsUsingBlock:^(NSDictionary *sectionInfo, NSUInteger idx, BOOL *stop) {
@@ -347,7 +348,7 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
             value = [self.model valueForKeyPath:keyPath];
         }
         @catch (NSException *exception) {
-            NSAssert(YES, @"Attempt to get a value at an invalid keypath (%@) for indexPath (%@)\n%@",
+            MUAssert(YES, @"Attempt to get a value at an invalid keypath (%@) for indexPath (%@)\n%@",
                      keyPath, indexPath, [exception reason]);
         }
     }
@@ -373,7 +374,7 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
             [self.model setValue:value forKeyPath:keyPath];
         }
         @catch (NSException *exception) {
-            NSAssert(YES, @"Attempt to set a value (%@) at an invalid keypath (%@)\n%@",
+            MUAssert(YES, @"Attempt to set a value (%@) at an invalid keypath (%@)\n%@",
                      value, keyPath, [exception reason]);
         }
     }

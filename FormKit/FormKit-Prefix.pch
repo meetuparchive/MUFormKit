@@ -13,4 +13,12 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+
+    #import "NSDate+MUAdditions.h"
+    #import "NSDate+MUDateStyles.h"
+    #import "NSObject+MUAdditions.h"
+    #import "NSTimeZone+MUAdditions.h"
+    #import "UITextView+ReturnBugFix.h"
+
+    #define MUAssert NSAssert
 #endif

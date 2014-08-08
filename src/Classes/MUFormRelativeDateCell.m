@@ -7,8 +7,6 @@
 //
 
 #import "MUFormRelativeDateCell.h"
-#import "NSDate+MUDateStyles.h"
-#import "NSDate+MUAdditions.h"
 
 NSString *const MUFormCellDateAscendingKey = @"MUFormCellDateAscendingKey";
 
@@ -40,10 +38,10 @@ static CGFloat const kMUHeightWithMessage = 56.0;
 
     self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
-    NSAssert([value isKindOfClass:[NSDate class]], @"Expected ‘value’ to be an NSDate. It was: %@", [value class]);
+    MUAssert([value isKindOfClass:[NSDate class]], @"Expected ‘value’ to be an NSDate. It was: %@", [value class]);
     
     id timeZoneValue = info[MUFormCellAttributeValuesKey][MUFormCellTimeZoneKey];
-    NSAssert(timeZoneValue && [timeZoneValue isKindOfClass:[NSTimeZone class]], @"Expected `MUFormCellTimeZoneKey` to be an NSTimeZone. It was: %@", [timeZoneValue class]);
+    MUAssert(timeZoneValue && [timeZoneValue isKindOfClass:[NSTimeZone class]], @"Expected `MUFormCellTimeZoneKey` to be an NSTimeZone. It was: %@", [timeZoneValue class]);
     NSTimeZone *timeZone = (NSTimeZone *)timeZoneValue;
 
     

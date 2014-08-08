@@ -14,20 +14,16 @@
 {
     [super awakeFromNib];
     self.selectionStyle = UITableViewCellSelectionStyleNone;
+    self.optionSwitch.isAccessibilityElement = NO;
+    self.isAccessibilityElement = YES;
 }
 
 #pragma mark - Accessibility
 
--(CGRect) accessibilityFrame
-{
-    return self.optionSwitch.frame;
-}
-
-- (BOOL)accessibilityActivate
+- (void)voiceOverActivate
 {
     self.optionSwitch.on = !self.optionSwitch.on;
     [self switchValueChanged:self.optionSwitch];
-    return YES;
 }
 
 - (NSInteger)accessibilityElementCount { return 1; }
@@ -35,8 +31,17 @@
 - (id)accessibilityElementAtIndex:(NSInteger)index {
     return self.optionSwitch;
 }
+
 - (NSInteger)indexOfAccessibilityElement:(id)element{
     return element == self.optionSwitch ? 0 : NSNotFound;
+}
+
+- (UIAccessibilityTraits)accessibilityTraits {
+    return [super accessibilityTraits] | self.optionSwitch.accessibilityTraits;
+}
+
+- (NSString *)accessibilityValue {
+    return self.optionSwitch.accessibilityValue;
 }
 
 #pragma mark - MUFormBaseCell
@@ -46,7 +51,7 @@
     [super configureWithValue:value info:info];
     
     if (value) {
-        NSAssert([value isKindOfClass:[NSNumber class]], @"Expected ‘value’ to be an NSNumber. It was: %@", [value class]);
+        MUAssert([value isKindOfClass:[NSNumber class]], @"Expected ‘value’ to be an NSNumber. It was: %@", [value class]);
         [self.optionSwitch setOn:[value boolValue] animated:NO];
     }
     else {
@@ -56,7 +61,10 @@
     
     NSString *localizedKey = info[MUFormLocalizedStaticTextKey];
     self.staticLabel.text = [[NSBundle mainBundle] localizedStringForKey:localizedKey value:localizedKey table:MUFormKitStringTable];
-    self.optionSwitch.accessibilityLabel = self.staticLabel.text;
+    
+    self.accessibilityLabel = self.staticLabel.text;
+    self.optionSwitch.accessibilityLabel = [NSString stringWithFormat:NSLocalizedString(@"%@ switch", @"<label> on/off setting switch"), self.staticLabel.text];
+    
 }
 
 - (IBAction)switchValueChanged:(UISwitch *)sender

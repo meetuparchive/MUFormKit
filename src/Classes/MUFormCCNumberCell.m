@@ -78,7 +78,7 @@ Returns a string that is partitioned by the joinedBy every stride variabled
     NSUInteger tailPartitionIndex = partitions*stride;
     if (tailPartitionIndex<partitionString.length) {
         NSUInteger length = partitionString.length-tailPartitionIndex;
-        NSAssert(length<stride, @"");
+        MUAssert(length<stride, @"");
         NSString *substring = [partitionString substringWithRange:(NSRange){tailPartitionIndex,length}];
         [partitionedStringArray addObject:substring];
     }

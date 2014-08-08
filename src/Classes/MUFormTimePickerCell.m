@@ -40,7 +40,7 @@
     [super configureWithValue:value info:info];
     
     id timeZoneValue = info[MUFormCellAttributeValuesKey][MUFormCellTimeZoneKey];
-    NSAssert(timeZoneValue && [timeZoneValue isKindOfClass:[NSTimeZone class]], @"Expected `MUFormCellTimeZoneKey` to be an NSTimeZone. It was: %@", [timeZoneValue class]);
+    MUAssert(timeZoneValue && [timeZoneValue isKindOfClass:[NSTimeZone class]], @"Expected `MUFormCellTimeZoneKey` to be an NSTimeZone. It was: %@", [timeZoneValue class]);
     self.timePicker.timeZone = (NSTimeZone *)timeZoneValue;
     
     [self.timePicker setDate:value animated:NO];

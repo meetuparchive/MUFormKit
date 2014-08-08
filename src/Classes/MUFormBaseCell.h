@@ -88,6 +88,11 @@ extern NSString *const MUFormCellTimeZoneKey;
  */
 - (void)configureWithValue:(id)value info:(NSDictionary *)info NS_REQUIRES_SUPER;
 
+
+///Custom action when voiceover activates this cell, default does nothing
+- (void)voiceOverActivate;
+
+
 @end
 
 

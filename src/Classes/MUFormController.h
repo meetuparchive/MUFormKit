@@ -34,4 +34,6 @@
 
 - (void)viewDidLoad NS_REQUIRES_SUPER;
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath NS_REQUIRES_SUPER;
+
 @end

@@ -29,13 +29,13 @@
     [super configureWithValue:value info:info];
     
     if (value) {
-        NSAssert([value isKindOfClass:[NSNumber class]],
+        MUAssert([value isKindOfClass:[NSNumber class]],
                  @"Expected ‘value’ to be an NSNumber. It was: %@", [value class]);
     }
 
     NSNumber *defaultValue = info[MUFormDefaultValueKey];
     if (defaultValue) {
-        NSAssert([defaultValue isKindOfClass:[NSNumber class]],
+        MUAssert([defaultValue isKindOfClass:[NSNumber class]],
                  @"Expected ‘defaultValue’ to be an NSNumber. It was: %@", [value class]);
     }
     

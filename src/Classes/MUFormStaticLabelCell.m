@@ -27,7 +27,7 @@ CGFloat const kMUPadding = 13.0;
     [super configureWithValue:value info:info];
     
     if (value) {
-        NSAssert([value isKindOfClass:[NSString class]] || [value isKindOfClass:[NSNumber class]], @"Expected a NSString or NSNumber.");
+        MUAssert([value isKindOfClass:[NSString class]] || [value isKindOfClass:[NSNumber class]], @"Expected a NSString or NSNumber.");
     }
     
     self.staticLabel.textColor = self.textColor;

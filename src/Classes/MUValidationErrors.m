@@ -8,9 +8,14 @@
 
 #import "MUValidationErrors.h"
 #import "NSError+MUValidation.h"
-#import <CoreData/CoreData.h>
 
+///If Core Data validation error key available use it here
+#ifdef _COREDATADEFINES_H
+NSString *const MUValidationDetailedErrorsKey = NSDetailedErrorsKey;
+#else
 NSString *const MUValidationDetailedErrorsKey = @"MUValidationDetailedErrors";
+#endif
+
 NSString *const MUValidationMessagesKey = @"MUValidationMessages";
 
 NSInteger ErrorCodeFromName(NSString *errorName)
@@ -42,10 +47,7 @@ NSArray *LocalizedValidationMessagesForError(NSError *error)
         if ([error code] == MUValidationMultipleErrorsError) {
             
             // Look for detailed errors.
-            NSArray *allErrors = [error userInfo][NSDetailedErrorsKey]; // Core data detailed error key (CoreDataErrors.h).
-            if (allErrors == nil) {
-                allErrors = [error userInfo][MUValidationDetailedErrorsKey]; // Alternative detailed errors key.
-            }
+            NSArray *allErrors = [error userInfo][MUValidationDetailedErrorsKey];
             
             [allErrors enumerateObjectsUsingBlock:^(NSError *detailError, NSUInteger idx, BOOL *stop) {
                 [validationMessages addObject:[detailError localizedDescription]];

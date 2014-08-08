@@ -96,7 +96,7 @@ static CGFloat const kMUDescriptionLabelHeight = 20.0;
     self.textField.secureTextEntry = [secureTextEntry boolValue];
     
     if (value) {
-        NSAssert([value isKindOfClass:[NSString class]], @"Expected ‘value’ to be an NSString. It was: %@", [value class]);
+        MUAssert([value isKindOfClass:[NSString class]], @"Expected ‘value’ to be an NSString. It was: %@", [value class]);
         self.textField.text = value;
     }
     

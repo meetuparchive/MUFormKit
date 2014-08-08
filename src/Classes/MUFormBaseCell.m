@@ -21,6 +21,7 @@ static CGFloat const kMUErrorLabelHeight = 20.0;
 
 @property (nonatomic, strong) UIView *topLine;
 @property (nonatomic, strong) UIView *bottomLine;
+@property (nonatomic) BOOL hasButtonAccessibilityTrait;
 
 @end
 
@@ -64,6 +65,19 @@ static CGFloat const kMUErrorLabelHeight = 20.0;
     /** Override this in subclasses and call super. */
     
     self.cellAttributes = info[MUFormCellAttributeValuesKey];
+    if (info[MUFormCellAccessibilityButtonTraitKey]) {
+        self.hasButtonAccessibilityTrait = [info[MUFormCellAccessibilityButtonTraitKey] boolValue];
+    }
+}
+
+- (void)voiceOverActivate { }
+
+- (UIAccessibilityTraits)accessibilityTraits {
+    if (self.hasButtonAccessibilityTrait) {
+        return [super accessibilityTraits] | UIAccessibilityTraitButton;
+    } else {
+        return [super accessibilityTraits];
+    }
 }
 
 @end

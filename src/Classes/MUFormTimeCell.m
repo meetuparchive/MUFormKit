@@ -7,7 +7,6 @@
 //
 
 #import "MUFormTimeCell.h"
-#import "NSDate+MUDateStyles.h"
 
 @implementation MUFormTimeCell
     
@@ -16,11 +15,11 @@
     [super configureWithValue:value info:info];
     
     if (value) {
-        NSAssert([value isKindOfClass:[NSDate class]], @"Expected ‘value’ to be an NSDate. It was: %@", [value class]);
+        MUAssert([value isKindOfClass:[NSDate class]], @"Expected ‘value’ to be an NSDate. It was: %@", [value class]);
     }
     
     id timeZoneValue = info[MUFormCellAttributeValuesKey][MUFormCellTimeZoneKey];
-    NSAssert(timeZoneValue && [timeZoneValue isKindOfClass:[NSTimeZone class]], @"Expected `MUFormCellTimeZoneKey` to be an NSTimeZone. It was: %@", [timeZoneValue class]);
+    MUAssert(timeZoneValue && [timeZoneValue isKindOfClass:[NSTimeZone class]], @"Expected `MUFormCellTimeZoneKey` to be an NSTimeZone. It was: %@", [timeZoneValue class]);
     self.timeZone = timeZoneValue;
 
     NSString *localizedKey = info[MUFormLocalizedStaticTextKey];

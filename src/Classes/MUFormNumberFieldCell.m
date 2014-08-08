@@ -40,7 +40,7 @@
     
     if (value) {
         NSString *stringValue = [value isKindOfClass:[NSNumber class]] ? [value stringValue] : value;
-        NSAssert([stringValue isKindOfClass:[NSString class]], @"Expected ‘value’ to be an NSString. It was: %@", [value class]);
+        MUAssert([stringValue isKindOfClass:[NSString class]], @"Expected ‘value’ to be an NSString. It was: %@", [value class]);
         self.numberField.text = stringValue;
     }
     else {

@@ -7,8 +7,6 @@
 //
 
 #import "MURelativeDatePickerController.h"
-#import "NSDate+MUDateStyles.h"
-#import "NSDate+MUAdditions.h"
 
 
 @interface MURelativeDatePickerController ()
@@ -85,8 +83,8 @@
 {
     [super viewDidLoad];
 
-    NSAssert(self.minimumDate, @"You must set a `minimumDate` before %@ is presented.", NSStringFromClass([self class]));
-    NSAssert(self.maximumDate, @"You must set a `maximumDate` before %@ is presented.", NSStringFromClass([self class]));
+    MUAssert(self.minimumDate, @"You must set a `minimumDate` before %@ is presented.", NSStringFromClass([self class]));
+    MUAssert(self.maximumDate, @"You must set a `maximumDate` before %@ is presented.", NSStringFromClass([self class]));
     
     self.tableView.backgroundColor = [UIColor colorWithWhite:0.97 alpha:1.0];
     self.tableView.rowHeight = 50.0;

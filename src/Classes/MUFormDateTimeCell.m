@@ -7,7 +7,6 @@
 //
 
 #import "MUFormDateTimeCell.h"
-#import "NSDate+MUDateStyles.h"
 
 NSString *const MUFormCellDateIndicatorImageKey = @"MUFormCellDateIndicatorImageKey";
 
@@ -55,10 +54,10 @@ static CGFloat const kMUDefaultRowHeight = 44.0;
     [super configureWithValue:value info:info];
     
     if (value) {
-        NSAssert([value isKindOfClass:[NSDate class]], @"Expected ‘value’ to be an NSDate. It was: %@", [value class]);
+        MUAssert([value isKindOfClass:[NSDate class]], @"Expected ‘value’ to be an NSDate. It was: %@", [value class]);
 
         id timeZoneValue = info[MUFormCellAttributeValuesKey][MUFormCellTimeZoneKey];
-        NSAssert(timeZoneValue && [timeZoneValue isKindOfClass:[NSTimeZone class]], @"Expected `MUFormCellTimeZoneKey` to be an NSTimeZone. It was: %@", [timeZoneValue class]);
+        MUAssert(timeZoneValue && [timeZoneValue isKindOfClass:[NSTimeZone class]], @"Expected `MUFormCellTimeZoneKey` to be an NSTimeZone. It was: %@", [timeZoneValue class]);
         self.timeZone = timeZoneValue;
         
         self.dateLabel.text = [value stringWithStyle:MUDateStyleTypeAbbreviatedDate inTimeZone:self.timeZone];

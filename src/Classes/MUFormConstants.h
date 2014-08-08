@@ -78,6 +78,12 @@ extern NSString *const MUFormCellIdentifierKey;
 /** Specifies the class of a cell. */
 extern NSString *const MUFormCellClassKey;
 
+/** Specifies the accessibility hint of a cell. */
+extern NSString *const MUFormCellLocalizedAccessibilityHintKey;
+
+/** Specifies that this cell is a button, and will be described as a button in accessibility traits. */
+extern NSString *const MUFormCellAccessibilityButtonTraitKey;
+
 /** Localized Key for text for a cell's label. */
 extern NSString *const MUFormLocalizedStaticTextKey;
 

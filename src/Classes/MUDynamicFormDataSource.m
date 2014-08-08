@@ -86,7 +86,7 @@ NSString *const MUFormSectionIndexedValueKeypathKey = @"MUFormSectionIndexedValu
         if ([self isAddNewItemForRowAtIndexPath:indexPath]) {
             return nil;
         } else {
-            NSAssert([arrayPropertyValue respondsToSelector:@selector(objectAtIndex:)],
+            MUAssert([arrayPropertyValue respondsToSelector:@selector(objectAtIndex:)],
             @"Dynamic property is incorrect object type for indexPath (%@)\n", indexPath);
             
             value = arrayPropertyValue[[indexPath row]];
@@ -122,7 +122,7 @@ NSString *const MUFormSectionIndexedValueKeypathKey = @"MUFormSectionIndexedValu
                 [indexedValue setValue:value forKeyPath:indexedKeypath];
             }
             @catch (NSException *exception) {
-                NSAssert(NO, @"Attempt to set a value (%@) at an invalid keypath %@\n%@", value, indexedKeypath, [exception reason]);
+                MUAssert(NO, @"Attempt to set a value (%@) at an invalid keypath %@\n%@", value, indexedKeypath, [exception reason]);
             }
         }
     } else {
@@ -195,7 +195,7 @@ NSString *const MUFormSectionIndexedValueKeypathKey = @"MUFormSectionIndexedValu
             return [self.model valueForKeyPath:propertyKeyPath];
         }
         @catch (NSException *exception) {
-            NSAssert(NO, @"Attempt to get a dynamic value %@ for section (%lu)\n%@", propertyKeyPath, (unsigned long)section, [exception reason]);
+            MUAssert(NO, @"Attempt to get a dynamic value %@ for section (%lu)\n%@", propertyKeyPath, (unsigned long)section, [exception reason]);
         }
     }
     return nil;

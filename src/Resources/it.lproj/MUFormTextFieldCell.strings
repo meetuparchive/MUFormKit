@@ -2,7 +2,7 @@
 "8.placeholder" = "Inserisci testo";
 
 /* Class = "IBUILabel"; text = "Validation message"; ObjectID = "XDX-KN-PAG"; */
-"XDX-KN-PAG.text" = "Messaggio di validazione ";
+"XDX-KN-PAG.text" = "Messaggio di validazione";
 
 /* Class = "IBUILabel"; text = "Label"; ObjectID = "h9d-pm-a35"; */
 "h9d-pm-a35.text" = "Etichetta";

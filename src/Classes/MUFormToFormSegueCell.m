@@ -46,7 +46,7 @@ static CGFloat const kMUMessageHeight = 10.0;
     
     self.messageLabel.text = nil;
     if (value) {
-        NSAssert([value isKindOfClass:[NSString class]], @"Expected ‘value’ to be an NSString. It was: %@", [value class]);
+        MUAssert([value isKindOfClass:[NSString class]], @"Expected ‘value’ to be an NSString. It was: %@", [value class]);
         self.messageLabel.text = value;
     }
     
