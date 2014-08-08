@@ -82,7 +82,7 @@
 		DE50BA39196CB66C0074C342 /* NSError+MUValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+MUValidation.h"; sourceTree = "<group>"; };
 		DE50BA3A196CB66C0074C342 /* NSError+MUValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+MUValidation.m"; sourceTree = "<group>"; };
 		DE50BA3C196CB6FD0074C342 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		DED8C5291965105F000D18DC /* FormKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FormKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DED8C5291965105F000D18DC /* FormKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = FormKit.app; path = FormKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DED8C52C1965105F000D18DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DED8C52E1965105F000D18DC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		DED8C5301965105F000D18DC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -316,8 +316,8 @@
 			children = (
 				DED8C563196510B9000D18DC /* Classes */,
 			);
-			path = src;
-			sourceTree = "<group>";
+			name = src;
+			sourceTree = SOURCE_ROOT;
 		};
 		DED8C563196510B9000D18DC /* Classes */ = {
 			isa = PBXGroup;
