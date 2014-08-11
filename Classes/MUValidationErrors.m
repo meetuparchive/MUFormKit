@@ -19,10 +19,10 @@ NSString *const MUValidationMessagesKey = @"MUValidationMessages";
 
 NSInteger ErrorCodeFromName(NSString *errorName)
 {
-    static NSDictionary *_validationErrorCodes = nil;
+    static NSDictionary *validationErrorCodes = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _validationErrorCodes =
+        validationErrorCodes =
         @{
             @"MUValidationDateTooSoonError"    : @(MUValidationDateTooSoonError),
             @"MUValidationDateTooLateError"    : @(MUValidationDateTooLateError),
@@ -31,7 +31,7 @@ NSInteger ErrorCodeFromName(NSString *errorName)
         };
     });
     
-    NSNumber *errorNumber = _validationErrorCodes[errorName];
+    NSNumber *errorNumber = validationErrorCodes[errorName];
     return [errorNumber integerValue];
 }
 
