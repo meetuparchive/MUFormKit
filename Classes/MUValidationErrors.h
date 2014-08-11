@@ -34,8 +34,7 @@ typedef NS_ENUM(NSInteger, MUValidationErrorType) {
     MUValidationStringTooLongError  = NSValidationStringTooLongError,
     MUValidationNumberTooLargeError = NSValidationNumberTooLargeError,
     MUValidationNumberTooSmallError = NSValidationNumberTooSmallError,
-    MUValidationStringPatternMatchingError = NSValidationStringPatternMatchingError
-    
+    MUValidationStringPatternMatchingError = NSValidationStringPatternMatchingError,
 };
 #else
 
@@ -48,7 +47,7 @@ typedef NS_ENUM(NSInteger, MUValidationErrorType) {
     MUValidationStringTooLongError  = 1240,
     MUValidationNumberTooLargeError = 1250,
     MUValidationNumberTooSmallError = 1260,
-    MUValidationStringPatternMatchingError = 1270
+    MUValidationStringPatternMatchingError = 1270,
 };
 
 #endif
