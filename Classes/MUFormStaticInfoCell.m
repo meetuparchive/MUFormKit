@@ -28,6 +28,11 @@
     [cell layoutIfNeeded];
 
     CGFloat height = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
+    
+    if (tableView.separatorStyle != UITableViewCellSeparatorStyleNone) {
+        height += 1;
+    }
+
     return height;
 }
 
