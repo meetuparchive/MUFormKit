@@ -99,24 +99,37 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
 
 #pragma mark - Initialization & Configuration -
 
-
 - (instancetype)initWithModel:(id)model JSONFilePath:(NSString *)filePath
 {
     NSParameterAssert(model);
     NSParameterAssert(filePath);
     
+    NSData *jsonData = [NSData dataWithContentsOfFile:filePath];
+    NSError *error = nil;
+    NSMutableDictionary *formStructure = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
+    MUAssert(error == nil, @"Error parsing json datasource file: %@\n%@", [error localizedDescription], [error userInfo]);
+    
+    return [self initWithModel:model formStructure:formStructure];
+}
+
+- (instancetype)initWithModel:(id)model formStructure:(NSDictionary *)formStructure
+{
+    NSParameterAssert(model);
+    NSParameterAssert(formStructure);
+    
     self = [super init];
     if (self) {
-        
         _model = model;
-        
-        NSData *jsonData = [NSData dataWithContentsOfFile:filePath];
-        NSError *error = nil;
-        NSMutableDictionary *formInfo = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
-        self.metadata = formInfo[MUFormMetadataKey];
-        self.rawSections = [formInfo[MUFormSectionsKey] copy];
+
+        CFDictionaryRef mutableCFFormStructure = CFPropertyListCreateDeepCopy(kCFAllocatorDefault,
+                                                                              (CFDictionaryRef)formStructure,
+                                                                              kCFPropertyListMutableContainers);
+        NSMutableDictionary *mutableFormStructure = (__bridge_transfer NSMutableDictionary *)mutableCFFormStructure;
+
+        self.metadata = mutableFormStructure[MUFormMetadataKey];
+        self.rawSections = [mutableFormStructure[MUFormSectionsKey] copy];
         [self updateActiveSections];
-        MUAssert(error == nil, @"Error parsing json datasource file: %@\n%@", [error localizedDescription], [error userInfo]);
+        
     }
     return self;
 }

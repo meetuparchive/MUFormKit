@@ -67,12 +67,20 @@ typedef void (^ConfigureCellBlock)(NSIndexPath *indexPath, MUFormBaseCell *cell,
 /**
  Instantiates an instance of the form data source.
  
- This is the designated initializer.
- 
  @param model The model this data source is representing - *required*.
  @param filePath The path to a JSON file containing the form structure.
  */
 - (instancetype)initWithModel:(id)model JSONFilePath:(NSString *)filePath;
+
+/**
+ Instantiates an instance of the form data source.
+ 
+ This is the designated initializer.
+ 
+ @param model The model this data source is representing - *required*.
+ @param formStructure The dictionary that describes this form.
+ */
+- (instancetype)initWithModel:(id)model formStructure:(NSDictionary *)formStructure;
 
 /**
  Sets a configuration block for table view cells.
