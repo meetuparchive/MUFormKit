@@ -36,4 +36,16 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath NS_REQUIRES_SUPER;
 
+/**
+    Should be called by any overriden cell delegate method. Passes the changes on to the
+    data source and calls `-didChangeValue:forItemAtIndexPath:`.
+*/
+- (void)changeValue:(id)value forItemAtIndexPath:(NSIndexPath *)indexPath;
+
+/**
+    Never call this method directly. This is exposed for subclasses to override and
+    perform additional operations whenever form values change.
+*/
+- (void)didChangeValue:(id)value forItemAtIndexPath:(NSIndexPath *)indexPath;
+
 @end

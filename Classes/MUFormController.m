@@ -99,7 +99,7 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
     
     [controller setDidSelectDateBlock:^(NSDate *date) {
         NSDate *mergedDateTime = [date dateWithTimeFromDate:currentDate timeZone:timeZone];
-        [self.dataSource setValue:mergedDateTime forItemAtIndexPath:indexPath];
+        [self changeValue:mergedDateTime forItemAtIndexPath:indexPath];
         [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
         [self.navigationController popViewControllerAnimated:YES];
     }];
@@ -341,6 +341,18 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
     return [self heightForRowAtIndexPath:indexPath];
 }
 
+#pragma mark - Form events
+
+- (void)changeValue:(id)value forItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.dataSource setValue:value forItemAtIndexPath:indexPath];
+    [self didChangeValue:value forItemAtIndexPath:indexPath];
+}
+
+- (void)didChangeValue:(id)value forItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    // For subclasses to override
+}
 
 #pragma mark - Form Cell Delegate Methods
 
@@ -362,7 +374,7 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
     // Merge the time with the existing date and update the model.
     NSDate *currentDate = [self.dataSource valueForItemAtIndexPath:relatedIndexPath];
     NSDate *mergedDateTime = [currentDate dateWithTimeFromDate:time timeZone:timeZone];
-    [self.dataSource setValue:mergedDateTime forItemAtIndexPath:relatedIndexPath];
+    [self changeValue:mergedDateTime forItemAtIndexPath:relatedIndexPath];
     [self.tableView reloadRowsAtIndexPaths:@[relatedIndexPath] withRowAnimation:UITableViewRowAnimationNone];
 }
 
@@ -391,7 +403,7 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
 - (void)textInputCell:(MUFormBaseCell *)sender textChanged:(NSString *)text
 {
     NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-    [self.dataSource setValue:text forItemAtIndexPath:indexPath];
+    [self changeValue:text forItemAtIndexPath:indexPath];
     [self mu_adjustCellHeightAtIndexPath:indexPath];
 }
 
@@ -415,13 +427,13 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
 - (void)textFieldCell:(MUFormTextFieldCell *)sender didEndEditingWithText:(NSString *)text
 {
     NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-    [self.dataSource setValue:text forItemAtIndexPath:indexPath];
+    [self changeValue:text forItemAtIndexPath:indexPath];
 }
 
 - (void)textViewCell:(MUFormTextViewCell *)sender didEndEditingWithText:(NSString *)text
 {
     NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-    [self.dataSource setValue:text forItemAtIndexPath:indexPath];
+    [self changeValue:text forItemAtIndexPath:indexPath];
 }
 
 #pragma mark - Number input
@@ -430,14 +442,14 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
 {
     NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
     NSNumber *number = ([numberString length]) ? @([numberString integerValue]) : nil;
-    [self.dataSource setValue:number forItemAtIndexPath:indexPath];
+    [self changeValue:number forItemAtIndexPath:indexPath];
 }
 
 - (void)numberFieldCell:(MUFormNumberFieldCell *)sender numberChanged:(NSString *)numberString
 {
     NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
     NSNumber *number = ([numberString length]) ? @([numberString integerValue]) : nil;
-    [self.dataSource setValue:number forItemAtIndexPath:indexPath];
+    [self changeValue:number forItemAtIndexPath:indexPath];
     [self mu_adjustCellHeightAtIndexPath:indexPath];
 }
 
@@ -451,14 +463,14 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
 - (void)switchCell:(MUFormSwitchCell *)sender didChangeValue:(BOOL)selected
 {
     NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-    [self.dataSource setValue:@(selected) forItemAtIndexPath:indexPath];
+    [self changeValue:@(selected) forItemAtIndexPath:indexPath];
     // Don't reload or the switch won't animate.
 }
 
 - (void)formActivationCell:(MUFormActivationCell *)sender didChangeValue:(BOOL)selected
 {
     NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-    [self.dataSource setValue:@(selected) forItemAtIndexPath:indexPath];
+    [self changeValue:@(selected) forItemAtIndexPath:indexPath];
     [self.dataSource tableView:self.tableView updateEnabledSectionsWithIndexPath:indexPath];
 }
 
