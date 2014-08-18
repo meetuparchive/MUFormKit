@@ -12,7 +12,6 @@
 		DED8C52D1965105F000D18DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED8C52C1965105F000D18DC /* Foundation.framework */; };
 		DED8C52F1965105F000D18DC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED8C52E1965105F000D18DC /* CoreGraphics.framework */; };
 		DED8C5311965105F000D18DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED8C5301965105F000D18DC /* UIKit.framework */; };
-		DED8C5371965105F000D18DC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5351965105F000D18DC /* InfoPlist.strings */; };
 		DED8C5391965105F000D18DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C5381965105F000D18DC /* main.m */; };
 		DED8C53D1965105F000D18DC /* MUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C53C1965105F000D18DC /* MUAppDelegate.m */; };
 		DED8C5431965105F000D18DC /* MUHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C5421965105F000D18DC /* MUHomeViewController.m */; };
@@ -20,7 +19,6 @@
 		DED8C54C1965105F000D18DC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED8C54B1965105F000D18DC /* XCTest.framework */; };
 		DED8C54D1965105F000D18DC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED8C52C1965105F000D18DC /* Foundation.framework */; };
 		DED8C54E1965105F000D18DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED8C5301965105F000D18DC /* UIKit.framework */; };
-		DED8C5561965105F000D18DC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5541965105F000D18DC /* InfoPlist.strings */; };
 		DED8C5581965105F000D18DC /* FormKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C5571965105F000D18DC /* FormKitTests.m */; };
 		DED8C5DB196510B9000D18DC /* MUDynamicFormController.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C565196510B9000D18DC /* MUDynamicFormController.m */; };
 		DED8C5DC196510B9000D18DC /* MUDynamicFormDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DED8C567196510B9000D18DC /* MUDynamicFormDataSource.m */; };
@@ -88,7 +86,6 @@
 		DED8C52E1965105F000D18DC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		DED8C5301965105F000D18DC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DED8C5341965105F000D18DC /* FormKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FormKit-Info.plist"; sourceTree = "<group>"; };
-		DED8C5361965105F000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DED8C5381965105F000D18DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DED8C53A1965105F000D18DC /* FormKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FormKit-Prefix.pch"; sourceTree = "<group>"; };
 		DED8C53B1965105F000D18DC /* MUAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MUAppDelegate.h; sourceTree = "<group>"; };
@@ -99,7 +96,6 @@
 		DED8C54A1965105F000D18DC /* FormKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FormKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DED8C54B1965105F000D18DC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		DED8C5531965105F000D18DC /* FormKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FormKitTests-Info.plist"; sourceTree = "<group>"; };
-		DED8C5551965105F000D18DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DED8C5571965105F000D18DC /* FormKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FormKitTests.m; sourceTree = "<group>"; };
 		DED8C564196510B9000D18DC /* MUDynamicFormController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUDynamicFormController.h; sourceTree = "<group>"; };
 		DED8C565196510B9000D18DC /* MUDynamicFormController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUDynamicFormController.m; sourceTree = "<group>"; };
@@ -290,7 +286,6 @@
 			isa = PBXGroup;
 			children = (
 				DED8C5341965105F000D18DC /* FormKit-Info.plist */,
-				DED8C5351965105F000D18DC /* InfoPlist.strings */,
 				DED8C5381965105F000D18DC /* main.m */,
 				DED8C53A1965105F000D18DC /* FormKit-Prefix.pch */,
 			);
@@ -310,7 +305,6 @@
 			isa = PBXGroup;
 			children = (
 				DED8C5531965105F000D18DC /* FormKitTests-Info.plist */,
-				DED8C5541965105F000D18DC /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -499,7 +493,6 @@
 				DED8C5FD196510B9000D18DC /* MUFormTimeCell.xib in Resources */,
 				DED8C5FB196510B9000D18DC /* MUFormTextFieldCell.xib in Resources */,
 				DED8C5FC196510B9000D18DC /* MUFormTextViewCell.xib in Resources */,
-				DED8C5371965105F000D18DC /* InfoPlist.strings in Resources */,
 				DED8C5F5196510B9000D18DC /* MUFormNumberFieldCell.xib in Resources */,
 				DED8C5F6196510B9000D18DC /* MUFormOptionCell.xib in Resources */,
 				DED8C5F8196510B9000D18DC /* MUFormStaticInfoCell.xib in Resources */,
@@ -517,7 +510,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DED8C5561965105F000D18DC /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,22 +603,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DED8C5351965105F000D18DC /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5361965105F000D18DC /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		DED8C5541965105F000D18DC /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DED8C5551965105F000D18DC /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		DED8C595196510B9000D18DC /* MUFormActivationCell.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
