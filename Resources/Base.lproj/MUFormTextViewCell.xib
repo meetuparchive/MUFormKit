@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -21,7 +21,6 @@
                                 <rect key="frame" x="10" y="4" width="300" height="112"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="FE7-o6-pKu"/>
                                     <constraint firstAttribute="height" constant="112" id="k70-Qf-8fp"/>
                                 </constraints>
                                 <color key="textColor" white="0.050467609490000002" alpha="1" colorSpace="calibratedWhite"/>
@@ -31,7 +30,6 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Validation message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NA0-c5-jwI">
                                 <rect key="frame" x="15" y="115" width="290" height="17"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="290" id="BsF-yN-WiJ"/>
                                     <constraint firstAttribute="height" constant="17" id="N2w-PY-UAV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
@@ -42,7 +40,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2nS-x8-YeX" firstAttribute="leading" secondItem="Cxy-Q0-rbj" secondAttribute="leading" constant="10" id="HIt-ap-lkL" userLabel="TextView-leading"/>
-                            <constraint firstAttribute="width" constant="320" id="Hdv-dB-yQl"/>
                             <constraint firstAttribute="bottom" secondItem="NA0-c5-jwI" secondAttribute="bottom" constant="8" id="JEM-Gs-Agw"/>
                             <constraint firstItem="2nS-x8-YeX" firstAttribute="top" secondItem="Cxy-Q0-rbj" secondAttribute="top" constant="4" id="aP5-bK-XXX"/>
                             <constraint firstAttribute="trailing" secondItem="2nS-x8-YeX" secondAttribute="trailing" constant="10" id="glS-zS-fAi" userLabel="TextView-trailing"/>
@@ -51,12 +48,13 @@
                         </constraints>
                     </view>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="Cxy-Q0-rbj" firstAttribute="top" secondItem="0z4-su-CRx" secondAttribute="top" id="Hwm-af-jzt"/>
+                    <constraint firstItem="Cxy-Q0-rbj" firstAttribute="leading" secondItem="0z4-su-CRx" secondAttribute="leading" id="I8l-yM-CNh"/>
+                    <constraint firstAttribute="bottom" secondItem="Cxy-Q0-rbj" secondAttribute="bottom" id="N4Q-L4-4Sl"/>
+                    <constraint firstAttribute="trailing" secondItem="Cxy-Q0-rbj" secondAttribute="trailing" id="i88-rS-nAj"/>
+                </constraints>
             </tableViewCellContentView>
-            <constraints>
-                <constraint firstItem="Cxy-Q0-rbj" firstAttribute="centerY" secondItem="vOC-Ol-TXg" secondAttribute="centerY" id="Ryx-9A-s82"/>
-                <constraint firstItem="Cxy-Q0-rbj" firstAttribute="leading" secondItem="vOC-Ol-TXg" secondAttribute="leading" id="bx7-OH-QFz"/>
-                <constraint firstItem="Cxy-Q0-rbj" firstAttribute="top" secondItem="vOC-Ol-TXg" secondAttribute="top" id="uOI-Le-k9h"/>
-            </constraints>
             <connections>
                 <outlet property="containerView" destination="Cxy-Q0-rbj" id="RjD-bc-QQW"/>
                 <outlet property="messageLabel" destination="NA0-c5-jwI" id="8Gl-AY-2lt"/>
