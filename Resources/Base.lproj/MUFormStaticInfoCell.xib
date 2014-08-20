@@ -49,9 +49,6 @@
                     <constraint firstItem="5Ag-oL-CLT" firstAttribute="top" secondItem="Bw3-Vk-YnS" secondAttribute="top" id="rzy-eE-9mA"/>
                 </constraints>
             </tableViewCellContentView>
-            <constraints>
-                <constraint firstItem="5Ag-oL-CLT" firstAttribute="leading" secondItem="cmw-Qi-Ojf" secondAttribute="leading" id="J6X-kU-XpL"/>
-            </constraints>
             <connections>
                 <outlet property="containerView" destination="5Ag-oL-CLT" id="Ywl-fq-XkM"/>
                 <outlet property="iconView" destination="lhY-r8-AMd" id="iQf-gN-MhZ"/>
