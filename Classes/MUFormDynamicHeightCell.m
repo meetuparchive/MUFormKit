@@ -12,12 +12,13 @@
 
 + (CGFloat)heightForTableView:(UITableView*)tableView value:(id)value info:(NSDictionary *)info
 {
-    NSString *cellIdentifierAndNibName = NSStringFromClass(self);
-    MUFormDynamicHeightCell *cell = (MUFormDynamicHeightCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifierAndNibName];
+    NSString *cellNibName = info[MUFormCellClassKey];
+    NSString *cellIdentifier = info[MUFormCellIdentifierKey];
+    MUFormDynamicHeightCell *cell = (MUFormDynamicHeightCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
-        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:cellIdentifierAndNibName owner:self options:nil];
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:cellNibName owner:self options:nil];
         cell = [topLevelObjects objectAtIndex:0];
-        NSAssert(cell, @"Expected a cell created from class %@ Nib file %@",cellIdentifierAndNibName,cellIdentifierAndNibName);
+        NSAssert(cell, @"Expected a cell created from identifier %@ Nib file %@",cellIdentifier,cellNibName);
     }
     
     [cell configureWithValue:value info:info];
