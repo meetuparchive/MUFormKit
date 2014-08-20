@@ -19,9 +19,6 @@
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Static text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tCd-U8-nqq">
                                 <rect key="frame" x="41" y="11" width="231" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="17"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" white="0.050467609490000002" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -37,9 +34,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="8" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="15" id="9" userLabel="image-leading"/>
-                            <constraint firstItem="tCd-U8-nqq" firstAttribute="centerY" secondItem="8" secondAttribute="centerY" id="11"/>
-                            <constraint firstItem="tCd-U8-nqq" firstAttribute="leading" secondItem="8" secondAttribute="trailing" id="12" userLabel="icon-H-label"/>
-                            <constraint firstItem="tCd-U8-nqq" firstAttribute="centerY" secondItem="6" secondAttribute="centerY" id="13"/>
+                            <constraint firstItem="8" firstAttribute="centerY" secondItem="tCd-U8-nqq" secondAttribute="centerY" id="11"/>
+                            <constraint firstItem="8" firstAttribute="trailing" secondItem="tCd-U8-nqq" secondAttribute="leading" id="12" userLabel="icon-H-label"/>
+                            <constraint firstAttribute="bottom" secondItem="tCd-U8-nqq" secondAttribute="bottom" constant="10" id="HbP-RT-0C1"/>
+                            <constraint firstAttribute="top" secondItem="tCd-U8-nqq" secondAttribute="top" constant="-11" id="ScG-99-zGH"/>
                             <constraint firstAttribute="trailing" secondItem="tCd-U8-nqq" secondAttribute="trailing" constant="15" id="x1N-pc-xWQ"/>
                         </constraints>
                     </view>

@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Meetup, Inc. All rights reserved.
 //
 
-#import "MUFormBaseCell.h"
+#import "MUFormDynamicHeightCell.h"
 
-@interface MUFormIconCell : MUFormBaseCell
+@interface MUFormIconCell : MUFormDynamicHeightCell
 
 /** Constraint for the padding to the right of the iconView, exposed to be able to collapse the view */
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *iconViewLabelLeadingHorizontalConstraint;

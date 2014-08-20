@@ -18,10 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Validation message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDX-KN-PAG" userLabel="Label - Validation">
-                                <rect key="frame" x="55" y="51" width="250" height="17"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="17" id="Qzs-Wa-a5s"/>
-                                </constraints>
+                                <rect key="frame" x="55" y="54" width="250" height="14"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                 <color key="textColor" red="0.87843137250000003" green="0.22352941179999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -56,6 +53,7 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="XDX-KN-PAG" secondAttribute="trailing" constant="15" id="98o-WE-GhG" userLabel="message-trailing"/>
                             <constraint firstItem="y7s-9H-pSl" firstAttribute="leading" secondItem="ykz-ev-x2A" secondAttribute="trailing" constant="10" id="G5X-yw-s5I"/>
+                            <constraint firstItem="XDX-KN-PAG" firstAttribute="top" secondItem="y7s-9H-pSl" secondAttribute="bottom" id="Kxj-NY-Z6C"/>
                             <constraint firstAttribute="trailing" secondItem="h9d-pm-a35" secondAttribute="trailing" constant="15" id="OSC-4y-Q3i"/>
                             <constraint firstItem="ykz-ev-x2A" firstAttribute="leading" secondItem="Pnv-Xz-aWL" secondAttribute="leading" constant="15" id="W1G-mS-VC0"/>
                             <constraint firstItem="ykz-ev-x2A" firstAttribute="centerY" secondItem="y7s-9H-pSl" secondAttribute="centerY" id="XLs-Ib-VN0"/>

@@ -10,21 +10,7 @@
 
 @implementation MUFormTextFieldCell
 
-static CGFloat const kMUDescriptionLabelHeight = 20.0;
-
 #pragma mark - Overrides -
-
-+ (CGFloat)heightForTableView:(UITableView*)tableView value:(id)value info:(NSDictionary *)info
-{
-    CGFloat height = [super heightForTableView:(UITableView*)tableView value:value info:info];
-    NSString *labelKey = info[MUFormLocalizedLabelKey];
-    NSString *localizedLabel = [[NSBundle mainBundle] localizedStringForKey:labelKey value:labelKey table:MUFormKitStringTable];
-    if ([localizedLabel length] > 0) {
-        height += kMUDescriptionLabelHeight;
-    }
-    return height;
-}
-
 
 - (void)awakeFromNib
 {
