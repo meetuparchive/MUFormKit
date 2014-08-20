@@ -11,25 +11,12 @@
 NSString *const MUFormSubformEnabledPropertyNameKey = @"MUFormSubformEnabledPropertyNameKey";
 NSString *const MUFormSubformValuePropertyNameKey = @"MUFormSubformValuePropertyNameKey";
 
-static CGFloat const kMUDefaultRowHeight = 44.0;
-static CGFloat const kMUMessageHeight = 10.0;
-
 @interface MUFormToFormSegueCell ()
 @property (weak, nonatomic) IBOutlet UILabel *stateIndicatorLabel;
 @end
 
 
 @implementation MUFormToFormSegueCell
-
-
-+ (CGFloat)heightForTableView:(UITableView*)tableView value:(id)value info:(NSDictionary *)info
-{
-    CGFloat height = kMUDefaultRowHeight;
-    if (value) {
-        height += kMUMessageHeight;
-    }
-    return height;
-}
 
 - (void)awakeFromNib
 {
