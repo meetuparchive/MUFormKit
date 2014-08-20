@@ -20,6 +20,8 @@ CGFloat const kMUPadding = 13.0;
 {
     [super prepareForReuse];
     self.iconView.image = nil;
+    self.staticLabel.text = nil;
+    self.accessoryType = UITableViewCellAccessoryNone;
 }
 
 - (void)configureWithValue:(id)value info:(NSDictionary *)info

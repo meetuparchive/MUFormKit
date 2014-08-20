@@ -28,6 +28,9 @@
 {
     [super prepareForReuse];
     self.iconView.image = nil;
+    self.iconViewLabelLeadingHorizontalConstraint.constant = 0.0;
+    self.iconViewWidthConstraint.constant = 0.0;
+    self.iconViewHeightConstraint.constant = 0.0;    
 }
 
 - (void)configureWithValue:(id)value info:(NSDictionary *)info

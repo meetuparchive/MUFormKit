@@ -38,6 +38,7 @@
     
     self.textField.text = nil;
     self.label.text = nil;
+    self.messageLabel.text = nil;
 }
 
 - (void)configureWithValue:(id)value info:(NSDictionary *)info
