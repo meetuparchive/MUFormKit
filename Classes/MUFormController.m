@@ -457,7 +457,10 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
 {
     NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
     [self.dataSource selectOptionAtIndexPath:indexPath];
-    [self.tableView reloadData];
+    [self performBlock:^{
+        [self.tableView reloadData];
+    } afterDelay:0.15];
+    
 }
 
 - (void)switchCell:(MUFormSwitchCell *)sender didChangeValue:(BOOL)selected

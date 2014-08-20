@@ -87,6 +87,9 @@ extern NSString *const MUFormCellAccessibilityButtonTraitKey;
 /** Localized Key for text for a cell's label. */
 extern NSString *const MUFormLocalizedStaticTextKey;
 
+/** Localized Key for text for a cell's detail label. */
+extern NSString *const MUFormLocalizedStaticDetailTextKey;
+
 /** Indicates the cell accesory type to be used. */
 extern NSString *const MUFormCellAccessoryTypeKey;
 

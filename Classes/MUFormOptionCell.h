@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MUFormBaseCell.h"
+#import "MUFormDynamicHeightCell.h"
 
-@interface MUFormOptionCell : MUFormBaseCell
+@interface MUFormOptionCell : MUFormDynamicHeightCell
 
 @property (weak, nonatomic) IBOutlet UILabel *staticLabel;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *staticLabelTrailingSpaceConstraint;
+@property (weak, nonatomic) IBOutlet UILabel *staticDetailLabel;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *staticDetailLabelTrailingSpaceConstraint;
 
 @end

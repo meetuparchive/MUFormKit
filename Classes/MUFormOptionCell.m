@@ -8,16 +8,18 @@
 
 #import "MUFormOptionCell.h"
 
+static CGFloat const MUDefaultCheckMarkAccessoryWidth = 38.5;
+
 @implementation MUFormOptionCell
 
 #pragma mark - Overrides -
+
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    if (touches.count == 1) {
-        if (self.accessoryType == UITableViewCellAccessoryNone &&
-            [self.delegate respondsToSelector:@selector(optionCellDidBecomeSelectedOptionCell:)]) {
-            [self.delegate optionCellDidBecomeSelectedOptionCell:self];
-        }
+    if (touches.count == 1 &&
+        self.accessoryType == UITableViewCellAccessoryNone &&
+        [self.delegate respondsToSelector:@selector(optionCellDidBecomeSelectedOptionCell:)]) {
+        [self.delegate optionCellDidBecomeSelectedOptionCell:self];
     }
     else {
         [super touchesEnded:touches withEvent:event];
@@ -41,13 +43,21 @@
     
     if ([value isEqualToNumber:defaultValue]) {
         self.accessoryType = UITableViewCellAccessoryCheckmark;
+        self.staticLabelTrailingSpaceConstraint.constant = 0;
+        self.staticDetailLabelTrailingSpaceConstraint.constant = 0.;
     }
     else {
         self.accessoryType = UITableViewCellAccessoryNone;
+        self.staticLabelTrailingSpaceConstraint.constant = MUDefaultCheckMarkAccessoryWidth;
+        self.staticDetailLabelTrailingSpaceConstraint.constant = MUDefaultCheckMarkAccessoryWidth;
     }
     
-    NSString *localizedKey = info[MUFormLocalizedStaticTextKey];
-    self.staticLabel.text = [[NSBundle mainBundle] localizedStringForKey:localizedKey value:localizedKey table:MUFormKitStringTable];
+    NSString *localizedStaticTextKey = info[MUFormLocalizedStaticTextKey];
+    self.staticLabel.text = [[NSBundle mainBundle] localizedStringForKey:localizedStaticTextKey value:localizedStaticTextKey table:MUFormKitStringTable];
+   
+    NSString *localizedStaticDetailTextKey = info[MUFormLocalizedStaticDetailTextKey];
+    self.staticDetailLabel.text = [[NSBundle mainBundle] localizedStringForKey:localizedStaticDetailTextKey value:localizedStaticDetailTextKey table:MUFormKitStringTable];
+    
 }
 
 @end
