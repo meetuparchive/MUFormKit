@@ -41,15 +41,20 @@ static CGFloat const MUDefaultCheckMarkAccessoryWidth = 38.5;
                  @"Expected ‘defaultValue’ to be an NSNumber. It was: %@", [value class]);
     }
     
-    if ([value isEqualToNumber:defaultValue]) {
+    BOOL isValueEqualToDefault = [value isEqualToNumber:defaultValue];
+    
+    if (isValueEqualToDefault && self.accessoryType != UITableViewCellAccessoryCheckmark) {
         self.accessoryType = UITableViewCellAccessoryCheckmark;
         self.staticLabelTrailingSpaceConstraint.constant = 0;
         self.staticDetailLabelTrailingSpaceConstraint.constant = 0.;
+        [self setNeedsUpdateConstraints];
     }
-    else {
+    else if (!isValueEqualToDefault && self.accessoryType == UITableViewCellAccessoryCheckmark)
+    {
         self.accessoryType = UITableViewCellAccessoryNone;
         self.staticLabelTrailingSpaceConstraint.constant = MUDefaultCheckMarkAccessoryWidth;
         self.staticDetailLabelTrailingSpaceConstraint.constant = MUDefaultCheckMarkAccessoryWidth;
+        [self setNeedsUpdateConstraints];
     }
     
     NSString *localizedStaticTextKey = info[MUFormLocalizedStaticTextKey];
