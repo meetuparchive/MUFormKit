@@ -22,8 +22,6 @@
     }
     
     [cell configureWithValue:value info:info];
-    [cell setNeedsUpdateConstraints];
-    [cell updateConstraintsIfNeeded];
     cell.bounds = CGRectMake(0.0f, 0.0f, CGRectGetWidth(tableView.bounds), CGRectGetHeight(cell.bounds));
     [cell setNeedsLayout];
     [cell layoutIfNeeded];
