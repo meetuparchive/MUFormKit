@@ -11,7 +11,6 @@
 #import "MUFormDataSource.h"
 #import "MURelativeDatePickerController.h"
 
-static CGFloat const kMUDefaultRowHeight = 44.0;
 static CGFloat const kMUDefaulSectionHeaderHeight = 17.0;
 static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
 
@@ -201,11 +200,8 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
     
     self.tableView.backgroundView = nil;
     self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeInteractive;
-    self.tableView.rowHeight = kMUDefaultRowHeight;
     self.tableView.sectionHeaderHeight = kMUDefaulSectionHeaderHeight;
     self.tableView.sectionFooterHeight = kMUDefaultSectionFooterHeight;
-    self.tableView.rowHeight = UITableViewAutomaticDimension;
-    self.tableView.estimatedRowHeight = 44.0;
     
     // Observe the keyboard.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(observeKeyboardDidShowNotification:) name:UIKeyboardDidShowNotification object:nil];
