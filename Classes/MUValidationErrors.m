@@ -130,4 +130,37 @@ NSString *LocalizedErrorStringForError(NSError *error)
     return isValid;
 }
 
+
++ (BOOL)    validateString:(NSString *__autoreleasing *)string
+                 withRegex:(NSString *)regexString
+         acceptEmptyString:(BOOL)acceptEmptyString
+ localizedErrorDescription:(NSString *)localizedErrorDescription
+                     error:(NSError *__autoreleasing *)outError
+{
+    if (!string) return acceptEmptyString;
+    if ([*string length] == 0 && acceptEmptyString) {
+        return YES;
+    }
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regexString];
+    if ([predicate evaluateWithObject:*string]) {
+        return YES;
+    }
+    
+    
+    NSDictionary *userInfo = localizedErrorDescription ? @{NSLocalizedDescriptionKey: localizedErrorDescription} : nil;
+    NSError *error = [NSError errorWithDomain:MUValidationErrorDomain code:MUValidationStringPatternMatchingError userInfo:userInfo];
+    
+    if (outError) {
+        if (*outError) {
+            *outError = [error mu_errorByCombiningWithError:*outError];
+        }
+        else {
+            *outError = error;
+        }
+    }
+    return NO;
+}
+
+
 @end
