@@ -85,10 +85,10 @@ NSString *LocalizedErrorStringForError(NSError *error)
         NSUInteger count = [messages count];
         [messages enumerateObjectsUsingBlock:^(NSString *singleErrorMessage, NSUInteger idx, BOOL *stop) {
             if (idx < count) {
-                [errorString appendFormat:@"- %@\n", singleErrorMessage];
+                [errorString appendFormat:@"• %@\n", singleErrorMessage];
             }
             else {
-                [errorString appendFormat:@"- %@", singleErrorMessage];
+                [errorString appendFormat:@"• %@", singleErrorMessage];
             }
         }];
     }
