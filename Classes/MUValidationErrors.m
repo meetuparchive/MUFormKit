@@ -77,7 +77,10 @@ NSString *LocalizedErrorStringForError(NSError *error)
 {
     NSMutableString *errorString = nil;
     NSArray *messages = LocalizedValidationMessagesForError(error);
-    if ([messages count] > 0) {
+    if ([messages count] == 1) {
+        return [messages firstObject];
+    }
+    else if ([messages count] > 1) {
         errorString = [NSMutableString string];
         NSUInteger count = [messages count];
         [messages enumerateObjectsUsingBlock:^(NSString *singleErrorMessage, NSUInteger idx, BOOL *stop) {
