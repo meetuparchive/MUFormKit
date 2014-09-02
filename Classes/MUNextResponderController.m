@@ -40,7 +40,7 @@
 
 - (void) focusOnNextResponderAtIndexPath:(NSIndexPath*)indexPath completion:(void(^)(BOOL didFindNextResponder))completion
 {
-    NSParameterAssert(indexPath);
+    MUParameterAssert(indexPath);
     [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
     if (cell) {

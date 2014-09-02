@@ -101,8 +101,8 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
 
 - (instancetype)initWithModel:(id)model JSONFilePath:(NSString *)filePath
 {
-    NSParameterAssert(model);
-    NSParameterAssert(filePath);
+    MUParameterAssert(model);
+    MUParameterAssert(filePath);
     
     NSData *jsonData = [NSData dataWithContentsOfFile:filePath];
     NSError *error = nil;
@@ -114,8 +114,8 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
 
 - (instancetype)initWithModel:(id)model formStructure:(NSDictionary *)formStructure
 {
-    NSParameterAssert(model);
-    NSParameterAssert(formStructure);
+    MUParameterAssert(model);
+    MUParameterAssert(formStructure);
     
     self = [super init];
     if (self) {
@@ -136,7 +136,7 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
 
 - (void)setCellConfigureBlock:(ConfigureCellBlock)cellConfigureBlock
 {
-    NSParameterAssert(cellConfigureBlock);
+    MUParameterAssert(cellConfigureBlock);
     self.configureCellBlock = cellConfigureBlock;
 }
 

@@ -64,8 +64,8 @@
 
 - (instancetype)initWithMinimumDate:(NSDate *)minimumDate maximumDate:(NSDate *)maximumDate
 {
-    NSParameterAssert(minimumDate);
-    NSParameterAssert(maximumDate);
+    MUParameterAssert(minimumDate);
+    MUParameterAssert(maximumDate);
     
     self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
