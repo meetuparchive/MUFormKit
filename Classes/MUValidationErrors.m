@@ -77,15 +77,18 @@ NSString *LocalizedErrorStringForError(NSError *error)
 {
     NSMutableString *errorString = nil;
     NSArray *messages = LocalizedValidationMessagesForError(error);
-    if ([messages count] > 0) {
+    if ([messages count] == 1) {
+        return [messages firstObject];
+    }
+    else if ([messages count] > 1) {
         errorString = [NSMutableString string];
         NSUInteger count = [messages count];
         [messages enumerateObjectsUsingBlock:^(NSString *singleErrorMessage, NSUInteger idx, BOOL *stop) {
             if (idx < count) {
-                [errorString appendFormat:@"- %@\n", singleErrorMessage];
+                [errorString appendFormat:@"• %@\n", singleErrorMessage];
             }
             else {
-                [errorString appendFormat:@"- %@", singleErrorMessage];
+                [errorString appendFormat:@"• %@", singleErrorMessage];
             }
         }];
     }
@@ -129,5 +132,38 @@ NSString *LocalizedErrorStringForError(NSError *error)
     }
     return isValid;
 }
+
+
++ (BOOL)    validateString:(NSString *__autoreleasing *)string
+                 withRegex:(NSString *)regexString
+         acceptEmptyString:(BOOL)acceptEmptyString
+ localizedErrorDescription:(NSString *)localizedErrorDescription
+                     error:(NSError *__autoreleasing *)outError
+{
+    if (!string) return acceptEmptyString;
+    if ([*string length] == 0 && acceptEmptyString) {
+        return YES;
+    }
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regexString];
+    if ([predicate evaluateWithObject:*string]) {
+        return YES;
+    }
+    
+    
+    NSDictionary *userInfo = localizedErrorDescription ? @{NSLocalizedDescriptionKey: localizedErrorDescription} : nil;
+    NSError *error = [NSError errorWithDomain:MUValidationErrorDomain code:MUValidationStringPatternMatchingError userInfo:userInfo];
+    
+    if (outError) {
+        if (*outError) {
+            *outError = [error mu_errorByCombiningWithError:*outError];
+        }
+        else {
+            *outError = error;
+        }
+    }
+    return NO;
+}
+
 
 @end

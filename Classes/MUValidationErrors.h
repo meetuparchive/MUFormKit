@@ -107,5 +107,21 @@ NSError *LocalizedValidationErrorForError(NSError *error);
              maxLength:(NSUInteger)maxLength
                  error:(NSError *__autoreleasing *)outError;
 
+
+/**
+ A helper to the KVC validation used when validating FormKit string values.
+ 
+ @param string                      The string to be validated.
+ @param regexString                 If `string` is a match of this regular expression, it will validate.
+ @param acceptEmptyString           Should this validator allow empty strings, even if they don't match the regex?
+ @param localizedErrorDescription   If `string` doesn't validate, this will add an error with this description to `outError`.
+ @param outError                    A pointer to an error which will be set if the string is not valid.
+ */
++ (BOOL)    validateString:(NSString *__autoreleasing *)string
+                 withRegex:(NSString *)regexString
+         acceptEmptyString:(BOOL)acceptEmptyString
+ localizedErrorDescription:(NSString *)localizedErrorDescription
+                     error:(NSError *__autoreleasing *)outError;
+
 @end
 
