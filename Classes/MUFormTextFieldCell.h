@@ -23,4 +23,6 @@
 - (void)textFieldEditingChanged:(UITextField *)textField;
 -(NSString*) textFieldText;
 
+- (void)awakeFromNib NS_REQUIRES_SUPER;
+
 @end

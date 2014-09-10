@@ -20,4 +20,5 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *iconViewHeightConstraint;
 
 - (void)awakeFromNib NS_REQUIRES_SUPER;
+
 @end
