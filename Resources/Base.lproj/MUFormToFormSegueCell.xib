@@ -54,7 +54,7 @@
                             <constraint firstItem="8Br-Aq-kND" firstAttribute="leading" secondItem="P3X-dC-vit" secondAttribute="leading" constant="15" id="cnP-Pg-l1V"/>
                             <constraint firstAttribute="bottom" secondItem="42" secondAttribute="bottom" constant="11" id="ddy-BQ-OEj"/>
                             <constraint firstAttribute="centerY" secondItem="8Br-Aq-kND" secondAttribute="centerY" id="lZm-l8-FqY"/>
-                            <constraint firstAttribute="top" secondItem="7" secondAttribute="top" priority="772" constant="-10" id="siW-E8-8fX"/>
+                            <constraint firstItem="7" firstAttribute="top" secondItem="P3X-dC-vit" secondAttribute="top" priority="772" constant="10" id="siW-E8-8fX"/>
                             <constraint firstItem="42" firstAttribute="top" secondItem="7" secondAttribute="bottom" id="yGd-JW-xLH"/>
                         </constraints>
                     </view>
