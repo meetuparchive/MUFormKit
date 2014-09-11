@@ -10,6 +10,15 @@
 
 static CGFloat const MUDefaultCheckMarkAccessoryWidth = 38.5;
 
+@interface MUFormOptionCell ()
+
+@property (weak, nonatomic) IBOutlet UILabel *staticLabel;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *staticLabelTrailingSpaceConstraint;
+@property (weak, nonatomic) IBOutlet UILabel *staticDetailLabel;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *staticDetailLabelTrailingSpaceConstraint;
+
+@end
+
 @implementation MUFormOptionCell
 
 #pragma mark - Overrides -
