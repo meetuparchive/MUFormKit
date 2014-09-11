@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -37,7 +37,7 @@
                             <constraint firstItem="8" firstAttribute="centerY" secondItem="tCd-U8-nqq" secondAttribute="centerY" id="11"/>
                             <constraint firstItem="8" firstAttribute="trailing" secondItem="tCd-U8-nqq" secondAttribute="leading" id="12" userLabel="icon-H-label"/>
                             <constraint firstAttribute="bottom" secondItem="tCd-U8-nqq" secondAttribute="bottom" constant="10" id="HbP-RT-0C1"/>
-                            <constraint firstAttribute="top" secondItem="tCd-U8-nqq" secondAttribute="top" constant="-11" id="ScG-99-zGH"/>
+                            <constraint firstItem="tCd-U8-nqq" firstAttribute="top" secondItem="6" secondAttribute="top" constant="11" id="ScG-99-zGH"/>
                             <constraint firstAttribute="trailing" secondItem="tCd-U8-nqq" secondAttribute="trailing" constant="15" id="x1N-pc-xWQ"/>
                         </constraints>
                     </view>
@@ -57,4 +57,9 @@
             </connections>
         </tableViewCell>
     </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>
