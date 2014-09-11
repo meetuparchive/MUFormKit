@@ -453,6 +453,9 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
 {
     NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
     [self.dataSource selectOptionAtIndexPath:indexPath];
+    
+    //This gives the tableview some time to perform the cell selection/deselection animation,
+    //reload is required to update which cells now have the checkmark, we should find a better way to do this
     [self performBlock:^{
         [self.tableView reloadData];
     } afterDelay:0.15];
