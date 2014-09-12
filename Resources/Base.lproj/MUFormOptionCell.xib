@@ -51,8 +51,8 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="containerView" destination="11" id="16"/>
-                <outlet property="staticDetailLabel" destination="KWN-qE-WZS" id="mb8-KI-vSW"/>
-                <outlet property="staticDetailLabelTrailingSpaceConstraint" destination="g50-pL-v5r" id="qSC-GI-ufe"/>
+                <outlet property="messageLabel" destination="KWN-qE-WZS" id="WoC-ne-dN5"/>
+                <outlet property="messageLabelTrailingSpaceConstraint" destination="g50-pL-v5r" id="pwe-2i-bKy"/>
                 <outlet property="staticLabel" destination="12" id="17"/>
                 <outlet property="staticLabelTrailingSpaceConstraint" destination="OOa-VS-Vt4" id="rx4-XK-adj"/>
             </connections>

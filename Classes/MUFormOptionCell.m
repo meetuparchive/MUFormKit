@@ -14,8 +14,8 @@ static CGFloat const MUDefaultCheckMarkAccessoryWidth = 38.5;
 
 @property (weak, nonatomic) IBOutlet UILabel *staticLabel;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *staticLabelTrailingSpaceConstraint;
-@property (weak, nonatomic) IBOutlet UILabel *staticDetailLabel;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *staticDetailLabelTrailingSpaceConstraint;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *messageLabelTrailingSpaceConstraint;
 
 @end
 
@@ -55,22 +55,22 @@ static CGFloat const MUDefaultCheckMarkAccessoryWidth = 38.5;
     if (isValueEqualToDefault && self.accessoryType != UITableViewCellAccessoryCheckmark) {
         self.accessoryType = UITableViewCellAccessoryCheckmark;
         self.staticLabelTrailingSpaceConstraint.constant = 0;
-        self.staticDetailLabelTrailingSpaceConstraint.constant = 0.;
+        self.messageLabelTrailingSpaceConstraint.constant = 0.;
         [self setNeedsUpdateConstraints];
     }
     else if (!isValueEqualToDefault && self.accessoryType == UITableViewCellAccessoryCheckmark)
     {
         self.accessoryType = UITableViewCellAccessoryNone;
         self.staticLabelTrailingSpaceConstraint.constant = MUDefaultCheckMarkAccessoryWidth;
-        self.staticDetailLabelTrailingSpaceConstraint.constant = MUDefaultCheckMarkAccessoryWidth;
+        self.messageLabelTrailingSpaceConstraint.constant = MUDefaultCheckMarkAccessoryWidth;
         [self setNeedsUpdateConstraints];
     }
     
     NSString *localizedStaticTextKey = info[MUFormLocalizedStaticTextKey];
     self.staticLabel.text = [[NSBundle mainBundle] localizedStringForKey:localizedStaticTextKey value:localizedStaticTextKey table:MUFormKitStringTable];
    
-    NSString *localizedStaticDetailTextKey = info[MUFormLocalizedStaticDetailTextKey];
-    self.staticDetailLabel.text = [[NSBundle mainBundle] localizedStringForKey:localizedStaticDetailTextKey value:localizedStaticDetailTextKey table:MUFormKitStringTable];
+    NSString *localizedStaticDetailTextKey = info[MUFormLocalizedCellMessageKey];
+    self.messageLabel.text = [[NSBundle mainBundle] localizedStringForKey:localizedStaticDetailTextKey value:localizedStaticDetailTextKey table:MUFormKitStringTable];
     
 }
 

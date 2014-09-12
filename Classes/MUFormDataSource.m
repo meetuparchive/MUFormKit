@@ -34,7 +34,6 @@ NSString *const MUFormCellLocalizedAccessibilityHintKey = @"MUFormCellLocalizedA
 NSString *const MUFormCellAccessibilityButtonTraitKey   = @"MUFormCellAccessibilityButtonTraitKey";
 NSString *const MUFormRowExpandedKey                    = @"MUFormRowExpandedKey";
 NSString *const MUFormLocalizedStaticTextKey            = @"MUFormLocalizedStaticTextKey";
-NSString *const MUFormLocalizedStaticDetailTextKey      = @"MUFormLocalizedStaticDetailTextKey";
 NSString *const MUFormCellAccessoryTypeKey              = @"MUFormCellAccessoryTypeKey";
 NSString *const MUFormPropertyNameKey                   = @"MUFormPropertyNameKey";
 NSString *const MUFormDependencyPropertyNameKey         = @"MUFormDependencyPropertyNameKey";
