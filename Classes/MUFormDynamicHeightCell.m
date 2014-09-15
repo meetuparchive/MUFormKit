@@ -29,7 +29,8 @@
     CGFloat height = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
     
     if (tableView.separatorStyle != UITableViewCellSeparatorStyleNone) {
-        height += 1;
+        //Leave room for separators on the top and bottom of this cell
+        height += 2.0f/[UIScreen mainScreen].scale;
     }
 
     return height;
