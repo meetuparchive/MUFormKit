@@ -10,8 +10,18 @@
 
 @implementation MUFormDynamicHeightCell
 
+static BOOL isiOS8 = NO;
++(void) initialize
+{
+    isiOS8 = SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8");
+}
+
 + (CGFloat)heightForTableView:(UITableView*)tableView value:(id)value info:(NSDictionary *)info
 {
+    if (isiOS8) {
+        return UITableViewAutomaticDimension;
+    }
+
     NSString *cellNibName = info[MUFormCellClassKey];
     NSString *cellIdentifier = info[MUFormCellIdentifierKey];
     MUFormDynamicHeightCell *cell = (MUFormDynamicHeightCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
