@@ -202,7 +202,8 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
     self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeInteractive;
     self.tableView.sectionHeaderHeight = kMUDefaulSectionHeaderHeight;
     self.tableView.sectionFooterHeight = kMUDefaultSectionFooterHeight;
-    self.tableView.estimatedRowHeight = SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8") ? UITableViewAutomaticDimension : 0.;
+    self.tableView.estimatedRowHeight = 44.;
+    self.tableView.rowHeight = SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8") ? UITableViewAutomaticDimension : 0.;
     
     // Observe the keyboard.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(observeKeyboardDidShowNotification:) name:UIKeyboardDidShowNotification object:nil];
@@ -212,13 +213,18 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.tableView reloadData];
     
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:self.lastTappedIndexPath];
     [cell setSelected:YES animated:NO];
     [self performBlock:^{
        [cell setSelected:NO animated:YES];
     } afterDelay:0.1]; // A bit of a hack, but it looks right.
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self.tableView reloadData];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
