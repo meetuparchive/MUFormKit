@@ -202,7 +202,7 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
     self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeInteractive;
     self.tableView.sectionHeaderHeight = kMUDefaulSectionHeaderHeight;
     self.tableView.sectionFooterHeight = kMUDefaultSectionFooterHeight;
-    self.tableView.estimatedRowHeight = 44.;
+    
     self.tableView.rowHeight = SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8") ? UITableViewAutomaticDimension : 0.;
     
     // Observe the keyboard.
@@ -213,18 +213,13 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self.tableView reloadData];
     
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:self.lastTappedIndexPath];
     [cell setSelected:YES animated:NO];
     [self performBlock:^{
        [cell setSelected:NO animated:YES];
     } afterDelay:0.1]; // A bit of a hack, but it looks right.
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    [self.tableView reloadData];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -248,7 +243,6 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
     
 #pragma mark - Row Height & Adjustments -
 
-
 - (CGFloat)heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CGFloat height = 0.0;
@@ -267,9 +261,7 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
     return height;
 }
 
-
 #pragma mark - Notifications -
-
 
 - (void)observeKeyboardDidShowNotification:(NSNotification *)notification
 {
@@ -343,6 +335,13 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
 {
     return [self heightForRowAtIndexPath:indexPath];
 }
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    Class cellClass = [self.dataSource cellClassForItemAtIndexPath:indexPath];
+    NSAssert(cellClass, @"Expected a cellClass set at indexPath %@",indexPath);
+    return [cellClass estimatedCellHeight];
+}
+
 
 #pragma mark - Form events
 

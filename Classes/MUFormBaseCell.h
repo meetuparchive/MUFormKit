@@ -72,6 +72,8 @@ extern NSString *const MUFormCellTimeZoneKey;
 + (CGFloat)heightForTableView:(UITableView*)tableView value:(id)value info:(NSDictionary *)info;
 
 
++ (CGFloat)estimatedCellHeight;
+
 ///-------------------------------------------------------------------
 /// @name Instance Methods
 ///-------------------------------------------------------------------

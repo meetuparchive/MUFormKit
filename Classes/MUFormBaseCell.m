@@ -38,6 +38,11 @@ static CGFloat const kMUErrorLabelHeight = 20.0;
     return height;
 }
 
++ (CGFloat)estimatedCellHeight
+{
+    return kMUDefaultRowHeight;
+}
+
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
