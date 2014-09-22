@@ -19,6 +19,10 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
 @property (nonatomic, assign) BOOL isKeyboardShowing;
 @property (nonatomic) CGRect keyboardFrame;
 
+/// To give correct estimates for cells that have been displayed but are now offscreen (from user scrolling down)
+@property (nonatomic, strong) NSMutableDictionary *cellHeightForDisplayedCells;
+
+
 @end
 
 @implementation MUFormController
@@ -204,6 +208,7 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
     self.tableView.sectionFooterHeight = kMUDefaultSectionFooterHeight;
     
     self.tableView.rowHeight = SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8") ? UITableViewAutomaticDimension : 0.;
+    self.cellHeightForDisplayedCells = [NSMutableDictionary dictionary];
     
     // Observe the keyboard.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(observeKeyboardDidShowNotification:) name:UIKeyboardDidShowNotification object:nil];
@@ -285,11 +290,13 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
     [self.nextResponderController willDisplayCell:cell forRowAtIndexPath:indexPath];    
 }
 
-- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath*)indexPath
 {
     if ([cell isKindOfClass:[MUFormBaseCell class]]) {
         [(MUFormBaseCell *)cell setDelegate:nil];
     }
+
+    self.cellHeightForDisplayedCells[indexPath] = @(CGRectGetHeight(cell.bounds));
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -336,12 +343,17 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
     return [self heightForRowAtIndexPath:indexPath];
 }
 
-- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSNumber *cellHeightForDisplayedCell = self.cellHeightForDisplayedCells[indexPath];
+    if (cellHeightForDisplayedCell) {
+        return [cellHeightForDisplayedCell floatValue];
+    }
+    
     Class cellClass = [self.dataSource cellClassForItemAtIndexPath:indexPath];
     NSAssert(cellClass, @"Expected a cellClass set at indexPath %@",indexPath);
     return [cellClass estimatedCellHeight];
 }
-
 
 #pragma mark - Form events
 
