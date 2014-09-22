@@ -21,4 +21,5 @@
     #import "UITextView+ReturnBugFix.h"
 
     #define MUAssert NSAssert
+    #define MUParameterAssert NSParameterAssert
 #endif
