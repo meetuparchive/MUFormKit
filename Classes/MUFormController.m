@@ -351,7 +351,7 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
     }
     
     Class cellClass = [self.dataSource cellClassForItemAtIndexPath:indexPath];
-    NSAssert(cellClass, @"Expected a cellClass set at indexPath %@",indexPath);
+    MUAssert(cellClass, @"Expected a cellClass set at indexPath %@",indexPath);
     return [cellClass estimatedCellHeight];
 }
 
