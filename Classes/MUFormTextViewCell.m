@@ -10,7 +10,7 @@
 
 static CGFloat kMUCellHeight = 120.0;
 static CGFloat kMUErrorLabelHeight = 20.0;
-static CGFloat const kMUMUFormTextViewCellEstimatedHeight = 140.0;
+static CGFloat const kMUFormTextViewCellEstimatedHeight = 140.0;
 
 @implementation MUFormTextViewCell
 
@@ -18,7 +18,7 @@ static CGFloat const kMUMUFormTextViewCellEstimatedHeight = 140.0;
 
 + (CGFloat)estimatedCellHeight
 {
-    return kMUMUFormTextViewCellEstimatedHeight;
+    return kMUFormTextViewCellEstimatedHeight;
 }
 
 + (CGFloat)heightForTableView:(UITableView*)tableView value:(id)value info:(NSDictionary *)info
