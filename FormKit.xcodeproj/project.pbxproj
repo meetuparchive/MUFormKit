@@ -58,7 +58,7 @@
 		DED8C5FE196510B9000D18DC /* MUFormTimePickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5AD196510B9000D18DC /* MUFormTimePickerCell.xib */; };
 		DED8C5FF196510B9000D18DC /* MUFormToFormSegueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED8C5AF196510B9000D18DC /* MUFormToFormSegueCell.xib */; };
 		EBAD38FE78D84A779E6DF804 /* libPods-FormKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9C8C03042A4D8DA132A258 /* libPods-FormKitDemo.a */; };
-		F3E3B83E19CA0E6C001EEDC6 /* MUFormDynamicHeightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E3B83D19CA0E6C001EEDC6 /* MUFormDynamicHeightCell.m */; };
+		F39A4F4E19D06D240067F47C /* MUFormDynamicHeightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F39A4F4D19D06D240067F47C /* MUFormDynamicHeightCell.m */; };
 		F3E7E248197D523900C4AAB5 /* MUHomeViewController.json in Resources */ = {isa = PBXBuildFile; fileRef = F3E7E247197D523900C4AAB5 /* MUHomeViewController.json */; };
 		F3E7E24B197D554A00C4AAB5 /* MUResizeableCellsController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E7E24A197D554A00C4AAB5 /* MUResizeableCellsController.m */; };
 		F3E7E24D197D570600C4AAB5 /* MUHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3E7E24C197D570600C4AAB5 /* MUHome.storyboard */; };
@@ -189,6 +189,8 @@
 		F326822319797B1600374B36 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormTimePickerCell.strings; sourceTree = "<group>"; };
 		F326822419797B1A00374B36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MUFormToFormSegueCell.strings; sourceTree = "<group>"; };
 		F326822519797B1C00374B36 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/MUFormToFormSegueCell.strings; sourceTree = "<group>"; };
+		F39A4F4C19D06D240067F47C /* MUFormDynamicHeightCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUFormDynamicHeightCell.h; sourceTree = "<group>"; };
+		F39A4F4D19D06D240067F47C /* MUFormDynamicHeightCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUFormDynamicHeightCell.m; sourceTree = "<group>"; };
 		F39EA67E19786A31002E4F3F /* MUFormKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = MUFormKit.podspec; sourceTree = "<group>"; };
 		F39EA6801978717E002E4F3F /* MUFormKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = MUFormKit.podspec; sourceTree = "<group>"; };
 		F39EA68119787191002E4F3F /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -332,8 +334,8 @@
 				DED8C567196510B9000D18DC /* MUDynamicFormDataSource.m */,
 				DED8C56A196510B9000D18DC /* MUFormBaseCell.h */,
 				DED8C56B196510B9000D18DC /* MUFormBaseCell.m */,
-				F3E3B83C19CA0E6C001EEDC6 /* MUFormDynamicHeightCell.h */,
-				F3E3B83D19CA0E6C001EEDC6 /* MUFormDynamicHeightCell.m */,
+				F39A4F4C19D06D240067F47C /* MUFormDynamicHeightCell.h */,
+				F39A4F4D19D06D240067F47C /* MUFormDynamicHeightCell.m */,
 				DED8C56E196510B9000D18DC /* MUFormConstants.h */,
 				DED8C56F196510B9000D18DC /* MUFormController.h */,
 				DED8C570196510B9000D18DC /* MUFormController.m */,
@@ -558,7 +560,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3E3B83E19CA0E6C001EEDC6 /* MUFormDynamicHeightCell.m in Sources */,
+				F39A4F4E19D06D240067F47C /* MUFormDynamicHeightCell.m in Sources */,
 				DED8C5E0196510B9000D18DC /* MUFormController.m in Sources */,
 				DED8C5F1196510B9000D18DC /* MUValidationErrors.m in Sources */,
 				DED8C53D1965105F000D18DC /* MUAppDelegate.m in Sources */,
@@ -831,6 +833,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FormKit/FormKit-Prefix.pch";
 				INFOPLIST_FILE = "FormKit/FormKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -845,6 +848,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FormKit/FormKit-Prefix.pch";
 				INFOPLIST_FILE = "FormKit/FormKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

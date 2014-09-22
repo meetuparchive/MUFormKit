@@ -6,7 +6,7 @@
 
 #import <Availability.h>
 
-#ifndef __IPHONE_5_0
+#ifndef __IPHONE_7_0
 #warning "This project uses features only available in iOS SDK 5.0 and later."
 #endif
 
@@ -21,4 +21,6 @@
     #import "UITextView+ReturnBugFix.h"
 
     #define MUAssert NSAssert
+    #define MUParameterAssert NSParameterAssert
+    #define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 #endif
