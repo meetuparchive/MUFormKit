@@ -206,8 +206,6 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
     self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeInteractive;
     self.tableView.sectionHeaderHeight = kMUDefaulSectionHeaderHeight;
     self.tableView.sectionFooterHeight = kMUDefaultSectionFooterHeight;
-    
-    self.tableView.rowHeight = SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8") ? UITableViewAutomaticDimension : 0.;
     self.cellHeightForDisplayedCells = [NSMutableDictionary dictionary];
     
     // Observe the keyboard.
