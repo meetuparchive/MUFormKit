@@ -9,6 +9,10 @@
 #import "NSError+MUValidation.h"
 #import "MUValidationErrors.h"
 
+/** A default error message title for display. */
+NSString *const MUValidationDefaultTitleKey = @"MUValidationDefaultTitleKey";
+
+
 @implementation NSError (MUValidation)
 
 - (NSError *)mu_errorByCombiningWithError:(NSError *)error
@@ -34,6 +38,29 @@
     return [NSError errorWithDomain:MUValidationErrorDomain
                                code:MUValidationMultipleErrorsError
                            userInfo:userInfo];
+}
+
++ (NSError *)errorWithValidationMessage:(NSString *)validationMessage code:(NSInteger)code
+{
+    NSDictionary *userInfo = @{
+        MUValidationDefaultTitleKey : NSLocalizedString(@"Oops! You missed something.", nil),
+        NSLocalizedDescriptionKey : validationMessage,
+    };
+    return [NSError errorWithDomain:MUValidationErrorDomain code:code userInfo:userInfo];
+}
+
+- (NSError *)errorWithValidationMessage:(NSString *)validationMessage
+{
+    NSDictionary *userInfo = @{
+        MUValidationDefaultTitleKey : NSLocalizedString(@"Oops! You missed something.", nil),
+        NSLocalizedDescriptionKey : validationMessage,
+        NSUnderlyingErrorKey : self
+    };
+    return [NSError errorWithDomain:MUValidationErrorDomain code:MUValidationMultipleErrorsError userInfo:userInfo];
+}
+
+- (NSString *)localizedValidationErrorTitle {
+    return [[self userInfo][MUValidationDefaultTitleKey] copy];
 }
 
 @end
