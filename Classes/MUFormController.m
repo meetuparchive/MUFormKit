@@ -19,6 +19,10 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
 @property (nonatomic, assign) BOOL isKeyboardShowing;
 @property (nonatomic) CGRect keyboardFrame;
 
+/// To give correct estimates for cells that have been displayed but are now offscreen (from user scrolling down)
+@property (nonatomic, strong) NSMutableDictionary *cellHeightForDisplayedCells;
+
+
 @end
 
 @implementation MUFormController
@@ -202,6 +206,7 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
     self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeInteractive;
     self.tableView.sectionHeaderHeight = kMUDefaulSectionHeaderHeight;
     self.tableView.sectionFooterHeight = kMUDefaultSectionFooterHeight;
+    self.cellHeightForDisplayedCells = [NSMutableDictionary dictionary];
     
     // Observe the keyboard.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(observeKeyboardDidShowNotification:) name:UIKeyboardDidShowNotification object:nil];
@@ -241,7 +246,6 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
     
 #pragma mark - Row Height & Adjustments -
 
-
 - (CGFloat)heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CGFloat height = 0.0;
@@ -260,9 +264,7 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
     return height;
 }
 
-
 #pragma mark - Notifications -
-
 
 - (void)observeKeyboardDidShowNotification:(NSNotification *)notification
 {
@@ -286,11 +288,13 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
     [self.nextResponderController willDisplayCell:cell forRowAtIndexPath:indexPath];    
 }
 
-- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath*)indexPath
 {
     if ([cell isKindOfClass:[MUFormBaseCell class]]) {
         [(MUFormBaseCell *)cell setDelegate:nil];
     }
+
+    self.cellHeightForDisplayedCells[indexPath] = @(CGRectGetHeight(cell.bounds));
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -335,6 +339,18 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return [self heightForRowAtIndexPath:indexPath];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSNumber *cellHeightForDisplayedCell = self.cellHeightForDisplayedCells[indexPath];
+    if (cellHeightForDisplayedCell) {
+        return [cellHeightForDisplayedCell floatValue];
+    }
+    
+    Class cellClass = [self.dataSource cellClassForItemAtIndexPath:indexPath];
+    MUAssert(cellClass, @"Expected a cellClass set at indexPath %@",indexPath);
+    return [cellClass estimatedCellHeight];
 }
 
 #pragma mark - Form events

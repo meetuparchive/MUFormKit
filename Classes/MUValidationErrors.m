@@ -9,9 +9,7 @@
 #import "MUValidationErrors.h"
 
 ///If Core Data validation error key available use it here
-#ifdef _COREDATADEFINES_H
-#define MUValidationDetailedErrorsKey NSDetailedErrorsKey
-#else
+#ifndef _COREDATADEFINES_H
 NSString * const MUValidationDetailedErrorsKey = @"MUValidationDetailedErrors";
 #endif
 

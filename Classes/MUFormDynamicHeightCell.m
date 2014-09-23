@@ -10,8 +10,18 @@
 
 @implementation MUFormDynamicHeightCell
 
+static BOOL isiOS8OrLater = NO;
++(void) initialize
+{
+    isiOS8OrLater = SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8");
+}
+
 + (CGFloat)heightForTableView:(UITableView*)tableView value:(id)value info:(NSDictionary *)info
 {
+    if (isiOS8OrLater) {
+        return UITableViewAutomaticDimension;
+    }
+
     NSString *cellNibName = info[MUFormCellClassKey];
     NSString *cellIdentifier = info[MUFormCellIdentifierKey];
     MUFormDynamicHeightCell *cell = (MUFormDynamicHeightCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
@@ -29,7 +39,8 @@
     CGFloat height = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
     
     if (tableView.separatorStyle != UITableViewCellSeparatorStyleNone) {
-        height += 1;
+        //Leave room for separators on the top and bottom of this cell
+        height += 2.0f/[UIScreen mainScreen].scale;
     }
 
     return height;
