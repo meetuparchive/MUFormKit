@@ -12,8 +12,12 @@
 /** The Validation Error Domain */
 extern NSString *const MUValidationErrorDomain;
 
+#ifdef _COREDATADEFINES_H
+#define MUValidationDetailedErrorsKey NSDetailedErrorsKey
+#else
 /** If multiple validation errors occur in one operation, they are collected in an array and added with this key to the "top-level error" of the operation. */
 extern NSString *const MUValidationDetailedErrorsKey;
+#endif
 
 /** An array of user friendly, localized validation strings. */
 extern NSString *const MUValidationMessagesKey;
