@@ -1,0 +1,9 @@
+
+/* Class = "IBUILabel"; text = "Validation message"; ObjectID = "XDX-KN-PAG"; */
+"XDX-KN-PAG.text" = "Validation message";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "h9d-pm-a35"; */
+"h9d-pm-a35.text" = "Label";
+
+/* Class = "IBUITextField"; placeholder = "Enter text"; ObjectID = "y7s-9H-pSl"; */
+"y7s-9H-pSl.placeholder" = "Enter text";
