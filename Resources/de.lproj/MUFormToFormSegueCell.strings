@@ -1,0 +1,9 @@
+/* Class = "IBUILabel"; text = "Off"; ObjectID = "2AY-bJ-sOo"; */
+"2AY-bJ-sOo.text" = "Aus";
+
+/* Class = "IBUILabel"; text = "Message"; ObjectID = "42"; */
+"42.text" = "Nachricht";
+
+/* Class = "IBUILabel"; text = "Push Cell"; ObjectID = "7"; */
+"7.text" = "Zelle Drücken";
+

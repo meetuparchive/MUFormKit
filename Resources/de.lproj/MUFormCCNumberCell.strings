@@ -1,0 +1,9 @@
+/* Class = "IBUITextField"; placeholder = "Enter text"; ObjectID = "2qL-D1-SWT"; */
+"2qL-D1-SWT.placeholder" = "Text eingeben";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "JA5-fq-JIW"; */
+"JA5-fq-JIW.text" = "Tag";
+
+/* Class = "IBUILabel"; text = "Validation message"; ObjectID = "vAf-ug-dfA"; */
+"vAf-ug-dfA.text" = "Benachrichtigungs-Nachricht";
+
