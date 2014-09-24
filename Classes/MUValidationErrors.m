@@ -7,6 +7,7 @@
 //
 
 #import "MUValidationErrors.h"
+#import "NSError+MUValidation.h"
 
 ///If Core Data validation error key available use it here
 #ifndef _COREDATADEFINES_H
