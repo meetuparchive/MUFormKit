@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
+        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <objects>
@@ -15,7 +15,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6" userLabel="Container View">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Switch cell" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ptc-V7-qMq">
                                 <rect key="frame" x="15" y="11" width="327" height="22"/>
@@ -54,11 +54,6 @@
                 <accessibilityTraits key="traits" none="YES" button="YES"/>
                 <bool key="isElement" value="YES"/>
             </accessibility>
-            <constraints>
-                <constraint firstItem="6" firstAttribute="bottom" secondItem="2" secondAttribute="bottom" id="6DE-Gg-QwF"/>
-                <constraint firstItem="6" firstAttribute="top" secondItem="2" secondAttribute="top" id="dg4-bb-uSt"/>
-                <constraint firstItem="6" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="l2G-03-ocY"/>
-            </constraints>
             <connections>
                 <outlet property="containerView" destination="6" id="14"/>
                 <outlet property="optionSwitch" destination="DhA-ja-2OP" id="pTJ-TM-k67"/>
