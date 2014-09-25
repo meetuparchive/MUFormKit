@@ -233,7 +233,6 @@ typedef void (^ConfigureCellBlock)(NSIndexPath *indexPath, MUFormBaseCell *cell,
  */
 - (void)selectOptionAtIndexPath:(NSIndexPath *)indexPath;
 
-
 /**
  Returns the indexPath for the row info with the given tag, nil if no row info was found
  
@@ -241,6 +240,20 @@ typedef void (^ConfigureCellBlock)(NSIndexPath *indexPath, MUFormBaseCell *cell,
  */
 - (NSIndexPath *)indexPathForRowInfoWithTag:(NSString *)tag;
 
+/**
+ Returns the index for the row info with the given tag, nil if no row info was found
+ 
+ @param tag The tag of the item whose index to retreive.
+ */
+- (NSInteger)indexForSectionInfoWithTag:(NSString *)tag;
+
+/**
+ Adds row info to existing form structure
+ 
+ @param rowInfo The info to add, appended to existing rows
+ @param section The section to add row info
+ */
+- (void)addRowInfo:(NSDictionary *)rowInfo inSection:(NSInteger)section;
 
 ///-------------------------------------------------------------------
 /// @name Validation

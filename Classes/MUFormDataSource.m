@@ -19,6 +19,7 @@ NSString *const MUFormKitStringTable            = @"FormKit";
 
 // Form section constants definitions.
 NSString *const MUFormSectionsKey                    = @"MUFormSectionsKey";
+NSString *const MUFormSectionTagKey                  = @"MUFormSectionTagKey";
 NSString *const MUFormSectionEnabledPropertyNameKey  = @"MUFormSectionEnabledPropertyNameKey";
 NSString *const MUFormSectionDynamicRowLimitKey      = @"MUFormSectionDynamicRowLimitKey";
 NSString *const MUFormLocalizedSectionHeaderTitleKey = @"MUFormLocalizedSectionHeaderTitleKey";
@@ -71,7 +72,7 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
 @interface MUFormDataSource ()
 
 @property (nonatomic, strong, readwrite) NSDictionary *metadata;
-@property (nonatomic, strong, readwrite) NSArray *rawSections;
+@property (nonatomic, strong, readwrite) NSMutableArray *rawSections;
 @property (nonatomic, strong, readwrite) NSMutableArray *activeSections;
 @property (nonatomic, strong, readwrite) NSDictionary *cellClassesByIdentifier;
 @property (nonatomic, strong, readwrite) NSIndexSet *dependentSectionIndexSet;
@@ -129,7 +130,7 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
 
         self.metadata = mutableFormStructure[MUFormMetadataKey];
         self.rawSections = [mutableFormStructure[MUFormSectionsKey] copy];
-        [self updateActiveSections];
+        [self didUpdateFormStructure];
         
     }
     return self;
@@ -141,6 +142,11 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
     self.configureCellBlock = cellConfigureBlock;
 }
 
+-(void) didUpdateFormStructure
+{
+    [self updateActiveSections];
+    _cellClassesByIdentifier = nil;
+}
 
 -(void) updateActiveSections
 {
@@ -421,6 +427,33 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
      return indexPath;
 }
 
+- (NSInteger)indexForSectionInfoWithTag:(NSString *)tag
+{
+    __block NSInteger index = NSNotFound;
+     [self enumerateSectionsUsingBlock:^(NSDictionary *sectionInfo, NSUInteger sectionIdx, BOOL *stop) {
+        if ([tag isEqualToString:sectionInfo[MUFormSectionTagKey]]) {
+            index = sectionIdx;
+            (*stop) = YES;
+        }
+     }];
+     return index;
+}
+
+- (void)addRowInfo:(NSDictionary *)rowInfo inSection:(NSInteger)section
+{
+    NSMutableDictionary *sectionInfo = [self.rawSections[section] mutableCopy];
+    NSMutableArray *rows = [sectionInfo[MUFormSectionRowsKey] mutableCopy];
+    if (!rows) {
+        rows = [NSMutableArray array];
+    }
+    [rows addObject:[rowInfo mutableCopy]];
+    sectionInfo[MUFormSectionRowsKey] = rows;
+    NSMutableArray *rawSectionsMutable = [self.rawSections mutableCopy];
+    rawSectionsMutable[section] = sectionInfo;
+    
+    self.rawSections = rawSectionsMutable;
+    [self didUpdateFormStructure];
+}
 
 #pragma mark - Validation -
 
