@@ -30,6 +30,7 @@ NSString *const MUFormSectionFooterHeightKey         = @"MUFormSectionFooterHeig
 // Form row constants definitions.
 NSString *const MUFormCellIdentifierKey                 = @"MUFormCellIdentifierKey";
 NSString *const MUFormCellClassKey                      = @"MUFormCellClassKey";
+NSString *const MUFormCellTagKey                        = @"MUFormCellTagKey";
 NSString *const MUFormCellLocalizedAccessibilityHintKey = @"MUFormCellLocalizedAccessibilityHintKey";
 NSString *const MUFormCellAccessibilityButtonTraitKey   = @"MUFormCellAccessibilityButtonTraitKey";
 NSString *const MUFormRowExpandedKey                    = @"MUFormRowExpandedKey";
@@ -402,6 +403,22 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
     if ([value isEqualToNumber:defaultValue] == NO) {
         [self setValue:defaultValue forItemAtIndexPath:indexPath];
     }
+}
+
+- (NSIndexPath *)indexPathForRowInfoWithTag:(NSString *)tag
+{
+    __block NSIndexPath *indexPath;
+     [self enumerateSectionsUsingBlock:^(NSDictionary *sectionInfo, NSUInteger sectionIdx, BOOL *stopForSections) {
+        NSArray *rows = sectionInfo[MUFormSectionRowsKey];
+        [rows enumerateObjectsUsingBlock:^(NSDictionary *rowInfo, NSUInteger rowIdx, BOOL *stopForRows) {
+            if ([tag isEqualToString:rowInfo[MUFormCellTagKey]]) {
+                indexPath = [NSIndexPath indexPathForRow:rowIdx inSection:sectionIdx];
+                (*stopForRows) = YES;
+                (*stopForSections) = YES;
+            }
+        }];
+     }];
+     return indexPath;
 }
 
 

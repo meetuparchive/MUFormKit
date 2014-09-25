@@ -78,6 +78,9 @@ extern NSString *const MUFormCellIdentifierKey;
 /** Specifies the class of a cell. */
 extern NSString *const MUFormCellClassKey;
 
+/** Specifies an optional tag for this row, useful for accessing explicitly in code. */
+extern NSString *const MUFormCellTagKey;
+
 /** Specifies the accessibility hint of a cell. */
 extern NSString *const MUFormCellLocalizedAccessibilityHintKey;
 
