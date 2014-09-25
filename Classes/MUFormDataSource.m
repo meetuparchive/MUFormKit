@@ -72,7 +72,7 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
 @interface MUFormDataSource ()
 
 @property (nonatomic, strong, readwrite) NSDictionary *metadata;
-@property (nonatomic, strong, readwrite) NSMutableArray *rawSections;
+@property (nonatomic, strong, readwrite) NSArray *rawSections;
 @property (nonatomic, strong, readwrite) NSMutableArray *activeSections;
 @property (nonatomic, strong, readwrite) NSDictionary *cellClassesByIdentifier;
 @property (nonatomic, strong, readwrite) NSIndexSet *dependentSectionIndexSet;
@@ -130,7 +130,7 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
 
         self.metadata = mutableFormStructure[MUFormMetadataKey];
         self.rawSections = [mutableFormStructure[MUFormSectionsKey] copy];
-        [self didUpdateFormStructure];
+        [self reloadFormData];
         
     }
     return self;
@@ -142,7 +142,7 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
     self.configureCellBlock = cellConfigureBlock;
 }
 
--(void) didUpdateFormStructure
+-(void) reloadFormData
 {
     [self updateActiveSections];
     _cellClassesByIdentifier = nil;
@@ -452,7 +452,7 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
     rawSectionsMutable[section] = sectionInfo;
     
     self.rawSections = rawSectionsMutable;
-    [self didUpdateFormStructure];
+    [self reloadFormData];
 }
 
 #pragma mark - Validation -
