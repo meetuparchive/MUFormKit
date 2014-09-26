@@ -1,3 +1,6 @@
 /* Class = "IBUILabel"; text = "Option cell"; ObjectID = "12"; */
-"12.text" = "Cellule Option";
+"12.text" = "Complètement visible";
+
+/* Class = "IBUILabel"; text = "Non-members can see all of your group's content before joining"; ObjectID = "KWN-qE-WZS"; */
+"KWN-qE-WZS.text" = "Les non-membres peuvent voir toutes les données de votre groupe avant de s'inscrire";
 
