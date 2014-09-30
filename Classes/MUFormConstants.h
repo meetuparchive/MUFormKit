@@ -150,6 +150,9 @@ extern NSString *const MUFormCellSegueIdentifierKey;
 /** The name of an icon image file. */
 extern NSString *const MUFormCellIconNameKey;
 
+/** The URL of an icon image file. */
+extern NSString *const MUFormCellIconURLStringKey;
+
 /** A localized key for a bit of meta data (e.g. A title for modal controllers invoked by tapping a cell). */
 extern NSString *const MUFormLocalizedMetaStringKey;
 

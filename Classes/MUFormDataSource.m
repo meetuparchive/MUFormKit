@@ -55,6 +55,7 @@ NSString *const MUFormLocalizedAccessibilityLabelKey    = @"MUFormLocalizedAcces
 NSString *const MUFormLocalizedCellMessageKey           = @"MUFormLocalizedCellMessageKey";
 NSString *const MUFormCellSegueIdentifierKey            = @"MUFormCellSegueIdentifierKey";
 NSString *const MUFormCellIconNameKey                   = @"MUFormCellIconNameKey";
+NSString *const MUFormCellIconURLStringKey              = @"MUFormCellIconURLStringKey";
 NSString *const MUFormMinimumDatePropertyNameKey        = @"MUFormMinimumDatePropertyNameKey";
 NSString *const MUFormMaximumDatePropertyNameKey        = @"MUFormMaximumDatePropertyNameKey";
 NSString *const MUFormLocalizedMetaStringKey            = @"MUFormLocalizedMetaStringKey";
