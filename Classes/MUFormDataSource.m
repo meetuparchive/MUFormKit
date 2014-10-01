@@ -407,7 +407,7 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
     NSNumber *defaultValue = rowInfo[MUFormDefaultValueKey];
     
     NSNumber *value = [self valueForItemAtIndexPath:indexPath];
-    if ([value isEqualToNumber:defaultValue] == NO) {
+    if ([value isEqual:defaultValue] == NO) {
         [self setValue:defaultValue forItemAtIndexPath:indexPath];
     }
 }

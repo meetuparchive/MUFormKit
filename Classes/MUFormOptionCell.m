@@ -38,20 +38,8 @@ static CGFloat const MUDefaultCheckMarkAccessoryWidth = 38.5;
 - (void)configureWithValue:(id)value info:(NSDictionary *)info
 {
     [super configureWithValue:value info:info];
-    
-    if (value) {
-        MUAssert([value isKindOfClass:[NSNumber class]],
-                 @"Expected ‘value’ to be an NSNumber. It was: %@", [value class]);
-    }
 
-    NSNumber *defaultValue = info[MUFormDefaultValueKey];
-    if (defaultValue) {
-        MUAssert([defaultValue isKindOfClass:[NSNumber class]],
-                 @"Expected ‘defaultValue’ to be an NSNumber. It was: %@", [value class]);
-    }
-    
-    BOOL isValueEqualToDefault = [value isEqualToNumber:defaultValue];
-    
+    BOOL isValueEqualToDefault = [value isEqual:info[MUFormDefaultValueKey]];
     if (isValueEqualToDefault && self.accessoryType != UITableViewCellAccessoryCheckmark) {
         self.accessoryType = UITableViewCellAccessoryCheckmark;
         self.staticLabelTrailingSpaceConstraint.constant = 0;
