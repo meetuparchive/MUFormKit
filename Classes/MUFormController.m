@@ -468,7 +468,14 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
 - (void)optionCellDidBecomeSelectedOptionCell:(MUFormOptionCell *)sender
 {
     NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-    [self.dataSource selectOptionAtIndexPath:indexPath];
+
+    NSDictionary *rowInfo = [self.dataSource rowInfoForItemAtIndexPath:indexPath];
+    NSNumber *defaultValue = rowInfo[MUFormDefaultValueKey];
+    
+    NSNumber *value = [self.dataSource valueForItemAtIndexPath:indexPath];
+    if ([value isEqual:defaultValue] == NO) {
+        [self changeValue:defaultValue forItemAtIndexPath:indexPath];
+    }
     
     //This gives the tableview some time to perform the cell selection/deselection animation,
     //reload is required to update which cells now have the checkmark, we should find a better way to do this

@@ -227,13 +227,6 @@ typedef void (^ConfigureCellBlock)(NSIndexPath *indexPath, MUFormBaseCell *cell,
 - (void)setValue:(id)value forItemAtIndexPath:(NSIndexPath *)indexPath;
 
 /**
- Selects an option cell at a specified index path.
- 
- @param indexPath The index path of the item.
- */
-- (void)selectOptionAtIndexPath:(NSIndexPath *)indexPath;
-
-/**
  Returns the indexPath for the row info with the given tag, nil if no row info was found
  
  @param tag The tag of the item whose indexPath to retreive.

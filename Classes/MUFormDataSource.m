@@ -401,17 +401,6 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
     }
 }
 
-- (void)selectOptionAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSDictionary *rowInfo = [self mu_rowInfoForItemAtIndexPath:indexPath];
-    NSNumber *defaultValue = rowInfo[MUFormDefaultValueKey];
-    
-    NSNumber *value = [self valueForItemAtIndexPath:indexPath];
-    if ([value isEqual:defaultValue] == NO) {
-        [self setValue:defaultValue forItemAtIndexPath:indexPath];
-    }
-}
-
 - (NSIndexPath *)indexPathForRowInfoWithTag:(NSString *)tag
 {
     __block NSIndexPath *indexPath;
