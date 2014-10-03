@@ -246,6 +246,10 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
     
 #pragma mark - Row Height & Adjustments -
 
++ (NSString *)keyForIndexPath:(NSIndexPath *)indexPath {
+    return [NSString stringWithFormat:@"%ld_%ld", (long)indexPath.section, (long)indexPath.row];
+}
+
 - (CGFloat)heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CGFloat height = 0.0;
@@ -294,7 +298,7 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
         [(MUFormBaseCell *)cell setDelegate:nil];
     }
 
-    self.cellHeightForDisplayedCells[indexPath] = @(CGRectGetHeight(cell.bounds));
+    self.cellHeightForDisplayedCells[[[self class] keyForIndexPath:indexPath]] = @(CGRectGetHeight(cell.bounds));
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -343,7 +347,7 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSNumber *cellHeightForDisplayedCell = self.cellHeightForDisplayedCells[indexPath];
+    NSNumber *cellHeightForDisplayedCell = self.cellHeightForDisplayedCells[[[self class] keyForIndexPath:indexPath]];
     if (cellHeightForDisplayedCell) {
         return [cellHeightForDisplayedCell floatValue];
     }
