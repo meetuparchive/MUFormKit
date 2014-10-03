@@ -57,8 +57,8 @@ static CGFloat const MUDefaultCheckMarkAccessoryWidth = 38.5;
     NSString *localizedStaticTextKey = info[MUFormLocalizedStaticTextKey];
     self.staticLabel.text = [[NSBundle mainBundle] localizedStringForKey:localizedStaticTextKey value:localizedStaticTextKey table:MUFormKitStringTable];
    
-    NSString *localizedStaticDetailTextKey = info[MUFormLocalizedCellMessageKey];
-    self.messageLabel.text = [[NSBundle mainBundle] localizedStringForKey:localizedStaticDetailTextKey value:localizedStaticDetailTextKey table:MUFormKitStringTable];
+    NSString *localizedCellMessageKey = info[MUFormLocalizedCellMessageKey];
+    self.messageLabel.text = [[NSBundle mainBundle] localizedStringForKey:localizedCellMessageKey value:localizedCellMessageKey table:MUFormKitStringTable];
     
 }
 
