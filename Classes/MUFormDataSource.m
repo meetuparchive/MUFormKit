@@ -186,13 +186,10 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
         
         // If `val` is a string, try getting a value from the model.
         if ([val isKindOfClass:[NSString class]]) {
-            SEL selector = NSSelectorFromString(val);
-            if ([self.model respondsToSelector:selector]) {
-                value = [self.model valueForKey:val];
-            }
+            value = [self.model valueForKey:val];
         }
         
-        if (value) {
+        if (value && ![value isEqual:[NSNull null]]) {
             cellAttributeValues[key] = value;
         }
     }];
