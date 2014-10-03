@@ -16,6 +16,16 @@
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.optionSwitch.isAccessibilityElement = NO;
     self.isAccessibilityElement = YES;
+
+    // This is dirty, but it's the only way to get the labels to render at the right height
+    // on first layout on iOS 8. If I do this during setFrame or layoutSubviews,
+    // it's somehow too late, even if I trigger another layout pass.
+    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8")) {
+        CGFloat staticLabelMargins = CGRectGetWidth(self.frame) - CGRectGetWidth(self.staticLabel.frame);
+        CGFloat messageLabelMargins = CGRectGetWidth(self.frame) - CGRectGetWidth(self.messageLabel.frame);
+        self.staticLabel.preferredMaxLayoutWidth = CGRectGetWidth([UIScreen mainScreen].bounds) - staticLabelMargins;
+        self.messageLabel.preferredMaxLayoutWidth = CGRectGetWidth([UIScreen mainScreen].bounds) - messageLabelMargins;
+    }
 }
 
 #pragma mark - Accessibility
@@ -62,6 +72,9 @@
     NSString *localizedKey = info[MUFormLocalizedStaticTextKey];
     self.staticLabel.text = [[NSBundle mainBundle] localizedStringForKey:localizedKey value:localizedKey table:MUFormKitStringTable];
     
+    NSString *localizedCellMessageKey = info[MUFormLocalizedCellMessageKey];
+    self.messageLabel.text = [[NSBundle mainBundle] localizedStringForKey:localizedCellMessageKey value:localizedCellMessageKey table:MUFormKitStringTable];
+
     self.accessibilityLabel = self.staticLabel.text;
     self.optionSwitch.accessibilityLabel = [NSString stringWithFormat:NSLocalizedString(@"%@ switch", @"<label> on/off setting switch"), self.staticLabel.text];
     
