@@ -48,6 +48,16 @@
     [self.timePicker setMinimumDate:minimumDate];
     NSDate *maximumDate = self.cellAttributes[MUFormCellMaximumDateKey];
     [self.timePicker setMaximumDate:maximumDate];
+
+    self.timePicker.enabled = ![info[MUFormCellIsDisabledKey] boolValue];
 }
+
+- (void)setEnabled:(BOOL)enabled {
+    self.timePicker.enabled = enabled;
+}
+- (BOOL)isEnabled {
+    return self.timePicker.isEnabled;
+}
+
 
 @end

@@ -52,6 +52,7 @@ static CGFloat const kMUErrorLabelHeight = 20.0;
         self.selectionStyle = UITableViewCellSelectionStyleGray;
         _defaultValueTextColor = [UIColor colorWithWhite:0.8 alpha:1.0];
         _textColor = [UIColor colorWithWhite:0.05 alpha:1.0];
+        _enabled = YES;
     }
     return self;
 }

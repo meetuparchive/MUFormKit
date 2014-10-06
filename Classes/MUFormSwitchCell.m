@@ -28,6 +28,13 @@
     }
 }
 
+- (void)setEnabled:(BOOL)enabled {
+    self.optionSwitch.enabled = enabled;
+}
+- (BOOL)isEnabled {
+    return self.optionSwitch.isEnabled;
+}
+
 #pragma mark - Accessibility
 
 - (void)voiceOverActivate
@@ -75,6 +82,7 @@
     NSString *localizedCellMessageKey = info[MUFormLocalizedCellMessageKey];
     self.messageLabel.text = [[NSBundle mainBundle] localizedStringForKey:localizedCellMessageKey value:localizedCellMessageKey table:MUFormKitStringTable];
 
+    self.optionSwitch.enabled = ![info[MUFormCellIsDisabledKey] boolValue];
     self.accessibilityLabel = self.staticLabel.text;
     self.optionSwitch.accessibilityLabel = [NSString stringWithFormat:NSLocalizedString(@"%@ switch", @"<label> on/off setting switch"), self.staticLabel.text];
     

@@ -17,6 +17,7 @@ static CGFloat const MUDefaultCheckMarkAccessoryWidth = 38.5;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *messageLabelTrailingSpaceConstraint;
 
+@property (nonatomic, assign, getter=isEnabled) BOOL enabled;
 @end
 
 @implementation MUFormOptionCell
@@ -60,6 +61,7 @@ static CGFloat const MUDefaultCheckMarkAccessoryWidth = 38.5;
     NSString *localizedCellMessageKey = info[MUFormLocalizedCellMessageKey];
     self.messageLabel.text = [[NSBundle mainBundle] localizedStringForKey:localizedCellMessageKey value:localizedCellMessageKey table:MUFormKitStringTable];
     
+    self.enabled = ![info[MUFormCellIsDisabledKey] boolValue];
 }
 
 @end

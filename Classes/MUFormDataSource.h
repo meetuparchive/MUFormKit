@@ -155,6 +155,8 @@ typedef void (^ConfigureCellBlock)(NSIndexPath *indexPath, MUFormBaseCell *cell,
 -(void) tableView:(UITableView *)tableView updateEnabledSectionsWithIndexPath:(NSIndexPath*)indexPath;
 
 
+/// Disable the main UIControl on the cell.
+- (void)setEnabled:(BOOL)isEnabled forRowAtIndexPath:(NSIndexPath *)indexPath;
 
 ///-------------------------------------------------------------------
 /// @name Getting & Setting Section Information

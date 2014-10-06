@@ -65,6 +65,7 @@ NSString *const MUFormDataSourceFileNameKey             = @"MUFormDataSourceFile
 NSString *const MUFormMaximumCharactersKey   			= @"MUFormMaximumCharactersKey";
 NSString *const MUFormRowHeightKey                      = @"MUFormRowHeightKey";
 NSString *const MUFormCellSecureTextEntryEnabledKey     = @"MUFormCellSecureTextEntryEnabledKey";
+NSString *const MUFormCellIsDisabledKey                 = @"MUFormCellIsDisabledKey";
 
 // Form error constants definitions.
 NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
@@ -322,6 +323,11 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
         }
         [tableView endUpdates];
     }
+}
+
+- (void)setEnabled:(BOOL)isEnabled forRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSMutableDictionary *rowInfo = [self mu_rowInfoForItemAtIndexPath:indexPath];
+    rowInfo[MUFormCellIsDisabledKey] = @(isEnabled);
 }
 
 #pragma mark - Getting & Setting Section Information -

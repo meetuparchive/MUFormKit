@@ -173,3 +173,7 @@ extern NSString *const MUFormRowHeightKey;
 
 /** Enable secure entry for text fields. */
 extern NSString *const MUFormCellSecureTextEntryEnabledKey;
+
+/** Set to @YES to disable the main control of this cell. */
+extern NSString *const MUFormCellIsDisabledKey;
+
