@@ -189,9 +189,14 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
         
         // If `val` is a string, try getting a value from the model.
         if ([val isKindOfClass:[NSString class]]) {
-            value = [self.model valueForKey:val];
+            @try {
+                value = [self.model valueForKey:val];
+            }
+            @catch(NSException *exception) {
+                MUAssert(YES, @"Attempt to get a value at an invalid key (%@) for indexPath (%@)\n%@", val, indexPath, [exception reason]);
+            }
         }
-        
+
         if (value && ![value isEqual:[NSNull null]]) {
             cellAttributeValues[key] = value;
         }
