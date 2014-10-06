@@ -344,7 +344,7 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
 
 - (void)setEnabled:(BOOL)isEnabled forRowAtIndexPath:(NSIndexPath *)indexPath {
     NSMutableDictionary *rowInfo = [self mu_rowInfoForItemAtIndexPath:indexPath];
-    rowInfo[MUFormCellIsDisabledKey] = @(isEnabled);
+    rowInfo[MUFormCellIsDisabledKey] = @(!isEnabled);
 }
 
 #pragma mark - Getting & Setting Section Information -
