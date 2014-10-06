@@ -156,7 +156,7 @@ typedef void (^ConfigureCellBlock)(NSIndexPath *indexPath, MUFormBaseCell *cell,
 
 
 /// Disable the main UIControl on the cell.
-- (void)setEnabled:(BOOL)isEnabled forRowAtIndexPath:(NSIndexPath *)indexPath;
+- (void)setEnabled:(BOOL)isEnabled forCell:(MUFormBaseCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 
 ///-------------------------------------------------------------------
 /// @name Getting & Setting Section Information
