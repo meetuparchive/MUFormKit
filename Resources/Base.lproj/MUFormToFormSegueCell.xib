@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="342" height="60.5"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalCompressionResistancePriority="751" text="Push Cell" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" preferredMaxLayoutWidth="254" translatesAutoresizingMaskIntoConstraints="NO" id="7" customClass="MUMultiLineLabel">
-                                <rect key="frame" x="55" y="10" width="254" height="25.5"/>
+                                <rect key="frame" x="60" y="10" width="249" height="25.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" white="0.050467609490000002" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -30,7 +30,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42">
-                                <rect key="frame" x="55" y="35.5" width="254" height="15.5"/>
+                                <rect key="frame" x="60" y="35.5" width="249" height="15.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                 <color key="textColor" white="0.55762431569343063" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="highlightedColor" white="0.55545734489051091" alpha="1" colorSpace="calibratedWhite"/>
@@ -50,7 +50,7 @@
                             <constraint firstAttribute="trailing" secondItem="2AY-bJ-sOo" secondAttribute="trailing" id="IC8-O3-M7R"/>
                             <constraint firstItem="2AY-bJ-sOo" firstAttribute="leading" secondItem="42" secondAttribute="trailing" constant="10" id="LgU-Om-kLY"/>
                             <constraint firstItem="42" firstAttribute="leading" secondItem="7" secondAttribute="leading" id="SYg-nc-Ku4"/>
-                            <constraint firstItem="7" firstAttribute="leading" secondItem="8Br-Aq-kND" secondAttribute="trailing" constant="10" id="UgY-Zw-Mpf"/>
+                            <constraint firstItem="7" firstAttribute="leading" secondItem="8Br-Aq-kND" secondAttribute="trailing" constant="15" id="UgY-Zw-Mpf"/>
                             <constraint firstItem="8Br-Aq-kND" firstAttribute="leading" secondItem="P3X-dC-vit" secondAttribute="leading" constant="15" id="cnP-Pg-l1V"/>
                             <constraint firstAttribute="bottom" secondItem="42" secondAttribute="bottom" constant="10" id="ddy-BQ-OEj"/>
                             <constraint firstAttribute="centerY" secondItem="8Br-Aq-kND" secondAttribute="centerY" id="lZm-l8-FqY"/>
@@ -71,6 +71,7 @@
                 <outlet property="iconView" destination="8Br-Aq-kND" id="RNA-Lt-PaZ"/>
                 <outlet property="iconViewHeightConstraint" destination="hVv-vb-YF8" id="DjQ-Q1-MGh"/>
                 <outlet property="iconViewLabelLeadingHorizontalConstraint" destination="UgY-Zw-Mpf" id="ffs-3s-7wi"/>
+                <outlet property="iconViewSuperviewHorizontalConstraint" destination="cnP-Pg-l1V" id="TOF-YO-qFh"/>
                 <outlet property="iconViewWidthConstraint" destination="9NK-Nh-wBr" id="qfx-7m-V0a"/>
                 <outlet property="messageLabel" destination="42" id="ENC-nQ-njv"/>
                 <outlet property="stateIndicatorLabel" destination="2AY-bJ-sOo" id="Gec-Ub-7Jq"/>

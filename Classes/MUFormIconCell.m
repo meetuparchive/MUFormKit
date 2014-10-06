@@ -9,6 +9,9 @@
 #import "MUFormIconCell.h"
 
 @interface MUFormIconCell ()
+/// Constraint between the icon and the superview (for setting separator insets)
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *iconViewSuperviewHorizontalConstraint;
+
 @property (nonatomic) CGFloat iconViewLabelLeadingHorizontalConstraintConstant;
 @property (nonatomic) CGFloat iconViewWidthConstant;
 @property (nonatomic) CGFloat iconViewHeightConstant;
@@ -61,6 +64,8 @@
         self.iconViewHeightConstraint.constant = 0.0;
     }
 
+    CGFloat leftInset = self.iconViewSuperviewHorizontalConstraint.constant + self.iconViewWidthConstraint.constant + self.iconViewLabelLeadingHorizontalConstraint.constant;
+    [self setSeparatorInset:UIEdgeInsetsMake(0.0f, leftInset, 0.0f, 0.0f)];
 }
 
 @end
