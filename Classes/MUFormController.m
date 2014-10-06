@@ -364,12 +364,11 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
     id oldValue = [self.dataSource valueForItemAtIndexPath:indexPath];
     if (![value isEqual:oldValue]) {
         [self.dataSource setValue:value forItemAtIndexPath:indexPath];
-        [self didChangeValue:value forItemAtIndexPath:indexPath];
+        [self didChangeValue:value forItemAtIndexPath:indexPath previousValue:oldValue];
     }
 }
 
-- (void)didChangeValue:(id)value forItemAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)didChangeValue:(id)value forItemAtIndexPath:(NSIndexPath *)indexPath previousValue:(id)previousValue {
     // For subclasses to override
 }
 

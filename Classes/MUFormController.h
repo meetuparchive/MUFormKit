@@ -46,6 +46,6 @@
     Never call this method directly. This is exposed for subclasses to override and
     perform additional operations whenever form values change.
 */
-- (void)didChangeValue:(id)value forItemAtIndexPath:(NSIndexPath *)indexPath;
+- (void)didChangeValue:(id)value forItemAtIndexPath:(NSIndexPath *)indexPath previousValue:(id)previousValue;
 
 @end
