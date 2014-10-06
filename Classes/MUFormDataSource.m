@@ -27,6 +27,8 @@ NSString *const MUFormLocalizedSectionFooterTitleKey = @"MUFormLocalizedSectionF
 NSString *const MUFormSectionRowsKey                 = @"MUFormSectionRowsKey";
 NSString *const MUFormSectionHeaderHeightKey         = @"MUFormSectionHeaderHeightKey";
 NSString *const MUFormSectionFooterHeightKey         = @"MUFormSectionFooterHeightKey";
+NSString *const MUFormSectionHeaderEnabledPropertyNameKey = @"MUFormSectionHeaderEnabledPropertyNameKey";
+NSString *const MUFormSectionFooterEnabledPropertyNameKey = @"MUFormSectionFooterEnabledPropertyNameKey";
 
 // Form row constants definitions.
 NSString *const MUFormCellIdentifierKey                 = @"MUFormCellIdentifierKey";
@@ -303,22 +305,32 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
     NSString *propertyName = dependencyPropertyName ?: [self rowInfoForItemAtIndexPath:indexPath][MUFormPropertyNameKey];
     MUAssert(propertyName, @"Expected property name for indexpath %@",indexPath);
     
-    NSMutableArray *dependentSectionPropertyNames = [NSMutableArray array];
+    NSMutableSet *sectionsToShowOrHide = [NSMutableSet set];
+    NSMutableSet *sectionsWithHeaderFooterChanges = [NSMutableSet set];
     [self enumerateSectionsUsingBlock:^(NSDictionary *sectionInfo, NSUInteger idx, BOOL *stop) {
         if ([propertyName isEqualToString:sectionInfo[MUFormSectionEnabledPropertyNameKey]]) {
-            [dependentSectionPropertyNames addObject:@(idx)];
+            [sectionsToShowOrHide addObject:@(idx)];
+        }
+        if (sectionInfo[MUFormSectionHeaderEnabledPropertyNameKey] || sectionInfo[MUFormSectionFooterEnabledPropertyNameKey]) {
+            [sectionsWithHeaderFooterChanges addObject:@(idx)];
         }
     }];
     
-    if ([dependentSectionPropertyNames count]) {
+    NSSet *sectionsWithChanges = [sectionsToShowOrHide setByAddingObjectsFromSet:sectionsWithHeaderFooterChanges];
+    if ([sectionsWithChanges count]) {
         BOOL enabled = [[self.model valueForKeyPath:propertyName] boolValue];
         [tableView beginUpdates];
-        for (NSNumber *sectionNumber in dependentSectionPropertyNames) {
+        for (NSNumber *sectionNumber in sectionsWithChanges) {
             NSIndexSet *indexSet = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange([sectionNumber integerValue], 1)];
-            if (enabled) {
-                [tableView insertSections:indexSet withRowAnimation:UITableViewRowAnimationFade];
-            } else {
-                [tableView deleteSections:indexSet withRowAnimation:UITableViewRowAnimationFade];
+            if ([sectionsToShowOrHide containsObject:sectionNumber]) {
+                if (enabled) {
+                    [tableView insertSections:indexSet withRowAnimation:UITableViewRowAnimationFade];
+                } else {
+                    [tableView deleteSections:indexSet withRowAnimation:UITableViewRowAnimationFade];
+                }
+            }
+            else if ([sectionsWithHeaderFooterChanges containsObject:sectionNumber]) {
+                [tableView reloadSections:indexSet withRowAnimation:UITableViewRowAnimationFade];
             }
         }
         [tableView endUpdates];
@@ -335,6 +347,14 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
 - (NSString *)titleForHeaderInSection:(NSInteger)section
 {
     NSDictionary *sectionInfo = self.activeSections[section];
+    NSString *headerEnabledKeyPath = sectionInfo[MUFormSectionHeaderEnabledPropertyNameKey];
+    if (headerEnabledKeyPath) {
+        id value = [self.model valueForKeyPath:headerEnabledKeyPath];
+        if ([value respondsToSelector:@selector(boolValue)] && ![value boolValue]) {
+            return nil;
+        }
+    }
+    
     NSString *localizedKey = sectionInfo[MUFormLocalizedSectionHeaderTitleKey];
     return [[NSBundle mainBundle] localizedStringForKey:localizedKey value:localizedKey table:MUFormKitStringTable];
 }
@@ -342,6 +362,14 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
 - (NSString *)titleForFooterInSection:(NSInteger)section
 {
     NSDictionary *sectionInfo = self.activeSections[section];
+    NSString *footerEnabledKeyPath = sectionInfo[MUFormSectionFooterEnabledPropertyNameKey];
+    if (footerEnabledKeyPath) {
+        id value = [self.model valueForKeyPath:footerEnabledKeyPath];
+        if ([value respondsToSelector:@selector(boolValue)] && ![value boolValue]) {
+            return nil;
+        }
+    }
+
     NSString *localizedKey = sectionInfo[MUFormLocalizedSectionFooterTitleKey];
     return [[NSBundle mainBundle] localizedStringForKey:localizedKey value:localizedKey table:MUFormKitStringTable];
 }

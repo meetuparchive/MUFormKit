@@ -36,6 +36,12 @@ extern NSString *const MUFormLocalizedSectionHeaderTitleKey;
 /** Returns the localized key for a form section footer. */
 extern NSString *const MUFormLocalizedSectionFooterTitleKey;
 
+/** Show the header if and only if this property is not @NO. */
+extern NSString *const MUFormSectionHeaderEnabledPropertyNameKey;
+
+/** Show the footer if and only if this property is not @NO. */
+extern NSString *const MUFormSectionFooterEnabledPropertyNameKey;
+
 /** Returns the max cell count for dynamic cell counts within a section */
 extern NSString *const MUFormSectionDynamicRowLimitKey;
 
