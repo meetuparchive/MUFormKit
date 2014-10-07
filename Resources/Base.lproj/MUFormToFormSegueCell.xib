@@ -30,7 +30,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42">
-                                <rect key="frame" x="60" y="35.5" width="249" height="15.5"/>
+                                <rect key="frame" x="60" y="35" width="249" height="15.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                 <color key="textColor" white="0.55762431569343063" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="highlightedColor" white="0.55545734489051091" alpha="1" colorSpace="calibratedWhite"/>
@@ -53,6 +53,7 @@
                             <constraint firstItem="7" firstAttribute="leading" secondItem="8Br-Aq-kND" secondAttribute="trailing" constant="15" id="UgY-Zw-Mpf"/>
                             <constraint firstItem="8Br-Aq-kND" firstAttribute="leading" secondItem="P3X-dC-vit" secondAttribute="leading" constant="15" id="cnP-Pg-l1V"/>
                             <constraint firstAttribute="bottom" secondItem="42" secondAttribute="bottom" constant="10" id="ddy-BQ-OEj"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="999" constant="44" id="fv9-h2-ntC"/>
                             <constraint firstAttribute="centerY" secondItem="8Br-Aq-kND" secondAttribute="centerY" id="lZm-l8-FqY"/>
                             <constraint firstItem="7" firstAttribute="top" secondItem="P3X-dC-vit" secondAttribute="top" constant="10" id="siW-E8-8fX"/>
                             <constraint firstItem="42" firstAttribute="top" secondItem="7" secondAttribute="bottom" id="yGd-JW-xLH"/>
