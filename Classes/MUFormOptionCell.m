@@ -17,16 +17,20 @@ static CGFloat const MUDefaultCheckMarkAccessoryWidth = 38.5;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *messageLabelTrailingSpaceConstraint;
 
-@property (nonatomic, assign, getter=isEnabled) BOOL enabled;
 @end
 
 @implementation MUFormOptionCell
 
 #pragma mark - Overrides -
 
+- (void)setEnabled:(BOOL)enabled {
+    [super setEnabled:enabled];
+    self.selectionStyle = enabled ? UITableViewCellSelectionStyleDefault : UITableViewCellSelectionStyleNone;
+}
+
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    if (touches.count == 1 &&
+    if (self.isEnabled && touches.count == 1 &&
         self.accessoryType == UITableViewCellAccessoryNone &&
         [self.delegate respondsToSelector:@selector(optionCellDidBecomeSelectedOptionCell:)]) {
         [self.delegate optionCellDidBecomeSelectedOptionCell:self];
