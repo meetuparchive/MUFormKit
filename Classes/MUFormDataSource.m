@@ -85,6 +85,7 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
 @property (nonatomic, strong) NSDictionary *timePickerRowInfo;
 @property (nonatomic, copy) ConfigureCellBlock configureCellBlock;
 
+@property (nonatomic, strong) NSDictionary *indexPathsForModelProperty;
 @end
 
 @implementation MUFormDataSource
@@ -169,6 +170,27 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
         }
     }];
     self.activeSections = enabledSections;
+
+    
+    // Recalculate the indexPaths for model property, since the sections may have changed.
+    NSMutableDictionary *indexPathsForProperty = [NSMutableDictionary dictionary];
+    [self.activeSections enumerateObjectsUsingBlock:^(NSDictionary *section, NSUInteger sectionIndex, BOOL *stop) {
+        NSArray *rows = section[MUFormSectionRowsKey];
+        if (![rows isKindOfClass:[NSArray class]]) return;
+        
+        [rows enumerateObjectsUsingBlock:^(NSDictionary *row, NSUInteger rowIndex, BOOL *stopSection) {
+            id property = row[MUFormPropertyNameKey];
+            if (property) {
+                NSIndexPath *indexPath = [NSIndexPath indexPathForRow:rowIndex inSection:sectionIndex];
+                
+                if (!indexPathsForProperty[property]) {
+                    indexPathsForProperty[property] = [NSMutableArray array];
+                }
+                [indexPathsForProperty[property] addObject:indexPath];
+            }
+        }];
+    }];
+    self.indexPathsForModelProperty = indexPathsForProperty;
 }
 
 #pragma mark - Private Methods -
@@ -346,6 +368,10 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
     NSMutableDictionary *rowInfo = [self mu_rowInfoForItemAtIndexPath:indexPath];
     rowInfo[MUFormCellIsDisabledKey] = @(!isEnabled);
     cell.enabled = isEnabled;
+}
+
+- (NSArray *)indexPathsForPropertyWithName:(NSString *)property {
+    return self.indexPathsForModelProperty[property] ?: @[];
 }
 
 #pragma mark - Getting & Setting Section Information -

@@ -483,12 +483,12 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
         [self changeValue:defaultValue forItemAtIndexPath:indexPath];
     }
     
-    //This gives the tableview some time to perform the cell selection/deselection animation,
-    //reload is required to update which cells now have the checkmark, we should find a better way to do this
+    // This delay gives the table view time to perform the cell selection/deselection animation
     [self performBlock:^{
-        [self.tableView reloadData];
+        NSArray *relatedOptionsCells = [self.dataSource indexPathsForPropertyWithName:rowInfo[MUFormPropertyNameKey]];
+        [self.tableView reloadRowsAtIndexPaths:relatedOptionsCells withRowAnimation:UITableViewRowAnimationNone];
     } afterDelay:0.15];
-    
+
 }
 
 - (void)switchCell:(MUFormSwitchCell *)sender didChangeValue:(BOOL)selected

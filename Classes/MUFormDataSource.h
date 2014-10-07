@@ -250,6 +250,10 @@ typedef void (^ConfigureCellBlock)(NSIndexPath *indexPath, MUFormBaseCell *cell,
  */
 - (void)addRowInfo:(NSDictionary *)rowInfo inSection:(NSInteger)section;
 
+/// Returns an array of all of the NSIndexPaths that affect a model property.
+- (NSArray *)indexPathsForPropertyWithName:(NSString *)property;
+
+
 ///-------------------------------------------------------------------
 /// @name Validation
 ///-------------------------------------------------------------------
