@@ -8,8 +8,6 @@
 
 #import "MUFormDateTimeCell.h"
 
-NSString *const MUFormCellDateIndicatorImageKey = @"MUFormCellDateIndicatorImageKey";
-
 static CGFloat const kMUDefaultRowHeight = 44.0;
 
 @implementation MUFormDateTimeCell
