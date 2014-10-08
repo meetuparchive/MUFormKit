@@ -92,12 +92,22 @@
 
     NSArray *validationMessages = info[MUValidationMessagesKey];
     self.messageLabel.text = [validationMessages firstObject];
+
+    self.textField.enabled = ![info[MUFormCellIsDisabledKey] boolValue];
 }
 
 -(NSString*) textFieldText
 {
     return self.textField.text;
 }
+
+- (void)setEnabled:(BOOL)enabled {
+    self.textField.enabled = enabled;
+}
+- (BOOL)isEnabled {
+    return self.textField.isEnabled;
+}
+
 
 #pragma mark - Actions -
 

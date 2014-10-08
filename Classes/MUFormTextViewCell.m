@@ -87,7 +87,17 @@ static CGFloat const kMUFormTextViewCellEstimatedHeight = 140.0;
     else {
         self.messageLabel.hidden = YES;
     }
+
+    self.textView.editable = ![info[MUFormCellIsDisabledKey] boolValue];
 }
+
+- (void)setEnabled:(BOOL)enabled {
+    self.textView.editable = enabled;
+}
+- (BOOL)isEnabled {
+    return self.textView.editable;
+}
+
 
 
 #pragma mark - Text View Delegate -

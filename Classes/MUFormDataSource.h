@@ -155,6 +155,8 @@ typedef void (^ConfigureCellBlock)(NSIndexPath *indexPath, MUFormBaseCell *cell,
 -(void) tableView:(UITableView *)tableView updateEnabledSectionsWithIndexPath:(NSIndexPath*)indexPath;
 
 
+/// Disable the main UIControl on the cell.
+- (void)setEnabled:(BOOL)isEnabled forCell:(MUFormBaseCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 
 ///-------------------------------------------------------------------
 /// @name Getting & Setting Section Information
@@ -227,13 +229,6 @@ typedef void (^ConfigureCellBlock)(NSIndexPath *indexPath, MUFormBaseCell *cell,
 - (void)setValue:(id)value forItemAtIndexPath:(NSIndexPath *)indexPath;
 
 /**
- Selects an option cell at a specified index path.
- 
- @param indexPath The index path of the item.
- */
-- (void)selectOptionAtIndexPath:(NSIndexPath *)indexPath;
-
-/**
  Returns the indexPath for the row info with the given tag, nil if no row info was found
  
  @param tag The tag of the item whose indexPath to retreive.
@@ -254,6 +249,10 @@ typedef void (^ConfigureCellBlock)(NSIndexPath *indexPath, MUFormBaseCell *cell,
  @param section The section to add row info
  */
 - (void)addRowInfo:(NSDictionary *)rowInfo inSection:(NSInteger)section;
+
+/// Returns an array of all of the NSIndexPaths that affect a model property.
+- (NSArray *)indexPathsForPropertyWithName:(NSString *)property;
+
 
 ///-------------------------------------------------------------------
 /// @name Validation

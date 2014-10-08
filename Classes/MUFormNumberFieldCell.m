@@ -54,7 +54,17 @@
     
     NSArray *validationMessages = info[MUValidationMessagesKey];
     self.messageLabel.text = ([validationMessages count] > 0) ? validationMessages[0] : nil;
+
+    self.numberField.enabled = ![info[MUFormCellIsDisabledKey] boolValue];
 }
+
+- (void)setEnabled:(BOOL)enabled {
+    self.numberField.enabled = enabled;
+}
+- (BOOL)isEnabled {
+    return self.numberField.isEnabled;
+}
+
 
 #pragma mark - Actions -
 

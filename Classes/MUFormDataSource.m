@@ -27,6 +27,8 @@ NSString *const MUFormLocalizedSectionFooterTitleKey = @"MUFormLocalizedSectionF
 NSString *const MUFormSectionRowsKey                 = @"MUFormSectionRowsKey";
 NSString *const MUFormSectionHeaderHeightKey         = @"MUFormSectionHeaderHeightKey";
 NSString *const MUFormSectionFooterHeightKey         = @"MUFormSectionFooterHeightKey";
+NSString *const MUFormSectionHeaderEnabledPropertyNameKey = @"MUFormSectionHeaderEnabledPropertyNameKey";
+NSString *const MUFormSectionFooterEnabledPropertyNameKey = @"MUFormSectionFooterEnabledPropertyNameKey";
 
 // Form row constants definitions.
 NSString *const MUFormCellIdentifierKey                 = @"MUFormCellIdentifierKey";
@@ -55,6 +57,7 @@ NSString *const MUFormLocalizedAccessibilityLabelKey    = @"MUFormLocalizedAcces
 NSString *const MUFormLocalizedCellMessageKey           = @"MUFormLocalizedCellMessageKey";
 NSString *const MUFormCellSegueIdentifierKey            = @"MUFormCellSegueIdentifierKey";
 NSString *const MUFormCellIconNameKey                   = @"MUFormCellIconNameKey";
+NSString *const MUFormCellIconURLStringKey              = @"MUFormCellIconURLStringKey";
 NSString *const MUFormMinimumDatePropertyNameKey        = @"MUFormMinimumDatePropertyNameKey";
 NSString *const MUFormMaximumDatePropertyNameKey        = @"MUFormMaximumDatePropertyNameKey";
 NSString *const MUFormLocalizedMetaStringKey            = @"MUFormLocalizedMetaStringKey";
@@ -64,6 +67,7 @@ NSString *const MUFormDataSourceFileNameKey             = @"MUFormDataSourceFile
 NSString *const MUFormMaximumCharactersKey   			= @"MUFormMaximumCharactersKey";
 NSString *const MUFormRowHeightKey                      = @"MUFormRowHeightKey";
 NSString *const MUFormCellSecureTextEntryEnabledKey     = @"MUFormCellSecureTextEntryEnabledKey";
+NSString *const MUFormCellIsDisabledKey                 = @"MUFormCellIsDisabledKey";
 
 // Form error constants definitions.
 NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
@@ -81,6 +85,7 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
 @property (nonatomic, strong) NSDictionary *timePickerRowInfo;
 @property (nonatomic, copy) ConfigureCellBlock configureCellBlock;
 
+@property (nonatomic, strong) NSDictionary *indexPathsForModelProperty;
 @end
 
 @implementation MUFormDataSource
@@ -165,6 +170,27 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
         }
     }];
     self.activeSections = enabledSections;
+
+    
+    // Recalculate the indexPaths for model property, since the sections may have changed.
+    NSMutableDictionary *indexPathsForProperty = [NSMutableDictionary dictionary];
+    [self.activeSections enumerateObjectsUsingBlock:^(NSDictionary *section, NSUInteger sectionIndex, BOOL *stop) {
+        NSArray *rows = section[MUFormSectionRowsKey];
+        if (![rows isKindOfClass:[NSArray class]]) return;
+        
+        [rows enumerateObjectsUsingBlock:^(NSDictionary *row, NSUInteger rowIndex, BOOL *stopSection) {
+            id property = row[MUFormPropertyNameKey];
+            if (property) {
+                NSIndexPath *indexPath = [NSIndexPath indexPathForRow:rowIndex inSection:sectionIndex];
+                
+                if (!indexPathsForProperty[property]) {
+                    indexPathsForProperty[property] = [NSMutableArray array];
+                }
+                [indexPathsForProperty[property] addObject:indexPath];
+            }
+        }];
+    }];
+    self.indexPathsForModelProperty = indexPathsForProperty;
 }
 
 #pragma mark - Private Methods -
@@ -185,13 +211,15 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
         
         // If `val` is a string, try getting a value from the model.
         if ([val isKindOfClass:[NSString class]]) {
-            SEL selector = NSSelectorFromString(val);
-            if ([self.model respondsToSelector:selector]) {
+            @try {
                 value = [self.model valueForKey:val];
             }
+            @catch(NSException *exception) {
+                MUAssert(YES, @"Attempt to get a value at an invalid key (%@) for indexPath (%@)\n%@", val, indexPath, [exception reason]);
+            }
         }
-        
-        if (value) {
+
+        if (value && ![value isEqual:[NSNull null]]) {
             cellAttributeValues[key] = value;
         }
     }];
@@ -304,26 +332,46 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
     NSString *propertyName = dependencyPropertyName ?: [self rowInfoForItemAtIndexPath:indexPath][MUFormPropertyNameKey];
     MUAssert(propertyName, @"Expected property name for indexpath %@",indexPath);
     
-    NSMutableArray *dependentSectionPropertyNames = [NSMutableArray array];
+    NSMutableSet *sectionsToShowOrHide = [NSMutableSet set];
+    NSMutableSet *sectionsWithHeaderFooterChanges = [NSMutableSet set];
     [self enumerateSectionsUsingBlock:^(NSDictionary *sectionInfo, NSUInteger idx, BOOL *stop) {
         if ([propertyName isEqualToString:sectionInfo[MUFormSectionEnabledPropertyNameKey]]) {
-            [dependentSectionPropertyNames addObject:@(idx)];
+            [sectionsToShowOrHide addObject:@(idx)];
+        }
+        if (sectionInfo[MUFormSectionHeaderEnabledPropertyNameKey] || sectionInfo[MUFormSectionFooterEnabledPropertyNameKey]) {
+            [sectionsWithHeaderFooterChanges addObject:@(idx)];
         }
     }];
     
-    if ([dependentSectionPropertyNames count]) {
+    NSSet *sectionsWithChanges = [sectionsToShowOrHide setByAddingObjectsFromSet:sectionsWithHeaderFooterChanges];
+    if ([sectionsWithChanges count]) {
         BOOL enabled = [[self.model valueForKeyPath:propertyName] boolValue];
         [tableView beginUpdates];
-        for (NSNumber *sectionNumber in dependentSectionPropertyNames) {
+        for (NSNumber *sectionNumber in sectionsWithChanges) {
             NSIndexSet *indexSet = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange([sectionNumber integerValue], 1)];
-            if (enabled) {
-                [tableView insertSections:indexSet withRowAnimation:UITableViewRowAnimationFade];
-            } else {
-                [tableView deleteSections:indexSet withRowAnimation:UITableViewRowAnimationFade];
+            if ([sectionsToShowOrHide containsObject:sectionNumber]) {
+                if (enabled) {
+                    [tableView insertSections:indexSet withRowAnimation:UITableViewRowAnimationFade];
+                } else {
+                    [tableView deleteSections:indexSet withRowAnimation:UITableViewRowAnimationFade];
+                }
+            }
+            else if ([sectionsWithHeaderFooterChanges containsObject:sectionNumber]) {
+                [tableView reloadSections:indexSet withRowAnimation:UITableViewRowAnimationFade];
             }
         }
         [tableView endUpdates];
     }
+}
+
+- (void)setEnabled:(BOOL)isEnabled forCell:(MUFormBaseCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+    NSMutableDictionary *rowInfo = [self mu_rowInfoForItemAtIndexPath:indexPath];
+    rowInfo[MUFormCellIsDisabledKey] = @(!isEnabled);
+    cell.enabled = isEnabled;
+}
+
+- (NSArray *)indexPathsForPropertyWithName:(NSString *)property {
+    return self.indexPathsForModelProperty[property] ?: @[];
 }
 
 #pragma mark - Getting & Setting Section Information -
@@ -331,6 +379,14 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
 - (NSString *)titleForHeaderInSection:(NSInteger)section
 {
     NSDictionary *sectionInfo = self.activeSections[section];
+    NSString *headerEnabledKeyPath = sectionInfo[MUFormSectionHeaderEnabledPropertyNameKey];
+    if (headerEnabledKeyPath) {
+        id value = [self.model valueForKeyPath:headerEnabledKeyPath];
+        if ([value respondsToSelector:@selector(boolValue)] && ![value boolValue]) {
+            return nil;
+        }
+    }
+    
     NSString *localizedKey = sectionInfo[MUFormLocalizedSectionHeaderTitleKey];
     return [[NSBundle mainBundle] localizedStringForKey:localizedKey value:localizedKey table:MUFormKitStringTable];
 }
@@ -338,6 +394,14 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
 - (NSString *)titleForFooterInSection:(NSInteger)section
 {
     NSDictionary *sectionInfo = self.activeSections[section];
+    NSString *footerEnabledKeyPath = sectionInfo[MUFormSectionFooterEnabledPropertyNameKey];
+    if (footerEnabledKeyPath) {
+        id value = [self.model valueForKeyPath:footerEnabledKeyPath];
+        if ([value respondsToSelector:@selector(boolValue)] && ![value boolValue]) {
+            return nil;
+        }
+    }
+
     NSString *localizedKey = sectionInfo[MUFormLocalizedSectionFooterTitleKey];
     return [[NSBundle mainBundle] localizedStringForKey:localizedKey value:localizedKey table:MUFormKitStringTable];
 }
@@ -397,17 +461,6 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
             MUAssert(YES, @"Attempt to set a value (%@) at an invalid keypath (%@)\n%@",
                      value, keyPath, [exception reason]);
         }
-    }
-}
-
-- (void)selectOptionAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSDictionary *rowInfo = [self mu_rowInfoForItemAtIndexPath:indexPath];
-    NSNumber *defaultValue = rowInfo[MUFormDefaultValueKey];
-    
-    NSNumber *value = [self valueForItemAtIndexPath:indexPath];
-    if ([value isEqualToNumber:defaultValue] == NO) {
-        [self setValue:defaultValue forItemAtIndexPath:indexPath];
     }
 }
 

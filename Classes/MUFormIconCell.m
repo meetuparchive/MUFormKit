@@ -9,6 +9,9 @@
 #import "MUFormIconCell.h"
 
 @interface MUFormIconCell ()
+/// Constraint between the icon and the superview (for setting separator insets)
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *iconViewSuperviewHorizontalConstraint;
+
 @property (nonatomic) CGFloat iconViewLabelLeadingHorizontalConstraintConstant;
 @property (nonatomic) CGFloat iconViewWidthConstant;
 @property (nonatomic) CGFloat iconViewHeightConstant;
@@ -28,6 +31,7 @@
 {
     [super prepareForReuse];
     self.iconView.image = nil;
+    [self.iconView setMeetupUrl:nil];
     self.iconViewLabelLeadingHorizontalConstraint.constant = 0.0;
     self.iconViewWidthConstraint.constant = 0.0;
     self.iconViewHeightConstraint.constant = 0.0;    
@@ -37,8 +41,16 @@
 {
     [super configureWithValue:value info:info];
     
-    NSString *iconName = info[MUFormCellIconNameKey];   
-    if ([iconName length] > 0) {
+    NSString *iconName = info[MUFormCellIconNameKey];
+    NSString *iconURLString = info[MUFormCellIconURLStringKey];
+    if ([iconURLString length] > 0) {
+        UIImage *placeholder = ([iconName length] > 0) ? [UIImage imageNamed:iconName] : nil;
+        [self.iconView setMeetupUrl:[NSURL URLWithString:iconURLString] placeHolderImage:placeholder];
+        self.iconViewLabelLeadingHorizontalConstraint.constant = self.iconViewLabelLeadingHorizontalConstraintConstant;
+        self.iconViewWidthConstraint.constant = self.iconViewWidthConstant;
+        self.iconViewHeightConstraint.constant = self.iconViewHeightConstant;
+    }
+    else if ([iconName length] > 0) {
         self.iconView.image = [UIImage imageNamed:iconName];
         self.iconViewLabelLeadingHorizontalConstraint.constant = self.iconViewLabelLeadingHorizontalConstraintConstant;
         self.iconViewWidthConstraint.constant = self.iconViewWidthConstant;
@@ -46,11 +58,14 @@
     }
     else {
         self.iconView.image = nil;
+        [self.iconView setMeetupUrl:nil];
         self.iconViewLabelLeadingHorizontalConstraint.constant = 0.0;
         self.iconViewWidthConstraint.constant = 0.0;
         self.iconViewHeightConstraint.constant = 0.0;
     }
 
+    CGFloat leftInset = self.iconViewSuperviewHorizontalConstraint.constant + self.iconViewWidthConstraint.constant + self.iconViewLabelLeadingHorizontalConstraint.constant;
+    [self setSeparatorInset:UIEdgeInsetsMake(0.0f, leftInset, 0.0f, 0.0f)];
 }
 
 @end

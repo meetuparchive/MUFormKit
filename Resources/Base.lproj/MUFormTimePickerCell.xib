@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6249" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -21,15 +22,12 @@
                     </datePicker>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="3" secondAttribute="trailing" id="X2F-j7-fJy"/>
-                    <constraint firstItem="3" firstAttribute="leading" secondItem="sIm-S1-THj" secondAttribute="leading" id="aXP-Uh-j6e"/>
+                    <constraint firstAttribute="bottom" secondItem="3" secondAttribute="bottom" id="6bR-aq-16v"/>
+                    <constraint firstItem="3" firstAttribute="top" secondItem="sIm-S1-THj" secondAttribute="top" id="Zkt-bl-Qoe"/>
+                    <constraint firstItem="3" firstAttribute="leading" secondItem="sIm-S1-THj" secondAttribute="leading" id="fOK-hu-fta"/>
+                    <constraint firstAttribute="trailing" secondItem="3" secondAttribute="trailing" id="nuV-Wo-nnP"/>
                 </constraints>
             </tableViewCellContentView>
-            <constraints>
-                <constraint firstItem="3" firstAttribute="top" secondItem="2" secondAttribute="top" id="VkD-JW-uep"/>
-                <constraint firstItem="3" firstAttribute="bottom" secondItem="2" secondAttribute="bottom" id="ayB-fz-lEl"/>
-                <constraint firstItem="3" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="mOd-y9-srp"/>
-            </constraints>
             <connections>
                 <outlet property="timePicker" destination="3" id="8"/>
             </connections>

@@ -6,9 +6,9 @@
 //
 //
 
-#import "MUFormBaseCell.h"
+#import "MUFormDynamicHeightCell.h"
 
-@interface MUFormSwitchCell : MUFormBaseCell
+@interface MUFormSwitchCell : MUFormDynamicHeightCell
 
 @property (weak, nonatomic) IBOutlet UILabel *staticLabel;
 @property (strong, nonatomic) IBOutlet UISwitch *optionSwitch;

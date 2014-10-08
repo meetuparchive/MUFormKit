@@ -48,6 +48,9 @@ extern NSString *const MUFormCellTimeZoneKey;
 /** Indicates whether the value represented is a default. The default value is `NO`. */
 @property (nonatomic) BOOL representsDefaultValue;
 
+/// Enable or disable the main UIControl of the cell. The default value is YES.
+@property (nonatomic, assign, getter=isEnabled) BOOL enabled;
+
 // iOS6: These can dies when dropping ios 6.
 @property (weak, nonatomic) IBOutlet UIView *containerView; // Maybe..
 @property (nonatomic, getter = isFirstInSection) BOOL firstInSection; // Kill in iOS 7.

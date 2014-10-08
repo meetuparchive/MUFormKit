@@ -36,6 +36,12 @@ extern NSString *const MUFormLocalizedSectionHeaderTitleKey;
 /** Returns the localized key for a form section footer. */
 extern NSString *const MUFormLocalizedSectionFooterTitleKey;
 
+/** The name of a property on the model. Show the header if and only if the value of that property is not @NO. */
+extern NSString *const MUFormSectionHeaderEnabledPropertyNameKey;
+
+/** The name of a property on the model. Show the footer if and only if the value of that property is not @NO. */
+extern NSString *const MUFormSectionFooterEnabledPropertyNameKey;
+
 /** Returns the max cell count for dynamic cell counts within a section */
 extern NSString *const MUFormSectionDynamicRowLimitKey;
 
@@ -150,6 +156,9 @@ extern NSString *const MUFormCellSegueIdentifierKey;
 /** The name of an icon image file. */
 extern NSString *const MUFormCellIconNameKey;
 
+/** The URL of an icon image file. */
+extern NSString *const MUFormCellIconURLStringKey;
+
 /** A localized key for a bit of meta data (e.g. A title for modal controllers invoked by tapping a cell). */
 extern NSString *const MUFormLocalizedMetaStringKey;
 
@@ -170,3 +179,7 @@ extern NSString *const MUFormRowHeightKey;
 
 /** Enable secure entry for text fields. */
 extern NSString *const MUFormCellSecureTextEntryEnabledKey;
+
+/** Set to @YES to disable the main control of this cell. */
+extern NSString *const MUFormCellIsDisabledKey;
+

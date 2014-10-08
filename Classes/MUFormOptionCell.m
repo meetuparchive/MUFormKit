@@ -23,9 +23,14 @@ static CGFloat const MUDefaultCheckMarkAccessoryWidth = 38.5;
 
 #pragma mark - Overrides -
 
+- (void)setEnabled:(BOOL)enabled {
+    [super setEnabled:enabled];
+    self.selectionStyle = enabled ? UITableViewCellSelectionStyleDefault : UITableViewCellSelectionStyleNone;
+}
+
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    if (touches.count == 1 &&
+    if (self.isEnabled && touches.count == 1 &&
         self.accessoryType == UITableViewCellAccessoryNone &&
         [self.delegate respondsToSelector:@selector(optionCellDidBecomeSelectedOptionCell:)]) {
         [self.delegate optionCellDidBecomeSelectedOptionCell:self];
@@ -38,20 +43,8 @@ static CGFloat const MUDefaultCheckMarkAccessoryWidth = 38.5;
 - (void)configureWithValue:(id)value info:(NSDictionary *)info
 {
     [super configureWithValue:value info:info];
-    
-    if (value) {
-        MUAssert([value isKindOfClass:[NSNumber class]],
-                 @"Expected ‘value’ to be an NSNumber. It was: %@", [value class]);
-    }
 
-    NSNumber *defaultValue = info[MUFormDefaultValueKey];
-    if (defaultValue) {
-        MUAssert([defaultValue isKindOfClass:[NSNumber class]],
-                 @"Expected ‘defaultValue’ to be an NSNumber. It was: %@", [value class]);
-    }
-    
-    BOOL isValueEqualToDefault = [value isEqualToNumber:defaultValue];
-    
+    BOOL isValueEqualToDefault = [value isEqual:info[MUFormDefaultValueKey]];
     if (isValueEqualToDefault && self.accessoryType != UITableViewCellAccessoryCheckmark) {
         self.accessoryType = UITableViewCellAccessoryCheckmark;
         self.staticLabelTrailingSpaceConstraint.constant = 0;
@@ -69,9 +62,10 @@ static CGFloat const MUDefaultCheckMarkAccessoryWidth = 38.5;
     NSString *localizedStaticTextKey = info[MUFormLocalizedStaticTextKey];
     self.staticLabel.text = [[NSBundle mainBundle] localizedStringForKey:localizedStaticTextKey value:localizedStaticTextKey table:MUFormKitStringTable];
    
-    NSString *localizedStaticDetailTextKey = info[MUFormLocalizedCellMessageKey];
-    self.messageLabel.text = [[NSBundle mainBundle] localizedStringForKey:localizedStaticDetailTextKey value:localizedStaticDetailTextKey table:MUFormKitStringTable];
+    NSString *localizedCellMessageKey = info[MUFormLocalizedCellMessageKey];
+    self.messageLabel.text = [[NSBundle mainBundle] localizedStringForKey:localizedCellMessageKey value:localizedCellMessageKey table:MUFormKitStringTable];
     
+    self.enabled = ![info[MUFormCellIsDisabledKey] boolValue];
 }
 
 @end

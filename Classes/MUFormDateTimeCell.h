@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "MUFormBaseCell.h"
 
-extern NSString *const MUFormCellDateIndicatorImageKey;
-
 @interface MUFormDateTimeCell : MUFormBaseCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *indicatorImage;

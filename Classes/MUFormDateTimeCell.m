@@ -8,8 +8,6 @@
 
 #import "MUFormDateTimeCell.h"
 
-NSString *const MUFormCellDateIndicatorImageKey = @"MUFormCellDateIndicatorImageKey";
-
 static CGFloat const kMUDefaultRowHeight = 44.0;
 
 @implementation MUFormDateTimeCell
@@ -74,7 +72,7 @@ static CGFloat const kMUDefaultRowHeight = 44.0;
             self.timeLabel.highlightedTextColor = self.textColor;
         }
         
-        NSString *indicatorImage = self.cellAttributes[MUFormCellDateIndicatorImageKey];
+        NSString *indicatorImage = info[MUFormCellIconNameKey];
         self.indicatorImage.image = [UIImage imageNamed:indicatorImage];
     }
 }

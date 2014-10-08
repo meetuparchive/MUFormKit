@@ -246,6 +246,10 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
     
 #pragma mark - Row Height & Adjustments -
 
++ (NSString *)keyForIndexPath:(NSIndexPath *)indexPath {
+    return [NSString stringWithFormat:@"%ld_%ld", (long)indexPath.section, (long)indexPath.row];
+}
+
 - (CGFloat)heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     CGFloat height = 0.0;
@@ -294,7 +298,7 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
         [(MUFormBaseCell *)cell setDelegate:nil];
     }
 
-    self.cellHeightForDisplayedCells[indexPath] = @(CGRectGetHeight(cell.bounds));
+    self.cellHeightForDisplayedCells[[[self class] keyForIndexPath:indexPath]] = @(CGRectGetHeight(cell.bounds));
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -343,7 +347,7 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSNumber *cellHeightForDisplayedCell = self.cellHeightForDisplayedCells[indexPath];
+    NSNumber *cellHeightForDisplayedCell = self.cellHeightForDisplayedCells[[[self class] keyForIndexPath:indexPath]];
     if (cellHeightForDisplayedCell) {
         return [cellHeightForDisplayedCell floatValue];
     }
@@ -357,12 +361,14 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
 
 - (void)changeValue:(id)value forItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self.dataSource setValue:value forItemAtIndexPath:indexPath];
-    [self didChangeValue:value forItemAtIndexPath:indexPath];
+    id oldValue = [self.dataSource valueForItemAtIndexPath:indexPath];
+    if (![value isEqual:oldValue]) {
+        [self.dataSource setValue:value forItemAtIndexPath:indexPath];
+        [self didChangeValue:value forItemAtIndexPath:indexPath previousValue:oldValue];
+    }
 }
 
-- (void)didChangeValue:(id)value forItemAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)didChangeValue:(id)value forItemAtIndexPath:(NSIndexPath *)indexPath previousValue:(id)previousValue {
     // For subclasses to override
 }
 
@@ -468,14 +474,21 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
 - (void)optionCellDidBecomeSelectedOptionCell:(MUFormOptionCell *)sender
 {
     NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-    [self.dataSource selectOptionAtIndexPath:indexPath];
+
+    NSDictionary *rowInfo = [self.dataSource rowInfoForItemAtIndexPath:indexPath];
+    NSNumber *defaultValue = rowInfo[MUFormDefaultValueKey];
     
-    //This gives the tableview some time to perform the cell selection/deselection animation,
-    //reload is required to update which cells now have the checkmark, we should find a better way to do this
+    NSNumber *value = [self.dataSource valueForItemAtIndexPath:indexPath];
+    if ([value isEqual:defaultValue] == NO) {
+        [self changeValue:defaultValue forItemAtIndexPath:indexPath];
+    }
+    
+    // This delay gives the table view time to perform the cell selection/deselection animation
     [self performBlock:^{
-        [self.tableView reloadData];
+        NSArray *relatedOptionsCells = [self.dataSource indexPathsForPropertyWithName:rowInfo[MUFormPropertyNameKey]];
+        [self.tableView reloadRowsAtIndexPaths:relatedOptionsCells withRowAnimation:UITableViewRowAnimationNone];
     } afterDelay:0.15];
-    
+
 }
 
 - (void)switchCell:(MUFormSwitchCell *)sender didChangeValue:(BOOL)selected
