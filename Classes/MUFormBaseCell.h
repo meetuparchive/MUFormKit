@@ -51,12 +51,8 @@ extern NSString *const MUFormCellTimeZoneKey;
 /// Enable or disable the main UIControl of the cell. The default value is YES.
 @property (nonatomic, assign, getter=isEnabled) BOOL enabled;
 
-// iOS6: These can dies when dropping ios 6.
-@property (weak, nonatomic) IBOutlet UIView *containerView; // Maybe..
-@property (nonatomic, getter = isFirstInSection) BOOL firstInSection; // Kill in iOS 7.
-@property (nonatomic, getter = isLastInSection) BOOL lastInSection; // Kill in iOS 7.
-@property (nonatomic, getter = isIndented) BOOL indented; // Kill in iOS 7.
-
+/** Container for for all form UI elements*/
+@property (weak, nonatomic) IBOutlet UIView *containerView;
 
 ///-------------------------------------------------------------------
 /// @name Class Methods
