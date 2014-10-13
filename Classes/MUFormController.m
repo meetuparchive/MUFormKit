@@ -303,6 +303,8 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+
     self.lastTappedIndexPath = indexPath;
     MUFormBaseCell *cell = (MUFormBaseCell *)[tableView cellForRowAtIndexPath:indexPath];
     MUAssert([cell isKindOfClass:[MUFormBaseCell class]], @"Expected cell type MUFormBaseCell was %@",cell);
@@ -325,7 +327,11 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
     else if ([cell isKindOfClass:[MUFormRelativeDateCell class]]) {
         [self mu_handleRelativeDateTapAtIndexpath:indexPath];
     }
-    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    else if ([cell isKindOfClass:[MUFormOptionCell class]]) {
+        if (cell.accessoryType == UITableViewCellAccessoryNone) {
+            [self optionCellDidBecomeSelectedOptionCell:(MUFormOptionCell *)cell];
+        }
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section

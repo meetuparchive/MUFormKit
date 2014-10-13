@@ -14,7 +14,6 @@ static CGFloat const MUDefaultCheckMarkAccessoryWidth = 38.5;
 
 @property (weak, nonatomic) IBOutlet UILabel *staticLabel;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *staticLabelTrailingSpaceConstraint;
-
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *messageLabelTrailingSpaceConstraint;
 
 @end
@@ -26,18 +25,6 @@ static CGFloat const MUDefaultCheckMarkAccessoryWidth = 38.5;
 - (void)setEnabled:(BOOL)enabled {
     [super setEnabled:enabled];
     self.selectionStyle = enabled ? UITableViewCellSelectionStyleDefault : UITableViewCellSelectionStyleNone;
-}
-
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    if (self.isEnabled && touches.count == 1 &&
-        self.accessoryType == UITableViewCellAccessoryNone &&
-        [self.delegate respondsToSelector:@selector(optionCellDidBecomeSelectedOptionCell:)]) {
-        [self.delegate optionCellDidBecomeSelectedOptionCell:self];
-    }
-    else {
-        [super touchesEnded:touches withEvent:event];
-    }
 }
 
 - (void)configureWithValue:(id)value info:(NSDictionary *)info
