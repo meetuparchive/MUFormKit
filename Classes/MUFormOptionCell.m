@@ -22,11 +22,6 @@ static CGFloat const MUDefaultCheckMarkAccessoryWidth = 38.5;
 
 #pragma mark - Overrides -
 
-- (void)setEnabled:(BOOL)enabled {
-    [super setEnabled:enabled];
-    self.selectionStyle = enabled ? UITableViewCellSelectionStyleDefault : UITableViewCellSelectionStyleNone;
-}
-
 - (void)configureWithValue:(id)value info:(NSDictionary *)info
 {
     [super configureWithValue:value info:info];
