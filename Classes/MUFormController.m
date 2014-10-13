@@ -315,17 +315,15 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
     if ([segueIdentifier length] > 0) {
         [self performSegueWithIdentifier:segueIdentifier sender:cell];
     }
-    else {
-        if ([cell conformsToProtocol:@protocol(MUFormNextTextResponder)]) {
-            [cell becomeFirstResponder];
-        }
-        else if ([cell isKindOfClass:[MUFormTimeCell class]]) {
-            MUFormTimeCell *timeCell = (MUFormTimeCell *)cell;
-            [self mu_handleTimeTapAtIndexPath:indexPath withTimeZone:timeCell.timeZone];
-        }
-        else if ([cell isKindOfClass:[MUFormRelativeDateCell class]]) {
-            [self mu_handleRelativeDateTapAtIndexpath:indexPath];
-        }
+    else if ([cell conformsToProtocol:@protocol(MUFormNextTextResponder)]) {
+        [cell becomeFirstResponder];
+    }
+    else if ([cell isKindOfClass:[MUFormTimeCell class]]) {
+        MUFormTimeCell *timeCell = (MUFormTimeCell *)cell;
+        [self mu_handleTimeTapAtIndexPath:indexPath withTimeZone:timeCell.timeZone];
+    }
+    else if ([cell isKindOfClass:[MUFormRelativeDateCell class]]) {
+        [self mu_handleRelativeDateTapAtIndexpath:indexPath];
     }
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
