@@ -328,7 +328,7 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
         [self mu_handleRelativeDateTapAtIndexpath:indexPath];
     }
     else if ([cell isKindOfClass:[MUFormOptionCell class]]) {
-        if (cell.accessoryType == UITableViewCellAccessoryNone) {
+        if (cell.enabled && cell.accessoryType == UITableViewCellAccessoryNone) {
             [self optionCellDidBecomeSelectedOptionCell:(MUFormOptionCell *)cell];
         }
     }
