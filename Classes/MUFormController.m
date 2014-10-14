@@ -303,6 +303,8 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
     self.lastTappedIndexPath = indexPath;
     MUFormBaseCell *cell = (MUFormBaseCell *)[tableView cellForRowAtIndexPath:indexPath];
     MUAssert([cell isKindOfClass:[MUFormBaseCell class]], @"Expected cell type MUFormBaseCell was %@",cell);
@@ -315,19 +317,21 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
     if ([segueIdentifier length] > 0) {
         [self performSegueWithIdentifier:segueIdentifier sender:cell];
     }
-    else {
-        if ([cell conformsToProtocol:@protocol(MUFormNextTextResponder)]) {
-            [cell becomeFirstResponder];
-        }
-        else if ([cell isKindOfClass:[MUFormTimeCell class]]) {
-            MUFormTimeCell *timeCell = (MUFormTimeCell *)cell;
-            [self mu_handleTimeTapAtIndexPath:indexPath withTimeZone:timeCell.timeZone];
-        }
-        else if ([cell isKindOfClass:[MUFormRelativeDateCell class]]) {
-            [self mu_handleRelativeDateTapAtIndexpath:indexPath];
+    else if ([cell conformsToProtocol:@protocol(MUFormNextTextResponder)]) {
+        [cell becomeFirstResponder];
+    }
+    else if ([cell isKindOfClass:[MUFormTimeCell class]]) {
+        MUFormTimeCell *timeCell = (MUFormTimeCell *)cell;
+        [self mu_handleTimeTapAtIndexPath:indexPath withTimeZone:timeCell.timeZone];
+    }
+    else if ([cell isKindOfClass:[MUFormRelativeDateCell class]]) {
+        [self mu_handleRelativeDateTapAtIndexpath:indexPath];
+    }
+    else if ([cell isKindOfClass:[MUFormOptionCell class]]) {
+        if (cell.enabled && cell.accessoryType == UITableViewCellAccessoryNone) {
+            [self optionCellDidBecomeSelectedOptionCell:(MUFormOptionCell *)cell];
         }
     }
-    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -483,10 +487,15 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
         [self changeValue:defaultValue forItemAtIndexPath:indexPath];
     }
     
-    // This delay gives the table view time to perform the cell selection/deselection animation
+    // We use this delay to give the table view time to perform the cell selection/deselection animation.
+    // We prefer this over using +[CATransaction setCompletionBlock:] to reload at animation completion
+    // because the cell deselection animation ease-out is very gradual, making the reload look really slow.
     [self performBlock:^{
         NSArray *relatedOptionsCells = [self.dataSource indexPathsForPropertyWithName:rowInfo[MUFormPropertyNameKey]];
-        [self.tableView reloadRowsAtIndexPaths:relatedOptionsCells withRowAnimation:UITableViewRowAnimationNone];
+        for (NSIndexPath *relatedIndexPath in relatedOptionsCells) {
+            MUFormBaseCell *cell = (MUFormBaseCell *)[self.tableView cellForRowAtIndexPath:relatedIndexPath];
+            [self.dataSource reconfigureCell:cell atIndexPath:relatedIndexPath];
+        }
     } afterDelay:0.15];
 
 }

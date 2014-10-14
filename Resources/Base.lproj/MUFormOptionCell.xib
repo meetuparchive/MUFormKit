@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6249" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -37,6 +38,7 @@
                             <constraint firstAttribute="trailing" secondItem="12" secondAttribute="trailing" id="OOa-VS-Vt4"/>
                             <constraint firstItem="12" firstAttribute="top" secondItem="11" secondAttribute="top" constant="12" id="T4B-h1-yYC"/>
                             <constraint firstAttribute="bottom" secondItem="KWN-qE-WZS" secondAttribute="bottom" constant="10" id="cFY-wV-WfO"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="999" constant="44" id="clw-fy-d0c"/>
                             <constraint firstAttribute="trailing" secondItem="KWN-qE-WZS" secondAttribute="trailing" id="g50-pL-v5r"/>
                         </constraints>
                     </view>
