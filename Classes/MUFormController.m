@@ -487,12 +487,15 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
         [self changeValue:defaultValue forItemAtIndexPath:indexPath];
     }
     
-    // We use this delay gives the table view time to perform the cell selection/deselection animation.
+    // We use this delay to give the table view time to perform the cell selection/deselection animation.
     // We prefer this over using +[CATransaction setCompletionBlock:] to reload at animation completion
     // because the cell deselection animation ease-out is very gradual, making the reload look really slow.
     [self performBlock:^{
         NSArray *relatedOptionsCells = [self.dataSource indexPathsForPropertyWithName:rowInfo[MUFormPropertyNameKey]];
-        [self.tableView reloadRowsAtIndexPaths:relatedOptionsCells withRowAnimation:UITableViewRowAnimationNone];
+        for (NSIndexPath *relatedIndexPath in relatedOptionsCells) {
+            MUFormBaseCell *cell = (MUFormBaseCell *)[self.tableView cellForRowAtIndexPath:relatedIndexPath];
+            [self.dataSource reconfigureCell:cell atIndexPath:relatedIndexPath];
+        }
     } afterDelay:0.15];
 
 }

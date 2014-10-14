@@ -601,12 +601,20 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSMutableDictionary *rowInfo = [self mu_rowInfoForItemAtIndexPath:indexPath];
+    NSDictionary *rowInfo = [self rowInfoForItemAtIndexPath:indexPath];
     NSString *cellIdentifier = rowInfo[MUFormCellIdentifierKey];
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
-
     if ([cell isKindOfClass:[MUFormBaseCell class]]) {
+        [self reconfigureCell:(MUFormBaseCell *)cell atIndexPath:indexPath];
+    }
+    
+    return cell;
+}
+
+- (void)reconfigureCell:(MUFormBaseCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+    if ([cell isKindOfClass:[MUFormBaseCell class]]) {
+        NSMutableDictionary *rowInfo = [self mu_rowInfoForItemAtIndexPath:indexPath];
         
         id value = [self valueForItemAtIndexPath:indexPath];
         rowInfo[MUFormCellAttributeValuesKey] = [self mu_cellAttributeValuesForItemAtIndexPath:indexPath];
@@ -615,11 +623,9 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
             self.configureCellBlock(indexPath, (MUFormBaseCell *)cell, value, rowInfo);
         }
         else {
-            [(MUFormBaseCell *)cell configureWithValue:value info:rowInfo];
+            [cell configureWithValue:value info:rowInfo];
         }
     }
-    
-    return cell;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section

@@ -158,6 +158,15 @@ typedef void (^ConfigureCellBlock)(NSIndexPath *indexPath, MUFormBaseCell *cell,
 /// Disable the main UIControl on the cell.
 - (void)setEnabled:(BOOL)isEnabled forCell:(MUFormBaseCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 
+/**
+ In an ideal world, this method would be unnecesary, and you'd use
+ -[UITableView reloadRowsAtIndexPaths:withRowAnimation:] instead of this method.
+ 
+ Unfortunately, this is the real world, and that method causes cell flickering
+ on iPhone 6 Plus when used with iOS 8 self-sizing cells. :-(
+ */
+- (void)reconfigureCell:(MUFormBaseCell *)cell atIndexPath:(NSIndexPath *)indexPath;
+
 ///-------------------------------------------------------------------
 /// @name Getting & Setting Section Information
 ///-------------------------------------------------------------------
@@ -252,7 +261,6 @@ typedef void (^ConfigureCellBlock)(NSIndexPath *indexPath, MUFormBaseCell *cell,
 
 /// Returns an array of all of the NSIndexPaths that affect a model property.
 - (NSArray *)indexPathsForPropertyWithName:(NSString *)property;
-
 
 ///-------------------------------------------------------------------
 /// @name Validation
