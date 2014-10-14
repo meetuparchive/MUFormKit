@@ -16,11 +16,47 @@ static CGFloat const MUDefaultCheckMarkAccessoryWidth = 38.5;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *staticLabelTrailingSpaceConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *messageLabelTrailingSpaceConstraint;
 
+@property (assign, nonatomic, getter=isAnimating) BOOL animating;
+@property (copy, nonatomic) void(^selectedAnimationCompletion)();
 @end
 
 @implementation MUFormOptionCell
 
 #pragma mark - Overrides -
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+    if (!selected && animated) {
+        self.animating = YES;
+        
+        // This block will be run at the end of the selected animation.
+        [CATransaction setCompletionBlock:^{
+            self.animating = NO;
+            if (self.selectedAnimationCompletion) {
+                self.selectedAnimationCompletion();
+                self.selectedAnimationCompletion = NULL;
+            }
+        }];
+    }
+    
+    [super setSelected:selected animated:animated];
+}
+
+- (void)setEnabled:(BOOL)enabled {
+    [super setEnabled:enabled];
+
+    __weak __typeof__(self) weakSelf = self;
+    void (^setStyle)() = ^{
+        weakSelf.selectionStyle = enabled ? UITableViewCellSelectionStyleDefault : UITableViewCellSelectionStyleNone;
+    };
+    
+    if (self.isAnimating) {
+        self.selectedAnimationCompletion = setStyle;
+    }
+    else {
+        setStyle();
+    }
+}
+
 
 - (void)configureWithValue:(id)value info:(NSDictionary *)info
 {
