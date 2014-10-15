@@ -1,0 +1,18 @@
+{
+  "MUFormMetadataKey": {
+    "MUFormLocalizedMetadataTitleKey": "Home"
+  }, 
+  "MUFormSectionsKey": [
+    {
+      "MUFormSectionRowsKey": [
+        {
+          "MUFormCellAccessoryTypeKey": 1, 
+          "MUFormCellClassKey": "MUFormToFormSegueCell",
+          "MUFormCellIdentifierKey": "form-to-form-segue-cell",
+          "MUFormCellSegueIdentifierKey": "resizeable-cells-segue",
+          "MUFormLocalizedStaticTextKey" : "Resizeable cells",
+        },
+      ]
+    }
+  ]
+}
