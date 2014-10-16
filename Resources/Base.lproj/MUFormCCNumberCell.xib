@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6249" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -17,11 +17,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jee-ro-y5A" userLabel="Container View">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Validation message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAf-ug-dfA" userLabel="Label - Validation">
-                                <rect key="frame" x="60" y="51" width="245" height="17"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="17" id="bAL-Ne-9Hq"/>
-                                </constraints>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Validation message" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAf-ug-dfA" userLabel="Label - Validation">
+                                <rect key="frame" x="55" y="54" width="250" height="14"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                 <color key="textColor" red="0.87843137250000003" green="0.22352941179999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -56,6 +53,7 @@
                             <constraint firstItem="H7X-vc-EOz" firstAttribute="centerY" secondItem="2qL-D1-SWT" secondAttribute="centerY" id="2ga-i2-Ylw"/>
                             <constraint firstAttribute="bottom" secondItem="vAf-ug-dfA" secondAttribute="bottom" constant="8" id="KCQ-VV-qYH"/>
                             <constraint firstItem="H7X-vc-EOz" firstAttribute="leading" secondItem="Jee-ro-y5A" secondAttribute="leading" constant="15" id="XrG-nA-7aU"/>
+                            <constraint firstItem="vAf-ug-dfA" firstAttribute="top" secondItem="2qL-D1-SWT" secondAttribute="bottom" id="fUR-3o-twn"/>
                             <constraint firstItem="2qL-D1-SWT" firstAttribute="top" secondItem="JA5-fq-JIW" secondAttribute="bottom" id="gus-XI-7Ub"/>
                             <constraint firstItem="JA5-fq-JIW" firstAttribute="top" secondItem="Jee-ro-y5A" secondAttribute="top" constant="7" id="hEt-eX-YJ3"/>
                             <constraint firstItem="2qL-D1-SWT" firstAttribute="leading" secondItem="vAf-ug-dfA" secondAttribute="leading" id="qub-sb-JfG"/>
