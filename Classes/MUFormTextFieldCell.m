@@ -87,7 +87,7 @@
         self.textField.text = value;
     }
     
-    NSString *formLabelKey = info[MUFormLocalizedLabelKey];
+    NSString *formLabelKey = info[MUFormLocalizedStaticTextKey];
     self.label.text = [[NSBundle mainBundle] localizedStringForKey:formLabelKey value:formLabelKey table:MUFormKitStringTable];
 
     NSArray *validationMessages = info[MUValidationMessagesKey];

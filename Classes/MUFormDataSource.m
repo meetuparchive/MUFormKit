@@ -52,7 +52,6 @@ NSString *const MUFormUITextAutocorrectionTypeKey       = @"MUFormUITextAutocorr
 NSString *const MUFormUIKeyboardTypeKey                 = @"MUFormUIKeyboardTypeKey";
 NSString *const MUFormUIReturnKeyTypeKey                = @"MUFormUIReturnKeyTypeKey";
 NSString *const MUFormUITextAutocapitalizationTypeKey   = @"MUFormUITextAutocapitalizationTypeKey";
-NSString *const MUFormLocalizedLabelKey            		= @"MUFormLocalizedLabelKey";
 NSString *const MUFormLocalizedAccessibilityLabelKey    = @"MUFormLocalizedAccessibilityLabelKey";
 NSString *const MUFormLocalizedCellMessageKey           = @"MUFormLocalizedCellMessageKey";
 NSString *const MUFormCellSegueIdentifierKey            = @"MUFormCellSegueIdentifierKey";
