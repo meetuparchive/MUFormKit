@@ -141,9 +141,6 @@ extern NSString *const MUFormUIReturnKeyTypeKey;
 /** The UITextAutocapitalizationType for cells with text fields */
 extern NSString *const MUFormUITextAutocapitalizationTypeKey;
 
-/** A localized key for a label to assign to the forms cell */
-extern NSString *const MUFormLocalizedLabelKey;
-
 /** An accessibility label to assign to the dominant item in the form cell */
 extern NSString *const MUFormLocalizedAccessibilityLabelKey;
 
