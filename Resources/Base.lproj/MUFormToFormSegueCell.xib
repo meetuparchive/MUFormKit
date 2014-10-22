@@ -15,10 +15,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P3X-dC-vit" userLabel="Container View">
-                        <rect key="frame" x="0.0" y="0.0" width="342" height="60.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="342" height="60"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalCompressionResistancePriority="751" text="Push Cell" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" preferredMaxLayoutWidth="254" translatesAutoresizingMaskIntoConstraints="NO" id="7" customClass="MUMultiLineLabel">
-                                <rect key="frame" x="60" y="10" width="249" height="25.5"/>
+                                <rect key="frame" x="60" y="12" width="249" height="22"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" white="0.050467609490000002" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -30,7 +30,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42">
-                                <rect key="frame" x="60" y="35" width="249" height="15.5"/>
+                                <rect key="frame" x="60" y="34" width="249" height="16"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                 <color key="textColor" white="0.55762431569343063" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="highlightedColor" white="0.55545734489051091" alpha="1" colorSpace="calibratedWhite"/>
@@ -48,6 +48,7 @@
                             <constraint firstItem="2AY-bJ-sOo" firstAttribute="leading" secondItem="7" secondAttribute="trailing" constant="10" id="3kU-Ix-l7a"/>
                             <constraint firstAttribute="centerY" secondItem="2AY-bJ-sOo" secondAttribute="centerY" id="60N-Ey-gta"/>
                             <constraint firstAttribute="trailing" secondItem="2AY-bJ-sOo" secondAttribute="trailing" id="IC8-O3-M7R"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="JTv-tb-97M"/>
                             <constraint firstItem="2AY-bJ-sOo" firstAttribute="leading" secondItem="42" secondAttribute="trailing" constant="10" id="LgU-Om-kLY"/>
                             <constraint firstItem="42" firstAttribute="leading" secondItem="7" secondAttribute="leading" id="SYg-nc-Ku4"/>
                             <constraint firstItem="7" firstAttribute="leading" secondItem="8Br-Aq-kND" secondAttribute="trailing" constant="15" id="UgY-Zw-Mpf"/>
@@ -55,7 +56,7 @@
                             <constraint firstAttribute="bottom" secondItem="42" secondAttribute="bottom" constant="10" id="ddy-BQ-OEj"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="999" constant="44" id="fv9-h2-ntC"/>
                             <constraint firstAttribute="centerY" secondItem="8Br-Aq-kND" secondAttribute="centerY" id="lZm-l8-FqY"/>
-                            <constraint firstItem="7" firstAttribute="top" secondItem="P3X-dC-vit" secondAttribute="top" constant="10" id="siW-E8-8fX"/>
+                            <constraint firstItem="7" firstAttribute="top" secondItem="P3X-dC-vit" secondAttribute="top" constant="12" id="siW-E8-8fX"/>
                             <constraint firstItem="42" firstAttribute="top" secondItem="7" secondAttribute="bottom" id="yGd-JW-xLH"/>
                         </constraints>
                     </view>

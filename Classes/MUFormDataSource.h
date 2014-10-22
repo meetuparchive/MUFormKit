@@ -86,6 +86,7 @@ typedef void (^ConfigureCellBlock)(NSIndexPath *indexPath, MUFormBaseCell *cell,
  Sets a configuration block for table view cells.
  
  @param cellConfigureBlock A block object to be executed when the table view requests a cell.
+ @warning Setting this block with prevent the default `configureWithValue:info` method from being called
  @see `ConfigureCellBlock`
  */
 - (void)setCellConfigureBlock:(ConfigureCellBlock)cellConfigureBlock;
