@@ -57,15 +57,6 @@ static CGFloat const kMUErrorLabelHeight = 20.0;
     return self;
 }
 
-- (void)awakeFromNib
-{
-    [super awakeFromNib];
-    
-    if (!self.containerView) return;
-    
-    [self setNeedsUpdateConstraints];
-}
-
 - (void)configureWithValue:(id)value info:(NSDictionary *)info
 {
     /** Override this in subclasses and call super. */

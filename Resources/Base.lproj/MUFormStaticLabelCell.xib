@@ -49,7 +49,6 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="containerView" destination="6" id="18"/>
                 <outlet property="iconView" destination="8" id="20"/>
                 <outlet property="iconViewWidthConstraint" destination="16" id="21"/>
                 <outlet property="staticLabel" destination="tCd-U8-nqq" id="19"/>

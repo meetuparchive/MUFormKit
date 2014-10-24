@@ -51,8 +51,6 @@ extern NSString *const MUFormCellTimeZoneKey;
 /// Enable or disable the main UIControl of the cell. The default value is YES.
 @property (nonatomic, assign, getter=isEnabled) BOOL enabled;
 
-/** Container for for all form UI elements*/
-@property (weak, nonatomic) IBOutlet UIView *containerView;
 
 ///-------------------------------------------------------------------
 /// @name Class Methods
@@ -76,8 +74,6 @@ extern NSString *const MUFormCellTimeZoneKey;
 ///-------------------------------------------------------------------
 /// @name Instance Methods
 ///-------------------------------------------------------------------
-
-- (void)awakeFromNib NS_REQUIRES_SUPER;
 
 /**
  Configures the cell.
