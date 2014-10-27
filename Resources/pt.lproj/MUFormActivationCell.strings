@@ -2,8 +2,8 @@
 "RcS-cj-RR1.text" = "Célula de alternância Form";
 
 /* Class = "IBUILabel"; text = "Switch cell"; ObjectID = "nwr-37-myd"; */
-"nwr-37-myd.text" = "Célula chave\n";
+"nwr-37-myd.text" = "Célula chave";
 
 /* Class = "IBUILabel"; text = "Label"; ObjectID = "tA4-f4-Afd"; */
-"tA4-f4-Afd.text" = "Etiqueta\n";
+"tA4-f4-Afd.text" = "Etiqueta";
 
