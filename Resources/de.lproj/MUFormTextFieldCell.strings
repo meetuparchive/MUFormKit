@@ -4,6 +4,9 @@
 /* Class = "IBUILabel"; text = "Validation message"; ObjectID = "XDX-KN-PAG"; */
 "XDX-KN-PAG.text" = "Bestätigungs-Nachricht";
 
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "h9d-pm-a35"; */
+"h9d-pm-a35.text" = "Tag";
+
 /* Class = "IBUILabel"; text = "Label"; ObjectID = "okl-ii-fmt"; */
 "okl-ii-fmt.text" = "Tag";
 
