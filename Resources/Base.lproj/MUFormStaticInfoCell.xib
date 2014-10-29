@@ -51,7 +51,6 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="containerView" destination="5Ag-oL-CLT" id="Ywl-fq-XkM"/>
                 <outlet property="iconView" destination="lhY-r8-AMd" id="iQf-gN-MhZ"/>
                 <outlet property="iconViewWidthConstraint" destination="KeY-Qy-zhq" id="14f-wq-B0f"/>
                 <outlet property="staticLabel" destination="NSg-rX-0cf" id="syz-z9-Ync"/>

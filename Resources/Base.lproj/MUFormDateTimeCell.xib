@@ -57,7 +57,6 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="containerView" destination="6" id="23"/>
                 <outlet property="dateLabel" destination="IWk-5U-mqH" id="24"/>
                 <outlet property="indicatorImage" destination="9" id="26"/>
                 <outlet property="timeLabel" destination="Es5-yR-S6v" id="25"/>

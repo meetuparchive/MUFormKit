@@ -50,7 +50,6 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="containerView" destination="MiR-cT-gWc" id="xGw-fW-b4V"/>
                 <outlet property="messageLabel" destination="QKK-zW-uof" id="O8N-M2-DOO"/>
                 <outlet property="relativeDateLabel" destination="KzH-ad-lBd" id="d45-RR-Vyk"/>
             </connections>

@@ -68,7 +68,6 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="containerView" destination="6" id="28"/>
                 <outlet property="messageLabel" destination="bXX-mP-1S4" id="31"/>
                 <outlet property="numberField" destination="9" id="29"/>
                 <outlet property="staticLabel" destination="5MY-TB-vBj" id="30"/>

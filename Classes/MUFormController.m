@@ -152,13 +152,7 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
     _dataSource = dataSource;
     
     __weak __typeof__(self) weakSelf = self;
-    [self.dataSource setCellConfigureBlock:^(NSIndexPath *indexPath, MUFormBaseCell *cell, id value, NSDictionary *itemInfo) {
-        
-        // Cell separators [iOS 7 style]
-        NSInteger rowCount = [weakSelf.dataSource numberOfRowsInSection:indexPath.section];
-        cell.firstInSection = (indexPath.row == 0);
-        cell.lastInSection = (indexPath.row == rowCount - 1);
-        
+    [self.dataSource setCellConfigureBlock:^(NSIndexPath *indexPath, MUFormBaseCell *cell, id value, NSDictionary *itemInfo) {        
         [cell configureWithValue:value info:itemInfo];
         cell.delegate = weakSelf;
     }];

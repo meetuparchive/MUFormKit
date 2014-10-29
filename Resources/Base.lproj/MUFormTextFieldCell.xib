@@ -72,7 +72,6 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="containerView" destination="Pnv-Xz-aWL" id="o31-6s-PFB"/>
                 <outlet property="iconView" destination="ykz-ev-x2A" id="dCW-Ai-bqF"/>
                 <outlet property="iconViewHeightConstraint" destination="ofB-QX-PFc" id="jQE-tn-EMN"/>
                 <outlet property="iconViewLabelLeadingHorizontalConstraint" destination="G5X-yw-s5I" id="bbF-wT-QXG"/>
