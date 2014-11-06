@@ -8,33 +8,26 @@
 
 #import "MUFormTextViewCell.h"
 
-static CGFloat kMUCellHeight = 120.0;
-static CGFloat kMUErrorLabelHeight = 20.0;
-static CGFloat const kMUFormTextViewCellEstimatedHeight = 140.0;
+@interface MUFormTextViewCell ()
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *validationMarginConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *titleMarginContstraint;
+@property (nonatomic, assign) CGFloat titleMarginConstraintConstant;
+@property (nonatomic, assign) CGFloat validationMarginConstraintConstant;
+@end
 
 @implementation MUFormTextViewCell
 
 #pragma mark - Overrides -
-
-+ (CGFloat)estimatedCellHeight
-{
-    return kMUFormTextViewCellEstimatedHeight;
-}
-
-+ (CGFloat)heightForTableView:(UITableView*)tableView value:(id)value info:(NSDictionary *)info
-{
-    CGFloat height = kMUCellHeight;
-    if (info[MUValidationMessagesKey]) {
-        height += kMUErrorLabelHeight;
-    }
-    return height;
-}
 
 - (void)awakeFromNib
 {
     [super awakeFromNib];
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.textView.delegate = self;
+    self.titleMarginConstraintConstant = self.titleMarginContstraint.constant;
+    self.validationMarginConstraintConstant = self.validationMarginConstraint.constant;
+    self.textView.minimumNumberOfLines = 3.0f;
+    self.textView.maximumNumberOfLines = 3.0f;
 }
 
 - (void)dealloc {
@@ -72,6 +65,17 @@ static CGFloat const kMUFormTextViewCellEstimatedHeight = 140.0;
         self.textView.attributedPlaceholder = [[NSAttributedString alloc] initWithString:localizedString
                                                                               attributes:attributes];
     }
+    
+    NSString *staticLabelKey = info[MUFormLocalizedStaticTextKey];
+    NSString *staticLabelString = [[NSBundle mainBundle] localizedStringForKey:staticLabelKey value:staticLabelKey table:MUFormKitStringTable];
+    if ([staticLabelString length] > 0) {
+        self.titleLabel.text = staticLabelString;
+        self.titleMarginContstraint.constant = self.titleMarginConstraintConstant;
+    }
+    else {
+        self.titleLabel.text = nil;
+        self.titleMarginContstraint.constant = 0.0f;
+    }
 
     if (info[MUFormLocalizedAccessibilityLabelKey]) {
         NSString *accessibilityLabelKey = info[MUFormLocalizedAccessibilityLabelKey];
@@ -82,10 +86,11 @@ static CGFloat const kMUFormTextViewCellEstimatedHeight = 140.0;
     NSArray *validationMessages = info[MUValidationMessagesKey];
     if ([validationMessages count] > 0) {
         self.messageLabel.text = validationMessages[0];
-        self.messageLabel.hidden = NO;
+        self.validationMarginConstraint.constant = self.validationMarginConstraintConstant;
     }
     else {
-        self.messageLabel.hidden = YES;
+        self.messageLabel.text = nil;
+        self.validationMarginConstraint.constant = 0.0f;
     }
 
     self.textView.editable = ![info[MUFormCellIsDisabledKey] boolValue];
