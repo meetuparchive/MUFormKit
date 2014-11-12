@@ -21,4 +21,6 @@
 
 - (void)awakeFromNib NS_REQUIRES_SUPER;
 
+@property (weak, nonatomic) IBOutlet UILabel *staticLabel;
+
 @end

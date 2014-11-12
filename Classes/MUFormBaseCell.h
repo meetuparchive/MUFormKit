@@ -19,7 +19,7 @@ extern NSString *const MUFormCellTimeZoneKey;
 
 @protocol MUFormNextTextResponder, MUFormCellDelegate;
 
-@class MUFormDateTimeCell, MUFormTimePickerCell, MUFormTextFieldCell, MUFormTextViewCell, MUFormNumberFieldCell, MUFormOptionCell, MUFormSwitchCell, MUFormActivationCell;
+@class MUFormDateTimeCell, MUFormTimePickerCell, MUFormTextFieldCell, MUFormTextViewCell, MUFormNumberFieldCell, MUFormOptionCell, MUFormSwitchCell, MUFormActivationCell, MUFormPhotoAddingCell;
 
 @interface MUFormBaseCell : UITableViewCell
 
@@ -218,6 +218,9 @@ extern NSString *const MUFormCellTimeZoneKey;
  */
 - (void)formActivationCell:(MUFormActivationCell *)sender didChangeValue:(BOOL)selected;
 
+
+/// Tells the delegate that an image for this cell has been chosen.
+- (void)photoAddingCell:(MUFormPhotoAddingCell *)sender didPickImage:(UIImage *)image;
 @end
 
 

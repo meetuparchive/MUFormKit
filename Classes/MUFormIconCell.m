@@ -43,7 +43,13 @@
     
     NSString *iconName = info[MUFormCellIconNameKey];
     NSString *iconURLString = info[MUFormCellIconURLStringKey];
-    if ([iconURLString length] > 0) {
+    if ([value isKindOfClass:[UIImage class]]) {
+        self.iconView.image = value;
+        self.iconViewLabelLeadingHorizontalConstraint.constant = self.iconViewLabelLeadingHorizontalConstraintConstant;
+        self.iconViewWidthConstraint.constant = self.iconViewWidthConstant;
+        self.iconViewHeightConstraint.constant = self.iconViewHeightConstant;
+    }
+    else if ([iconURLString length] > 0) {
         UIImage *placeholder = ([iconName length] > 0) ? [UIImage imageNamed:iconName] : nil;
         [self.iconView setMeetupUrl:[NSURL URLWithString:iconURLString] placeHolderImage:placeholder];
         self.iconViewLabelLeadingHorizontalConstraint.constant = self.iconViewLabelLeadingHorizontalConstraintConstant;
@@ -66,6 +72,9 @@
 
     CGFloat leftInset = self.iconViewSuperviewHorizontalConstraint.constant + self.iconViewWidthConstraint.constant + self.iconViewLabelLeadingHorizontalConstraint.constant;
     [self setSeparatorInset:UIEdgeInsetsMake(0.0f, leftInset, 0.0f, 0.0f)];
+    
+    NSString *localizedKey = info[MUFormLocalizedStaticTextKey];
+    self.staticLabel.text = [[NSBundle mainBundle] localizedStringForKey:localizedKey value:localizedKey table:MUFormKitStringTable];
 }
 
 @end

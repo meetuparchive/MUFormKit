@@ -23,6 +23,4 @@ extern NSString *const MUFormSubformValuePropertyNameKey;
  */
 @interface MUFormToFormSegueCell : MUFormIconCell
 
-@property (weak, nonatomic) IBOutlet UILabel *staticLabel;
-
 @end
