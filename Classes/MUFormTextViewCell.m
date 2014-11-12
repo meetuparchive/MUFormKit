@@ -89,7 +89,7 @@
         self.validationMarginConstraint.constant = self.validationMarginConstraintConstant;
     }
     else {
-        self.messageLabel.text = nil;
+        self.messageLabel.text = @"";
         self.validationMarginConstraint.constant = 0.0f;
     }
 
