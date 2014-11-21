@@ -31,6 +31,7 @@ extern NSString *const MUValidationMessagesKey;
 
 typedef NS_ENUM(NSInteger, MUValidationErrorType) {
     MUValidationUnknownError        = 0,
+    MUValidationMissingMandatoryPropertyError = NSValidationMissingMandatoryPropertyError,
     MUValidationMultipleErrorsError = NSValidationMultipleErrorsError,
     MUValidationDateTooSoonError    = NSValidationDateTooSoonError,
     MUValidationDateTooLateError    = NSValidationDateTooLateError,
