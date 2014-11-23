@@ -155,6 +155,11 @@ typedef void (^ConfigureCellBlock)(NSIndexPath *indexPath, MUFormBaseCell *cell,
  */
 -(void) tableView:(UITableView *)tableView updateEnabledSectionsWithIndexPath:(NSIndexPath*)indexPath;
 
+/**
+ Signals to update tableview sections which were dependent on a specific property
+ 
+ */
+- (void)tableView:(UITableView *)tableView updateEnabledSectionsWithDependencyPropertyName:(NSString *)propertyName;
 
 /// Disable the main UIControl on the cell.
 - (void)setEnabled:(BOOL)isEnabled forCell:(MUFormBaseCell *)cell atIndexPath:(NSIndexPath *)indexPath;
