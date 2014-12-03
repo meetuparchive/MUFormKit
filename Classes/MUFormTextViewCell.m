@@ -8,9 +8,11 @@
 
 #import "MUFormTextViewCell.h"
 
+static const CGFloat MUFormTextViewNumberOfLines = 3.0f;
+
 @interface MUFormTextViewCell ()
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *validationMarginConstraint;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *titleMarginContstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *titleMarginConstraint;
 @property (nonatomic, assign) CGFloat titleMarginConstraintConstant;
 @property (nonatomic, assign) CGFloat validationMarginConstraintConstant;
 @end
@@ -24,10 +26,10 @@
     [super awakeFromNib];
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.textView.delegate = self;
-    self.titleMarginConstraintConstant = self.titleMarginContstraint.constant;
+    self.titleMarginConstraintConstant = self.titleMarginConstraint.constant;
     self.validationMarginConstraintConstant = self.validationMarginConstraint.constant;
-    self.textView.minimumNumberOfLines = 3.0f;
-    self.textView.maximumNumberOfLines = 3.0f;
+    self.textView.minimumNumberOfLines = MUFormTextViewNumberOfLines;
+    self.textView.maximumNumberOfLines = MUFormTextViewNumberOfLines;
 }
 
 - (void)dealloc {
@@ -70,11 +72,11 @@
     NSString *staticLabelString = [[NSBundle mainBundle] localizedStringForKey:staticLabelKey value:staticLabelKey table:MUFormKitStringTable];
     if ([staticLabelString length] > 0) {
         self.titleLabel.text = staticLabelString;
-        self.titleMarginContstraint.constant = self.titleMarginConstraintConstant;
+        self.titleMarginConstraint.constant = self.titleMarginConstraintConstant;
     }
     else {
         self.titleLabel.text = nil;
-        self.titleMarginContstraint.constant = 0.0f;
+        self.titleMarginConstraint.constant = 0.0f;
     }
 
     if (info[MUFormLocalizedAccessibilityLabelKey]) {

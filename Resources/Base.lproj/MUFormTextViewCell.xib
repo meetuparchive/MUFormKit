@@ -63,7 +63,7 @@
                 <outlet property="messageLabel" destination="NA0-c5-jwI" id="gb3-fk-zWR"/>
                 <outlet property="textView" destination="2nS-x8-YeX" id="jGV-DV-a0j"/>
                 <outlet property="titleLabel" destination="5u6-y5-9uu" id="Pms-kj-s6u"/>
-                <outlet property="titleMarginContstraint" destination="isi-ys-oqc" id="AGV-5d-B18"/>
+                <outlet property="titleMarginConstraint" destination="isi-ys-oqc" id="M1I-hi-AIg"/>
                 <outlet property="validationMarginConstraint" destination="YMt-D8-drG" id="cdP-vW-Z1R"/>
             </connections>
             <point key="canvasLocation" x="329" y="238.5"/>
