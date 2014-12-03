@@ -10,6 +10,7 @@
 #import "MUFormKit.h"
 #import "MUFormDataSource.h"
 #import "MURelativeDatePickerController.h"
+#import "MUPhotoAddingController.h"
 
 static CGFloat const kMUDefaulSectionHeaderHeight = 17.0;
 static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
@@ -21,7 +22,7 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
 
 /// To give correct estimates for cells that have been displayed but are now offscreen (from user scrolling down)
 @property (nonatomic, strong) NSMutableDictionary *cellHeightForDisplayedCells;
-
+@property (nonatomic, strong) MUPhotoAddingController *photoAddingController;
 
 @end
 
@@ -326,6 +327,16 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
             [self optionCellDidBecomeSelectedOptionCell:(MUFormOptionCell *)cell];
         }
     }
+    else if ([cell isKindOfClass:[MUFormPhotoAddingCell class]]) {
+        MUFormPhotoAddingCell *photoCell = (MUFormPhotoAddingCell *)cell;
+        if (photoCell.enabled) {
+            MUPhotoAddingController *controller = [[MUPhotoAddingController alloc] initWithType:MUPhotoAddingControllerTypeAskUser
+                                                                           parentViewController:self];
+            controller.delegate = photoCell;
+            [controller show];
+            self.photoAddingController = controller;
+        }
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -506,6 +517,11 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
     NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
     [self changeValue:@(selected) forItemAtIndexPath:indexPath];
     [self.dataSource tableView:self.tableView updateEnabledSectionsWithIndexPath:indexPath];
+}
+
+- (void)photoAddingCell:(MUFormPhotoAddingCell *)sender didPickImage:(UIImage *)image {
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+    [self changeValue:image forItemAtIndexPath:indexPath];
 }
 
 @end
