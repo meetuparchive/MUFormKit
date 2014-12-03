@@ -325,12 +325,14 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
     return [self.mutableTextInputIndexPaths sortedArrayUsingSelector:@selector(compare:)];
 }
 
--(void) tableView:(UITableView *)tableView updateEnabledSectionsWithIndexPath:(NSIndexPath*)indexPath
-{
+- (void)tableView:(UITableView *)tableView updateEnabledSectionsWithIndexPath:(NSIndexPath*)indexPath {
     NSString *dependencyPropertyName = [self rowInfoForItemAtIndexPath:indexPath][MUFormDependencyPropertyNameKey];
     NSString *propertyName = dependencyPropertyName ?: [self rowInfoForItemAtIndexPath:indexPath][MUFormPropertyNameKey];
     MUAssert(propertyName, @"Expected property name for indexpath %@",indexPath);
-    
+    [self tableView:tableView updateEnabledSectionsWithDependencyPropertyName:propertyName];
+}
+
+- (void)tableView:(UITableView *)tableView updateEnabledSectionsWithDependencyPropertyName:(NSString *)propertyName {
     NSMutableSet *sectionsToShowOrHide = [NSMutableSet set];
     NSMutableSet *sectionsWithHeaderFooterChanges = [NSMutableSet set];
     [self enumerateSectionsUsingBlock:^(NSDictionary *sectionInfo, NSUInteger idx, BOOL *stop) {
@@ -361,6 +363,7 @@ NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
         }
         [tableView endUpdates];
     }
+    
 }
 
 - (void)setEnabled:(BOOL)isEnabled forCell:(MUFormBaseCell *)cell atIndexPath:(NSIndexPath *)indexPath {
