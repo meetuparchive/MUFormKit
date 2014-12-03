@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MUFormBaseCell.h"
-#import "SAMTextView.h"
+#import "MUFormDynamicHeightCell.h"
+#import "MUResizingTextView.h"
 
-@interface MUFormTextViewCell : MUFormBaseCell <UITextViewDelegate, MUFormNextTextResponder>
+@interface MUFormTextViewCell : MUFormDynamicHeightCell <MUResizingTextViewDelegate, MUFormNextTextResponder>
 
-@property (weak, nonatomic) IBOutlet SAMTextView *textView;
+@property (weak, nonatomic) IBOutlet MUResizingTextView *textView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 @end

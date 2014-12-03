@@ -28,9 +28,6 @@ NSString *const MUFormSubformValuePropertyNameKey = @"MUFormSubformValueProperty
 - (void)configureWithValue:(id)value info:(NSDictionary *)info
 {
     [super configureWithValue:value info:info];
-    NSString *localizedKey = info[MUFormLocalizedStaticTextKey];
-    self.staticLabel.text = [[NSBundle mainBundle] localizedStringForKey:localizedKey value:localizedKey table:MUFormKitStringTable];
-    
     self.messageLabel.text = nil;
     if (value) {
         MUAssert([value isKindOfClass:[NSString class]], @"Expected ‘value’ to be an NSString. It was: %@", [value class]);

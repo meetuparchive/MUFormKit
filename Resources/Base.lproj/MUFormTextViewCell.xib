@@ -1,50 +1,54 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="form-text-view-cell" rowHeight="140" id="vOC-Ol-TXg" customClass="MUFormTextViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="141"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="form-text-view-cell" rowHeight="100" id="vOC-Ol-TXg" customClass="MUFormTextViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="101"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vOC-Ol-TXg" id="0z4-su-CRx">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cxy-Q0-rbj" userLabel="Container View">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="100.5"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2nS-x8-YeX" customClass="SAMTextView">
-                                <rect key="frame" x="10" y="4" width="300" height="112"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2nS-x8-YeX" customClass="MUResizingTextView">
+                                <rect key="frame" x="10" y="34" width="300" height="34.5"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="112" id="k70-Qf-8fp"/>
-                                </constraints>
                                 <color key="textColor" white="0.050467609490000002" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Validation message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NA0-c5-jwI">
-                                <rect key="frame" x="15" y="115" width="290" height="17"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="17" id="N2w-PY-UAV"/>
-                                </constraints>
+                                <rect key="frame" x="15" y="78" width="290" height="14"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                 <color key="textColor" red="0.87843137250000003" green="0.22352941179999999" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text View Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="295" translatesAutoresizingMaskIntoConstraints="NO" id="5u6-y5-9uu" customClass="MUMultiLineLabel">
+                                <rect key="frame" x="15" y="10" width="295" height="19.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2nS-x8-YeX" firstAttribute="leading" secondItem="Cxy-Q0-rbj" secondAttribute="leading" constant="10" id="HIt-ap-lkL" userLabel="TextView-leading"/>
+                            <constraint firstItem="5u6-y5-9uu" firstAttribute="leading" secondItem="2nS-x8-YeX" secondAttribute="leading" constant="5" id="IC9-bI-Hxd"/>
                             <constraint firstAttribute="bottom" secondItem="NA0-c5-jwI" secondAttribute="bottom" constant="8" id="JEM-Gs-Agw"/>
-                            <constraint firstItem="2nS-x8-YeX" firstAttribute="top" secondItem="Cxy-Q0-rbj" secondAttribute="top" constant="4" id="aP5-bK-XXX"/>
+                            <constraint firstItem="NA0-c5-jwI" firstAttribute="top" secondItem="2nS-x8-YeX" secondAttribute="bottom" constant="10" id="YMt-D8-drG"/>
+                            <constraint firstItem="2nS-x8-YeX" firstAttribute="top" secondItem="5u6-y5-9uu" secondAttribute="bottom" constant="5" id="aib-og-4o6"/>
                             <constraint firstAttribute="trailing" secondItem="2nS-x8-YeX" secondAttribute="trailing" constant="10" id="glS-zS-fAi" userLabel="TextView-trailing"/>
+                            <constraint firstItem="5u6-y5-9uu" firstAttribute="top" secondItem="Cxy-Q0-rbj" secondAttribute="top" constant="10" id="isi-ys-oqc"/>
                             <constraint firstItem="NA0-c5-jwI" firstAttribute="leading" secondItem="Cxy-Q0-rbj" secondAttribute="leading" constant="15" id="lsw-es-NPU" userLabel="Message-leading"/>
                             <constraint firstAttribute="trailing" secondItem="NA0-c5-jwI" secondAttribute="trailing" constant="15" id="nV9-nd-kfq" userLabel="Message-trailing"/>
+                            <constraint firstItem="5u6-y5-9uu" firstAttribute="trailing" secondItem="2nS-x8-YeX" secondAttribute="trailing" id="rgg-1R-ZIz"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -56,9 +60,13 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="messageLabel" destination="NA0-c5-jwI" id="8Gl-AY-2lt"/>
+                <outlet property="messageLabel" destination="NA0-c5-jwI" id="gb3-fk-zWR"/>
                 <outlet property="textView" destination="2nS-x8-YeX" id="jGV-DV-a0j"/>
+                <outlet property="titleLabel" destination="5u6-y5-9uu" id="Pms-kj-s6u"/>
+                <outlet property="titleMarginConstraint" destination="isi-ys-oqc" id="M1I-hi-AIg"/>
+                <outlet property="validationMarginConstraint" destination="YMt-D8-drG" id="cdP-vW-Z1R"/>
             </connections>
+            <point key="canvasLocation" x="329" y="238.5"/>
         </tableViewCell>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

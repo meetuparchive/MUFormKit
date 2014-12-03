@@ -18,4 +18,5 @@
 #import "MUFormOptionCell.h"
 #import "MUFormSwitchCell.h"
 #import "MUFormActivationCell.h"
+#import "MUFormPhotoAddingCell.h"
 #import "MUFormConstants.h"
