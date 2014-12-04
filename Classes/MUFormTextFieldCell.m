@@ -80,6 +80,9 @@
     }
     
     NSNumber *secureTextEntry = info[MUFormCellSecureTextEntryEnabledKey];
+    if ([secureTextEntry boolValue]) {
+        self.textField.autocorrectionType = NO;
+    }
     self.textField.secureTextEntry = [secureTextEntry boolValue];
     
     if (value) {
