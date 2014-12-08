@@ -331,6 +331,7 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
         MUFormPhotoAddingCell *photoCell = (MUFormPhotoAddingCell *)cell;
         if (photoCell.enabled) {
             MUPhotoAddingController *controller = [[MUPhotoAddingController alloc] initWithType:MUPhotoAddingControllerTypeAskUser
+                                                                                     cameraType:MUPhotoAddingControllerCameraDeviceTypeFront
                                                                            parentViewController:self];
             controller.delegate = photoCell;
             [controller show];
