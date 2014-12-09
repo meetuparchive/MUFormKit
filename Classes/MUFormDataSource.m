@@ -68,9 +68,6 @@ NSString *const MUFormRowHeightKey                      = @"MUFormRowHeightKey";
 NSString *const MUFormCellSecureTextEntryEnabledKey     = @"MUFormCellSecureTextEntryEnabledKey";
 NSString *const MUFormCellIsDisabledKey                 = @"MUFormCellIsDisabledKey";
 
-// Form error constants definitions.
-NSString *const MUValidationErrorDomain = @"MUValidationErrorDomain";
-
 
 @interface MUFormDataSource ()
 
