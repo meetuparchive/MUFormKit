@@ -121,10 +121,16 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
         
         id value = [self.dataSource valueForItemAtIndexPath:indexPath];
         NSDictionary *info = [self.dataSource rowInfoForItemAtIndexPath:indexPath];
-        
-        [self.tableView beginUpdates];
+
         [cell configureWithValue:value info:info];
-        [self.tableView endUpdates];
+
+        // FIXME: There's a bug in iOS 8 where if you reload the last cell in a table view,
+        // it'll scroll to the top. This helps, but doesn't fix, this really annoying issue.
+        CGSize newSize = [cell systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+        if (!CGSizeEqualToSize(newSize, [cell frame].size)) {
+            [self.tableView beginUpdates];
+            [self.tableView endUpdates];
+        }
     }
     
     // Adjust the table view's content offset if necessary.
