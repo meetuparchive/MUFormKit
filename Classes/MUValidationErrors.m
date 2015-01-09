@@ -9,6 +9,8 @@
 #import "MUValidationErrors.h"
 #import "NSError+MUValidation.h"
 
+NSString * const MUValidationErrorDomain = @"MUValidationErrorDomain";
+
 ///If Core Data validation error key available use it here
 #ifndef _COREDATADEFINES_H
 NSString * const MUValidationDetailedErrorsKey = @"MUValidationDetailedErrors";
