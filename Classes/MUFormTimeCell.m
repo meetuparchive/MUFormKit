@@ -9,6 +9,12 @@
 #import "MUFormTimeCell.h"
 
 @implementation MUFormTimeCell
+
+- (void)setFont:(UIFont *)font {
+    _font = font;
+    self.staticLabel.font = font;
+    self.timeLabel.font = font;
+}
     
 - (void)configureWithValue:(id)value info:(NSDictionary *)info
 {

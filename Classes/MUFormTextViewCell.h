@@ -12,6 +12,7 @@
 
 @interface MUFormTextViewCell : MUFormDynamicHeightCell <MUResizingTextViewDelegate, MUFormNextTextResponder>
 
+@property (strong, nonatomic) UIFont *font UI_APPEARANCE_SELECTOR;
 @property (weak, nonatomic) IBOutlet MUResizingTextView *textView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 

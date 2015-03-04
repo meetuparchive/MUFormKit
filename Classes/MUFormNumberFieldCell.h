@@ -11,6 +11,7 @@
 
 @interface MUFormNumberFieldCell : MUFormBaseCell <UITextFieldDelegate, MUFormNextTextResponder>
 
+@property (strong, nonatomic) UIFont *font UI_APPEARANCE_SELECTOR;
 @property (weak, nonatomic) IBOutlet UILabel *staticLabel;
 @property (weak, nonatomic) IBOutlet UITextField *numberField;
 

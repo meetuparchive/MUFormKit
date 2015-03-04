@@ -21,6 +21,7 @@
 
 - (void)awakeFromNib NS_REQUIRES_SUPER;
 
+@property (strong, nonatomic) UIFont *font UI_APPEARANCE_SELECTOR;
 @property (weak, nonatomic) IBOutlet UILabel *staticLabel;
 
 @end

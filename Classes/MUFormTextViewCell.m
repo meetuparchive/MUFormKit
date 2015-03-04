@@ -105,7 +105,12 @@ static const CGFloat MUFormTextViewNumberOfLines = 3.0f;
     return self.textView.editable;
 }
 
-
+#pragma mark - Properties -
+- (void)setFont:(UIFont *)font {
+    _font = font;
+    self.textView.font = font;
+    self.titleLabel.font = font;
+}
 
 #pragma mark - Text View Delegate -
 

@@ -14,7 +14,6 @@
 /** @name Appearance Proxy */
 
 @property (nonatomic) UITextBorderStyle borderStyle UI_APPEARANCE_SELECTOR;
-@property (nonatomic, strong) UIFont *font UI_APPEARANCE_SELECTOR;
 
 @property (weak, nonatomic) IBOutlet UILabel *label;
 @property (weak, nonatomic) IBOutlet UITextField *textField;

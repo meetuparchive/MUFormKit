@@ -32,6 +32,11 @@ static CGFloat const kMUHeightWithMessage = 56.0;
     return ([message length] > 0) ? kMUHeightWithMessage : kMUDefaultRowHeight;
 }
 
+- (void)setFont:(UIFont *)font {
+    _font = font;
+    self.relativeDateLabel.font = font;
+}
+
 - (void)configureWithValue:(id)value info:(NSDictionary *)info
 {
     [super configureWithValue:value info:info];

@@ -25,6 +25,11 @@ NSString *const MUFormSubformValuePropertyNameKey = @"MUFormSubformValueProperty
     self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 }
 
+- (void)setFont:(UIFont *)font {
+    [super setFont:font];
+    self.stateIndicatorLabel.font = font;
+}
+
 - (void)configureWithValue:(id)value info:(NSDictionary *)info
 {
     [super configureWithValue:value info:info];

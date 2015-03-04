@@ -33,6 +33,9 @@ extern NSString *const MUFormCellTimeZoneKey;
 /** Defines a text color for labels. */
 @property (nonatomic, strong) UIColor *textColor UI_APPEARANCE_SELECTOR;
 
+/** Defines the message label font. */
+@property (nonatomic, strong) UIFont *messageLabelFont UI_APPEARANCE_SELECTOR;
+
 /** An object conforming to the `MUFormCellDelegate` protocol. */
 @property (nonatomic, weak) id <MUFormCellDelegate> delegate;
 

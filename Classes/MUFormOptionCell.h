@@ -11,4 +11,6 @@
 
 @interface MUFormOptionCell : MUFormDynamicHeightCell
 
+@property (strong, nonatomic) UIFont *font UI_APPEARANCE_SELECTOR;
+
 @end

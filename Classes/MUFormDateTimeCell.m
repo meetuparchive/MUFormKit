@@ -17,6 +17,14 @@ static CGFloat const kMUDefaultRowHeight = 44.0;
     return kMUDefaultRowHeight;
 }
 
+#pragma mark - Properties -
+
+- (void)setFont:(UIFont *)font {
+    _font = font;
+    self.dateLabel.font = font;
+    self.timeLabel.font = font;
+}
+
 #pragma mark - Accessors -
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event

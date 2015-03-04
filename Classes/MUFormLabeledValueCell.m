@@ -18,6 +18,12 @@ CGFloat const MUFormAttributedTextCellHeight = 48.0f;
 
 @implementation MUFormLabeledValueCell
 
+- (void)setFont:(UIFont *)font {
+    _font = font;
+    self.cellLeftLabel.font = font;
+    self.cellRightLabel.font = font;
+}
+
 - (void)configureWithValue:(id)value info:(NSDictionary *)info
 {
     self.cellLeftLabel.text = [[NSBundle mainBundle] localizedStringForKey:info[MUFormLocalizedStaticTextKey] value:info[MUFormLocalizedStaticTextKey] table:MUFormKitStringTable];

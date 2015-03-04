@@ -65,6 +65,11 @@
     return self.numberField.isEnabled;
 }
 
+- (void)setFont:(UIFont *)font {
+    _font = font;
+    self.staticLabel.font = font;
+    self.numberField.font = font;
+}
 
 #pragma mark - Actions -
 

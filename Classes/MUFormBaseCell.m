@@ -77,4 +77,9 @@ static CGFloat const kMUErrorLabelHeight = 20.0;
     }
 }
 
+- (void)setMessageLabelFont:(UIFont *)messageLabelFont {
+    _messageLabelFont = messageLabelFont;
+    self.messageLabel.font = messageLabelFont;
+}
+
 @end

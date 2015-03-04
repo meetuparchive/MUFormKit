@@ -23,6 +23,12 @@
     [self.textField addTarget:self action:@selector(textFieldEditingChanged:) forControlEvents:UIControlEventEditingChanged];
 }
 
+- (void)setFont:(UIFont *)font {
+    [super setFont:font];
+    self.textField.font = font;
+    self.label.font = font;
+}
+
 - (void)dealloc {
     _textField.delegate = nil;
 }
@@ -121,7 +127,6 @@
         [self.delegate textInputCell:self textChanged:[self textFieldText]];
     }
 }
-
 
 #pragma mark - Text Field Delegate -
 
