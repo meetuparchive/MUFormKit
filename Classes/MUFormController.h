@@ -20,7 +20,7 @@
 /** Stored the last tapped index path. */
 @property (nonatomic, strong) NSIndexPath *lastTappedIndexPath;
 
-@property (nonatomic) MUNextResponderController *nextResponderController;
+@property (nonatomic, strong) MUNextResponderController *nextResponderController;
 
 @property (nonatomic, assign, readonly) BOOL isKeyboardShowing;
 
