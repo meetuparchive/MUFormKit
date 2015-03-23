@@ -110,6 +110,9 @@ static const CGFloat MUFormTextViewNumberOfLines = 3.0f;
     _font = font;
     self.textView.font = font;
     self.titleLabel.font = font;
+    // Necessary for updating the placeholder font
+    self.textView.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.textView.placeholder attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: self.defaultValueTextColor}];
+
 }
 
 #pragma mark - Text View Delegate -
