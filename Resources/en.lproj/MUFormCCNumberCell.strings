@@ -1,9 +1,9 @@
 
-/* Class = "IBUITextField"; placeholder = "Enter text"; ObjectID = "2qL-D1-SWT"; */
+/* Class = "UITextField"; placeholder = "Enter text"; ObjectID = "2qL-D1-SWT"; */
 "2qL-D1-SWT.placeholder" = "Enter text";
 
-/* Class = "IBUILabel"; text = "Label"; ObjectID = "JA5-fq-JIW"; */
+/* Class = "UILabel"; text = "Label"; ObjectID = "JA5-fq-JIW"; */
 "JA5-fq-JIW.text" = "Label";
 
-/* Class = "IBUILabel"; text = "Validation message"; ObjectID = "vAf-ug-dfA"; */
+/* Class = "UILabel"; text = "Validation message"; ObjectID = "vAf-ug-dfA"; */
 "vAf-ug-dfA.text" = "Validation message";

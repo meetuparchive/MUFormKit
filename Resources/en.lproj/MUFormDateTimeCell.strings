@@ -1,6 +1,6 @@
 
-/* Class = "IBUILabel"; text = "7:00 PM"; ObjectID = "Es5-yR-S6v"; */
+/* Class = "UILabel"; text = "7:00 PM"; ObjectID = "Es5-yR-S6v"; */
 "Es5-yR-S6v.text" = "7:00 PM";
 
-/* Class = "IBUILabel"; text = "Fri, June 21, 2013"; ObjectID = "IWk-5U-mqH"; */
+/* Class = "UILabel"; text = "Fri, June 21, 2013"; ObjectID = "IWk-5U-mqH"; */
 "IWk-5U-mqH.text" = "Fri, June 21, 2013";
