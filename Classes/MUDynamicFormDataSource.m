@@ -52,11 +52,11 @@ NSString *const MUFormSectionIndexedValueKeypathKey = @"MUFormSectionIndexedValu
         NSArray *addCellRows = [self.rawSections valueForKeyPath:[NSString stringWithFormat:@"@distinctUnionOfObjects.%@",MUFormSectionRowAddKey]];
         NSArray *rows = [prototypeRows arrayByAddingObjectsFromArray:addCellRows];
         
-        NSMutableDictionary *classesById = [NSMutableDictionary dictionaryWithDictionary:parentIdentifiers];
+        NSMutableDictionary *classesByID = [NSMutableDictionary dictionaryWithDictionary:parentIdentifiers];
         for (NSDictionary *rowInfo in rows) {
-            classesById[rowInfo[MUFormCellIdentifierKey]] = rowInfo[MUFormCellClassKey];
+            classesByID[rowInfo[MUFormCellIdentifierKey]] = rowInfo[MUFormCellClassKey];
         }
-        self.dynamicCellClassesByIdentifier = [classesById copy];
+        self.dynamicCellClassesByIdentifier = [classesByID copy];
     }
     return self.dynamicCellClassesByIdentifier;
 }

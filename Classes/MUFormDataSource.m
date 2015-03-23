@@ -91,11 +91,11 @@ NSString *const MUFormCellIsDisabledKey                 = @"MUFormCellIsDisabled
 {
     if (_cellClassesByIdentifier == nil) {
         NSArray *rows = [self.rawSections valueForKeyPath:[NSString stringWithFormat:@"@distinctUnionOfArrays.%@",MUFormSectionRowsKey]];
-        NSMutableDictionary *classesById = [NSMutableDictionary dictionaryWithCapacity:[rows count]];
+        NSMutableDictionary *classesByID = [NSMutableDictionary dictionaryWithCapacity:[rows count]];
         for (NSDictionary *rowInfo in rows) {
-            classesById[rowInfo[MUFormCellIdentifierKey]] = rowInfo[MUFormCellClassKey];
+            classesByID[rowInfo[MUFormCellIdentifierKey]] = rowInfo[MUFormCellClassKey];
         }
-        _cellClassesByIdentifier = [classesById copy];
+        _cellClassesByIdentifier = [classesByID copy];
     }
     return _cellClassesByIdentifier;
 }
