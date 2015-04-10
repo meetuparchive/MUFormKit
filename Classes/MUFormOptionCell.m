@@ -22,6 +22,13 @@ static CGFloat const MUDefaultCheckMarkAccessoryWidth = 38.5;
 
 @implementation MUFormOptionCell
 
+#pragma mark - Properties -
+
+- (void)setFont:(UIFont *)font {
+    _font = font;
+    self.staticLabel.font = font;
+}
+
 #pragma mark - Overrides -
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

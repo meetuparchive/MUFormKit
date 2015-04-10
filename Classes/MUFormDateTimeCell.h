@@ -11,6 +11,7 @@
 
 @interface MUFormDateTimeCell : MUFormBaseCell
 
+@property (strong, nonatomic) UIFont *font UI_APPEARANCE_SELECTOR;
 @property (weak, nonatomic) IBOutlet UIImageView *indicatorImage;
 @property (strong, nonatomic) IBOutlet UILabel *dateLabel;
 @property (strong, nonatomic) IBOutlet UILabel *timeLabel;

@@ -105,7 +105,16 @@ static const CGFloat MUFormTextViewNumberOfLines = 3.0f;
     return self.textView.editable;
 }
 
-
+#pragma mark - Properties -
+- (void)setFont:(UIFont *)font {
+    _font = font;
+    self.textView.font = font;
+    self.titleLabel.font = font;
+    // Necessary for updating the placeholder font, if it's set
+    if (self.textView.placeholder) {
+        self.textView.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.textView.placeholder attributes:@{NSFontAttributeName: font, NSForegroundColorAttributeName: self.defaultValueTextColor}];
+    }
+}
 
 #pragma mark - Text View Delegate -
 

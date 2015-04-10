@@ -10,6 +10,7 @@
 
 @interface MUFormSwitchCell : MUFormDynamicHeightCell
 
+@property (strong, nonatomic) UIFont *font UI_APPEARANCE_SELECTOR;
 @property (weak, nonatomic) IBOutlet UILabel *staticLabel;
 @property (strong, nonatomic) IBOutlet UISwitch *optionSwitch;
 

@@ -12,4 +12,7 @@
 extern CGFloat const MUFormAttributedTextCellHeight;
 
 @interface MUFormLabeledValueCell : MUFormBaseCell
+
+@property (nonatomic, strong) UIFont *font UI_APPEARANCE_SELECTOR;
+
 @end

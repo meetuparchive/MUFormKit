@@ -11,7 +11,6 @@
 
 @interface MUFormStaticLabelCell : MUFormIconCell
 
-
 @property (weak, nonatomic) IBOutlet UILabel *staticLabel;
 
 @end

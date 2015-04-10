@@ -19,6 +19,11 @@
 
 @implementation MUFormIconCell
 
+- (void)setFont:(UIFont *)font {
+    _font = font;
+    self.staticLabel.font = font;
+}
+
 - (void)awakeFromNib
 {
     [super awakeFromNib];
