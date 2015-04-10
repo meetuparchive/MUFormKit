@@ -16,6 +16,8 @@
 
 @implementation MUDynamicFormController
 
+@dynamic dataSource;
+
 #pragma mark - UITableView Delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
