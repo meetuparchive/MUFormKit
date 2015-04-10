@@ -1,6 +1,6 @@
 
-/* Class = "IBUILabel"; text = "Label"; ObjectID = "4la-7l-kZ0"; */
+/* Class = "UILabel"; text = "Label"; ObjectID = "4la-7l-kZ0"; */
 "4la-7l-kZ0.text" = "Label";
 
-/* Class = "IBUILabel"; text = "Report:"; ObjectID = "j26-Qq-hmN"; */
+/* Class = "UILabel"; text = "Report:"; ObjectID = "j26-Qq-hmN"; */
 "j26-Qq-hmN.text" = "Report:";
