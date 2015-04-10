@@ -16,6 +16,7 @@ CGFloat const kMUPadding = 13.0;
 
 @implementation MUFormStaticLabelCell
 
+@dynamic staticLabel;
 - (void)prepareForReuse
 {
     [super prepareForReuse];
