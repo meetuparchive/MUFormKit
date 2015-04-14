@@ -373,6 +373,21 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
     return [cellClass estimatedCellHeight];
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section
+{
+    UITableViewHeaderFooterView *tableViewHeaderFooterView = (UITableViewHeaderFooterView *)view;
+    if ([tableViewHeaderFooterView respondsToSelector:@selector(textLabel)]) {
+        tableViewHeaderFooterView.textLabel.font = [UIFont preferredWhitneyBoldFontForTextStyle:UIFontTextStyleBody];
+    }
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayFooterView:(UIView *)view forSection:(NSInteger)section {
+    UITableViewHeaderFooterView *tableViewHeaderFooterView = (UITableViewHeaderFooterView *)view;
+    if ([tableViewHeaderFooterView respondsToSelector:@selector(textLabel)]) {
+        tableViewHeaderFooterView.textLabel.font = [UIFont preferredWhitneyFontForTextStyle:UIFontTextStyleFootnote];
+    }
+}
+
 #pragma mark - Form events
 
 - (void)changeValue:(id)value forItemAtIndexPath:(NSIndexPath *)indexPath
