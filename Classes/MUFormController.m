@@ -376,15 +376,15 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
 - (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section
 {
     UITableViewHeaderFooterView *tableViewHeaderFooterView = (UITableViewHeaderFooterView *)view;
-    if ([tableViewHeaderFooterView respondsToSelector:@selector(adjustFontForWhitney)]) {
-        [tableViewHeaderFooterView adjustFontForWhitney];
+    if ([tableViewHeaderFooterView respondsToSelector:@selector(adjustFontForWhitneyHeader)]) {
+        [tableViewHeaderFooterView adjustFontForWhitneyHeader];
     }
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayFooterView:(UIView *)view forSection:(NSInteger)section {
     UITableViewHeaderFooterView *tableViewHeaderFooterView = (UITableViewHeaderFooterView *)view;
-    if ([tableViewHeaderFooterView respondsToSelector:@selector(textLabel)]) {
-        tableViewHeaderFooterView.textLabel.font = [UIFont preferredWhitneyFontForTextStyle:UIFontTextStyleFootnote];
+    if ([tableViewHeaderFooterView respondsToSelector:@selector(adjustFontForWhitneyFooter)]) {
+        [tableViewHeaderFooterView adjustFontForWhitneyFooter];
     }
 }
 
