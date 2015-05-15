@@ -52,6 +52,11 @@
     self.staticLabel.text = [[NSBundle mainBundle] localizedStringForKey:localizedKey value:localizedKey table:MUFormKitStringTable];
     self.maxCharacters = [info[MUFormMaximumCharactersKey] integerValue];
     
+    // Give the number field an accessibility label if it has no text to use.
+    if (!self.numberField.hasText && !self.numberField.placeholder.length) {
+        self.numberField.accessibilityLabel = self.staticLabel.text;
+    }
+    
     NSArray *validationMessages = info[MUValidationMessagesKey];
     self.messageLabel.text = ([validationMessages count] > 0) ? validationMessages[0] : nil;
 
