@@ -331,21 +331,26 @@ NSString *const MUFormCellIsDisabledKey                 = @"MUFormCellIsDisabled
 
 - (void)tableView:(UITableView *)tableView updateEnabledSectionsWithDependencyPropertyName:(NSString *)propertyName {
     NSMutableSet *sectionsToShowOrHide = [NSMutableSet set];
-    NSMutableSet *sectionsWithHeaderFooterChanges = [NSMutableSet set];
+    NSMutableSet *sectionsWithChanges = [NSMutableSet set];
     [self enumerateSectionsUsingBlock:^(NSDictionary *sectionInfo, NSUInteger idx, BOOL *stop) {
         if ([propertyName isEqualToString:sectionInfo[MUFormSectionEnabledPropertyNameKey]]) {
             [sectionsToShowOrHide addObject:@(idx)];
         }
         if (sectionInfo[MUFormSectionHeaderEnabledPropertyNameKey] || sectionInfo[MUFormSectionFooterEnabledPropertyNameKey]) {
-            [sectionsWithHeaderFooterChanges addObject:@(idx)];
+            [sectionsWithChanges addObject:@(idx)];
+        }
+        for(NSDictionary *row in sectionInfo[MUFormSectionRowsKey]) {
+            if ([propertyName isEqualToString:row[MUFormDependentPropertyNameKey]]) {
+                [sectionsWithChanges addObject:@(idx)];
+            }
         }
     }];
     
-    NSSet *sectionsWithChanges = [sectionsToShowOrHide setByAddingObjectsFromSet:sectionsWithHeaderFooterChanges];
-    if ([sectionsWithChanges count]) {
+    NSSet *allSectionsWithChanges = [sectionsToShowOrHide setByAddingObjectsFromSet:sectionsWithChanges];
+    if ([allSectionsWithChanges count]) {
         BOOL enabled = [[self.model valueForKeyPath:propertyName] boolValue];
         [tableView beginUpdates];
-        for (NSNumber *sectionNumber in sectionsWithChanges) {
+        for (NSNumber *sectionNumber in allSectionsWithChanges) {
             NSIndexSet *indexSet = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange([sectionNumber integerValue], 1)];
             if ([sectionsToShowOrHide containsObject:sectionNumber]) {
                 if (enabled) {
@@ -354,7 +359,7 @@ NSString *const MUFormCellIsDisabledKey                 = @"MUFormCellIsDisabled
                     [tableView deleteSections:indexSet withRowAnimation:UITableViewRowAnimationFade];
                 }
             }
-            else if ([sectionsWithHeaderFooterChanges containsObject:sectionNumber]) {
+            else if ([sectionsWithChanges containsObject:sectionNumber]) {
                 [tableView reloadSections:indexSet withRowAnimation:UITableViewRowAnimationFade];
             }
         }
