@@ -4,3 +4,6 @@
 /* Class = "IBUILabel"; text = "Message"; ObjectID = "42"; */
 "42.text" = "メッセージ";
 
+/* Class = "IBUILabel"; text = "Push Cell"; ObjectID = "7"; */
+"7.text" = "Push Cell";
+

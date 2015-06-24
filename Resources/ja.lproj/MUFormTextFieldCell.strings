@@ -1,6 +1,15 @@
 /* Class = "IBUITextField"; placeholder = "Enter text"; ObjectID = "8"; */
 "8.placeholder" = "テキストを入力する";
 
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "h9d-pm-a35"; */
+"h9d-pm-a35.text" = "Label";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "okl-ii-fmt"; */
+"okl-ii-fmt.text" = "Label";
+
+/* Class = "IBUILabel"; text = "Validation message"; ObjectID = "XDX-KN-PAG"; */
+"XDX-KN-PAG.text" = "Validation message";
+
 /* Class = "IBUITextField"; placeholder = "Enter text"; ObjectID = "y7s-9H-pSl"; */
 "y7s-9H-pSl.placeholder" = "テキストを入力する";
 
