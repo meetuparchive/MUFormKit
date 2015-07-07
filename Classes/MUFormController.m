@@ -200,7 +200,7 @@ static CGFloat const kMUDefaultSectionFooterHeight = 17.0;
     [super viewDidLoad];
 
     self.nextResponderController.tableView = self.tableView;
-    UIBarButtonItem *backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Back", nil) style:UIBarButtonItemStyleBordered target:nil action:nil];
+    UIBarButtonItem *backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Back", nil) style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.backBarButtonItem = backBarButtonItem;
     
     self.tableView.backgroundView = nil;
