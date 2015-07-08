@@ -149,9 +149,4 @@ static const CGFloat MUFormTextViewNumberOfLines = 3.0f;
     }
 }
 
-- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
-    [textView scrollToCursorIfNecessaryForReplacementText:text];
-    return YES;
-}
-
 @end
