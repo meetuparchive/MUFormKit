@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.platform     = :ios
   s.ios.deployment_target = "7.0"
-  s.source       = { :git => "git@github.com:meetup/MUFormKit.git", :tag => "0.0.1" }
+  s.source       = { :git => "git@github.com:meetup/MUFormKit.git", :tag => spec.version.to_s }
   s.source_files  = ["src/Classes","src/Resources/*"]
   s.resources = ["src/Resources/**/*.xib"]
   s.frameworks = "Foundation", "CoreGraphics", "CoreData", "UIKit"
