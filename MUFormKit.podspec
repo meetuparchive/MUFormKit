@@ -17,8 +17,8 @@ Pod::Spec.new do |s|
   s.platform     = :ios
   s.ios.deployment_target = "7.0"
   s.source       = { :git => "git@github.com:meetup/MUFormKit.git", :tag => s.version.to_s }
-  s.source_files  = ["src/Classes","src/Resources/*"]
-  s.resources = ["src/Resources/**/*.xib"]
+  s.source_files  = ["Classes","Resources/*"]
+  s.resources = ["Resources/**/*.xib"]
   s.frameworks = "Foundation", "CoreGraphics", "CoreData", "UIKit"
   s.dependency "MUCore"
   s.dependency "SAMTextView"
