@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.name         = "MUFormKit"
   s.authors      = "Meetup"
   s.homepage     = "http://github.com/meetup"
-  s.version      = "0.0.1"
+  s.version      = "1.0.0"
   s.summary      = "A framework for making forms"
   s.license      = "MIT"
   s.platform     = :ios
