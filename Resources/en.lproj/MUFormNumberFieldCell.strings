@@ -1,0 +1,9 @@
+
+/* Class = "UITextField"; placeholder = "20"; ObjectID = "9"; */
+"9.placeholder" = "20";
+
+/* Class = "UILabel"; text = "Number entry"; ObjectID = "5MY-TB-vBj"; */
+"5MY-TB-vBj.text" = "Number entry";
+
+/* Class = "UILabel"; text = "Validation message"; ObjectID = "bXX-mP-1S4"; */
+"bXX-mP-1S4.text" = "Validation message";

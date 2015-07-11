@@ -1,0 +1,9 @@
+/* Class = "IBUILabel"; text = "Number entry"; ObjectID = "5MY-TB-vBj"; */
+"5MY-TB-vBj.text" = "Voce numerica";
+
+/* Class = "IBUITextField"; placeholder = "20"; ObjectID = "9"; */
+"9.placeholder" = "20";
+
+/* Class = "IBUILabel"; text = "Validation message"; ObjectID = "bXX-mP-1S4"; */
+"bXX-mP-1S4.text" = "Messaggio di validazione";
+

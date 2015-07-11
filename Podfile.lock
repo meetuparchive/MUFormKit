@@ -1,0 +1,40 @@
+PODS:
+  - FormatterKit (1.6.0):
+    - FormatterKit/AddressFormatter
+    - FormatterKit/ArrayFormatter
+    - FormatterKit/ColorFormatter
+    - FormatterKit/LocationFormatter
+    - FormatterKit/OrdinalNumberFormatter
+    - FormatterKit/TimeIntervalFormatter
+    - FormatterKit/UnitOfInformationFormatter
+    - FormatterKit/URLRequestFormatter
+  - FormatterKit/AddressFormatter (1.6.0)
+  - FormatterKit/ArrayFormatter (1.6.0)
+  - FormatterKit/ColorFormatter (1.6.0)
+  - FormatterKit/LocationFormatter (1.6.0)
+  - FormatterKit/OrdinalNumberFormatter (1.6.0)
+  - FormatterKit/TimeIntervalFormatter (1.6.0)
+  - FormatterKit/UnitOfInformationFormatter (1.6.0)
+  - FormatterKit/URLRequestFormatter (1.6.0)
+  - MUCore (0.0.2):
+    - FormatterKit
+  - SAMTextView (0.2.0)
+
+DEPENDENCIES:
+  - MUCore (from `git@github.com:meetup/MUCore.git`, tag `0.0.2`)
+  - SAMTextView (from `git://github.com/smup/SAMTextView.git`, commit `85159bc5bb57fc4487e5c03da28dd1cb70c33f07`)
+
+EXTERNAL SOURCES:
+  MUCore:
+    :git: git@github.com:meetup/MUCore.git
+    :tag: 0.0.2
+  SAMTextView:
+    :commit: 85159bc5bb57fc4487e5c03da28dd1cb70c33f07
+    :git: git://github.com/smup/SAMTextView.git
+
+SPEC CHECKSUMS:
+  FormatterKit: 534b21b52b9b822a9ec884a14e2debf92e7a3126
+  MUCore: f488d9dbf4b33fe67f3b44f31e56135fef1b60ff
+  SAMTextView: 3a18c24b6bbfb856ac6e519536b3eec27a2f2fb8
+
+COCOAPODS: 0.33.1

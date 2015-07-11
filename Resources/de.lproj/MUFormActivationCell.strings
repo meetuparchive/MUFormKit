@@ -1,0 +1,9 @@
+/* Class = "IBUILabel"; text = "Switch cell"; ObjectID = "nwr-37-myd"; */
+"nwr-37-myd.text" = "Zelle wechseln";
+
+/* Class = "IBUILabel"; text = "Form toggle cell"; ObjectID = "RcS-cj-RR1"; */
+"RcS-cj-RR1.text" = "Umschalt-Zelle erzeugen";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "tA4-f4-Afd"; */
+"tA4-f4-Afd.text" = "Beschriftung";
+
